@@ -1023,8 +1023,8 @@ body {
         background: rgba(7, 11, 20, 0.96);
         backdrop-filter: blur(20px);
         flex-direction: column;
-        padding: 12px 20px;
-        gap: 0;
+        padding: 16px 20px;
+        gap: 4px;
         border-bottom: 1px solid rgba(255,255,255,0.06);
         z-index: 50;
     }
@@ -1034,6 +1034,7 @@ body {
     .navbar__menu a {
         padding: 14px 18px;
         width: 100%;
+        border-radius: 10px;
     }
     .navbar__toggle {
         display: block;
