@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda - Correo Argentino Pro</title>
+    <meta name="description" content="Centro de ayuda de Correo Argentino Pro. Guias, tutoriales y documentacion para configurar y usar el plugin.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="navbar__inner">
+        <a href="/" class="navbar__brand">
+            <svg width="36" height="36" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="20" width="56" height="40" rx="4" fill="white" opacity="0.95"/>
+                <path d="M8 20 L36 40 L64 20" fill="white" opacity="0.9"/>
+                <path d="M8 20 L36 40 L64 20" stroke="rgba(255,255,255,0.3)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 24 L36 44 L64 24" stroke="#0073aa" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="42" y="46" width="36" height="20" rx="4" fill="#0055a4"/>
+                <text x="60" y="60.5" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="white" letter-spacing="1.5">PRO</text>
+            </svg>
+            <span class="navbar__brand-text">CA Pro</span>
+        </a>
+        <button class="navbar__toggle" aria-label="Menu" onclick="document.querySelector('.navbar__menu').classList.toggle('open')">&#9776;</button>
+        <ul class="navbar__menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="ayuda.html" class="active">Ayuda</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<header class="page-header">
+    <h1>Centro de Ayuda</h1>
+    <p>Guias y documentacion para sacarle el maximo provecho al plugin</p>
+</header>
+
+<!-- Knowledge Base -->
+<section class="ayuda">
+    <div class="container">
+        <div class="ayuda__grid">
+            <a href="#" class="ayuda-card">
+                <div class="ayuda-card__icon">&#128640;</div>
+                <h3>Primeros pasos</h3>
+                <p>Instalacion, activacion de licencia y configuracion inicial del plugin.</p>
+            </a>
+            <a href="#" class="ayuda-card">
+                <div class="ayuda-card__icon">&#128176;</div>
+                <h3>Cotizacion (MiCorreo)</h3>
+                <p>Como configurar la cotizacion en tiempo real con tu cuenta de MiCorreo.</p>
+            </a>
+            <a href="#" class="ayuda-card">
+                <div class="ayuda-card__icon">&#128205;</div>
+                <h3>Selector de sucursales</h3>
+                <p>Configuracion del mapa interactivo y envio a sucursal en el checkout.</p>
+            </a>
+            <a href="#" class="ayuda-card">
+                <div class="ayuda-card__icon">&#128230;</div>
+                <h3>Creacion de envios</h3>
+                <p>Como crear envios desde WooCommerce con MiCorreo y Paq.Ar.</p>
+            </a>
+            <a href="#" class="ayuda-card">
+                <div class="ayuda-card__icon">&#127991;</div>
+                <h3>Etiquetas PDF</h3>
+                <p>Generacion e impresion de rotulos para clientes Paq.Ar.</p>
+            </a>
+            <a href="#" class="ayuda-card">
+                <div class="ayuda-card__icon">&#128666;</div>
+                <h3>Tracking</h3>
+                <p>Seguimiento automatico, emails de notificacion y sincronizacion.</p>
+            </a>
+            <a href="#" class="ayuda-card">
+                <div class="ayuda-card__icon">&#9889;</div>
+                <h3>Acciones masivas</h3>
+                <p>Crear envios y etiquetas en lote. Exportacion CSV.</p>
+            </a>
+            <a href="#" class="ayuda-card">
+                <div class="ayuda-card__icon">&#128295;</div>
+                <h3>Diagnostico</h3>
+                <p>Herramientas de diagnostico, logs y solucion de problemas comunes.</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>Correo Argentino Pro &copy; 2026 &middot; Desarrollado por <a href="https://adwebs.com.ar">AD Webs</a></p>
+        <p style="margin-top: 8px;">No estamos afiliados a Correo Argentino S.A.</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Correo Argentino Pro</title>
+    <meta name="description" content="Contacta al equipo de Correo Argentino Pro. Soporte tecnico, consultas de venta y mas.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="navbar__inner">
+        <a href="/" class="navbar__brand">
+            <svg width="36" height="36" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="20" width="56" height="40" rx="4" fill="white" opacity="0.95"/>
+                <path d="M8 20 L36 40 L64 20" fill="white" opacity="0.9"/>
+                <path d="M8 20 L36 40 L64 20" stroke="rgba(255,255,255,0.3)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 24 L36 44 L64 24" stroke="#0073aa" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="42" y="46" width="36" height="20" rx="4" fill="#0055a4"/>
+                <text x="60" y="60.5" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="white" letter-spacing="1.5">PRO</text>
+            </svg>
+            <span class="navbar__brand-text">CA Pro</span>
+        </a>
+        <button class="navbar__toggle" aria-label="Menu" onclick="document.querySelector('.navbar__menu').classList.toggle('open')">&#9776;</button>
+        <ul class="navbar__menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="ayuda.html">Ayuda</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contacto.html" class="active">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<header class="page-header">
+    <h1>Contacto</h1>
+    <p>Escribinos y te respondemos a la brevedad</p>
+</header>
+
+<!-- Contact Form -->
+<section class="contact">
+    <div class="container">
+        <form class="contact-form" id="contact-form">
+            <div class="contact-form__group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" required placeholder="Tu nombre">
+            </div>
+            <div class="contact-form__group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            </div>
+            <div class="contact-form__group">
+                <label for="subject">Asunto</label>
+                <select id="subject" name="subject" required>
+                    <option value="" disabled selected>Selecciona un asunto</option>
+                    <option value="soporte">Soporte tecnico</option>
+                    <option value="ventas">Consulta de compra</option>
+                    <option value="licencia">Problema con licencia</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+            <div class="contact-form__group">
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" required placeholder="Describe tu consulta con el mayor detalle posible..."></textarea>
+            </div>
+            <button type="submit" class="contact-form__submit" id="submit-btn">Enviar mensaje</button>
+            <div class="contact-form__status" id="form-status"></div>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>Correo Argentino Pro &copy; 2026 &middot; Desarrollado por <a href="https://adwebs.com.ar">AD Webs</a></p>
+        <p style="margin-top: 8px;">No estamos afiliados a Correo Argentino S.A.</p>
+    </div>
+</footer>
+
+<script>
+(function() {
+    var API_URL = 'https://api.correoargentinopro.com';
+    var form = document.getElementById('contact-form');
+    var btn = document.getElementById('submit-btn');
+    var status = document.getElementById('form-status');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        btn.disabled = true;
+        btn.textContent = 'Enviando...';
+        status.textContent = '';
+        status.className = 'contact-form__status';
+
+        var data = {
+            name: form.name.value,
+            email: form.email.value,
+            subject: form.subject.value,
+            message: form.message.value
+        };
+
+        fetch(API_URL + '/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+        .then(function(r) {
+            if (r.ok) return r.json();
+            throw new Error('Error');
+        })
+        .then(function() {
+            status.textContent = 'Mensaje enviado correctamente. Te responderemos pronto.';
+            status.className = 'contact-form__status contact-form__status--success';
+            form.reset();
+        })
+        .catch(function() {
+            status.textContent = 'Error al enviar. Intenta de nuevo o escribinos directamente por email.';
+            status.className = 'contact-form__status contact-form__status--error';
+        })
+        .finally(function() {
+            btn.disabled = false;
+            btn.textContent = 'Enviar mensaje';
+        });
+    });
+})();
+</script>
+
+</body>
+</html>
