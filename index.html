@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correo Argentino Pro para WooCommerce</title>
+    <meta name="description" content="Plugin premium de WooCommerce para integrar Correo Argentino. Cotizacion en tiempo real, selector de sucursales con mapa, etiquetas, tracking y mas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --blue: #0073aa;
+            --blue-dark: #005a87;
+            --blue-light: #e8f4fd;
+            --green: #00a32a;
+            --orange: #dba617;
+            --text: #1d2327;
+            --text-light: #50575e;
+            --bg: #f9fafb;
+            --white: #ffffff;
+            --radius: 12px;
+            --shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #0055a4 0%, #0073aa 50%, #00a0d2 100%);
+            color: white;
+            padding: 80px 20px 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: var(--bg);
+            clip-path: ellipse(55% 100% at 50% 100%);
+        }
+        .header__badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+        .header h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .header p {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+        .header__cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            color: var(--blue);
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        .header__cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+        }
+        .header__price {
+            display: block;
+            margin-top: 16px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* ── Container ── */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ── Features ── */
+        .features {
+            padding: 60px 0 80px;
+        }
+        .features__title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 48px;
+        }
+        .features__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .feature-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 32px;
+            box-shadow: var(--shadow);
+            border: 1px solid #e5e7eb;
+            transition: transform 0.2s;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+        }
+        .feature-card__icon {
+            width: 48px;
+            height: 48px;
+            background: var(--blue-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+        .feature-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* ── Pricing ── */
+        .pricing {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        .pricing__title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .pricing__subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 48px;
+            font-size: 1.05rem;
+        }
+        .pricing-card {
+            max-width: 480px;
+            margin: 0 auto;
+            background: var(--bg);
+            border-radius: var(--radius);
+            padding: 40px;
+            border: 2px solid var(--blue);
+            text-align: center;
+            box-shadow: 0 8px 40px rgba(0,115,170,0.12);
+        }
+        .pricing-card__name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--blue);
+            margin-bottom: 8px;
+        }
+        .pricing-card__price {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+        .pricing-card__price span {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--text-light);
+        }
+        .pricing-card__period {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+        }
+        .pricing-card__features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 32px;
+        }
+        .pricing-card__features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 0.95rem;
+        }
+        .pricing-card__features li::before {
+            content: '\2713';
+            color: var(--green);
+            font-weight: 700;
+            margin-right: 10px;
+        }
+        .pricing-card__btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background: var(--blue);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .pricing-card__btn:hover {
+            background: var(--blue-dark);
+            transform: translateY(-2px);
+        }
+        .pricing__guarantee {
+            text-align: center;
+            margin-top: 20px;
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        /* ── FAQ ── */
+        .faq {
+            padding: 80px 0;
+        }
+        .faq__title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 48px;
+        }
+        .faq__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+            gap: 24px;
+        }
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 24px;
+            border: 1px solid #e5e7eb;
+        }
+        .faq-item h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .faq-item p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            background: var(--text);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.85rem;
+        }
+        .footer a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+        }
+
+        /* ── Success section ── */
+        .success-section {
+            display: none;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .success-section.active {
+            display: block;
+        }
+        .success-card {
+            max-width: 500px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 48px;
+            box-shadow: var(--shadow);
+            border: 2px solid var(--green);
+        }
+        .success-card__icon {
+            font-size: 64px;
+            margin-bottom: 16px;
+        }
+        .success-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+        .success-card__key {
+            font-family: monospace;
+            font-size: 1.3rem;
+            background: #f0f0f0;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-weight: 700;
+            letter-spacing: 1px;
+            user-select: all;
+        }
+        .success-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 600px) {
+            .header { padding: 60px 20px 80px; }
+            .features__grid { grid-template-columns: 1fr; }
+            .faq__grid { grid-template-columns: 1fr; }
+            .pricing-card { padding: 28px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <span class="header__badge">Plugin Premium para WooCommerce</span>
+        <h1>Correo Argentino Pro</h1>
+        <p>La integracion profesional con Correo Argentino que tu tienda necesita. Cotizacion en tiempo real, mapa de sucursales, etiquetas, tracking y mas.</p>
+        <a href="#comprar" class="header__cta">Comprar ahora</a>
+        <span class="header__price">Pago unico &middot; Actualizaciones y soporte incluidos</span>
+    </div>
+</header>
+
+<!-- Features -->
+<section class="features">
+    <div class="container">
+        <h2 class="features__title">Todo lo que necesitas para enviar con Correo Argentino</h2>
+        <div class="features__grid">
+            <div class="feature-card">
+                <div class="feature-card__icon">&#128176;</div>
+                <h3>Cotizacion en tiempo real</h3>
+                <p>Tus clientes ven el costo de envio actualizado al instante en el checkout. Integracion directa con la API de MiCorreo.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-card__icon">&#128205;</div>
+                <h3>Selector de sucursales con mapa</h3>
+                <p>Modal interactivo con mapa Leaflet, busqueda, geolocalizacion y ordenamiento por cercania. +3000 sucursales.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-card__icon">&#128230;</div>
+                <h3>Creacion de envios</h3>
+                <p>Crea envios en Correo Argentino desde el panel de WooCommerce. Soporta MiCorreo (PyMEs) y Paq.Ar (empresas).</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-card__icon">&#127991;</div>
+                <h3>Etiquetas PDF</h3>
+                <p>Genera e imprime rotulos de envio directamente desde cada pedido. Disponible para clientes Paq.Ar con acuerdo comercial.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-card__icon">&#128666;</div>
+                <h3>Tracking automatico</h3>
+                <p>Seguimiento en tiempo real con timeline visual. Emails automaticos al cambiar de estado. Sincronizacion cada 6 horas.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-card__icon">&#9889;</div>
+                <h3>Acciones masivas</h3>
+                <p>Crea envios y genera etiquetas para multiples pedidos a la vez. Exporta a CSV. Perfecto para alto volumen.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing -->
+<section class="pricing" id="comprar">
+    <div class="container">
+        <h2 class="pricing__title">Un solo pago, todo incluido</h2>
+        <p class="pricing__subtitle">Sin suscripciones ni costos ocultos. Compra una vez, usa para siempre.</p>
+
+        <div class="pricing-card">
+            <div class="pricing-card__name">Licencia completa</div>
+            <div class="pricing-card__price" id="price-display"><!-- Price set by JS --></div>
+            <div class="pricing-card__period">Pago unico &middot; 1 sitio</div>
+
+            <ul class="pricing-card__features">
+                <li>Cotizacion en tiempo real (MiCorreo)</li>
+                <li>Selector de sucursales con mapa interactivo</li>
+                <li>Creacion de envios (MiCorreo + Paq.Ar)</li>
+                <li>Etiquetas PDF (Paq.Ar)</li>
+                <li>Tracking automatico con notificaciones</li>
+                <li>Acciones masivas y exportacion CSV</li>
+                <li>Wizard de configuracion y diagnostico</li>
+                <li>Compatible con HPOS y Checkout por bloques</li>
+                <li>Actualizaciones automaticas</li>
+                <li>Soporte por email</li>
+            </ul>
+
+            <a href="#" class="pricing-card__btn" id="buy-btn">Comprar con Mercado Pago</a>
+        </div>
+        <p class="pricing__guarantee">Pago seguro via Mercado Pago. Tu licencia se entrega al instante.</p>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+    <div class="container">
+        <h2 class="faq__title">Preguntas frecuentes</h2>
+        <div class="faq__grid">
+            <div class="faq-item">
+                <h4>Que servicios de Correo Argentino soporta?</h4>
+                <p>Soporta MiCorreo (para PyMEs y monotributistas, con cotizacion) y Paq.Ar v2 (para empresas con acuerdo comercial, con etiquetas).</p>
+            </div>
+            <div class="faq-item">
+                <h4>Necesito tener cuenta en Correo Argentino?</h4>
+                <p>Si. Necesitas una cuenta en MiCorreo o un acuerdo comercial Paq.Ar. El plugin se conecta a tu cuenta existente.</p>
+            </div>
+            <div class="faq-item">
+                <h4>La licencia es por sitio?</h4>
+                <p>Si, cada licencia es valida para 1 dominio. Podes desactivarla y moverla a otro sitio cuando quieras.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Incluye actualizaciones?</h4>
+                <p>Si. Las actualizaciones llegan directamente a tu WordPress, como cualquier plugin del repositorio oficial.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Es compatible con mi tema?</h4>
+                <p>El plugin funciona con cualquier tema compatible con WooCommerce. Soporta HPOS y el checkout por bloques.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Como recibo la licencia?</h4>
+                <p>Despues de pagar con Mercado Pago, tu clave de licencia aparece en pantalla y se envia a tu email. La activacion es instantanea.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Success (shown after payment) -->
+<section class="success-section" id="success-section">
+    <div class="container">
+        <div class="success-card">
+            <div class="success-card__icon">&#127881;</div>
+            <h2>Gracias por tu compra!</h2>
+            <p>Tu clave de licencia es:</p>
+            <div class="success-card__key" id="license-key-display">---</div>
+            <p>Copiala y pegala en <strong>Correo Arg. Pro &gt; Configuracion &gt; Licencia</strong> en tu WordPress.</p>
+            <p style="margin-top: 16px;">
+                <a href="#" id="download-link" style="color: var(--blue); font-weight: 600;">Descargar plugin</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>Correo Argentino Pro &copy; 2026 &middot; Desarrollado por <a href="https://adwebs.com.ar">AD Webs</a></p>
+        <p style="margin-top: 8px;">No estamos afiliados a Correo Argentino S.A.</p>
+    </div>
+</footer>
+
+<script>
+(function() {
+    var API_URL = 'https://api.correoargentinopro.com';
+    // Price in ARS — update as needed
+    var PRICE_ARS = 25000;
+    var PRICE_DISPLAY = '$' + PRICE_ARS.toLocaleString('es-AR');
+
+    document.getElementById('price-display').innerHTML = PRICE_DISPLAY + ' <span>ARS</span>';
+
+    // Buy button — redirects to Mercado Pago checkout
+    // The MP preference should be created server-side. For now, link to the API.
+    document.getElementById('buy-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        // Create preference on our API, then redirect to MP checkout
+        fetch(API_URL + '/checkout/create', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ price: PRICE_ARS })
+        })
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            if (data.checkout_url) {
+                window.location.href = data.checkout_url;
+            } else {
+                alert('Error al crear el pago. Intenta de nuevo.');
+            }
+        })
+        .catch(function() {
+            alert('Error de conexion. Intenta de nuevo.');
+        });
+    });
+
+    // Check if returning from MP payment (success URL has payment_id param)
+    var params = new URLSearchParams(window.location.search);
+    var paymentId = params.get('payment_id');
+
+    if (paymentId) {
+        // Fetch license key from our API
+        fetch(API_URL + '/checkout/success?payment_id=' + paymentId)
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            if (data.license_key) {
+                document.getElementById('license-key-display').textContent = data.license_key;
+                document.getElementById('download-link').href = API_URL + '/download/' + data.license_key;
+                document.getElementById('success-section').classList.add('active');
+                // Scroll to it
+                document.getElementById('success-section').scrollIntoView({ behavior: 'smooth' });
+            }
+        })
+        .catch(function() {});
+    }
+})();
+</script>
+
+</body>
+</html>
