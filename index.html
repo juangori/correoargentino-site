@@ -58,7 +58,7 @@
             <h1>Correo Argentino Pro</h1>
             <p>La integracion profesional con Correo Argentino que tu tienda necesita. Cotizacion en tiempo real, mapa de sucursales, etiquetas, tracking y mas.</p>
             <a href="#comprar" class="hero__cta" style="background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.4); pointer-events: none; cursor: not-allowed; box-shadow: none;">Proximamente</a>
-            <span class="hero__price">Pago unico &middot; Actualizaciones y soporte incluidos</span>
+            <span class="hero__price">Licencia anual &middot; Actualizaciones y soporte incluidos</span>
         </div>
     </div>
 </header>
@@ -105,13 +105,13 @@
 <!-- Pricing -->
 <section class="pricing" id="comprar">
     <div class="container">
-        <h2 class="pricing__title">Un solo pago, todo incluido</h2>
-        <p class="pricing__subtitle">Sin suscripciones ni costos ocultos. Compra una vez, usa para siempre.</p>
+        <h2 class="pricing__title">Simple, transparente, sin sorpresas</h2>
+        <p class="pricing__subtitle">Licencia anual para 1 sitio. Renovacion con descuento asegurado.</p>
 
         <div class="pricing-card">
-            <div class="pricing-card__name">Licencia completa</div>
+            <div class="pricing-card__name">Licencia anual</div>
             <div class="pricing-card__price" id="price-display"></div>
-            <div class="pricing-card__period">Pago unico &middot; 1 sitio</div>
+            <div class="pricing-card__period">por ano &middot; 1 sitio</div>
 
             <ul class="pricing-card__features">
                 <li>Cotizacion en tiempo real (MiCorreo)</li>
@@ -128,7 +128,7 @@
 
             <a href="#" class="pricing-card__btn" id="buy-btn" style="background: rgba(255,255,255,0.1); pointer-events: none; cursor: not-allowed; box-shadow: none; color: rgba(255,255,255,0.35);">Proximamente</a>
         </div>
-        <p class="pricing__guarantee">Pago seguro via Mercado Pago. Tu licencia se entrega al instante.</p>
+        <p class="pricing__guarantee">Pago seguro via Mercado Pago. Tu licencia se entrega al instante. Renovacion al 50% de descuento.</p>
     </div>
 </section>
 
@@ -137,11 +137,11 @@
     <div class="container">
         <div class="success-card">
             <div class="success-card__icon">&#127881;</div>
-            <h2>Gracias por tu compra!</h2>
-            <p>Tu clave de licencia es:</p>
+            <h2 id="success-title">Gracias por tu compra!</h2>
+            <p id="success-subtitle">Tu clave de licencia es:</p>
             <div class="success-card__key" id="license-key-display">---</div>
-            <p>Copiala y pegala en <strong>Correo Arg. Pro &gt; Configuracion &gt; Licencia</strong> en tu WordPress.</p>
-            <p style="margin-top: 16px;">
+            <p id="success-instructions">Copiala y pegala en <strong>Correo Arg. Pro &gt; Configuracion &gt; Licencia</strong> en tu WordPress.</p>
+            <p style="margin-top: 16px;" id="success-download">
                 <a href="#" id="download-link" style="color: var(--accent); font-weight: 600;">Descargar plugin</a>
             </p>
         </div>
@@ -152,6 +152,7 @@
 <footer class="footer">
     <div class="container">
         <p>Correo Argentino Pro &copy; 2026 &middot; Desarrollado por <a href="https://adwebs.com.ar">AD Webs</a></p>
+        <p style="margin-top: 8px;"><a href="terminos.html">Terminos y condiciones</a> &middot; <a href="privacidad.html">Politica de privacidad</a></p>
         <p style="margin-top: 8px;">No estamos afiliados a Correo Argentino S.A.</p>
     </div>
 </footer>
@@ -188,8 +189,45 @@
 
     var params = new URLSearchParams(window.location.search);
     var paymentId = params.get('payment_id');
+    var renewKey = params.get('renew');
+    var status = params.get('status');
 
-    if (paymentId) {
+    // Handle renewal redirect from plugin
+    if (renewKey) {
+        fetch(API_URL + '/checkout/renew', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ license_key: renewKey })
+        })
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            if (data.checkout_url) {
+                window.location.href = data.checkout_url;
+            } else {
+                alert(data.error || 'Error al crear el pago de renovacion.');
+            }
+        })
+        .catch(function() {
+            alert('Error de conexion. Intenta de nuevo.');
+        });
+    }
+
+    // Handle successful renewal return
+    if (status === 'renewed') {
+        var lk = params.get('license_key');
+        if (lk) {
+            document.getElementById('success-title').textContent = 'Licencia renovada!';
+            document.getElementById('success-subtitle').textContent = 'Tu licencia fue renovada exitosamente:';
+            document.getElementById('license-key-display').textContent = lk;
+            document.getElementById('success-instructions').innerHTML = 'No necesitas hacer nada en tu WordPress. El plugin se reactivara automaticamente.';
+            document.getElementById('success-download').style.display = 'none';
+            document.getElementById('success-section').classList.add('active');
+            document.getElementById('success-section').scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // Handle new purchase success
+    if (paymentId && status !== 'renewed') {
         fetch(API_URL + '/checkout/success?payment_id=' + paymentId)
         .then(function(r) { return r.json(); })
         .then(function(data) {
