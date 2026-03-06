@@ -52,6 +52,12 @@
             background: var(--bg);
             clip-path: ellipse(55% 100% at 50% 100%);
         }
+        .logo {
+            margin-bottom: 20px;
+        }
+        .logo svg {
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+        }
         .header__badge {
             display: inline-block;
             background: rgba(255,255,255,0.15);
@@ -345,6 +351,20 @@
 <!-- Header -->
 <header class="header">
     <div class="container">
+        <div class="logo" aria-label="Correo Argentino Pro">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Envelope body -->
+                <rect x="8" y="20" width="56" height="40" rx="4" fill="white" opacity="0.95"/>
+                <!-- Envelope flap -->
+                <path d="M8 24 L36 44 L64 24" stroke="#0073aa" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Envelope top edges -->
+                <path d="M8 20 L36 40 L64 20" fill="white" opacity="0.9"/>
+                <path d="M8 20 L36 40 L64 20" stroke="#0073aa" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- PRO badge -->
+                <rect x="42" y="46" width="36" height="20" rx="4" fill="#0055a4"/>
+                <text x="60" y="60.5" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="white" letter-spacing="1.5">PRO</text>
+            </svg>
+        </div>
         <span class="header__badge">Plugin Premium para WooCommerce</span>
         <h1>Correo Argentino Pro</h1>
         <p>La integracion profesional con Correo Argentino que tu tienda necesita. Cotizacion en tiempo real, mapa de sucursales, etiquetas, tracking y mas.</p>
