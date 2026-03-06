@@ -1,0 +1,11 @@
+<svg width="32" height="32" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="fEnv" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient>
+        <linearGradient id="fPro" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient>
+    </defs>
+    <rect width="80" height="80" rx="16" fill="#0f172a"/>
+    <rect x="10" y="18" width="48" height="34" rx="6" fill="white" opacity="0.95"/>
+    <path d="M10 24 L34 42 L58 24" stroke="url(#fEnv)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="38" y="42" width="34" height="18" rx="6" fill="url(#fPro)"/>
+    <text x="55" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="800" fill="white" letter-spacing="2">PRO</text>
+</svg>
