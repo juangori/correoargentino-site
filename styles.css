@@ -625,6 +625,45 @@ body {
 .contact-form__status--success { color: var(--green); }
 .contact-form__status--error { color: var(--red); }
 
+/* ── Legal Pages ── */
+.legal {
+    padding: 48px 0 100px;
+}
+.legal__content {
+    max-width: 760px;
+    margin: 0 auto;
+}
+.legal__content h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-top: 36px;
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+}
+.legal__content h2:first-child { margin-top: 0; }
+.legal__content h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+.legal__content p {
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    line-height: 1.8;
+}
+.legal__content ul {
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    padding-left: 20px;
+    line-height: 1.8;
+}
+.legal__content li { margin-bottom: 4px; }
+.legal__content a { color: var(--primary-light); text-decoration: none; }
+.legal__content a:hover { text-decoration: underline; }
+
 /* ── Help Center ── */
 .help {
     padding: 48px 0 100px;
