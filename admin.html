@@ -705,13 +705,13 @@
                 var status = l._effective_status || 'unactivated';
                 var badge = '<span class="badge badge--' + status + '">' + statusLabel(status) + '</span>';
                 return '<tr>' +
-                    '<td class="mono">' + l.key + '</td>' +
-                    '<td>' + (l.email || '-') + '</td>' +
-                    '<td>' + (l.domain || '<span style="color:var(--text-muted)">-</span>') + '</td>' +
+                    '<td class="mono">' + escapeHtml(l.key) + '</td>' +
+                    '<td>' + escapeHtml(l.email || '-') + '</td>' +
+                    '<td>' + (l.domain ? escapeHtml(l.domain) : '<span style="color:var(--text-muted)">-</span>') + '</td>' +
                     '<td>' + badge + '</td>' +
                     '<td>' + formatDate(l.created_at) + '</td>' +
                     '<td>' + formatDate(l.expires_at) + '</td>' +
-                    '<td><button class="btn btn--ghost btn--small" onclick="viewLicense(\'' + l.key + '\')">Ver</button></td>' +
+                    '<td><button class="btn btn--ghost btn--small" onclick="viewLicense(\'' + escapeHtml(l.key) + '\')">Ver</button></td>' +
                     '</tr>';
             }).join('');
         });
@@ -723,9 +723,9 @@
 
             var status = l._effective_status || 'unactivated';
             var html = '' +
-                '<dt>Clave</dt><dd>' + l.key + '</dd>' +
-                '<dt>Email</dt><dd>' + (l.email || '-') + '</dd>' +
-                '<dt>Dominio</dt><dd>' + (l.domain || 'No activada') + '</dd>' +
+                '<dt>Clave</dt><dd>' + escapeHtml(l.key) + '</dd>' +
+                '<dt>Email</dt><dd>' + escapeHtml(l.email || '-') + '</dd>' +
+                '<dt>Dominio</dt><dd>' + escapeHtml(l.domain || 'No activada') + '</dd>' +
                 '<dt>Estado</dt><dd><span class="badge badge--' + status + '">' + statusLabel(status) + '</span></dd>' +
                 '<dt>Creada</dt><dd>' + formatDateTime(l.created_at) + '</dd>' +
                 '<dt>Expira</dt><dd>' + formatDateTime(l.expires_at) + '</dd>' +
@@ -1008,7 +1008,7 @@
                 actions += '<button class="btn btn--ghost btn--small" onclick="deleteDiscount(\'' + d.code + '\')" style="color:var(--red)">Eliminar</button>';
 
                 return '<tr>' +
-                    '<td class="mono">' + d.code + '</td>' +
+                    '<td class="mono">' + escapeHtml(d.code) + '</td>' +
                     '<td>' + (d.type === 'percentage' ? 'Porcentaje' : 'Monto fijo') + '</td>' +
                     '<td>' + valueStr + '</td>' +
                     '<td>' + usesStr + '</td>' +
