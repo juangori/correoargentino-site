@@ -1121,7 +1121,25 @@ body {
 
 @media (max-width: 600px) {
     .hero__body { padding: 40px 20px 80px; }
-    .features__grid { grid-template-columns: 1fr; }
+    .features__grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 14px;
+        padding-bottom: 8px;
+        margin: 0 -24px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .features__grid::-webkit-scrollbar { display: none; }
+    .features__grid { scrollbar-width: none; }
+    .feature-card {
+        min-width: 280px;
+        max-width: 300px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
     .faq__grid { grid-template-columns: 1fr; }
     .pricing-card { padding: 32px 24px; }
     .contact-form { padding: 28px; }
