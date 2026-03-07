@@ -515,7 +515,7 @@
         <input type="text" id="review-name" placeholder="Nombre del cliente">
         <label for="review-website">Sitio web (opcional)</label>
         <input type="text" id="review-website" placeholder="mitienda.com.ar">
-        <label for="review-rating">Calificacion</label>
+        <label for="review-rating">Calificación</label>
         <select id="review-rating">
             <option value="5">5 estrellas</option>
             <option value="4">4 estrellas</option>
@@ -682,10 +682,10 @@
                 actions += ' <button class="btn btn--primary btn--small" onclick="reactivateLicense(\'' + l.key + '\')">Reactivar</button>';
             }
             if (status === 'expired') {
-                actions += ' <button class="btn btn--primary btn--small" onclick="extendLicense(\'' + l.key + '\', 365)">Extender 1 ano</button>';
+                actions += ' <button class="btn btn--primary btn--small" onclick="extendLicense(\'' + l.key + '\', 365)">Extender 1 año</button>';
             }
             actions += ' <button class="btn btn--ghost btn--small" onclick="extendLicense(\'' + l.key + '\', 30)">+30 dias</button>';
-            actions += ' <button class="btn btn--ghost btn--small" onclick="extendLicense(\'' + l.key + '\', 365)">+1 ano</button>';
+            actions += ' <button class="btn btn--ghost btn--small" onclick="extendLicense(\'' + l.key + '\', 365)">+1 año</button>';
             document.getElementById('detail-actions').innerHTML = actions;
 
             openModal('modal-detail');
