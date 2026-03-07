@@ -262,6 +262,28 @@
         .badge--expired { background: rgba(245,158,11,0.15); color: var(--orange); }
         .badge--revoked { background: rgba(239,68,68,0.15); color: var(--red); }
         .badge--unactivated { background: rgba(59,130,246,0.15); color: var(--primary); }
+        .badge--pending { background: rgba(245,158,11,0.15); color: var(--orange); }
+        .badge--approved { background: rgba(16,185,129,0.15); color: var(--green); }
+        .badge--rejected { background: rgba(239,68,68,0.15); color: var(--red); }
+
+        /* Review cards */
+        .review-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            margin-bottom: 12px;
+            transition: border-color 0.2s;
+        }
+        .review-card:hover { border-color: var(--border-hover); }
+        .review-card__header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
+        .review-card__name { font-weight: 600; color: var(--text); }
+        .review-card__website { font-size: 0.82rem; color: var(--accent); margin-left: 8px; }
+        .review-card__stars { color: #f59e0b; font-size: 0.95rem; letter-spacing: 2px; }
+        .review-card__comment { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; margin: 8px 0; }
+        .review-card__footer { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; }
+        .review-card__date { font-size: 0.75rem; color: var(--text-muted); }
+        .review-card__actions { display: flex; gap: 6px; }
 
         /* ── Modal ── */
         .modal-overlay {
@@ -382,6 +404,7 @@
         <div class="topbar__nav">
             <button class="active" onclick="showPanel('licenses', this)">Licencias</button>
             <button onclick="showPanel('messages', this)">Mensajes</button>
+            <button onclick="showPanel('reviews', this)">Resenas</button>
         </div>
         <button class="topbar__logout" onclick="doLogout()">Salir</button>
     </div>
@@ -437,6 +460,23 @@
                 <div class="loading">Cargando mensajes...</div>
             </div>
         </div>
+
+        <!-- Reviews Panel -->
+        <div class="panel" id="panel-reviews">
+            <div class="toolbar">
+                <select id="review-filter-select">
+                    <option value="all">Todas</option>
+                    <option value="pending">Pendientes</option>
+                    <option value="approved">Aprobadas</option>
+                    <option value="rejected">Rechazadas</option>
+                </select>
+                <button class="btn btn--primary" onclick="openReviewModal()">+ Agregar resena</button>
+                <button class="btn btn--ghost" onclick="loadReviews()">Actualizar</button>
+            </div>
+            <div id="reviews-list">
+                <div class="loading">Cargando resenas...</div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -466,6 +506,32 @@
     </div>
 </div>
 
+<!-- Create/Edit Review Modal -->
+<div class="modal-overlay" id="modal-review">
+    <div class="modal">
+        <h2 id="review-modal-title">Agregar resena</h2>
+        <input type="hidden" id="review-edit-id">
+        <label for="review-name">Nombre</label>
+        <input type="text" id="review-name" placeholder="Nombre del cliente">
+        <label for="review-website">Sitio web (opcional)</label>
+        <input type="text" id="review-website" placeholder="mitienda.com.ar">
+        <label for="review-rating">Calificacion</label>
+        <select id="review-rating">
+            <option value="5">5 estrellas</option>
+            <option value="4">4 estrellas</option>
+            <option value="3">3 estrellas</option>
+            <option value="2">2 estrellas</option>
+            <option value="1">1 estrella</option>
+        </select>
+        <label for="review-comment">Comentario</label>
+        <textarea id="review-comment" placeholder="Comentario de la resena..."></textarea>
+        <div class="modal__actions">
+            <button class="btn btn--ghost" onclick="closeModal('modal-review')">Cancelar</button>
+            <button class="btn btn--primary" onclick="saveReview()">Guardar</button>
+        </div>
+    </div>
+</div>
+
 <script>
 (function() {
     var API = 'https://api.correoargentinopro.com';
@@ -484,6 +550,13 @@
     window.reactivateLicense = reactivateLicense;
     window.extendLicense = extendLicense;
     window.deleteMessage = deleteMessage;
+    window.loadReviews = loadReviews;
+    window.openReviewModal = openReviewModal;
+    window.saveReview = saveReview;
+    window.approveReview = approveReview;
+    window.rejectReview = rejectReview;
+    window.editReview = editReview;
+    window.deleteReview = deleteReview;
 
     // Check saved token
     var saved = sessionStorage.getItem('cap_token');
@@ -718,6 +791,7 @@
         btn.classList.add('active');
 
         if (name === 'messages') loadMessages();
+        if (name === 'reviews') loadReviews();
         if (name === 'licenses') { loadLicenses(); loadStats(); }
     }
 
@@ -731,6 +805,126 @@
             if (e.target === overlay) overlay.classList.remove('open');
         });
     });
+
+    // Reviews
+    function loadReviews() {
+        var filter = document.getElementById('review-filter-select').value;
+        var container = document.getElementById('reviews-list');
+        container.innerHTML = '<div class="loading">Cargando resenas...</div>';
+
+        apiFetch('/admin/reviews?filter=' + filter).then(function(data) {
+            if (!data.reviews || data.reviews.length === 0) {
+                container.innerHTML = '<div class="empty-state"><p>No hay resenas</p></div>';
+                return;
+            }
+            container.innerHTML = data.reviews.map(function(r) {
+                var stars = '';
+                for (var i = 0; i < 5; i++) stars += i < r.rating ? '\u2605' : '\u2606';
+                var statusBadge = '<span class="badge badge--' + r.status + '">' + reviewStatusLabel(r.status) + '</span>';
+                var actions = '';
+                if (r.status === 'pending') {
+                    actions += '<button class="btn btn--primary btn--small" onclick="approveReview(\'' + r.id + '\')">Aprobar</button>';
+                    actions += '<button class="btn btn--danger btn--small" onclick="rejectReview(\'' + r.id + '\')">Rechazar</button>';
+                } else if (r.status === 'rejected') {
+                    actions += '<button class="btn btn--primary btn--small" onclick="approveReview(\'' + r.id + '\')">Aprobar</button>';
+                } else {
+                    actions += '<button class="btn btn--danger btn--small" onclick="rejectReview(\'' + r.id + '\')">Rechazar</button>';
+                }
+                actions += '<button class="btn btn--ghost btn--small" onclick="editReview(\'' + r.id + '\')">Editar</button>';
+                actions += '<button class="btn btn--ghost btn--small" onclick="deleteReview(\'' + r.id + '\')" style="color:var(--red)">Eliminar</button>';
+
+                return '<div class="review-card">' +
+                    '<div class="review-card__header">' +
+                        '<div><span class="review-card__name">' + escapeHtml(r.name) + '</span>' +
+                        (r.website ? '<span class="review-card__website">' + escapeHtml(r.website) + '</span>' : '') +
+                        '</div>' +
+                        statusBadge +
+                    '</div>' +
+                    '<div class="review-card__stars">' + stars + '</div>' +
+                    '<div class="review-card__comment">' + escapeHtml(r.comment) + '</div>' +
+                    '<div class="review-card__footer">' +
+                        '<span class="review-card__date">' + formatDateTime(r.created_at) + '</span>' +
+                        '<div class="review-card__actions">' + actions + '</div>' +
+                    '</div>' +
+                '</div>';
+            }).join('');
+        });
+
+        // Attach filter listener once
+        if (!loadReviews._bound) {
+            document.getElementById('review-filter-select').addEventListener('change', loadReviews);
+            loadReviews._bound = true;
+        }
+    }
+
+    function openReviewModal(review) {
+        document.getElementById('review-modal-title').textContent = review ? 'Editar resena' : 'Agregar resena';
+        document.getElementById('review-edit-id').value = review ? review.id : '';
+        document.getElementById('review-name').value = review ? review.name : '';
+        document.getElementById('review-website').value = review ? review.website : '';
+        document.getElementById('review-rating').value = review ? review.rating : '5';
+        document.getElementById('review-comment').value = review ? review.comment : '';
+        openModal('modal-review');
+    }
+
+    function saveReview() {
+        var editId = document.getElementById('review-edit-id').value;
+        var payload = {
+            name: document.getElementById('review-name').value,
+            website: document.getElementById('review-website').value,
+            rating: parseInt(document.getElementById('review-rating').value),
+            comment: document.getElementById('review-comment').value,
+        };
+
+        if (!payload.name || !payload.comment) {
+            alert('Nombre y comentario son obligatorios');
+            return;
+        }
+
+        var url, method;
+        if (editId) {
+            url = '/admin/reviews/' + editId;
+            method = 'PUT';
+        } else {
+            url = '/admin/reviews';
+            method = 'POST';
+            payload.status = 'approved';
+        }
+
+        apiFetch(url, { method: method, body: JSON.stringify(payload) }).then(function(data) {
+            if (data.success || data.review) {
+                closeModal('modal-review');
+                loadReviews();
+            } else {
+                alert('Error: ' + (data.error || 'desconocido'));
+            }
+        });
+    }
+
+    function approveReview(id) {
+        apiFetch('/admin/reviews/' + id, { method: 'PUT', body: JSON.stringify({ action: 'approve' }) }).then(function() { loadReviews(); });
+    }
+
+    function rejectReview(id) {
+        apiFetch('/admin/reviews/' + id, { method: 'PUT', body: JSON.stringify({ action: 'reject' }) }).then(function() { loadReviews(); });
+    }
+
+    function editReview(id) {
+        apiFetch('/admin/reviews?filter=all').then(function(list) {
+            var review = list.reviews.find(function(r) { return r.id === id; });
+            if (review) openReviewModal(review);
+        });
+    }
+
+    function deleteReview(id) {
+        if (!confirm('Eliminar esta resena?')) return;
+        apiFetch('/admin/reviews/' + id, { method: 'DELETE' }).then(function() { loadReviews(); });
+    }
+
+    function reviewStatusLabel(s) {
+        var map = { pending: 'Pendiente', approved: 'Aprobada', rejected: 'Rechazada' };
+        return map[s] || s;
+    }
 
     // Formatting
     function formatDate(iso) {
