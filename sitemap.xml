@@ -28,8 +28,9 @@
         <loc>https://correoargentinopro.com/blog/</loc>
         <lastmod>2026-03-07</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
+    <!-- Blog posts -->
     <url>
         <loc>https://correoargentinopro.com/blog/como-integrar-correo-argentino-woocommerce.html</loc>
         <lastmod>2026-03-07</lastmod>
@@ -48,6 +49,85 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+    <url>
+        <loc>https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html</loc>
+        <lastmod>2026-03-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://correoargentinopro.com/blog/paqar-woocommerce.html</loc>
+        <lastmod>2026-03-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://correoargentinopro.com/blog/como-hacer-envio-correo-argentino.html</loc>
+        <lastmod>2026-03-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://correoargentinopro.com/blog/cuanto-cuesta-enviar-paquete-correo-argentino.html</loc>
+        <lastmod>2026-03-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://correoargentinopro.com/blog/cuanto-tarda-envio-correo-argentino.html</loc>
+        <lastmod>2026-03-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://correoargentinopro.com/blog/etiqueta-envio-correo-argentino.html</loc>
+        <lastmod>2026-03-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://correoargentinopro.com/blog/que-datos-necesito-enviar-paquete-correo-argentino.html</loc>
+        <lastmod>2026-03-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://correoargentinopro.com/blog/tipos-envio-correo-argentino.html</loc>
+        <lastmod>2026-03-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://correoargentinopro.com/blog/que-es-micorreo-correo-argentino.html</loc>
+        <lastmod>2026-03-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://correoargentinopro.com/blog/correo-argentino-plugin-oficial-vs-pro.html</loc>
+        <lastmod>2026-03-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://correoargentinopro.com/blog/como-armar-encomienda-correo-argentino.html</loc>
+        <lastmod>2026-03-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://correoargentinopro.com/blog/enviar-medicamentos-correo-argentino.html</loc>
+        <lastmod>2026-03-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://correoargentinopro.com/blog/declaracion-envios-internacionales-correo-argentino.html</loc>
+        <lastmod>2026-03-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <!-- Legal -->
     <url>
         <loc>https://correoargentinopro.com/terminos.html</loc>
         <lastmod>2026-03-07</lastmod>

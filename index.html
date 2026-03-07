@@ -32,7 +32,7 @@
         "url": "https://correoargentinopro.com",
         "offers": {
             "@type": "Offer",
-            "price": "50000",
+            "price": "49990",
             "priceCurrency": "ARS",
             "availability": "https://schema.org/PreOrder"
         },
@@ -113,6 +113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <button class="navbar__toggle" aria-label="Menu" onclick="document.querySelector('.navbar__menu').classList.toggle('open')">&#9776;</button>
             <ul class="navbar__menu">
                 <li><a href="/" class="active">Home</a></li>
+                <li><a href="#cotizador">Cotizador</a></li>
                 <li><a href="ayuda.html">Ayuda</a></li>
                 <li><a href="faqs.html">FAQs</a></li>
                 <li><a href="blog/">Blog</a></li>
@@ -180,6 +181,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     </div>
+</section>
+
+<!-- Cotizador -->
+<section class="features" id="cotizador">
+    <div class="container">
+        <h2 class="features__title">Cotizador de envios Correo Argentino</h2>
+        <p style="text-align:center; color: var(--dark-text-secondary); margin-bottom: 32px; max-width: 560px; margin-left: auto; margin-right: auto;">Calcula el costo estimado de tu envio al instante. Precios actualizados de Correo Argentino.</p>
+        <div style="max-width: 640px; margin: 0 auto; background: var(--dark-surface); border: 1px solid var(--dark-border); border-radius: 16px; padding: 32px;">
+            <form id="homeCotizadorForm" onsubmit="return false;" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div style="display:flex; flex-direction:column; gap:6px; grid-column: 1 / -1;">
+                    <label style="font-size:0.85rem; color: var(--dark-text-secondary); font-weight:500;">Tipo de envio</label>
+                    <select id="hCotTipo" style="background: rgba(255,255,255,0.06); color:#fff; border:1px solid var(--dark-border); border-radius:8px; padding:10px 14px; font-size:0.95rem; font-family:'Outfit',sans-serif; outline:none;">
+                        <option value="CP" style="background:#1a1a2e;">Paquete a domicilio (Clasico)</option>
+                        <option value="CS" style="background:#1a1a2e;">Paquete a sucursal</option>
+                        <option value="EP" style="background:#1a1a2e;">Paquete expreso a domicilio</option>
+                    </select>
+                </div>
+                <div style="display:flex; flex-direction:column; gap:6px;">
+                    <label style="font-size:0.85rem; color: var(--dark-text-secondary); font-weight:500;">CP origen</label>
+                    <input type="text" id="hCotOrigen" placeholder="Ej: 1425" maxlength="5" required style="background: rgba(255,255,255,0.06); color:#fff; border:1px solid var(--dark-border); border-radius:8px; padding:10px 14px; font-size:0.95rem; font-family:'Outfit',sans-serif; outline:none;">
+                </div>
+                <div style="display:flex; flex-direction:column; gap:6px;">
+                    <label style="font-size:0.85rem; color: var(--dark-text-secondary); font-weight:500;">CP destino</label>
+                    <input type="text" id="hCotDestino" placeholder="Ej: 5000" maxlength="5" required style="background: rgba(255,255,255,0.06); color:#fff; border:1px solid var(--dark-border); border-radius:8px; padding:10px 14px; font-size:0.95rem; font-family:'Outfit',sans-serif; outline:none;">
+                </div>
+                <div style="display:flex; flex-direction:column; gap:6px;">
+                    <label style="font-size:0.85rem; color: var(--dark-text-secondary); font-weight:500;">Peso (kg)</label>
+                    <input type="number" id="hCotPeso" step="0.1" min="0.1" max="25" placeholder="1.5" required style="background: rgba(255,255,255,0.06); color:#fff; border:1px solid var(--dark-border); border-radius:8px; padding:10px 14px; font-size:0.95rem; font-family:'Outfit',sans-serif; outline:none;">
+                </div>
+                <div style="display:flex; flex-direction:column; gap:6px;">
+                    <label style="font-size:0.85rem; color: var(--dark-text-secondary); font-weight:500;">Largo (cm)</label>
+                    <input type="number" id="hCotLargo" min="1" max="150" placeholder="30" required style="background: rgba(255,255,255,0.06); color:#fff; border:1px solid var(--dark-border); border-radius:8px; padding:10px 14px; font-size:0.95rem; font-family:'Outfit',sans-serif; outline:none;">
+                </div>
+                <div style="display:flex; flex-direction:column; gap:6px;">
+                    <label style="font-size:0.85rem; color: var(--dark-text-secondary); font-weight:500;">Ancho (cm)</label>
+                    <input type="number" id="hCotAncho" min="1" max="150" placeholder="20" required style="background: rgba(255,255,255,0.06); color:#fff; border:1px solid var(--dark-border); border-radius:8px; padding:10px 14px; font-size:0.95rem; font-family:'Outfit',sans-serif; outline:none;">
+                </div>
+                <div style="display:flex; flex-direction:column; gap:6px;">
+                    <label style="font-size:0.85rem; color: var(--dark-text-secondary); font-weight:500;">Alto (cm)</label>
+                    <input type="number" id="hCotAlto" min="1" max="150" placeholder="15" required style="background: rgba(255,255,255,0.06); color:#fff; border:1px solid var(--dark-border); border-radius:8px; padding:10px 14px; font-size:0.95rem; font-family:'Outfit',sans-serif; outline:none;">
+                </div>
+                <button type="submit" id="hCotizarBtn" onclick="homeCotizar()" style="grid-column: 1 / -1; background: var(--gradient-accent); color:#fff; border:none; border-radius:8px; padding:14px 24px; font-size:1rem; font-weight:600; font-family:'Outfit',sans-serif; cursor:pointer; margin-top:8px; transition: opacity 0.2s;">Cotizar envio</button>
+            </form>
+            <div id="hCotResults" style="margin-top: 20px;">
+                <div id="hCotLoading" style="display:none; text-align:center; padding:20px; color: var(--dark-text-secondary);">
+                    <div style="display:inline-block; width:24px; height:24px; border:3px solid rgba(255,255,255,0.15); border-top-color:#3b82f6; border-radius:50%; animation: hSpin 0.7s linear infinite;"></div>
+                    <p style="margin-top:8px;">Consultando tarifas...</p>
+                </div>
+                <div id="hCotError" style="display:none; background:rgba(239,68,68,0.1); border:1px solid rgba(239,68,68,0.3); border-radius:8px; padding:14px; color:#fca5a5; text-align:center;"></div>
+                <div id="hCotCards" style="display:none; gap:10px;"></div>
+            </div>
+        </div>
+    </div>
+    <style>
+        @keyframes hSpin { to { transform: rotate(360deg); } }
+        .hcot-card { background: rgba(255,255,255,0.04); border: 1px solid var(--dark-border); border-radius: 10px; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .hcot-card .hc-name { font-weight: 600; color: var(--dark-text); }
+        .hcot-card .hc-time { font-size: 0.85rem; color: var(--dark-text-muted); margin-top: 2px; }
+        .hcot-card .hc-price { font-size: 1.25rem; font-weight: 700; background: var(--gradient-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        #hCotizarBtn:hover { opacity: 0.9; }
+        #hCotizarBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+        @media (max-width: 600px) {
+            #homeCotizadorForm { grid-template-columns: 1fr !important; }
+        }
+    </style>
 </section>
 
 <!-- Reviews -->
@@ -258,7 +324,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 (function() {
     var API_URL = 'https://api.correoargentinopro.com';
-    var PRICE_ARS = 50000;
+    var PRICE_ARS = 49990;
     var PRICE_DISPLAY = '$' + PRICE_ARS.toLocaleString('es-AR');
 
     document.getElementById('price-display').innerHTML = PRICE_DISPLAY + ' <span>ARS</span>';
@@ -398,6 +464,61 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         .catch(function() {});
     }
 })();
+
+function hFmtPrice(v) {
+    var n = parseFloat(v);
+    if (isNaN(n)) return '$ 0,00';
+    var p = n.toFixed(2).split('.');
+    return '$ ' + p[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ',' + p[1];
+}
+
+function homeCotizar() {
+    var o = document.getElementById('hCotOrigen').value.trim();
+    var d = document.getElementById('hCotDestino').value.trim();
+    var peso = parseFloat(document.getElementById('hCotPeso').value);
+    var largo = parseInt(document.getElementById('hCotLargo').value);
+    var ancho = parseInt(document.getElementById('hCotAncho').value);
+    var alto = parseInt(document.getElementById('hCotAlto').value);
+    var btn = document.getElementById('hCotizarBtn');
+    var loading = document.getElementById('hCotLoading');
+    var errDiv = document.getElementById('hCotError');
+    var cards = document.getElementById('hCotCards');
+
+    if (!o || !d || !peso || !largo || !ancho || !alto) {
+        errDiv.textContent = 'Por favor completa todos los campos.';
+        errDiv.style.display = 'block'; cards.style.display = 'none'; return;
+    }
+    if (!/^\d{4,5}$/.test(o) || !/^\d{4,5}$/.test(d)) {
+        errDiv.textContent = 'Los codigos postales deben tener 4 o 5 digitos.';
+        errDiv.style.display = 'block'; cards.style.display = 'none'; return;
+    }
+
+    btn.disabled = true; loading.style.display = 'block'; errDiv.style.display = 'none'; cards.style.display = 'none';
+
+    fetch('https://api.correoargentinopro.com/cotizar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ cpOrigen: o, cpDestino: d, peso: peso, largo: largo, ancho: ancho, alto: alto })
+    })
+    .then(function(r) { if (!r.ok) throw new Error('Error'); return r.json(); })
+    .then(function(data) {
+        var list = data.rates || [];
+        if (!list.length) throw new Error(data.error || 'No hay tarifas disponibles para esa ruta.');
+        var html = '';
+        list.forEach(function(s) {
+            html += '<div class="hcot-card"><div><div class="hc-name">' + (s.nombre || 'Correo Argentino') + (s.tipo ? ' — ' + s.tipo : '') + '</div>';
+            if (s.plazo) html += '<div class="hc-time">Plazo estimado: ' + s.plazo + '</div>';
+            html += '</div><div class="hc-price">' + hFmtPrice(s.precio) + '</div></div>';
+        });
+        cards.innerHTML = html;
+        cards.style.display = 'grid';
+    })
+    .catch(function(e) {
+        errDiv.textContent = e.message || 'Error al consultar tarifas.';
+        errDiv.style.display = 'block';
+    })
+    .finally(function() { loading.style.display = 'none'; btn.disabled = false; });
+}
 </script>
 
 </body>
