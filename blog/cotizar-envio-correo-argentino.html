@@ -368,14 +368,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     var html = '';
                     services.forEach(function(s) {
-                        var name = s.service_name || s.serviceName || s.nombre || s.name || 'Servicio';
-                        var price = s.price || s.precio || s.total || s.rate || 0;
-                        var time = s.delivery_time || s.deliveryTime || s.plazo || s.estimatedDays || '';
-                        if (typeof time === 'number') {
-                            time = time + ' dias habiles';
-                        }
+                        var name = s.nombre || s.productName || 'Correo Argentino';
+                        var tipo = s.tipo || '';
+                        var price = s.precio || s.price || 0;
+                        var time = s.plazo || '';
                         html += '<div class="cotizador-card">';
-                        html += '<div><div class="service-name">' + name + '</div>';
+                        html += '<div><div class="service-name">' + name + (tipo ? ' — ' + tipo : '') + '</div>';
                         if (time) {
                             html += '<div class="service-time">Plazo estimado: ' + time + '</div>';
                         }
