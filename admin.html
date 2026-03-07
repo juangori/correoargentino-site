@@ -405,6 +405,7 @@
             <button class="active" onclick="showPanel('licenses', this)">Licencias</button>
             <button onclick="showPanel('messages', this)">Mensajes</button>
             <button onclick="showPanel('reviews', this)">Reseñas</button>
+            <button onclick="showPanel('discounts', this)">Descuentos</button>
         </div>
         <a href="/" class="topbar__logout" style="text-decoration:none;">Ir al sitio</a>
         <button class="topbar__logout" onclick="doLogout()">Salir</button>
@@ -459,6 +460,32 @@
         <div class="panel" id="panel-messages">
             <div id="messages-list">
                 <div class="loading">Cargando mensajes...</div>
+            </div>
+        </div>
+
+        <!-- Discounts Panel -->
+        <div class="panel" id="panel-discounts">
+            <div class="toolbar">
+                <button class="btn btn--primary" onclick="openDiscountModal()">+ Crear descuento</button>
+                <button class="btn btn--ghost" onclick="loadDiscounts()">Actualizar</button>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Tipo</th>
+                            <th>Valor</th>
+                            <th>Usos</th>
+                            <th>Expira</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="discounts-tbody">
+                        <tr><td colspan="7" class="loading">Cargando...</td></tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
@@ -533,6 +560,33 @@
     </div>
 </div>
 
+<!-- Create/Edit Discount Modal -->
+<div class="modal-overlay" id="modal-discount">
+    <div class="modal">
+        <h2 id="discount-modal-title">Crear descuento</h2>
+        <input type="hidden" id="discount-edit-code">
+        <label for="discount-code">Codigo (ej: LAUNCH20)</label>
+        <input type="text" id="discount-code" placeholder="LAUNCH20" style="text-transform:uppercase">
+        <label for="discount-type">Tipo</label>
+        <select id="discount-type">
+            <option value="percentage">Porcentaje (%)</option>
+            <option value="fixed">Monto fijo ($)</option>
+        </select>
+        <label for="discount-value">Valor</label>
+        <input type="number" id="discount-value" placeholder="20" min="1">
+        <label for="discount-max-uses">Usos maximos (vacio = ilimitado)</label>
+        <input type="number" id="discount-max-uses" placeholder="Ilimitado" min="1">
+        <label for="discount-expires">Fecha de expiracion (opcional)</label>
+        <input type="date" id="discount-expires">
+        <label for="discount-description">Descripcion (opcional)</label>
+        <input type="text" id="discount-description" placeholder="Descuento de lanzamiento">
+        <div class="modal__actions">
+            <button class="btn btn--ghost" onclick="closeModal('modal-discount')">Cancelar</button>
+            <button class="btn btn--primary" onclick="saveDiscount()">Guardar</button>
+        </div>
+    </div>
+</div>
+
 <script>
 (function() {
     var API = 'https://api.correoargentinopro.com';
@@ -558,6 +612,12 @@
     window.rejectReview = rejectReview;
     window.editReview = editReview;
     window.deleteReview = deleteReview;
+    window.loadDiscounts = loadDiscounts;
+    window.openDiscountModal = openDiscountModal;
+    window.saveDiscount = saveDiscount;
+    window.toggleDiscount = toggleDiscount;
+    window.editDiscount = editDiscount;
+    window.deleteDiscount = deleteDiscount;
 
     // Check saved token
     var saved = sessionStorage.getItem('cap_token');
@@ -793,6 +853,7 @@
 
         if (name === 'messages') loadMessages();
         if (name === 'reviews') loadReviews();
+        if (name === 'discounts') loadDiscounts();
         if (name === 'licenses') { loadLicenses(); loadStats(); }
     }
 
@@ -920,6 +981,120 @@
     function deleteReview(id) {
         if (!confirm('Eliminar esta reseña?')) return;
         apiFetch('/admin/reviews/' + id, { method: 'DELETE' }).then(function() { loadReviews(); });
+    }
+
+    // Discounts
+    function loadDiscounts() {
+        var tbody = document.getElementById('discounts-tbody');
+        tbody.innerHTML = '<tr><td colspan="7" class="loading">Cargando...</td></tr>';
+
+        apiFetch('/admin/discounts').then(function(data) {
+            if (!data.discounts || data.discounts.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="7" class="loading">No hay descuentos creados</td></tr>';
+                return;
+            }
+            tbody.innerHTML = data.discounts.map(function(d) {
+                var valueStr = d.type === 'percentage' ? d.value + '%' : '$' + d.value.toLocaleString('es-AR');
+                var usesStr = (d.used_count || 0) + (d.max_uses ? '/' + d.max_uses : '/∞');
+                var isValid = d._is_valid;
+                var statusBadge = isValid
+                    ? '<span class="badge badge--active">Activo</span>'
+                    : '<span class="badge badge--revoked">Inactivo</span>';
+
+                var actions = '<button class="btn btn--ghost btn--small" onclick="editDiscount(\'' + d.code + '\')">Editar</button> ';
+                actions += isValid
+                    ? '<button class="btn btn--ghost btn--small" onclick="toggleDiscount(\'' + d.code + '\', false)" style="color:var(--orange)">Pausar</button> '
+                    : '<button class="btn btn--primary btn--small" onclick="toggleDiscount(\'' + d.code + '\', true)">Activar</button> ';
+                actions += '<button class="btn btn--ghost btn--small" onclick="deleteDiscount(\'' + d.code + '\')" style="color:var(--red)">Eliminar</button>';
+
+                return '<tr>' +
+                    '<td class="mono">' + d.code + '</td>' +
+                    '<td>' + (d.type === 'percentage' ? 'Porcentaje' : 'Monto fijo') + '</td>' +
+                    '<td>' + valueStr + '</td>' +
+                    '<td>' + usesStr + '</td>' +
+                    '<td>' + formatDate(d.expires_at) + '</td>' +
+                    '<td>' + statusBadge + '</td>' +
+                    '<td>' + actions + '</td>' +
+                    '</tr>';
+            }).join('');
+        });
+    }
+
+    function openDiscountModal(discount) {
+        document.getElementById('discount-modal-title').textContent = discount ? 'Editar descuento' : 'Crear descuento';
+        document.getElementById('discount-edit-code').value = discount ? discount.code : '';
+        document.getElementById('discount-code').value = discount ? discount.code : '';
+        document.getElementById('discount-code').disabled = !!discount;
+        document.getElementById('discount-type').value = discount ? discount.type : 'percentage';
+        document.getElementById('discount-value').value = discount ? discount.value : '';
+        document.getElementById('discount-max-uses').value = discount && discount.max_uses ? discount.max_uses : '';
+        document.getElementById('discount-expires').value = discount && discount.expires_at ? discount.expires_at.slice(0, 10) : '';
+        document.getElementById('discount-description').value = discount ? discount.description || '' : '';
+        openModal('modal-discount');
+    }
+
+    function saveDiscount() {
+        var editCode = document.getElementById('discount-edit-code').value;
+        var code = document.getElementById('discount-code').value.trim().toUpperCase();
+        var type = document.getElementById('discount-type').value;
+        var value = parseFloat(document.getElementById('discount-value').value);
+        var maxUses = document.getElementById('discount-max-uses').value;
+        var expires = document.getElementById('discount-expires').value;
+        var description = document.getElementById('discount-description').value;
+
+        if (!code || !value) {
+            alert('Codigo y valor son obligatorios');
+            return;
+        }
+
+        var payload = {
+            code: code,
+            type: type,
+            value: value,
+            max_uses: maxUses ? parseInt(maxUses) : null,
+            expires_at: expires || null,
+            description: description,
+        };
+
+        var url, method;
+        if (editCode) {
+            url = '/admin/discounts/' + encodeURIComponent(editCode);
+            method = 'PUT';
+        } else {
+            url = '/admin/discounts';
+            method = 'POST';
+        }
+
+        apiFetch(url, { method: method, body: JSON.stringify(payload) }).then(function(data) {
+            if (data.success || data.discount) {
+                closeModal('modal-discount');
+                loadDiscounts();
+                if (!editCode) alert('Descuento "' + code + '" creado!');
+            } else {
+                alert('Error: ' + (data.error || 'desconocido'));
+            }
+        });
+    }
+
+    function toggleDiscount(code, active) {
+        apiFetch('/admin/discounts/' + encodeURIComponent(code), {
+            method: 'PUT',
+            body: JSON.stringify({ active: active })
+        }).then(function() { loadDiscounts(); });
+    }
+
+    function editDiscount(code) {
+        apiFetch('/admin/discounts').then(function(data) {
+            var d = data.discounts.find(function(x) { return x.code === code; });
+            if (d) openDiscountModal(d);
+        });
+    }
+
+    function deleteDiscount(code) {
+        if (!confirm('Eliminar el descuento "' + code + '"?')) return;
+        apiFetch('/admin/discounts/' + encodeURIComponent(code), { method: 'DELETE' }).then(function() {
+            loadDiscounts();
+        });
     }
 
     function reviewStatusLabel(s) {
