@@ -334,7 +334,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         fetch(API_URL + '/checkout/create', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ price: PRICE_ARS })
+            body: JSON.stringify({})
         })
         .then(function(r) { return r.json(); })
         .then(function(data) {
@@ -465,6 +465,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
 })();
 
+function hEsc(s) {
+    var d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
+}
+
 function hFmtPrice(v) {
     var n = parseFloat(v);
     if (isNaN(n)) return '$ 0,00';
@@ -472,7 +478,11 @@ function hFmtPrice(v) {
     return '$ ' + p[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ',' + p[1];
 }
 
+var _cotLastCall = 0;
+var _COT_COOLDOWN = 3000;
+
 function homeCotizar() {
+    var now = Date.now();
     var o = document.getElementById('hCotOrigen').value.trim();
     var d = document.getElementById('hCotDestino').value.trim();
     var peso = parseFloat(document.getElementById('hCotPeso').value);
@@ -492,6 +502,11 @@ function homeCotizar() {
         errDiv.textContent = 'Los codigos postales deben tener 4 o 5 digitos.';
         errDiv.style.display = 'block'; cards.style.display = 'none'; return;
     }
+    if (now - _cotLastCall < _COT_COOLDOWN) {
+        errDiv.textContent = 'Espera unos segundos antes de cotizar de nuevo.';
+        errDiv.style.display = 'block'; cards.style.display = 'none'; return;
+    }
+    _cotLastCall = now;
 
     btn.disabled = true; loading.style.display = 'block'; errDiv.style.display = 'none'; cards.style.display = 'none';
 
@@ -506,8 +521,8 @@ function homeCotizar() {
         if (!list.length) throw new Error(data.error || 'No hay tarifas disponibles para esa ruta.');
         var html = '';
         list.forEach(function(s) {
-            html += '<div class="hcot-card"><div><div class="hc-name">' + (s.nombre || 'Correo Argentino') + (s.tipo ? ' — ' + s.tipo : '') + '</div>';
-            if (s.plazo) html += '<div class="hc-time">Plazo estimado: ' + s.plazo + '</div>';
+            html += '<div class="hcot-card"><div><div class="hc-name">' + hEsc(s.nombre || 'Correo Argentino') + (s.tipo ? ' — ' + hEsc(s.tipo) : '') + '</div>';
+            if (s.plazo) html += '<div class="hc-time">Plazo estimado: ' + hEsc(s.plazo) + '</div>';
             html += '</div><div class="hc-price">' + hFmtPrice(s.precio) + '</div></div>';
         });
         cards.innerHTML = html;
