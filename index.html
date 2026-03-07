@@ -192,7 +192,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="reviews__avg" id="reviews-avg"></div>
         </div>
         <div class="reviews__grid" id="reviews-grid">
-            <div class="reviews__empty">Cargando resenas...</div>
+            <div class="reviews__empty">Cargando reseñas...</div>
         </div>
     </div>
 </section>
@@ -300,7 +300,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             var starsHtml = '';
             for (var i = 0; i < 5; i++) starsHtml += i < fullStars ? '\u2605' : '\u2606';
             document.getElementById('reviews-stars').textContent = starsHtml;
-            document.getElementById('reviews-avg').textContent = data.average + ' de 5 \u00B7 ' + data.count + ' resena' + (data.count !== 1 ? 's' : '');
+            document.getElementById('reviews-avg').textContent = data.average + ' de 5 \u00B7 ' + data.count + ' reseña' + (data.count !== 1 ? 's' : '');
 
             // Cards
             grid.innerHTML = data.reviews.map(function(r) {
