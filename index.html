@@ -182,6 +182,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </section>
 
+<!-- Reviews -->
+<section class="reviews" id="reviews-section">
+    <div class="container">
+        <h2 class="reviews__title">Lo que dicen nuestros usuarios</h2>
+        <p class="reviews__subtitle">Tiendas reales que ya usan Correo Argentino Pro</p>
+        <div class="reviews__summary" id="reviews-summary" style="display:none;">
+            <div class="reviews__stars" id="reviews-stars"></div>
+            <div class="reviews__avg" id="reviews-avg"></div>
+        </div>
+        <div class="reviews__grid" id="reviews-grid">
+            <div class="reviews__empty">Cargando resenas...</div>
+        </div>
+    </div>
+</section>
+
 <!-- Pricing -->
 <section class="pricing" id="comprar">
     <div class="container">
@@ -267,6 +282,67 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             alert('Error de conexion. Intenta de nuevo.');
         });
     });
+
+    // Load reviews
+    fetch(API_URL + '/reviews')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            var grid = document.getElementById('reviews-grid');
+            if (!data.reviews || data.reviews.length === 0) {
+                document.getElementById('reviews-section').style.display = 'none';
+                return;
+            }
+
+            // Summary
+            var summary = document.getElementById('reviews-summary');
+            summary.style.display = '';
+            var fullStars = Math.floor(data.average);
+            var starsHtml = '';
+            for (var i = 0; i < 5; i++) starsHtml += i < fullStars ? '\u2605' : '\u2606';
+            document.getElementById('reviews-stars').textContent = starsHtml;
+            document.getElementById('reviews-avg').textContent = data.average + ' de 5 \u00B7 ' + data.count + ' resena' + (data.count !== 1 ? 's' : '');
+
+            // Cards
+            grid.innerHTML = data.reviews.map(function(r) {
+                var stars = '';
+                for (var j = 0; j < 5; j++) stars += j < r.rating ? '\u2605' : '\u2606';
+                var initials = r.name.split(' ').map(function(w) { return w[0]; }).join('').slice(0, 2).toUpperCase();
+                return '<div class="review-item">' +
+                    '<div class="review-item__stars">' + stars + '</div>' +
+                    '<div class="review-item__comment">' + r.comment.replace(/</g, '&lt;') + '</div>' +
+                    '<div class="review-item__author">' +
+                        '<div class="review-item__avatar">' + initials + '</div>' +
+                        '<div>' +
+                            '<div class="review-item__name">' + r.name.replace(/</g, '&lt;') + '</div>' +
+                            (r.website ? '<div class="review-item__site">' + r.website.replace(/</g, '&lt;') + '</div>' : '') +
+                        '</div>' +
+                    '</div>' +
+                '</div>';
+            }).join('');
+
+            // Inject AggregateRating schema
+            var schema = {
+                '@context': 'https://schema.org',
+                '@type': 'SoftwareApplication',
+                'name': 'Correo Argentino Pro',
+                'applicationCategory': 'BusinessApplication',
+                'operatingSystem': 'WordPress',
+                'aggregateRating': {
+                    '@type': 'AggregateRating',
+                    'ratingValue': String(data.average),
+                    'bestRating': '5',
+                    'worstRating': '1',
+                    'ratingCount': String(data.count)
+                }
+            };
+            var scriptEl = document.createElement('script');
+            scriptEl.type = 'application/ld+json';
+            scriptEl.textContent = JSON.stringify(schema);
+            document.head.appendChild(scriptEl);
+        })
+        .catch(function() {
+            document.getElementById('reviews-section').style.display = 'none';
+        });
 
     var params = new URLSearchParams(window.location.search);
     var paymentId = params.get('payment_id');
