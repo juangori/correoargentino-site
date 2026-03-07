@@ -404,7 +404,7 @@
         <div class="topbar__nav">
             <button class="active" onclick="showPanel('licenses', this)">Licencias</button>
             <button onclick="showPanel('messages', this)">Mensajes</button>
-            <button onclick="showPanel('reviews', this)">Resenas</button>
+            <button onclick="showPanel('reviews', this)">Reseñas</button>
         </div>
         <button class="topbar__logout" onclick="doLogout()">Salir</button>
     </div>
@@ -470,11 +470,11 @@
                     <option value="approved">Aprobadas</option>
                     <option value="rejected">Rechazadas</option>
                 </select>
-                <button class="btn btn--primary" onclick="openReviewModal()">+ Agregar resena</button>
+                <button class="btn btn--primary" onclick="openReviewModal()">+ Agregar reseña</button>
                 <button class="btn btn--ghost" onclick="loadReviews()">Actualizar</button>
             </div>
             <div id="reviews-list">
-                <div class="loading">Cargando resenas...</div>
+                <div class="loading">Cargando reseñas...</div>
             </div>
         </div>
     </div>
@@ -509,7 +509,7 @@
 <!-- Create/Edit Review Modal -->
 <div class="modal-overlay" id="modal-review">
     <div class="modal">
-        <h2 id="review-modal-title">Agregar resena</h2>
+        <h2 id="review-modal-title">Agregar reseña</h2>
         <input type="hidden" id="review-edit-id">
         <label for="review-name">Nombre</label>
         <input type="text" id="review-name" placeholder="Nombre del cliente">
@@ -524,7 +524,7 @@
             <option value="1">1 estrella</option>
         </select>
         <label for="review-comment">Comentario</label>
-        <textarea id="review-comment" placeholder="Comentario de la resena..."></textarea>
+        <textarea id="review-comment" placeholder="Comentario de la reseña..."></textarea>
         <div class="modal__actions">
             <button class="btn btn--ghost" onclick="closeModal('modal-review')">Cancelar</button>
             <button class="btn btn--primary" onclick="saveReview()">Guardar</button>
@@ -810,11 +810,11 @@
     function loadReviews() {
         var filter = document.getElementById('review-filter-select').value;
         var container = document.getElementById('reviews-list');
-        container.innerHTML = '<div class="loading">Cargando resenas...</div>';
+        container.innerHTML = '<div class="loading">Cargando reseñas...</div>';
 
         apiFetch('/admin/reviews?filter=' + filter).then(function(data) {
             if (!data.reviews || data.reviews.length === 0) {
-                container.innerHTML = '<div class="empty-state"><p>No hay resenas</p></div>';
+                container.innerHTML = '<div class="empty-state"><p>No hay reseñas</p></div>';
                 return;
             }
             container.innerHTML = data.reviews.map(function(r) {
@@ -858,7 +858,7 @@
     }
 
     function openReviewModal(review) {
-        document.getElementById('review-modal-title').textContent = review ? 'Editar resena' : 'Agregar resena';
+        document.getElementById('review-modal-title').textContent = review ? 'Editar reseña' : 'Agregar reseña';
         document.getElementById('review-edit-id').value = review ? review.id : '';
         document.getElementById('review-name').value = review ? review.name : '';
         document.getElementById('review-website').value = review ? review.website : '';
@@ -917,7 +917,7 @@
     }
 
     function deleteReview(id) {
-        if (!confirm('Eliminar esta resena?')) return;
+        if (!confirm('Eliminar esta reseña?')) return;
         apiFetch('/admin/reviews/' + id, { method: 'DELETE' }).then(function() { loadReviews(); });
     }
 
