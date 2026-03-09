@@ -309,6 +309,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 return '$ ' + intPart + ',' + parts[1];
             }
 
+            function esc(s) {
+                var d = document.createElement('div');
+                d.textContent = s;
+                return d.innerHTML;
+            }
+
             async function cotizarEnvio() {
                 var origen = document.getElementById('cotOrigen').value.trim();
                 var destino = document.getElementById('cotDestino').value.trim();
@@ -373,9 +379,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         var price = s.precio || s.price || 0;
                         var time = s.plazo || '';
                         html += '<div class="cotizador-card">';
-                        html += '<div><div class="service-name">' + name + (tipo ? ' — ' + tipo : '') + '</div>';
+                        html += '<div><div class="service-name">' + esc(name) + (tipo ? ' — ' + esc(tipo) : '') + '</div>';
                         if (time) {
-                            html += '<div class="service-time">Plazo estimado: ' + time + '</div>';
+                            html += '<div class="service-time">Plazo estimado: ' + esc(time) + '</div>';
                         }
                         html += '</div>';
                         html += '<div class="service-price">' + formatPrice(price) + '</div>';
