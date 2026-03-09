@@ -287,6 +287,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li>Soporte por email</li>
             </ul>
 
+            <div class="discount-row" id="discount-row">
+                <input type="text" id="discount-input" placeholder="Codigo de descuento" style="text-transform:uppercase">
+                <button type="button" id="discount-apply-btn">Aplicar</button>
+            </div>
+            <div class="discount-msg" id="discount-msg"></div>
+
             <a href="#" class="pricing-card__btn" id="buy-btn">Comprar ahora</a>
         </div>
         <p class="pricing__guarantee">Pago seguro via Mercado Pago. Tu licencia se entrega al instante. Renovacion al 50% de descuento.</p>
@@ -329,19 +335,65 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     document.getElementById('price-display').innerHTML = PRICE_DISPLAY + ' <span>ARS</span>';
 
+    var appliedDiscount = null;
+
+    // Discount code handling
+    document.getElementById('discount-apply-btn').addEventListener('click', function() {
+        var code = document.getElementById('discount-input').value.trim().toUpperCase();
+        var msg = document.getElementById('discount-msg');
+        if (!code) { msg.textContent = 'Ingresa un codigo de descuento.'; msg.className = 'discount-msg error'; return; }
+
+        msg.textContent = 'Validando...';
+        msg.className = 'discount-msg';
+
+        fetch(API_URL + '/discount/validate', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ code: code })
+        })
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            if (data.valid) {
+                appliedDiscount = data.code;
+                var desc = data.type === 'percentage' ? data.value + '% de descuento' : '$' + data.value.toLocaleString('es-AR') + ' de descuento';
+                msg.textContent = desc + (data.description ? ' — ' + data.description : '');
+                msg.className = 'discount-msg success';
+                // Update price display
+                var priceEl = document.getElementById('price-display');
+                priceEl.innerHTML = '<span class="discount-original-price">' + PRICE_DISPLAY + '</span>$' + data.final_price.toLocaleString('es-AR') + ' <span>ARS</span>';
+            } else {
+                appliedDiscount = null;
+                msg.textContent = data.error || 'Codigo invalido.';
+                msg.className = 'discount-msg error';
+                document.getElementById('price-display').innerHTML = PRICE_DISPLAY + ' <span>ARS</span>';
+            }
+        })
+        .catch(function() {
+            msg.textContent = 'Error de conexion.';
+            msg.className = 'discount-msg error';
+        });
+    });
+
+    document.getElementById('discount-input').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') { e.preventDefault(); document.getElementById('discount-apply-btn').click(); }
+    });
+
     document.getElementById('buy-btn').addEventListener('click', function(e) {
         e.preventDefault();
+        var payload = { price: PRICE_ARS };
+        if (appliedDiscount) payload.discount_code = appliedDiscount;
+
         fetch(API_URL + '/checkout/create', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ price: PRICE_ARS })
+            body: JSON.stringify(payload)
         })
         .then(function(r) { return r.json(); })
         .then(function(data) {
             if (data.checkout_url) {
                 window.location.href = data.checkout_url;
             } else {
-                alert('Error al crear el pago. Intenta de nuevo.');
+                alert(data.error || 'Error al crear el pago. Intenta de nuevo.');
             }
         })
         .catch(function() {
