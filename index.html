@@ -463,7 +463,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         });
 
     var params = new URLSearchParams(window.location.search);
-    var paymentId = params.get('payment_id');
+    var sid = params.get('sid');
     var renewKey = params.get('renew');
     var status = params.get('status');
 
@@ -502,8 +502,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
 
     // Handle new purchase success
-    if (paymentId && status !== 'renewed') {
-        fetch(API_URL + '/checkout/success?payment_id=' + paymentId)
+    if (sid && status === 'approved') {
+        fetch(API_URL + '/checkout/success?sid=' + sid)
         .then(function(r) { return r.json(); })
         .then(function(data) {
             if (data.license_key) {
