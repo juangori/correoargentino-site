@@ -138,8 +138,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="hero__badge">Plugin Premium para WooCommerce</span>
             <h1>Correo Argentino Pro</h1>
             <p>La integración profesional con Correo Argentino que tu tienda necesita. Cotización en tiempo real, mapa de sucursales, etiquetas, tracking y más.</p>
-            <a href="#comprar" class="hero__cta">Comprar ahora</a>
-            <span class="hero__price">Licencia anual &middot; Actualizaciones y soporte incluidos</span>
+            <a href="#precio" class="hero__cta">Probar gratis por 15 días</a>
+            <span class="hero__price">Sin tarjeta de crédito &middot; Todas las funciones incluidas</span>
         </div>
     </div>
 </header>
@@ -286,38 +286,63 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- Pricing -->
-<section class="pricing" id="comprar">
+<section class="pricing" id="precio">
     <div class="container">
         <h2 class="pricing__title">Simple, transparente, sin sorpresas</h2>
-        <p class="pricing__subtitle">Licencia anual para 1 sitio. Renovación con descuento asegurado.</p>
+        <p class="pricing__subtitle">Probalo gratis o comprá la licencia completa. Todas las funciones incluidas.</p>
 
-        <div class="pricing-card">
-            <div class="pricing-card__name">Licencia anual</div>
-            <div class="pricing-card__price" id="price-display"></div>
-            <div class="pricing-card__period">por año &middot; 1 sitio</div>
+        <div class="pricing-grid">
+            <!-- Free Trial Card -->
+            <div class="pricing-card pricing-card--trial">
+                <div class="pricing-card__name">Prueba gratuita</div>
+                <div class="pricing-card__price">Gratis</div>
+                <div class="pricing-card__period">15 días &middot; sin compromiso</div>
 
-            <ul class="pricing-card__features">
-                <li>Cotización en tiempo real (MiCorreo)</li>
-                <li>Selector de sucursales con mapa interactivo</li>
-                <li>Creación de envíos (MiCorreo + Paq.Ar)</li>
-                <li>Etiquetas PDF (Paq.Ar)</li>
-                <li>Tracking automático con notificaciones</li>
-                <li>Acciones masivas y exportación CSV</li>
-                <li>Wizard de configuración y diagnóstico</li>
-                <li>Compatible con HPOS y Checkout por bloques</li>
-                <li>Actualizaciones automáticas</li>
-                <li>Soporte por email</li>
-            </ul>
+                <ul class="pricing-card__features">
+                    <li>Cotización en tiempo real (MiCorreo)</li>
+                    <li>Selector de sucursales con mapa interactivo</li>
+                    <li>Creación de envíos (MiCorreo + Paq.Ar)</li>
+                    <li>Etiquetas PDF (Paq.Ar)</li>
+                    <li>Tracking automático con notificaciones</li>
+                    <li>Acciones masivas y exportación CSV</li>
+                    <li>Wizard de configuración y diagnóstico</li>
+                    <li>Compatible con HPOS y Checkout por bloques</li>
+                </ul>
 
-            <div class="discount-row" id="discount-row">
-                <input type="text" id="discount-input" placeholder="Código de descuento" style="text-transform:uppercase">
-                <button type="button" id="discount-apply-btn">Aplicar</button>
+                <a href="#" class="pricing-card__btn pricing-card__btn--trial" id="download-btn" download>Descargar gratis</a>
+                <p class="pricing-card__note">Sin tarjeta de crédito. Se desactiva a los 15 días.</p>
             </div>
-            <div class="discount-msg" id="discount-msg"></div>
 
-            <a href="#" class="pricing-card__btn" id="buy-btn">Comprar ahora</a>
+            <!-- Paid License Card -->
+            <div class="pricing-card pricing-card--featured" id="comprar">
+                <div class="pricing-card__badge">Recomendado</div>
+                <div class="pricing-card__name">Licencia anual</div>
+                <div class="pricing-card__price" id="price-display"></div>
+                <div class="pricing-card__period">por año &middot; 1 sitio</div>
+
+                <ul class="pricing-card__features">
+                    <li>Cotización en tiempo real (MiCorreo)</li>
+                    <li>Selector de sucursales con mapa interactivo</li>
+                    <li>Creación de envíos (MiCorreo + Paq.Ar)</li>
+                    <li>Etiquetas PDF (Paq.Ar)</li>
+                    <li>Tracking automático con notificaciones</li>
+                    <li>Acciones masivas y exportación CSV</li>
+                    <li>Wizard de configuración y diagnóstico</li>
+                    <li>Compatible con HPOS y Checkout por bloques</li>
+                    <li><strong>Actualizaciones automáticas</strong></li>
+                    <li><strong>Soporte prioritario por email</strong></li>
+                </ul>
+
+                <div class="discount-row" id="discount-row">
+                    <input type="text" id="discount-input" placeholder="Código de descuento" style="text-transform:uppercase">
+                    <button type="button" id="discount-apply-btn">Aplicar</button>
+                </div>
+                <div class="discount-msg" id="discount-msg"></div>
+
+                <a href="#" class="pricing-card__btn" id="buy-btn">Comprar ahora</a>
+            </div>
         </div>
-        <p class="pricing__guarantee">Pago seguro via Mercado Pago. Tu licencia se entrega al instante. Renovación al 50% de descuento.</p>
+        <p class="pricing__guarantee">Pago seguro vía Mercado Pago. Tu licencia se entrega al instante. Renovación al 50% de descuento.</p>
     </div>
 </section>
 
@@ -356,6 +381,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var PRICE_DISPLAY = '$' + PRICE_ARS.toLocaleString('es-AR');
 
     document.getElementById('price-display').innerHTML = PRICE_DISPLAY + ' <span>ARS</span>';
+    document.getElementById('download-btn').href = API_URL + '/download/free';
 
     var appliedDiscount = null;
 
