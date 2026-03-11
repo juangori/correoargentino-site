@@ -183,6 +183,60 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </section>
 
+<!-- Screenshots -->
+<section class="screenshots" id="capturas">
+    <div class="container">
+        <h2 class="screenshots__title">Mira el plugin en accion</h2>
+        <p class="screenshots__subtitle">Interfaz profesional para tu tienda y tu panel de administracion</p>
+        <div class="screenshots__carousel">
+            <div class="screenshots__track" id="screenshots-track">
+                <div class="screenshots__slide active">
+                    <img src="assets/screenshot-map.png" alt="Selector de sucursales con mapa interactivo" loading="lazy">
+                    <div class="screenshots__caption">
+                        <strong>Mapa de sucursales</strong>
+                        <span>Tus clientes eligen sucursal con mapa interactivo, busqueda y geolocalizacion</span>
+                    </div>
+                </div>
+                <div class="screenshots__slide">
+                    <img src="assets/screenshot-cart.png" alt="Carrito con opciones de envio y sucursal seleccionada" loading="lazy">
+                    <div class="screenshots__caption">
+                        <strong>Envio en el carrito</strong>
+                        <span>Cotizacion en tiempo real con opcion de domicilio o sucursal</span>
+                    </div>
+                </div>
+                <div class="screenshots__slide">
+                    <img src="assets/screenshot-dashboard.png" alt="Panel de administracion del plugin" loading="lazy">
+                    <div class="screenshots__caption">
+                        <strong>Dashboard del plugin</strong>
+                        <span>Estadisticas de envios, estado de conexion y acciones rapidas</span>
+                    </div>
+                </div>
+                <div class="screenshots__slide">
+                    <img src="assets/screenshot-diagnostics.png" alt="Pagina de diagnostico del sistema" loading="lazy">
+                    <div class="screenshots__caption">
+                        <strong>Diagnostico del sistema</strong>
+                        <span>Verificacion automatica de requisitos, credenciales y conexion API</span>
+                    </div>
+                </div>
+            </div>
+            <div class="screenshots__nav">
+                <button class="screenshots__arrow screenshots__arrow--prev" aria-label="Anterior" onclick="slideScreenshots(-1)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                <div class="screenshots__dots" id="screenshots-dots">
+                    <button class="screenshots__dot active" onclick="goToSlide(0)"></button>
+                    <button class="screenshots__dot" onclick="goToSlide(1)"></button>
+                    <button class="screenshots__dot" onclick="goToSlide(2)"></button>
+                    <button class="screenshots__dot" onclick="goToSlide(3)"></button>
+                </div>
+                <button class="screenshots__arrow screenshots__arrow--next" aria-label="Siguiente" onclick="slideScreenshots(1)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Cotizador -->
 <section class="features" id="cotizador">
     <div class="container">
@@ -586,6 +640,30 @@ function homeCotizar() {
     })
     .finally(function() { loading.style.display = 'none'; btn.disabled = false; });
 }
+
+// Screenshots carousel
+var _ssIdx = 0;
+var _ssTotal = 4;
+var _ssAuto;
+
+function goToSlide(i) {
+    _ssIdx = i;
+    var slides = document.querySelectorAll('.screenshots__slide');
+    var dots = document.querySelectorAll('.screenshots__dot');
+    slides.forEach(function(s, idx) { s.classList.toggle('active', idx === i); });
+    dots.forEach(function(d, idx) { d.classList.toggle('active', idx === i); });
+    resetAutoSlide();
+}
+
+function slideScreenshots(dir) {
+    goToSlide((_ssIdx + dir + _ssTotal) % _ssTotal);
+}
+
+function resetAutoSlide() {
+    clearInterval(_ssAuto);
+    _ssAuto = setInterval(function() { slideScreenshots(1); }, 5000);
+}
+resetAutoSlide();
 </script>
 
 </body>
