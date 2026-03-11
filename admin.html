@@ -403,6 +403,7 @@
         <span class="topbar__brand">CA Pro Admin</span>
         <div class="topbar__nav">
             <button class="active" onclick="showPanel('licenses', this)">Licencias</button>
+            <button onclick="showPanel('trials', this)">Pruebas</button>
             <button onclick="showPanel('messages', this)">Mensajes</button>
             <button onclick="showPanel('reviews', this)">Reseñas</button>
             <button onclick="showPanel('discounts', this)">Descuentos</button>
@@ -451,6 +452,33 @@
                     </thead>
                     <tbody id="licenses-tbody">
                         <tr><td colspan="7" class="loading">Cargando...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Trials Panel -->
+        <div class="panel" id="panel-trials">
+            <div class="toolbar">
+                <select id="trial-filter-select" onchange="renderTrials()">
+                    <option value="all">Todas</option>
+                    <option value="active">Activas</option>
+                    <option value="expired">Expiradas</option>
+                </select>
+                <button class="btn btn--ghost" onclick="loadTrials()">Actualizar</button>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dominio</th>
+                            <th>Estado</th>
+                            <th>Días restantes</th>
+                            <th>Inicio</th>
+                        </tr>
+                    </thead>
+                    <tbody id="trials-tbody">
+                        <tr><td colspan="4" class="loading">Cargando...</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -854,6 +882,7 @@
         if (name === 'messages') loadMessages();
         if (name === 'reviews') loadReviews();
         if (name === 'discounts') loadDiscounts();
+        if (name === 'trials') loadTrials();
         if (name === 'licenses') { loadLicenses(); loadStats(); }
     }
 
@@ -981,6 +1010,46 @@
     function deleteReview(id) {
         if (!confirm('Eliminar esta reseña?')) return;
         apiFetch('/admin/reviews/' + id, { method: 'DELETE' }).then(function() { loadReviews(); });
+    }
+
+    // Trials
+    var trialsData = [];
+    function loadTrials() {
+        var tbody = document.getElementById('trials-tbody');
+        tbody.innerHTML = '<tr><td colspan="4" class="loading">Cargando...</td></tr>';
+        apiFetch('/admin/trials').then(function(data) {
+            trialsData = data.trials || [];
+            renderTrials();
+        }).catch(function() {
+            tbody.innerHTML = '<tr><td colspan="4" class="loading">Error al cargar</td></tr>';
+        });
+    }
+
+    function renderTrials() {
+        var tbody = document.getElementById('trials-tbody');
+        var filter = document.getElementById('trial-filter-select').value;
+        var filtered = trialsData.filter(function(t) {
+            if (filter === 'active') return t.active;
+            if (filter === 'expired') return !t.active;
+            return true;
+        });
+
+        if (filtered.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="4" class="loading">No hay pruebas registradas</td></tr>';
+            return;
+        }
+
+        tbody.innerHTML = filtered.map(function(t) {
+            var statusClass = t.active ? 'badge--green' : 'badge--red';
+            var statusText = t.active ? 'Activa' : 'Expirada';
+            var startDate = new Date(t.started_at).toLocaleDateString('es-AR');
+            return '<tr>' +
+                '<td><strong>' + escapeHtml(t.domain) + '</strong></td>' +
+                '<td><span class="badge ' + statusClass + '">' + statusText + '</span></td>' +
+                '<td>' + t.days_remaining + ' días</td>' +
+                '<td>' + startDate + '</td>' +
+                '</tr>';
+        }).join('');
     }
 
     // Discounts
