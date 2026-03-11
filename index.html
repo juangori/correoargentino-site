@@ -184,57 +184,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- Screenshots -->
-<section class="screenshots" id="capturas">
+<section class="ss" id="capturas">
     <div class="container">
-        <h2 class="screenshots__title">Mirá el plugin en acción</h2>
-        <p class="screenshots__subtitle">Interfaz profesional para tu tienda y tu panel de administración</p>
-        <div class="screenshots__carousel">
-          <div class="screenshots__track-wrapper">
-            <div class="screenshots__track" id="screenshots-track">
-                <div class="screenshots__slide">
-                    <img src="assets/screenshot-map.png" alt="Selector de sucursales con mapa interactivo" loading="lazy">
-                    <div class="screenshots__caption">
-                        <strong>Mapa de sucursales</strong>
-                        <span>Tus clientes eligen sucursal con mapa interactivo, búsqueda y geolocalización</span>
-                    </div>
-                </div>
-                <div class="screenshots__slide">
-                    <img src="assets/screenshot-cart.png" alt="Carrito con opciones de envio y sucursal seleccionada" loading="lazy">
-                    <div class="screenshots__caption">
-                        <strong>Envío en el carrito</strong>
-                        <span>Cotización en tiempo real con opción de domicilio o sucursal</span>
-                    </div>
-                </div>
-                <div class="screenshots__slide">
-                    <img src="assets/screenshot-dashboard.png" alt="Panel de administración del plugin" loading="lazy">
-                    <div class="screenshots__caption">
-                        <strong>Dashboard del plugin</strong>
-                        <span>Estadísticas de envíos, estado de conexión y acciones rápidas</span>
-                    </div>
-                </div>
-                <div class="screenshots__slide">
-                    <img src="assets/screenshot-diagnostics.png" alt="Página de diagnóstico del sistema" loading="lazy">
-                    <div class="screenshots__caption">
-                        <strong>Diagnóstico del sistema</strong>
-                        <span>Verificación automática de requisitos, credenciales y conexión API</span>
-                    </div>
-                </div>
+        <h2 class="ss__title">Mirá el plugin en acción</h2>
+        <p class="ss__sub">Interfaz profesional para tu tienda y tu panel de administración</p>
+        <div class="ss__wrap">
+            <button class="ss__arr ss__arr--l" onclick="ssGo(-1)" aria-label="Anterior">&#8249;</button>
+            <div class="ss__frame">
+                <img id="ss-img" src="assets/screenshot-map.png" alt="">
             </div>
-          </div>
-            <div class="screenshots__nav">
-                <button class="screenshots__arrow screenshots__arrow--prev" aria-label="Anterior" onclick="slideScreenshots(-1)">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-                </button>
-                <div class="screenshots__dots" id="screenshots-dots">
-                    <button class="screenshots__dot active" onclick="goToSlide(0)"></button>
-                    <button class="screenshots__dot" onclick="goToSlide(1)"></button>
-                    <button class="screenshots__dot" onclick="goToSlide(2)"></button>
-                    <button class="screenshots__dot" onclick="goToSlide(3)"></button>
-                </div>
-                <button class="screenshots__arrow screenshots__arrow--next" aria-label="Siguiente" onclick="slideScreenshots(1)">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-                </button>
-            </div>
+            <button class="ss__arr ss__arr--r" onclick="ssGo(1)" aria-label="Siguiente">&#8250;</button>
+        </div>
+        <p class="ss__label" id="ss-label"><strong>Mapa de sucursales</strong> — Tus clientes eligen sucursal con mapa interactivo, búsqueda y geolocalización</p>
+        <div class="ss__dots" id="ss-dots">
+            <button class="ss__dot active" onclick="ssSet(0)"></button>
+            <button class="ss__dot" onclick="ssSet(1)"></button>
+            <button class="ss__dot" onclick="ssSet(2)"></button>
+            <button class="ss__dot" onclick="ssSet(3)"></button>
         </div>
     </div>
 </section>
@@ -643,73 +609,29 @@ function homeCotizar() {
     .finally(function() { loading.style.display = 'none'; btn.disabled = false; });
 }
 
-// Screenshots carousel — horizontal slide + touch swipe
-(function() {
-    var track = document.getElementById('screenshots-track');
-    var dots = document.querySelectorAll('.screenshots__dot');
-    var idx = 0;
-    var total = 4;
-    var autoTimer;
-
-    function goTo(i) {
-        idx = i;
-        track.style.transform = 'translateX(-' + (idx * 100) + '%)';
-        dots.forEach(function(d, j) { d.classList.toggle('active', j === idx); });
-        resetAuto();
-    }
-
-    function resetAuto() {
-        clearInterval(autoTimer);
-        autoTimer = setInterval(function() { goTo((idx + 1) % total); }, 5000);
-    }
-
-    // Expose globally for onclick handlers
-    window.goToSlide = goTo;
-    window.slideScreenshots = function(dir) { goTo((idx + dir + total) % total); };
-
-    // Touch / mouse drag
-    var startX = 0, startY = 0, dragging = false, dx = 0, isHorizontal = null;
-
-    track.addEventListener('mousedown', function(e) { startDrag(e.clientX, e.clientY); e.preventDefault(); });
-    track.addEventListener('touchstart', function(e) { startDrag(e.touches[0].clientX, e.touches[0].clientY); }, { passive: true });
-
-    function startDrag(x, y) { startX = x; startY = y; dragging = true; dx = 0; isHorizontal = null; track.classList.add('dragging'); }
-
-    function onMove(x, y) {
-        if (!dragging) return;
-        dx = x - startX;
-        var dy = y - startY;
-        if (isHorizontal === null) {
-            if (Math.abs(dx) > 5 || Math.abs(dy) > 5) isHorizontal = Math.abs(dx) > Math.abs(dy);
-            else return;
-        }
-        if (!isHorizontal) return;
-        var pct = (idx * 100) - (dx / track.offsetWidth * 100);
-        track.style.transform = 'translateX(-' + pct + '%)';
-    }
-
-    document.addEventListener('mousemove', function(e) { onMove(e.clientX, e.clientY); });
-    document.addEventListener('touchmove', function(e) { onMove(e.touches[0].clientX, e.touches[0].clientY); }, { passive: true });
-
-    function endDrag() {
-        if (!dragging) return;
-        dragging = false;
-        track.classList.remove('dragging');
-        if (isHorizontal && Math.abs(dx) > 40) {
-            goTo(Math.max(0, Math.min(total - 1, idx + (dx < 0 ? 1 : -1))));
-        } else {
-            goTo(idx);
-        }
-    }
-
-    document.addEventListener('mouseup', endDrag);
-    document.addEventListener('touchend', endDrag);
-
-    // Prevent click after drag
-    track.addEventListener('click', function(e) { if (Math.abs(dx) > 10) e.preventDefault(); }, true);
-
-    resetAuto();
-})();
+// Screenshots carousel
+var _ss = [
+    { src: 'assets/screenshot-map.png', label: '<strong>Mapa de sucursales</strong> — Tus clientes eligen sucursal con mapa interactivo, búsqueda y geolocalización' },
+    { src: 'assets/screenshot-cart.png', label: '<strong>Envío en el carrito</strong> — Cotización en tiempo real con opción de domicilio o sucursal' },
+    { src: 'assets/screenshot-dashboard.png', label: '<strong>Dashboard del plugin</strong> — Estadísticas de envíos, estado de conexión y acciones rápidas' },
+    { src: 'assets/screenshot-diagnostics.png', label: '<strong>Diagnóstico del sistema</strong> — Verificación automática de requisitos, credenciales y conexión API' }
+];
+var _ssI = 0, _ssT;
+function ssSet(i) {
+    _ssI = i;
+    var img = document.getElementById('ss-img');
+    img.style.opacity = '0';
+    setTimeout(function() {
+        img.src = _ss[i].src;
+        img.onload = function() { img.style.opacity = '1'; };
+    }, 200);
+    document.getElementById('ss-label').innerHTML = _ss[i].label;
+    document.querySelectorAll('.ss__dot').forEach(function(d, j) { d.classList.toggle('active', j === i); });
+    clearInterval(_ssT);
+    _ssT = setInterval(function() { ssGo(1); }, 5000);
+}
+function ssGo(d) { ssSet((_ssI + d + _ss.length) % _ss.length); }
+_ssT = setInterval(function() { ssGo(1); }, 5000);
 </script>
 
 </body>
