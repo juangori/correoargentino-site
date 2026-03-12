@@ -382,6 +382,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     document.getElementById('price-display').innerHTML = PRICE_DISPLAY + ' <span>ARS</span>';
     document.getElementById('download-btn').href = API_URL + '/download/free';
+    document.getElementById('download-btn').addEventListener('click', function() {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'descarga_gratis' });
+    });
 
     var appliedDiscount = null;
 
@@ -428,6 +432,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     document.getElementById('buy-btn').addEventListener('click', function(e) {
         e.preventDefault();
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'comprar_ahora', discount_code: appliedDiscount || '' });
         var payload = { price: PRICE_ARS };
         if (appliedDiscount) payload.discount_code = appliedDiscount;
 
@@ -607,6 +613,9 @@ function homeCotizar() {
         errDiv.style.display = 'block'; cards.style.display = 'none'; return;
     }
     _cotLastCall = now;
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'cotizar_envio', cot_origen: o, cot_destino: d, cot_peso: peso });
 
     btn.disabled = true; loading.style.display = 'block'; errDiv.style.display = 'none'; cards.style.display = 'none';
 
