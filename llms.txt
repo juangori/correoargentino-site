@@ -1,0 +1,81 @@
+# Correo Argentino Pro
+
+> Plugin premium de WooCommerce para integrar envíos de Correo Argentino en tiendas online de Argentina. Cotización en tiempo real, mapa de sucursales, etiquetas PDF, tracking automático y acciones masivas.
+
+## Acerca del producto
+
+Correo Argentino Pro es un plugin comercial para WordPress/WooCommerce que permite a tiendas online argentinas ofrecer envíos con Correo Argentino de forma profesional. Se integra con las APIs oficiales de MiCorreo (para PyMEs) y Paq.Ar (para empresas con acuerdo comercial).
+
+Características principales:
+- Cotización de envíos en tiempo real vía API de MiCorreo
+- Selector de sucursales con mapa interactivo Leaflet (+3000 sucursales)
+- Creación de envíos desde el panel de WooCommerce (MiCorreo y Paq.Ar)
+- Generación de etiquetas PDF / rótulos de envío
+- Tracking automático con timeline visual y notificaciones por email
+- Acciones masivas: crear envíos y etiquetas para múltiples pedidos a la vez
+- Exportación CSV de envíos
+- Reglas de envío gratis configurables
+- Servicios soportados: Clásico (a domicilio), Envío a sucursal, Expreso
+- Compatible con HPOS y checkout por bloques de WooCommerce
+- Wizard de configuración y diagnóstico integrado
+
+Precio: $49.990 ARS por año (licencia para 1 sitio). Prueba gratuita de 15 días sin tarjeta de crédito.
+Requisitos: WordPress 5.8+, WooCommerce 7.0+.
+Desarrollado por AD Webs (adwebs.com.ar).
+
+## Páginas principales
+
+- [Inicio](https://correoargentinopro.com/): Presentación del plugin, funcionalidades, capturas, cotizador de envíos, precios y descarga
+- [Cotizador de envíos](https://correoargentinopro.com/#cotizador): Herramienta gratuita para calcular el costo de envío con Correo Argentino
+- [Documentación / Ayuda](https://correoargentinopro.com/ayuda.html): Guías de instalación, configuración y uso del plugin
+- [Preguntas frecuentes](https://correoargentinopro.com/faqs.html): FAQs sobre el plugin, licencias, compatibilidad y soporte
+- [Blog](https://correoargentinopro.com/blog/): Artículos sobre envíos, WooCommerce y ecommerce en Argentina
+- [Contacto](https://correoargentinopro.com/contacto.html): Formulario de contacto y soporte
+
+## Temas del blog
+
+### Guías de envíos con Correo Argentino
+- [Cómo hacer un envío por Correo Argentino](https://correoargentinopro.com/blog/como-hacer-envio-correo-argentino.html)
+- [Cuánto cuesta enviar un paquete por Correo Argentino](https://correoargentinopro.com/blog/cuanto-cuesta-enviar-paquete-correo-argentino.html)
+- [Cuánto tarda un envío por Correo Argentino](https://correoargentinopro.com/blog/cuanto-tarda-envio-correo-argentino.html)
+- [Tipos de envío de Correo Argentino](https://correoargentinopro.com/blog/tipos-envio-correo-argentino.html)
+- [Cotizar envío Correo Argentino](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html)
+- [Seguimiento de envíos Correo Argentino](https://correoargentinopro.com/blog/seguimiento-envio-correo-argentino.html)
+- [Etiqueta de envío Correo Argentino](https://correoargentinopro.com/blog/etiqueta-envio-correo-argentino.html)
+- [Qué datos necesito para enviar un paquete](https://correoargentinopro.com/blog/que-datos-necesito-enviar-paquete-correo-argentino.html)
+- [Peso volumétrico en Correo Argentino](https://correoargentinopro.com/blog/peso-volumetrico-correo-argentino.html)
+- [Zonas de envío Correo Argentino](https://correoargentinopro.com/blog/zonas-envio-correo-argentino.html)
+- [Envío a sucursal vs domicilio](https://correoargentinopro.com/blog/envio-sucursal-vs-domicilio-correo-argentino.html)
+- [Embalaje y medidas máximas](https://correoargentinopro.com/blog/embalaje-medidas-maximas-correo-argentino.html)
+- [Qué es MiCorreo](https://correoargentinopro.com/blog/que-es-micorreo-correo-argentino.html)
+- [Cómo armar una encomienda](https://correoargentinopro.com/blog/como-armar-encomienda-correo-argentino.html)
+- [Enviar medicamentos por Correo Argentino](https://correoargentinopro.com/blog/enviar-medicamentos-correo-argentino.html)
+- [Declaración para envíos internacionales](https://correoargentinopro.com/blog/declaracion-envios-internacionales-correo-argentino.html)
+- [Mi envío no llega: qué hacer](https://correoargentinopro.com/blog/envio-correo-argentino-no-llega.html)
+- [Logística inversa y devoluciones](https://correoargentinopro.com/blog/logistica-inversa-devolucion-correo-argentino.html)
+
+### WooCommerce y ecommerce en Argentina
+- [Cómo integrar Correo Argentino en WooCommerce](https://correoargentinopro.com/blog/como-integrar-correo-argentino-woocommerce.html)
+- [Envíos Correo Argentino para tiendas online](https://correoargentinopro.com/blog/envios-correo-argentino-tienda-online.html)
+- [Paq.Ar en WooCommerce](https://correoargentinopro.com/blog/paqar-woocommerce.html)
+- [Envío gratis en WooCommerce con Correo Argentino](https://correoargentinopro.com/blog/envio-gratis-woocommerce-correo-argentino.html)
+- [Imprimir etiquetas masivas en WooCommerce](https://correoargentinopro.com/blog/imprimir-etiquetas-masivas-woocommerce.html)
+- [WooCommerce en Argentina: guía completa](https://correoargentinopro.com/blog/woocommerce-argentina-guia-completa.html)
+- [Reducir abandono de carrito en Argentina](https://correoargentinopro.com/blog/reducir-abandono-carrito-argentina.html)
+- [Mejores temas WooCommerce para Argentina](https://correoargentinopro.com/blog/mejores-temas-woocommerce-argentina.html)
+
+### Comparativas
+- [Mejor plugin de envíos para WooCommerce Argentina](https://correoargentinopro.com/blog/mejor-plugin-envios-argentina-woocommerce.html)
+- [Correo Argentino vs OCA vs Andreani](https://correoargentinopro.com/blog/correo-argentino-vs-oca-vs-andreani.html)
+- [Mercado Envíos vs Correo Argentino](https://correoargentinopro.com/blog/mercado-envios-vs-correo-argentino.html)
+- [Plugin oficial de Correo Argentino vs Pro](https://correoargentinopro.com/blog/correo-argentino-plugin-oficial-vs-pro.html)
+- [Tiendanube vs WooCommerce en Argentina](https://correoargentinopro.com/blog/tiendanube-vs-woocommerce-argentina.html)
+- [Alternativas a Tiendanube en Argentina](https://correoargentinopro.com/blog/alternativas-tiendanube-argentina.html)
+- [Alternativas a Shopify en Argentina](https://correoargentinopro.com/blog/alternativas-shopify-argentina.html)
+
+## Contacto
+
+- Soporte: soporte@correoargentinopro.com
+- Formulario de contacto: https://correoargentinopro.com/contacto.html
+- Documentación: https://correoargentinopro.com/ayuda.html
+- Desarrollador: AD Webs — https://adwebs.com.ar
