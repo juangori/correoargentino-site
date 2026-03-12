@@ -929,6 +929,11 @@ body {
     transform: translateY(-1px);
     text-decoration: none;
 }
+.legal__content .blog-cta__btn,
+.legal__content .blog-cta__btn:hover,
+.legal__content .blog-cta__btn:visited {
+    color: #fff;
+}
 
 /* Blog TOC */
 .blog-toc {
