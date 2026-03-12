@@ -191,5 +191,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </footer>
 
+<style>
+.blog-pagination{display:flex;justify-content:center;align-items:center;gap:8px;margin-top:40px;flex-wrap:wrap}
+.blog-pagination__btn{min-width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;border:1px solid var(--border);background:var(--surface);color:var(--text-muted);font-family:"Outfit",sans-serif;font-size:.9rem;font-weight:500;cursor:pointer;transition:all .2s;padding:0 12px}
+.blog-pagination__btn:hover{border-color:var(--primary-light);color:var(--text)}
+.blog-pagination__btn.active{background:linear-gradient(135deg,#3b82f6,#06b6d4);color:#fff;border-color:transparent}
+.blog-pagination__btn:disabled{opacity:.4;cursor:default}
+.blog-card[data-hidden]{display:none}
+</style>
+<script>
+(function(){
+var PER_PAGE=9,currentPage=1;
+var cards=Array.prototype.slice.call(document.querySelectorAll(".blog-card"));
+var grid=document.querySelector(".blog-grid");
+if(!grid||cards.length<=PER_PAGE)return;
+var pag=document.createElement("div");pag.className="blog-pagination";
+grid.parentNode.insertBefore(pag,grid.nextSibling);
+function render(){
+var totalPages=Math.ceil(cards.length/PER_PAGE);
+cards.forEach(function(c,i){
+if(i>=(currentPage-1)*PER_PAGE&&i<currentPage*PER_PAGE){c.removeAttribute("data-hidden");c.style.display="";}
+else{c.setAttribute("data-hidden","");c.style.display="none";}
+});
+var html='<button class="blog-pagination__btn" data-page="prev">\u2190 Anterior</button>';
+for(var p=1;p<=totalPages;p++){html+='<button class="blog-pagination__btn'+(p===currentPage?' active':'')+'" data-page="'+p+'">'+p+'</button>';}
+html+='<button class="blog-pagination__btn" data-page="next">Siguiente \u2192</button>';
+pag.innerHTML=html;
+pag.querySelector('[data-page="prev"]').disabled=currentPage===1;
+pag.querySelector('[data-page="next"]').disabled=currentPage===totalPages;
+pag.querySelectorAll(".blog-pagination__btn").forEach(function(btn){
+btn.addEventListener("click",function(){
+var v=this.getAttribute("data-page");
+if(v==="prev"&&currentPage>1)currentPage--;
+else if(v==="next"&&currentPage<totalPages)currentPage++;
+else if(v!=="prev"&&v!=="next")currentPage=parseInt(v);
+render();window.scrollTo({top:grid.offsetTop-100,behavior:"smooth"});
+});
+});
+}
+render();
+})();
+</script>
+
 </body>
 </html>
