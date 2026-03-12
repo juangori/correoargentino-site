@@ -128,6 +128,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             message: form.message.value
         };
 
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'enviar_mensaje', contact_subject: data.subject });
+
         fetch(API_URL + '/contact', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
