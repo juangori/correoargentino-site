@@ -61,6 +61,46 @@
         ]
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "El envío gratis aplica para retiro en sucursal tambien?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Si, cuándo configuras envío gratis en Correo Argentino Pro, aplica a todos los servicios habilitados, incluyendo retiro en sucursal. El cliente puede elegir la sucursal mas cercana desde el mapa del checkout y el envío sigue siendo gratis."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Puedo ofrecer envío gratis solo en algunos servicios?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Con el metodo nativo de WooCommerce, el envío gratuito es un metodo separado y no distingue entre servicios. Con Correo Argentino Pro, el envío gratis aplica a todos los servicios habilitados. Si queres que solo aplique a Clasico pero no a Expreso, podes combinar el metodo nativo de WooCommerce con las tarifas del plugin."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Como se que monto mínimo poner?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Analiza tu ticket promedio, tu margen bruto y tu costo de envío promedio. Una formula simple: el monto mínimo deberia ser al menos ticket promedio + 20%, y tu margen bruto en ese monto debe cubrir el costo de envío."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Afecta al SEO ofrecer envío gratis?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Indirectamente, si. Google valora la experiencia de usuario, y una tienda con envío gratis tiene menores tasas de rebote y mayor tiempo en pagina. Ademas, podes usar datos estructurados (shippingDetails en schema.org) para que Google muestre el beneficio de envío gratis en los resultados de busqueda."
+                }
+            }
+        ]
+    }
+    </script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
