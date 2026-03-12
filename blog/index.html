@@ -528,26 +528,118 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 .blog-card[data-hidden] {
     display: none;
 }
+.blog-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+.blog-pagination__btn {
+    min-width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-muted);
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 0 12px;
+}
+.blog-pagination__btn:hover {
+    border-color: var(--primary-light);
+    color: var(--text);
+}
+.blog-pagination__btn.active {
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    color: #fff;
+    border-color: transparent;
+}
+.blog-pagination__btn:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
 </style>
 
 <script>
 (function() {
+    var PER_PAGE = 9;
+    var currentPage = 1;
+    var currentFilter = 'all';
     var filters = document.querySelectorAll('.blog-filter');
-    var cards = document.querySelectorAll('.blog-card');
+    var allCards = Array.prototype.slice.call(document.querySelectorAll('.blog-card'));
+    var grid = document.querySelector('.blog-grid');
+
+    // Create pagination container
+    var pag = document.createElement('div');
+    pag.className = 'blog-pagination';
+    grid.parentNode.insertBefore(pag, grid.nextSibling);
+
+    function getVisible() {
+        return allCards.filter(function(c) {
+            return currentFilter === 'all' || c.getAttribute('data-category') === currentFilter;
+        });
+    }
+
+    function render() {
+        var visible = getVisible();
+        var totalPages = Math.max(1, Math.ceil(visible.length / PER_PAGE));
+        if (currentPage > totalPages) currentPage = totalPages;
+        var start = (currentPage - 1) * PER_PAGE;
+        var end = start + PER_PAGE;
+
+        allCards.forEach(function(c) { c.setAttribute('data-hidden', ''); });
+        visible.forEach(function(c, i) {
+            if (i >= start && i < end) c.removeAttribute('data-hidden');
+        });
+
+        // Build pagination
+        pag.innerHTML = '';
+        if (totalPages <= 1) return;
+
+        var prev = document.createElement('button');
+        prev.className = 'blog-pagination__btn';
+        prev.textContent = '\u2190';
+        prev.disabled = currentPage === 1;
+        prev.onclick = function() { currentPage--; render(); };
+        pag.appendChild(prev);
+
+        for (var p = 1; p <= totalPages; p++) {
+            (function(page) {
+                var btn = document.createElement('button');
+                btn.className = 'blog-pagination__btn' + (page === currentPage ? ' active' : '');
+                btn.textContent = page;
+                btn.onclick = function() { currentPage = page; render(); };
+                pag.appendChild(btn);
+            })(p);
+        }
+
+        var next = document.createElement('button');
+        next.className = 'blog-pagination__btn';
+        next.textContent = '\u2192';
+        next.disabled = currentPage === totalPages;
+        next.onclick = function() { currentPage++; render(); };
+        pag.appendChild(next);
+    }
+
     filters.forEach(function(btn) {
         btn.addEventListener('click', function() {
             filters.forEach(function(b) { b.classList.remove('active'); });
             btn.classList.add('active');
-            var cat = btn.getAttribute('data-filter');
-            cards.forEach(function(card) {
-                if (cat === 'all' || card.getAttribute('data-category') === cat) {
-                    card.removeAttribute('data-hidden');
-                } else {
-                    card.setAttribute('data-hidden', '');
-                }
-            });
+            currentFilter = btn.getAttribute('data-filter');
+            currentPage = 1;
+            render();
         });
     });
+
+    render();
 })();
 </script>
 </body>
