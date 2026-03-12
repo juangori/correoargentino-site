@@ -30,6 +30,31 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    <!-- Blog category hubs -->
+    <url>
+        <loc>https://correoargentinopro.com/blog/envios/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://correoargentinopro.com/blog/woocommerce/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://correoargentinopro.com/blog/guias/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://correoargentinopro.com/blog/comparativas/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
     <!-- Blog posts -->
     <url>
         <loc>https://correoargentinopro.com/blog/como-integrar-correo-argentino-woocommerce.html</loc>
@@ -189,6 +214,36 @@
     </url>
     <url>
         <loc>https://correoargentinopro.com/blog/woocommerce-argentina-guia-completa.html</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://correoargentinopro.com/blog/mercado-envios-vs-correo-argentino.html</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://correoargentinopro.com/blog/reducir-abandono-carrito-argentina.html</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://correoargentinopro.com/blog/mejores-temas-woocommerce-argentina.html</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://correoargentinopro.com/blog/alternativas-tiendanube-argentina.html</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://correoargentinopro.com/blog/alternativas-shopify-argentina.html</loc>
         <lastmod>2026-03-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
