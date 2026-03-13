@@ -134,8 +134,25 @@
             cursor: pointer;
             transition: all 0.2s;
         }
+        .topbar__nav button { position: relative; }
         .topbar__nav button:hover { color: var(--text); background: var(--surface); }
         .topbar__nav button.active { color: white; background: rgba(59,130,246,0.15); }
+        .nav-badge {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            min-width: 16px;
+            height: 16px;
+            padding: 0 4px;
+            background: var(--red);
+            color: #fff;
+            font-size: 10px;
+            font-weight: 700;
+            line-height: 16px;
+            text-align: center;
+            border-radius: 8px;
+            pointer-events: none;
+        }
         .topbar__logout {
             padding: 6px 14px;
             background: transparent;
@@ -326,6 +343,7 @@
             outline: none;
         }
         .modal input:focus, .modal select:focus, .modal textarea:focus { border-color: var(--primary); }
+        .modal select option { background: #1e293b; color: var(--text); }
         .modal textarea { min-height: 80px; resize: vertical; }
         .modal__actions { display: flex; gap: 10px; margin-top: 24px; justify-content: flex-end; }
 
@@ -407,12 +425,12 @@
     <div class="topbar">
         <span class="topbar__brand">CA Pro Admin</span>
         <div class="topbar__nav">
-            <button class="active" onclick="showPanel('licenses', this)">Licencias</button>
-            <button onclick="showPanel('trials', this)">Pruebas</button>
-            <button onclick="showPanel('messages', this)">Mensajes</button>
-            <button onclick="showPanel('reviews', this)">Reseñas</button>
-            <button onclick="showPanel('discounts', this)">Descuentos</button>
-            <button onclick="showPanel('tickets', this)">Tickets</button>
+            <button class="active" id="nav-licenses" onclick="showPanel('licenses', this)">Licencias</button>
+            <button id="nav-trials" onclick="showPanel('trials', this)">Pruebas</button>
+            <button id="nav-messages" onclick="showPanel('messages', this)">Mensajes</button>
+            <button id="nav-reviews" onclick="showPanel('reviews', this)">Reseñas</button>
+            <button id="nav-discounts" onclick="showPanel('discounts', this)">Descuentos</button>
+            <button id="nav-tickets" onclick="showPanel('tickets', this)">Tickets</button>
         </div>
         <a href="/" class="topbar__logout" style="text-decoration:none;">Ir al sitio</a>
         <button class="topbar__logout" onclick="doLogout()">Salir</button>
@@ -714,6 +732,7 @@
     window.viewTicket = viewTicket;
     window.updateTicketStatus = updateTicketStatus;
     window.sendTicketReply = sendTicketReply;
+    window.deleteTicket = deleteTicket;
 
     // Check saved token
     var saved = sessionStorage.getItem('cap_token');
@@ -782,7 +801,25 @@
             document.getElementById('stat-trials').textContent = s.activeTrials || 0;
             document.getElementById('stat-tickets').textContent = s.openTickets || 0;
             document.getElementById('stat-revenue').textContent = '$' + ((s.revenue || 0) / 1).toLocaleString('es-AR');
+
+            // Update nav badges
+            updateNavBadge('nav-tickets', s.openTickets || 0);
+            updateNavBadge('nav-messages', s.unreadMessages || 0);
+            updateNavBadge('nav-reviews', s.pendingReviews || 0);
         });
+    }
+
+    function updateNavBadge(btnId, count) {
+        var btn = document.getElementById(btnId);
+        if (!btn) return;
+        var existing = btn.querySelector('.nav-badge');
+        if (existing) existing.remove();
+        if (count > 0) {
+            var badge = document.createElement('span');
+            badge.className = 'nav-badge';
+            badge.textContent = count > 99 ? '99+' : count;
+            btn.appendChild(badge);
+        }
     }
 
     function loadLicenses() {
@@ -1261,7 +1298,7 @@
                     '<td>' + badge + '</td>' +
                     '<td>' + formatDate(t.created_at) + '</td>' +
                     '<td>' + (t.replies_count || 0) + '</td>' +
-                    '<td><button class="btn btn--ghost btn--small" onclick="viewTicket(\'' + t.id + '\')">Ver</button></td>' +
+                    '<td><button class="btn btn--ghost btn--small" onclick="viewTicket(\'' + t.id + '\')">Ver</button> <button class="btn btn--ghost btn--small" onclick="deleteTicket(\'' + t.id + '\')" style="color:var(--red)">Eliminar</button></td>' +
                     '</tr>';
             }).join('');
         });
@@ -1335,13 +1372,20 @@
             body: JSON.stringify({ message: msg })
         }).then(function(data) {
             if (data.success) {
-                alert('Respuesta enviada por email');
-                viewTicket(id); // Refresh detail
+                closeModal('modal-ticket');
                 loadTickets();
                 loadStats();
             } else {
                 alert('Error: ' + (data.error || 'desconocido'));
             }
+        });
+    }
+
+    function deleteTicket(id) {
+        if (!confirm('Eliminar este ticket?')) return;
+        apiFetch('/admin/tickets/' + id, { method: 'DELETE' }).then(function() {
+            loadTickets();
+            loadStats();
         });
     }
 
