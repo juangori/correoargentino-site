@@ -266,6 +266,10 @@
         .badge--pending { background: rgba(245,158,11,0.15); color: var(--orange); }
         .badge--approved { background: rgba(16,185,129,0.15); color: var(--green); }
         .badge--rejected { background: rgba(239,68,68,0.15); color: var(--red); }
+        .badge--green { background: rgba(16,185,129,0.15); color: var(--green); }
+        .badge--cyan { background: rgba(6,182,212,0.15); color: var(--accent); }
+        .badge--orange { background: rgba(245,158,11,0.15); color: var(--orange); }
+        .badge--red { background: rgba(239,68,68,0.15); color: var(--red); }
 
         /* Review cards */
         .review-card {
@@ -408,6 +412,7 @@
             <button onclick="showPanel('messages', this)">Mensajes</button>
             <button onclick="showPanel('reviews', this)">Reseñas</button>
             <button onclick="showPanel('discounts', this)">Descuentos</button>
+            <button onclick="showPanel('tickets', this)">Tickets</button>
         </div>
         <a href="/" class="topbar__logout" style="text-decoration:none;">Ir al sitio</a>
         <button class="topbar__logout" onclick="doLogout()">Salir</button>
@@ -422,6 +427,7 @@
             <div class="stat-card"><div class="stat-card__label">Expiradas</div><div class="stat-card__value stat-card__value--orange" id="stat-expired">-</div></div>
             <div class="stat-card"><div class="stat-card__label">Revocadas</div><div class="stat-card__value stat-card__value--red" id="stat-revoked">-</div></div>
             <div class="stat-card"><div class="stat-card__label">Pruebas</div><div class="stat-card__value stat-card__value--purple" id="stat-trials">-</div></div>
+            <div class="stat-card"><div class="stat-card__label">Tickets</div><div class="stat-card__value stat-card__value--orange" id="stat-tickets">-</div></div>
             <div class="stat-card"><div class="stat-card__label">Ingresos</div><div class="stat-card__value" id="stat-revenue">-</div></div>
         </div>
 
@@ -513,6 +519,37 @@
                         </tr>
                     </thead>
                     <tbody id="discounts-tbody">
+                        <tr><td colspan="7" class="loading">Cargando...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Tickets Panel -->
+        <div class="panel" id="panel-tickets">
+            <div class="toolbar">
+                <select id="ticket-filter-select" onchange="loadTickets()">
+                    <option value="all">Todos</option>
+                    <option value="new">Nuevos</option>
+                    <option value="in-progress">En progreso</option>
+                    <option value="resolved">Resueltos</option>
+                </select>
+                <button class="btn btn--ghost" onclick="loadTickets()">Actualizar</button>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Email</th>
+                            <th>Sitio</th>
+                            <th>Categoria</th>
+                            <th>Estado</th>
+                            <th>Fecha</th>
+                            <th>Resp.</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tickets-tbody">
                         <tr><td colspan="7" class="loading">Cargando...</td></tr>
                     </tbody>
                 </table>
@@ -617,6 +654,31 @@
     </div>
 </div>
 
+<!-- Ticket Detail Modal -->
+<div class="modal-overlay" id="modal-ticket">
+    <div class="modal" style="max-width:700px;">
+        <h2>Detalle del Ticket</h2>
+        <div id="ticket-detail-content"></div>
+        <div id="ticket-replies-thread" style="max-height:250px;overflow-y:auto;margin:12px 0;"></div>
+        <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px;">
+            <label style="white-space:nowrap;font-size:13px;color:var(--text-secondary);">Estado:</label>
+            <select id="ticket-status-select" style="flex:1;">
+                <option value="new">Nuevo</option>
+                <option value="in-progress">En progreso</option>
+                <option value="resolved">Resuelto</option>
+            </select>
+        </div>
+        <label style="font-size:13px;color:var(--text-secondary);margin-bottom:4px;display:block;">Responder:</label>
+        <textarea id="ticket-reply-text" rows="3" placeholder="Escribi tu respuesta..."></textarea>
+        <input type="hidden" id="ticket-detail-id">
+        <div class="modal__actions">
+            <button class="btn btn--ghost" onclick="closeModal('modal-ticket')">Cerrar</button>
+            <button class="btn btn--ghost" onclick="updateTicketStatus()">Guardar estado</button>
+            <button class="btn btn--primary" onclick="sendTicketReply()">Enviar respuesta</button>
+        </div>
+    </div>
+</div>
+
 <script>
 (function() {
     var API = 'https://api.correoargentinopro.com';
@@ -648,6 +710,10 @@
     window.toggleDiscount = toggleDiscount;
     window.editDiscount = editDiscount;
     window.deleteDiscount = deleteDiscount;
+    window.loadTickets = loadTickets;
+    window.viewTicket = viewTicket;
+    window.updateTicketStatus = updateTicketStatus;
+    window.sendTicketReply = sendTicketReply;
 
     // Check saved token
     var saved = sessionStorage.getItem('cap_token');
@@ -714,6 +780,7 @@
             document.getElementById('stat-expired').textContent = s.expired || 0;
             document.getElementById('stat-revoked').textContent = s.revoked || 0;
             document.getElementById('stat-trials').textContent = s.activeTrials || 0;
+            document.getElementById('stat-tickets').textContent = s.openTickets || 0;
             document.getElementById('stat-revenue').textContent = '$' + ((s.revenue || 0) / 1).toLocaleString('es-AR');
         });
     }
@@ -886,6 +953,7 @@
         if (name === 'reviews') loadReviews();
         if (name === 'discounts') loadDiscounts();
         if (name === 'trials') loadTrials();
+        if (name === 'tickets') loadTickets();
         if (name === 'licenses') { loadLicenses(); loadStats(); }
     }
 
@@ -1166,6 +1234,114 @@
         if (!confirm('Eliminar el descuento "' + code + '"?')) return;
         apiFetch('/admin/discounts/' + encodeURIComponent(code), { method: 'DELETE' }).then(function() {
             loadDiscounts();
+        });
+    }
+
+    // Tickets
+    function loadTickets() {
+        var tbody = document.getElementById('tickets-tbody');
+        tbody.innerHTML = '<tr><td colspan="7" class="loading">Cargando...</td></tr>';
+        apiFetch('/admin/tickets').then(function(data) {
+            var filter = document.getElementById('ticket-filter-select').value;
+            var tickets = (data.tickets || []).filter(function(t) {
+                return filter === 'all' || t.status === filter;
+            });
+            if (tickets.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="7" class="loading">No hay tickets</td></tr>';
+                return;
+            }
+            tbody.innerHTML = tickets.map(function(t) {
+                var statusMap = { 'new': 'badge--cyan', 'in-progress': 'badge--orange', 'resolved': 'badge--green' };
+                var statusLabel = { 'new': 'Nuevo', 'in-progress': 'En progreso', 'resolved': 'Resuelto' };
+                var badge = '<span class="badge ' + (statusMap[t.status] || '') + '">' + (statusLabel[t.status] || t.status) + '</span>';
+                return '<tr>' +
+                    '<td>' + escapeHtml(t.email || '-') + '</td>' +
+                    '<td style="max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">' + escapeHtml(t.site_url || '-') + '</td>' +
+                    '<td>' + escapeHtml(t.category || '-') + '</td>' +
+                    '<td>' + badge + '</td>' +
+                    '<td>' + formatDate(t.created_at) + '</td>' +
+                    '<td>' + (t.replies_count || 0) + '</td>' +
+                    '<td><button class="btn btn--ghost btn--small" onclick="viewTicket(\'' + t.id + '\')">Ver</button></td>' +
+                    '</tr>';
+            }).join('');
+        });
+    }
+
+    function viewTicket(id) {
+        apiFetch('/admin/tickets/' + id).then(function(data) {
+            if (data.error) { alert('Ticket no encontrado'); return; }
+            var t = data.ticket;
+            document.getElementById('ticket-detail-id').value = t.id;
+            document.getElementById('ticket-status-select').value = t.status;
+            document.getElementById('ticket-reply-text').value = '';
+
+            var html = '<dl class="detail-grid">' +
+                '<dt>Email</dt><dd>' + escapeHtml(t.email) + '</dd>' +
+                '<dt>Nombre</dt><dd>' + escapeHtml(t.name || '-') + '</dd>' +
+                '<dt>Sitio</dt><dd>' + escapeHtml(t.site_url || '-') + '</dd>' +
+                '<dt>Categoria</dt><dd>' + escapeHtml(t.category || '-') + '</dd>' +
+                '<dt>Plugin</dt><dd>v' + escapeHtml(t.cap_version || '?') + '</dd>' +
+                '<dt>WP / WC / PHP</dt><dd>' + escapeHtml(t.wp_version || '?') + ' / ' + escapeHtml(t.wc_version || '?') + ' / ' + escapeHtml(t.php_version || '?') + '</dd>' +
+                '<dt>Servicio</dt><dd>' + escapeHtml(t.service_type || '-') + '</dd>' +
+                '<dt>Fecha</dt><dd>' + formatDateTime(t.created_at) + '</dd>' +
+                '</dl>' +
+                '<div style="background:var(--surface);border-radius:8px;padding:12px;margin-top:12px;">' +
+                '<p style="color:var(--text-secondary);font-size:12px;margin-bottom:6px;">Descripcion:</p>' +
+                '<p style="white-space:pre-wrap;font-size:13px;">' + escapeHtml(t.description) + '</p></div>';
+            document.getElementById('ticket-detail-content').innerHTML = html;
+
+            // Render replies
+            var replies = t.replies || [];
+            var repliesHtml = '';
+            if (replies.length > 0) {
+                repliesHtml = '<p style="color:var(--text-secondary);font-size:12px;margin-bottom:8px;">Respuestas (' + replies.length + '):</p>';
+                repliesHtml += replies.map(function(r) {
+                    return '<div style="border-left:3px solid var(--primary);padding:8px 12px;margin-bottom:8px;background:var(--surface);border-radius:0 8px 8px 0;">' +
+                        '<p style="font-size:13px;white-space:pre-wrap;">' + escapeHtml(r.message) + '</p>' +
+                        '<p style="font-size:11px;color:var(--text-muted);margin-top:4px;">' + formatDateTime(r.created_at) + '</p>' +
+                        '</div>';
+                }).join('');
+            }
+            document.getElementById('ticket-replies-thread').innerHTML = repliesHtml;
+
+            openModal('modal-ticket');
+        });
+    }
+
+    function updateTicketStatus() {
+        var id = document.getElementById('ticket-detail-id').value;
+        var status = document.getElementById('ticket-status-select').value;
+        apiFetch('/admin/tickets/' + id, {
+            method: 'PUT',
+            body: JSON.stringify({ status: status })
+        }).then(function(data) {
+            if (data.success) {
+                closeModal('modal-ticket');
+                loadTickets();
+                loadStats();
+            } else {
+                alert('Error: ' + (data.error || 'desconocido'));
+            }
+        });
+    }
+
+    function sendTicketReply() {
+        var id = document.getElementById('ticket-detail-id').value;
+        var msg = document.getElementById('ticket-reply-text').value.trim();
+        if (!msg) { alert('Escribi un mensaje'); return; }
+
+        apiFetch('/admin/tickets/' + id + '/reply', {
+            method: 'POST',
+            body: JSON.stringify({ message: msg })
+        }).then(function(data) {
+            if (data.success) {
+                alert('Respuesta enviada por email');
+                viewTicket(id); // Refresh detail
+                loadTickets();
+                loadStats();
+            } else {
+                alert('Error: ' + (data.error || 'desconocido'));
+            }
         });
     }
 
