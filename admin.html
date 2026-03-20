@@ -427,6 +427,7 @@
         <div class="topbar__nav">
             <button class="active" id="nav-licenses" onclick="showPanel('licenses', this)">Licencias</button>
             <button id="nav-trials" onclick="showPanel('trials', this)">Pruebas</button>
+            <button id="nav-installs" onclick="showPanel('installs', this)">Instalados</button>
             <button id="nav-messages" onclick="showPanel('messages', this)">Mensajes</button>
             <button id="nav-reviews" onclick="showPanel('reviews', this)">Reseñas</button>
             <button id="nav-discounts" onclick="showPanel('discounts', this)">Descuentos</button>
@@ -505,6 +506,30 @@
                     </thead>
                     <tbody id="trials-tbody">
                         <tr><td colspan="4" class="loading">Cargando...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Installs Panel -->
+        <div class="panel" id="panel-installs">
+            <div class="toolbar">
+                <button class="btn btn--ghost" onclick="loadInstalls()">Actualizar</button>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dominio</th>
+                            <th>Versión plugin</th>
+                            <th>WP</th>
+                            <th>WC</th>
+                            <th>Primera vez</th>
+                            <th>Último ping</th>
+                        </tr>
+                    </thead>
+                    <tbody id="installs-tbody">
+                        <tr><td colspan="6" class="loading">Cargando...</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -994,6 +1019,7 @@
         if (name === 'reviews') loadReviews();
         if (name === 'discounts') loadDiscounts();
         if (name === 'trials') loadTrials();
+        if (name === 'installs') loadInstalls();
         if (name === 'tickets') loadTickets();
         if (name === 'licenses') { loadLicenses(); loadStats(); }
     }
@@ -1162,6 +1188,31 @@
                 '<td>' + startDate + '</td>' +
                 '</tr>';
         }).join('');
+    }
+
+    // Installs
+    function loadInstalls() {
+        var tbody = document.getElementById('installs-tbody');
+        tbody.innerHTML = '<tr><td colspan="6" class="loading">Cargando...</td></tr>';
+        apiFetch('/admin/installs').then(function(data) {
+            var installs = data.installs || [];
+            if (installs.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="6" class="loading">No hay instalaciones registradas</td></tr>';
+                return;
+            }
+            tbody.innerHTML = installs.map(function(i) {
+                return '<tr>' +
+                    '<td><strong>' + escapeHtml(i.domain) + '</strong></td>' +
+                    '<td>' + escapeHtml(i.cap_version || '-') + '</td>' +
+                    '<td>' + escapeHtml(i.wp_version || '-') + '</td>' +
+                    '<td>' + escapeHtml(i.wc_version || '-') + '</td>' +
+                    '<td>' + new Date(i.first_seen).toLocaleDateString('es-AR') + '</td>' +
+                    '<td>' + new Date(i.last_seen).toLocaleDateString('es-AR') + '</td>' +
+                    '</tr>';
+            }).join('');
+        }).catch(function() {
+            tbody.innerHTML = '<tr><td colspan="6" class="loading">Error al cargar</td></tr>';
+        });
     }
 
     // Discounts
