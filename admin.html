@@ -958,11 +958,15 @@
                 return;
             }
             container.innerHTML = data.messages.map(function(m) {
+                var websiteHtml = m.website
+                    ? '<div class="msg-card__subject"><a href="' + escapeHtml(m.website) + '" target="_blank" rel="noopener">' + escapeHtml(m.website) + '</a></div>'
+                    : '';
                 return '<div class="msg-card">' +
                     '<div class="msg-card__header">' +
                         '<div><span class="msg-card__from">' + escapeHtml(m.name) + '</span> <span class="msg-card__email">&lt;' + escapeHtml(m.email) + '&gt;</span></div>' +
                         '<button class="msg-card__delete" onclick="deleteMessage(\'' + m.id + '\', this)" title="Eliminar">Eliminar</button>' +
                     '</div>' +
+                    websiteHtml +
                     '<div class="msg-card__subject">' + escapeHtml(m.subject) + '</div>' +
                     '<div class="msg-card__body">' + escapeHtml(m.message) + '</div>' +
                     '<div class="msg-card__date">' + formatDateTime(m.created_at) + '</div>' +
