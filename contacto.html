@@ -88,6 +88,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </select>
             </div>
             <div class="contact-form__group">
+                <label for="website">Tu sitio web</label>
+                <input type="url" id="website" name="website" required placeholder="https://tusitioweb.com">
+            </div>
+            <div class="contact-form__group">
                 <label for="message">Mensaje</label>
                 <textarea id="message" name="message" required placeholder="Describe tu consulta con el mayor detalle posible..."></textarea>
             </div>
@@ -125,6 +129,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             name: form.name.value,
             email: form.email.value,
             subject: form.subject.value,
+            website: form.website.value,
             message: form.message.value
         };
 
