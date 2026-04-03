@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo Conectar WooCommerce con AFIP: Facturación Electrónica Automática</title>
+    <meta name="description" content="Guía para conectar WooCommerce con AFIP y automatizar la facturación electrónica. Plugins, configuración del webservice, y errores comunes a evitar.">
+    <link rel="canonical" href="https://correoargentinopro.com/blog/conectar-woocommerce-afip-factura-electronica.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Correo Argentino Pro">
+    <meta property="og:title" content="Cómo Conectar WooCommerce con AFIP: Facturación Electrónica Automática">
+    <meta property="og:description" content="Guía para conectar WooCommerce con AFIP y automatizar la facturación electrónica. Plugins, configuración del webservice, y errores comunes a evitar.">
+    <meta property="og:url" content="https://correoargentinopro.com/blog/conectar-woocommerce-afip-factura-electronica.html">
+    <meta property="og:image" content="https://correoargentinopro.com/og-image.png">
+    <meta property="og:locale" content="es_AR">
+    <meta property="article:published_time" content="2026-04-03">
+    <meta property="article:author" content="AD Webs">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Cómo Conectar WooCommerce con AFIP: Facturación Electrónica Automática",
+        "description": "Guía para conectar WooCommerce con AFIP y automatizar la facturación electrónica. Plugins, configuración del webservice, y errores comunes a evitar.",
+        "datePublished": "2026-04-03",
+        "dateModified": "2026-04-03",
+        "author": {
+            "@type": "Organization",
+            "name": "AD Webs",
+            "url": "https://adwebs.com.ar"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Correo Argentino Pro",
+            "url": "https://correoargentinopro.com"
+        },
+        "mainEntityOfPage": "https://correoargentinopro.com/blog/conectar-woocommerce-afip-factura-electronica.html"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Blog",
+                "item": "https://correoargentinopro.com/blog/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Cómo Conectar WooCommerce con AFIP: Facturación Electrónica Automática",
+                "item": "https://correoargentinopro.com/blog/conectar-woocommerce-afip-factura-electronica.html"
+            }
+        ]
+    }
+    </script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5PL6T2RH');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PL6T2RH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="page-header">
+    <nav class="navbar">
+        <div class="navbar__inner">
+            <a href="/" class="navbar__brand">
+                <svg width="38" height="38" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="nEnv" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient>
+                        <linearGradient id="nPro" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient>
+                    </defs>
+                    <rect x="6" y="18" width="56" height="40" rx="8" fill="white" opacity="0.95"/>
+                    <path d="M6 24 L34 44 L62 24" stroke="url(#nEnv)" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <rect x="40" y="44" width="36" height="20" rx="7" fill="url(#nPro)"/>
+                    <text x="58" y="58.5" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="12.5" font-weight="800" fill="white" letter-spacing="2.5">PRO</text>
+                </svg>
+                <span class="navbar__brand-text">CA Pro</span>
+            </a>
+            <button class="navbar__toggle" aria-label="Menu" onclick="document.querySelector('.navbar__menu').classList.toggle('open')">&#9776;</button>
+            <ul class="navbar__menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="../ayuda.html">Ayuda</a></li>
+                <li><a href="../faqs.html">FAQs</a></li>
+                <li><a href="./" class="active">Blog</a></li>
+                <li><a href="../contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="page-header__body">
+        <p class="page-header__breadcrumb"><a href="./">Blog</a> &rarr;</p>
+        <h1>Cómo Conectar WooCommerce con AFIP: Facturación Electrónica Automática</h1>
+        <p>Automatizá la facturación de tu tienda online con AFIP &middot; 3 de abril, 2026</p>
+    </div>
+</header>
+
+<main>
+<article class="legal">
+    <div class="container">
+        <div class="legal__content">
+
+            <p>Si vendes online en Argentina, emitir <strong>facturas electronicas</strong> a traves de AFIP no es opcional: es una obligacion fiscal. Ya seas monotributista o responsable inscripto, cada venta que realices en tu tienda WooCommerce debe estar respaldada por un comprobante fiscal valido. La buena noticia es que existen herramientas que te permiten automatizar este proceso y conectar tu WooCommerce directamente con el webservice de facturacion de AFIP.</p>
+
+            <h2>Es obligatorio facturar cada venta online?</h2>
+            <p>Si, <strong>AFIP exige que cada operacion de venta sea facturada</strong>, sin importar el monto ni el canal de venta. Esto aplica tanto para monotributistas como para responsables inscriptos. Las ventas realizadas a traves de una tienda online no son la excepcion.</p>
+            <p>Las consecuencias de no facturar pueden ser severas:</p>
+            <ul>
+                <li><strong>Multas:</strong> AFIP puede aplicar sanciones economicas por facturacion irregular o faltante.</li>
+                <li><strong>Clausura temporal:</strong> en casos graves, puede ordenar la clausura del establecimiento o la baja del sitio web.</li>
+                <li><strong>Problemas con la categoria de monotributo:</strong> si tus ingresos no coinciden con lo facturado, podrias ser recategorizado o excluido del regimen.</li>
+                <li><strong>Imposibilidad de deducir gastos:</strong> sin facturacion correcta, no podes justificar ingresos ni deducir costos asociados, como los de envio. Te recomendamos leer nuestra guia sobre <a href="costos-envio-deduccion-impuestos-argentina.html">costos de envio y deduccion de impuestos</a> para entender este punto.</li>
+            </ul>
+
+            <h2>Que necesitas para empezar</h2>
+            <p>Antes de conectar tu WooCommerce con AFIP, necesitas tener en orden algunos requisitos previos:</p>
+            <ol>
+                <li><strong>CUIT activo:</strong> tu Clave Unica de Identificacion Tributaria debe estar habilitada y sin irregularidades.</li>
+                <li><strong>Clave fiscal nivel 3 o superior:</strong> necesitas acceso al portal de AFIP con clave fiscal de nivel 3 como minimo para administrar los webservices.</li>
+                <li><strong>Certificado digital para webservice:</strong> AFIP requiere un certificado digital que autoriza a tu aplicacion (el plugin de WooCommerce) a emitir facturas en tu nombre.</li>
+                <li><strong>Punto de venta electronico autorizado:</strong> debes dar de alta un punto de venta especifico para la facturacion electronica desde el portal de AFIP, en la seccion "Administracion de puntos de venta y domicilios".</li>
+            </ol>
+            <p>Estos pasos se realizan directamente en el sitio web de AFIP (<strong>afip.gob.ar</strong>) y son un requisito previo indispensable antes de configurar cualquier plugin.</p>
+
+            <div class="blog-cta">
+                <span class="blog-cta__text">Automatizá tus envíos con Correo Argentino en WooCommerce</span>
+                <a href="/" class="blog-cta__btn">Probar gratis por 15 días &rarr;</a>
+            </div>
+
+            <h2>Plugins de WooCommerce para facturacion AFIP</h2>
+            <p>Existen varios plugins que permiten conectar WooCommerce con el webservice de facturacion electronica de AFIP (<strong>WSFEV1</strong>). Al evaluar opciones, busca las siguientes funcionalidades clave:</p>
+            <ul>
+                <li><strong>Generacion automatica de facturas:</strong> el plugin deberia emitir la factura automaticamente cuando el pedido cambia a estado "completado" o "procesando".</li>
+                <li><strong>Descarga de PDF:</strong> tanto el administrador como el cliente deberian poder descargar la factura en formato PDF.</li>
+                <li><strong>Envio por email:</strong> la factura deberia adjuntarse automaticamente al email de confirmacion del pedido.</li>
+                <li><strong>Soporte para notas de credito:</strong> si necesitas hacer una devolucion, el plugin debe permitir emitir notas de credito asociadas a la factura original.</li>
+                <li><strong>Compatibilidad con tipos de comprobante:</strong> Factura A, B y C segun corresponda.</li>
+            </ul>
+            <p>Algunos plugins son gratuitos y cubren lo basico, mientras que las versiones premium ofrecen automatizacion completa, soporte prioritario y funcionalidades avanzadas como facturacion masiva.</p>
+
+            <h2>Como configurar el webservice de AFIP</h2>
+            <p>La configuracion del webservice es el paso mas tecnico del proceso. A continuacion te explicamos como hacerlo:</p>
+            <ol>
+                <li><strong>Accede a AFIP con clave fiscal:</strong> ingresa a afip.gob.ar con tu CUIT y clave fiscal.</li>
+                <li><strong>Busca "Administrador de Relaciones de Clave Fiscal":</strong> desde el menu de servicios, accede al administrador de relaciones.</li>
+                <li><strong>Autoriza el webservice:</strong> busca "Webservice de Facturacion Electronica" (WSFE) y autoriza el acceso para tu CUIT.</li>
+                <li><strong>Genera el certificado digital:</strong> desde la seccion de "Certificados Digitales", genera un nuevo certificado. El plugin te proporcionara un archivo CSR (Certificate Signing Request) que debes subir a AFIP para obtener el certificado firmado.</li>
+                <li><strong>Descarga e instala el certificado:</strong> AFIP te devuelve un archivo .crt que debes subir al plugin en tu WooCommerce.</li>
+                <li><strong>Configura el punto de venta:</strong> en el plugin, indica el numero de punto de venta que diste de alta previamente.</li>
+                <li><strong>Testa en homologacion:</strong> antes de operar en produccion, usa el entorno de homologacion (testing) de AFIP para verificar que todo funcione correctamente. Este paso es crucial para evitar errores en facturas reales.</li>
+            </ol>
+
+            <h2>Monotributo vs Responsable Inscripto</h2>
+            <p>El tipo de factura que emite tu tienda depende de tu condicion fiscal:</p>
+            <h3>Monotributo</h3>
+            <ul>
+                <li>Emite unicamente <strong>Factura C</strong>.</li>
+                <li>No discrimina IVA (el IVA esta incluido en el precio final).</li>
+                <li>Emite Factura C tanto a consumidores finales como a responsables inscriptos.</li>
+                <li>Es la opcion mas simple desde el punto de vista de configuracion del plugin.</li>
+            </ul>
+            <h3>Responsable Inscripto</h3>
+            <ul>
+                <li>Emite <strong>Factura A</strong> a otros responsables inscriptos (discriminando IVA).</li>
+                <li>Emite <strong>Factura B</strong> a consumidores finales y monotributistas.</li>
+                <li>El plugin debe detectar automaticamente el tipo de comprobante segun el CUIT o DNI del comprador.</li>
+                <li>Es importante configurar correctamente la alicuota de IVA (generalmente 21%) en los productos.</li>
+            </ul>
+            <p>Un buen plugin de facturacion pedira al comprador su condicion fiscal (Consumidor Final, Responsable Inscripto, Monotributo, Exento) y su CUIT o DNI en el checkout, y emitira el comprobante correspondiente automaticamente.</p>
+
+            <h2>Como facturar el envio</h2>
+            <p>Un punto que genera dudas frecuentes es <strong>como incluir el costo de envio en la factura</strong>. Hay dos enfoques principales:</p>
+            <ul>
+                <li><strong>Como item separado:</strong> el envio aparece como una linea adicional en la factura, con su propia descripcion e IVA (si corresponde).</li>
+                <li><strong>Incluido en el total:</strong> el costo de envio se suma al total sin discriminar como item separado.</li>
+            </ul>
+            <p>Para responsables inscriptos, el envio esta gravado con IVA al 21%, por lo que es importante que el plugin lo contemple correctamente. Te recomendamos leer nuestra guia completa sobre <a href="como-facturar-envios-ecommerce-argentina.html">como facturar envios en ecommerce en Argentina</a> donde explicamos este tema en detalle.</p>
+
+            <h2>Errores comunes</h2>
+            <p>Estos son los errores mas frecuentes al conectar WooCommerce con AFIP, y como evitarlos:</p>
+            <ul>
+                <li><strong>Punto de venta incorrecto:</strong> el numero de punto de venta configurado en el plugin debe coincidir exactamente con el que diste de alta en AFIP. Un numero diferente genera rechazo.</li>
+                <li><strong>Certificado vencido:</strong> los certificados digitales de AFIP tienen fecha de expiracion. Si tu plugin deja de emitir facturas de un dia para el otro, verifica la vigencia del certificado.</li>
+                <li><strong>Errores de CAE:</strong> el CAE (Codigo de Autorizacion Electronico) es el numero que AFIP asigna a cada factura. Si el webservice devuelve errores de CAE, generalmente se debe a datos incorrectos en la solicitud.</li>
+                <li><strong>Saltos en la numeracion:</strong> AFIP exige que la numeracion de facturas sea consecutiva. Si hay saltos (por ejemplo, de la factura 10 a la 12), puede generar alertas y problemas fiscales.</li>
+                <li><strong>No testar en homologacion:</strong> pasar directamente a produccion sin probar en el entorno de testing es la causa mas comun de problemas. Siempre testa primero.</li>
+                <li><strong>Condicion fiscal incorrecta:</strong> emitir Factura A a un consumidor final o Factura B a un responsable inscripto genera comprobantes invalidos.</li>
+            </ul>
+
+            <h2>Automatizar todo: pagos + envios + facturacion</h2>
+            <p>El escenario ideal para una tienda WooCommerce en Argentina es tener los tres pilares automatizados:</p>
+            <ol>
+                <li><strong>Pagos:</strong> un plugin de medios de pago como Mercado Pago o Mobbex que procese el cobro automaticamente.</li>
+                <li><strong>Envios:</strong> un plugin como <a href="/">Correo Argentino Pro</a> que cotice el envio en tiempo real, permita la creacion automatica de envios y genere etiquetas PDF con un click.</li>
+                <li><strong>Facturacion:</strong> un plugin de facturacion AFIP que emita el comprobante automaticamente al completarse el pedido.</li>
+            </ol>
+            <p>Con estos tres componentes funcionando en conjunto, el flujo es completamente automatico: el cliente elige sus productos, ve el costo de envio en tiempo real, paga con su metodo preferido, recibe la factura por email y el envio se genera automaticamente. Vos solo tenes que preparar el paquete y entregarlo al correo.</p>
+            <p>Si queres profundizar en como configurar el envio, nuestra <a href="como-integrar-correo-argentino-woocommerce.html">guia de integracion de Correo Argentino con WooCommerce</a> te explica todo el proceso paso a paso. Y para una vision general de como armar tu tienda completa, visita nuestra <a href="woocommerce-argentina-guia-completa.html">guia completa de WooCommerce en Argentina</a>.</p>
+
+            <p>Si tenes dudas sobre la configuracion o necesitas ayuda, consulta nuestras <a href="../faqs.html">preguntas frecuentes</a> o <a href="../contacto.html">escribinos</a> y te orientamos.</p>
+
+        </div>
+    </div>
+</article>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>Correo Argentino Pro &copy; 2026 &middot; Desarrollado por <a href="https://adwebs.com.ar">AD Webs</a></p>
+        <p style="margin-top: 8px;"><a href="../ayuda.html">Documentación</a> &middot; <a href="../faqs.html">FAQs</a> &middot; <a href="/">Comprar</a> &middot; <a href="../contacto.html">Contacto</a></p>
+        <p style="margin-top: 8px;"><a href="../terminos.html">Términos y condiciones</a> &middot; <a href="../privacidad.html">Política de privacidad</a></p>
+        <p style="margin-top: 8px;">No estamos afiliados a Correo Argentino S.A.</p>
+    </div>
+</footer>
+</body>
+</html>
