@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Sucursales de Correo Argentino en tu Tienda WooCommerce (2026)</title>
+    <meta name="description" content="Como funciona el mapa interactivo de sucursales de Correo Argentino en el checkout de WooCommerce. Seleccion visual, geolocalizacion y mejor experiencia de compra.">
+    <link rel="canonical" href="https://correoargentinopro.com/blog/mapa-sucursales-correo-argentino-leaflet.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Correo Argentino Pro">
+    <meta property="og:title" content="Mapa de Sucursales de Correo Argentino en tu Tienda WooCommerce (2026)">
+    <meta property="og:description" content="Como funciona el mapa interactivo de sucursales de Correo Argentino en el checkout de WooCommerce. Seleccion visual, geolocalizacion y mejor experiencia de compra.">
+    <meta property="og:url" content="https://correoargentinopro.com/blog/mapa-sucursales-correo-argentino-leaflet.html">
+    <meta property="og:image" content="https://correoargentinopro.com/og-image.png">
+    <meta property="og:locale" content="es_AR">
+    <meta property="article:published_time" content="2026-04-03">
+    <meta property="article:author" content="AD Webs">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Mapa de Sucursales de Correo Argentino en tu Tienda WooCommerce (2026)",
+        "description": "Como funciona el mapa interactivo de sucursales de Correo Argentino en el checkout de WooCommerce. Seleccion visual, geolocalizacion y mejor experiencia de compra.",
+        "datePublished": "2026-04-03",
+        "dateModified": "2026-04-03",
+        "author": {
+            "@type": "Organization",
+            "name": "AD Webs",
+            "url": "https://adwebs.com.ar"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Correo Argentino Pro",
+            "url": "https://correoargentinopro.com"
+        },
+        "mainEntityOfPage": "https://correoargentinopro.com/blog/mapa-sucursales-correo-argentino-leaflet.html"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Blog",
+                "item": "https://correoargentinopro.com/blog/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Mapa de Sucursales de Correo Argentino en tu Tienda WooCommerce (2026)",
+                "item": "https://correoargentinopro.com/blog/mapa-sucursales-correo-argentino-leaflet.html"
+            }
+        ]
+    }
+    </script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5PL6T2RH');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PL6T2RH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="page-header">
+    <nav class="navbar">
+        <div class="navbar__inner">
+            <a href="/" class="navbar__brand">
+                <svg width="38" height="38" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="nEnv" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient>
+                        <linearGradient id="nPro" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient>
+                    </defs>
+                    <rect x="6" y="18" width="56" height="40" rx="8" fill="white" opacity="0.95"/>
+                    <path d="M6 24 L34 44 L62 24" stroke="url(#nEnv)" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <rect x="40" y="44" width="36" height="20" rx="7" fill="url(#nPro)"/>
+                    <text x="58" y="58.5" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="12.5" font-weight="800" fill="white" letter-spacing="2.5">PRO</text>
+                </svg>
+                <span class="navbar__brand-text">CA Pro</span>
+            </a>
+            <button class="navbar__toggle" aria-label="Menu" onclick="document.querySelector('.navbar__menu').classList.toggle('open')">&#9776;</button>
+            <ul class="navbar__menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="../ayuda.html">Ayuda</a></li>
+                <li><a href="../faqs.html">FAQs</a></li>
+                <li><a href="./" class="active">Blog</a></li>
+                <li><a href="../contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="page-header__body">
+        <p class="page-header__breadcrumb"><a href="./">Blog</a> &rarr;</p>
+        <h1>Mapa de Sucursales de Correo Argentino en tu Tienda WooCommerce</h1>
+        <p>Selector visual de sucursales con mapa interactivo en el checkout &middot; 3 de abril, 2026</p>
+    </div>
+</header>
+
+<main>
+<article class="legal">
+    <div class="container">
+        <div class="legal__content">
+
+            <p>Cuando un cliente elige "retiro en sucursal" como metodo de envio en tu tienda online, necesita seleccionar en cual sucursal de Correo Argentino quiere retirar su paquete. La forma tradicional de hacer esto es mostrar un dropdown (lista desplegable) con todas las sucursales disponibles. El problema es que esa lista puede tener decenas o cientos de opciones, y nadie quiere scrollear entre "Sucursal 1", "Sucursal 2", "Sucursal 3"... para encontrar la que le queda cerca. <a href="/">Correo Argentino Pro</a> resuelve esto con un <strong>mapa interactivo</strong> directamente en el checkout de WooCommerce.</p>
+
+            <h2>Como funciona el selector de sucursales</h2>
+            <p>El flujo es simple y esta pensado para que el cliente lo resuelva en segundos:</p>
+            <ol>
+                <li>El cliente llega al checkout y selecciona <strong>"Retiro en sucursal"</strong> como metodo de envio.</li>
+                <li>Aparece un boton que dice "Elegir sucursal".</li>
+                <li>Al hacer clic, se abre una ventana modal con un <strong>mapa interactivo</strong> que muestra todas las sucursales de Correo Argentino en la zona del cliente.</li>
+                <li>El cliente puede navegar el mapa, buscar por direccion o usar la geolocalizacion para encontrar la sucursal mas cercana.</li>
+                <li>Hace clic en la sucursal que prefiere y listo: la sucursal seleccionada queda registrada en el pedido.</li>
+            </ol>
+            <p>Toda la informacion de la sucursal elegida (nombre, direccion completa, codigo postal) se guarda automaticamente en el pedido de WooCommerce, para que vos como dueno de la tienda sepas exactamente donde despachar el paquete.</p>
+
+            <h2>Por que un mapa y no un dropdown</h2>
+            <p>La respuesta corta es: <strong>porque es mucho mejor experiencia para el cliente</strong>. Y una mejor experiencia en el checkout significa menos carritos abandonados.</p>
+            <p>Pensa en esto: Correo Argentino tiene mas de 1.500 sucursales en todo el pais. Incluso filtrando por provincia o ciudad, un dropdown puede mostrar 20, 50 o 100 opciones. El cliente tiene que leer cada una, interpretar la direccion y tratar de adivinar cual le queda mas cerca. Esto genera friccion, y la friccion en el checkout es la principal causa de abandono de carrito.</p>
+            <p>Con un mapa, el cliente <strong>ve las sucursales ubicadas geograficamente</strong>. De un vistazo identifica cual esta cerca de su casa, de su trabajo o de su ruta habitual. No necesita leer 50 direcciones, solo mirar el mapa y hacer clic. Si te interesa profundizar en como reducir el abandono de carrito, te recomendamos nuestra guia sobre <a href="reducir-abandono-carrito-argentina.html">como reducir el abandono de carrito en tiendas argentinas</a>.</p>
+            <p>Tambien es un buen momento para evaluar si a tus clientes les conviene mas el envio a sucursal o a domicilio. Te lo explicamos en detalle en nuestro articulo sobre <a href="envio-sucursal-vs-domicilio-correo-argentino.html">envio a sucursal vs envio a domicilio con Correo Argentino</a>.</p>
+
+            <div class="blog-cta">
+                <span class="blog-cta__text">Automatizá tus envíos con Correo Argentino en WooCommerce</span>
+                <a href="/" class="blog-cta__btn">Probar gratis por 15 días &rarr;</a>
+            </div>
+
+            <h2>Geolocalizacion automatica</h2>
+            <p>Si el cliente le da permiso al navegador, el mapa se centra automaticamente en su ubicacion actual y ordena las sucursales por distancia. La sucursal mas cercana aparece primero, con la distancia indicada (por ejemplo, "1.2 km"). Esto hace que la seleccion sea casi instantanea: el cliente ve que tiene una sucursal a pocas cuadras y la elige con un clic.</p>
+            <p>La geolocalizacion funciona tanto en <strong>desktop como en celulares</strong>. En dispositivos moviles, donde el GPS es mas preciso, la experiencia es especialmente buena. El cliente puede estar comprando desde el colectivo y ver en segundos cual es la sucursal mas cercana a donde esta.</p>
+            <p>Si el cliente no permite la geolocalizacion (o su navegador no la soporta), el mapa simplemente se muestra centrado en la ciudad que el cliente ya ingreso como direccion de envio. El funcionamiento no se ve afectado, solo pierde la ordenacion automatica por distancia.</p>
+
+            <h2>Busqueda por direccion o ciudad</h2>
+            <p>Ademas de la geolocalizacion, el mapa incluye un <strong>campo de busqueda</strong> donde el cliente puede escribir una direccion, un barrio o una ciudad. A medida que escribe, el mapa se actualiza en tiempo real mostrando las sucursales en la zona buscada.</p>
+            <p>Esto es especialmente util cuando el cliente quiere retirar el paquete en un lugar diferente a donde esta ahora. Por ejemplo:</p>
+            <ul>
+                <li>Quiere retirarlo <strong>cerca del trabajo</strong> en vez de cerca de su casa.</li>
+                <li>Va a viajar a otra ciudad y prefiere retirarlo alla.</li>
+                <li>Quiere buscar sucursales en un barrio especifico que le queda de camino.</li>
+            </ul>
+            <p>La busqueda es rapida e intuitiva. No necesita saber el nombre exacto de la sucursal, solo escribir una referencia geografica y el mapa le muestra las opciones mas cercanas a ese punto.</p>
+
+            <h2>Informacion de cada sucursal</h2>
+            <p>Cuando el cliente hace clic en un marcador del mapa o selecciona una sucursal de la lista, ve toda la informacion relevante:</p>
+            <ul>
+                <li><strong>Nombre de la sucursal</strong></li>
+                <li><strong>Direccion completa</strong> (calle, numero, localidad)</li>
+                <li><strong>Ciudad y provincia</strong></li>
+                <li><strong>Codigo postal</strong></li>
+            </ul>
+            <p>Esta misma informacion queda registrada en el pedido de WooCommerce. Cuando vos como vendedor ves el pedido en tu panel, sabes exactamente a que sucursal enviar el paquete. No hay ambiguedad ni errores por sucursales mal seleccionadas.</p>
+            <p>Esto es particularmente importante al momento de <a href="como-integrar-correo-argentino-woocommerce.html">generar las etiquetas de envio</a>, ya que la sucursal de destino tiene que coincidir exactamente con lo que el cliente eligio.</p>
+
+            <h2>Experiencia en desktop y mobile</h2>
+            <p>El selector de sucursales esta optimizado para funcionar en cualquier dispositivo:</p>
+            <ul>
+                <li><strong>En desktop:</strong> el mapa se muestra en una ventana modal amplia. A un lado esta el mapa interactivo y al otro una lista con las sucursales cercanas. El cliente puede navegar el mapa con el mouse o usar la lista para scrollear las opciones.</li>
+                <li><strong>En celular:</strong> el layout se adapta a la pantalla. El mapa y la lista se apilan verticalmente, con botones grandes y faciles de tocar. El mapa responde a gestos tactiles (pinch para zoom, swipe para mover) y toda la interaccion esta pensada para pantallas chicas.</li>
+            </ul>
+            <p>Dado que la mayoria de las compras online en Argentina se hacen desde el celular, la optimizacion mobile es fundamental. Un selector de sucursales que funcione mal en mobile es peor que no tener selector. Si queres saber mas sobre como optimizar tu tienda en general, nuestra <a href="woocommerce-argentina-guia-completa.html">guia completa de WooCommerce en Argentina</a> cubre todos los aspectos clave.</p>
+
+            <h2>Como activar el mapa en tu tienda</h2>
+            <p>Activar el mapa de sucursales en tu tienda WooCommerce con <a href="/">Correo Argentino Pro</a> es muy sencillo:</p>
+            <ol>
+                <li>Instala y activa el plugin Correo Argentino Pro en tu tienda.</li>
+                <li>Anda a <strong>WooCommerce &gt; Ajustes &gt; Envio</strong> y selecciona la zona de envio que quieras configurar.</li>
+                <li>Agrega "Correo Argentino Pro" como metodo de envio.</li>
+                <li>En el tipo de entrega, selecciona <strong>"Retiro en sucursal"</strong>.</li>
+                <li>Listo. El mapa aparece automaticamente cuando tus clientes eligen retiro en sucursal en el checkout.</li>
+            </ol>
+            <p>No necesitas configurar APIs de mapas, ni obtener claves de Google Maps, ni hacer nada tecnico. El plugin se encarga de todo. Podes ver el proceso completo en nuestra guia sobre <a href="como-integrar-correo-argentino-woocommerce.html">como integrar Correo Argentino con WooCommerce</a>.</p>
+            <p>El mapa funciona tanto con el checkout clasico como con el nuevo <a href="checkout-por-bloques-woocommerce.html">checkout por bloques de WooCommerce</a>, asi que no importa que version de checkout uses.</p>
+
+            <h2>Conclusion</h2>
+            <p>El selector de sucursales con mapa interactivo es una de las funcionalidades que mas impacto tiene en la experiencia de compra de tu tienda. Reduce la friccion en el checkout, minimiza errores en la seleccion de sucursales y hace que el proceso de retiro sea claro tanto para el comprador como para vos.</p>
+            <p>Si todavia estas usando un dropdown basico para que tus clientes elijan sucursal, <a href="/">Correo Argentino Pro</a> te ofrece una alternativa mucho mas profesional y efectiva. Proba el plugin gratis por 15 dias y ve la diferencia en tu checkout.</p>
+
+            <p>Si tenes dudas sobre como configurar el envio a sucursal, visita nuestras <a href="../faqs.html">preguntas frecuentes</a> o <a href="../contacto.html">contactanos</a> y te ayudamos.</p>
+
+        </div>
+    </div>
+</article>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>Correo Argentino Pro &copy; 2026 &middot; Desarrollado por <a href="https://adwebs.com.ar">AD Webs</a></p>
+        <p style="margin-top: 8px;"><a href="../ayuda.html">Documentación</a> &middot; <a href="../faqs.html">FAQs</a> &middot; <a href="/">Comprar</a> &middot; <a href="../contacto.html">Contacto</a></p>
+        <p style="margin-top: 8px;"><a href="../terminos.html">Términos y condiciones</a> &middot; <a href="../privacidad.html">Política de privacidad</a></p>
+        <p style="margin-top: 8px;">No estamos afiliados a Correo Argentino S.A.</p>
+    </div>
+</footer>
+</body>
+</html>
