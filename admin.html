@@ -450,6 +450,17 @@
             <div class="stat-card"><div class="stat-card__label">Ingresos</div><div class="stat-card__value" id="stat-revenue">-</div></div>
         </div>
 
+        <!-- Test Emails -->
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:24px; padding:16px 20px; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-sm);">
+            <span style="color:var(--text-secondary); font-size:0.85rem; white-space:nowrap;">Test emails</span>
+            <input type="email" id="test-email-input" placeholder="tu@email.com" style="flex:1; padding:8px 12px; background:var(--dark-deeper); border:1px solid var(--border); border-radius:6px; color:var(--text); font-size:0.85rem;">
+            <button class="btn btn--ghost btn--small" onclick="sendTestEmail('purchase')">Compra</button>
+            <button class="btn btn--ghost btn--small" onclick="sendTestEmail('renewal')">Renovación</button>
+            <button class="btn btn--ghost btn--small" onclick="sendTestEmail('ticket_reply')">Soporte</button>
+            <button class="btn btn--primary btn--small" onclick="sendTestEmail()">Enviar todos</button>
+            <span id="test-email-status" style="font-size:0.8rem; color:var(--text-muted);"></span>
+        </div>
+
         <!-- Licenses Panel -->
         <div class="panel visible" id="panel-licenses">
             <div class="toolbar">
@@ -1469,6 +1480,24 @@
         div.textContent = text;
         return div.innerHTML;
     }
+
+    // Test emails
+    window.sendTestEmail = function(type) {
+        var email = document.getElementById('test-email-input').value.trim();
+        var status = document.getElementById('test-email-status');
+        if (!email) { status.textContent = 'Ingresá un email'; status.style.color = 'var(--red)'; return; }
+        status.textContent = 'Enviando...'; status.style.color = 'var(--text-muted)';
+        var payload = { email: email };
+        if (type) payload.type = type;
+        apiFetch('/admin/test-email', { method: 'POST', body: JSON.stringify(payload) }).then(function(data) {
+            if (data.success) {
+                status.textContent = 'Enviado!'; status.style.color = 'var(--green)';
+            } else {
+                status.textContent = data.error || 'Error'; status.style.color = 'var(--red)';
+            }
+            setTimeout(function() { status.textContent = ''; }, 4000);
+        });
+    };
 })();
 </script>
 
