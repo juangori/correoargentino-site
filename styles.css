@@ -453,15 +453,15 @@ body {
 }
 .pricing-card__badge {
     position: absolute;
-    top: 20px;
-    right: -28px;
+    top: 30px;
+    right: -30px;
     background: linear-gradient(135deg, #3b82f6, #06b6d4);
     color: white;
     font-size: 0.72rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    padding: 5px 44px;
+    padding: 5px 18px;
     transform: rotate(45deg);
 }
 .pricing-card__note {
