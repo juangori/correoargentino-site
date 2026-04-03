@@ -437,6 +437,41 @@ body {
     margin: 0 auto;
     align-items: start;
 }
+
+/* Compatibility trust bar */
+.compat { padding: 56px 0 20px; }
+.compat__label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 24px;
+}
+.compat__grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    flex-wrap: wrap;
+}
+.compat__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.compat__item span {
+    font-weight: 600;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+}
+.compat__item svg { flex-shrink: 0; }
+@media (max-width: 640px) {
+    .compat__grid { gap: 20px 28px; }
+    .compat__item span { font-size: 0.78rem; }
+}
+
 .pricing-card {
     background: var(--bg);
     border-radius: 20px;
