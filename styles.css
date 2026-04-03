@@ -439,7 +439,7 @@ body {
 }
 
 /* Compatibility trust bar */
-.compat { padding: 56px 0 20px; }
+.compat { padding: 56px 0 80px; }
 .compat__label {
     font-size: 0.7rem;
     text-transform: uppercase;
@@ -470,6 +470,55 @@ body {
 @media (max-width: 640px) {
     .compat__grid { gap: 20px 28px; }
     .compat__item span { font-size: 0.78rem; }
+}
+
+/* Pre-purchase FAQs */
+.prefaq { padding: 48px 0 56px; }
+.prefaq__container { max-width: 720px; }
+.prefaq__title {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 28px;
+    color: var(--text);
+}
+.prefaq__list { display: flex; flex-direction: column; gap: 12px; }
+.prefaq__item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: border-color 0.2s;
+}
+.prefaq__item:hover { border-color: var(--border-hover, rgba(255,255,255,0.14)); }
+.prefaq__item[open] { border-color: var(--primary-light); }
+.prefaq__q {
+    padding: 16px 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text);
+    transition: color 0.2s;
+}
+.prefaq__q::-webkit-details-marker { display: none; }
+.prefaq__item:hover .prefaq__q { color: var(--primary-light); }
+.prefaq__item[open] .prefaq__q { color: var(--primary-light); }
+.prefaq__icon {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    transition: transform 0.2s, color 0.2s;
+    flex-shrink: 0;
+    margin-left: 12px;
+}
+.prefaq__item[open] .prefaq__icon { transform: rotate(45deg); color: var(--primary-light); }
+.prefaq__a {
+    padding: 0 20px 16px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
 }
 
 .pricing-card {
@@ -1501,7 +1550,7 @@ body {
 }
 
 /* Reviews */
-.reviews { padding: 80px 0 100px; }
+.reviews { padding: 80px 0 40px; }
 .reviews__title {
     text-align: center;
     font-size: 1.9rem;
