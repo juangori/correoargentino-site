@@ -465,7 +465,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         e.preventDefault();
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({ event: 'comprar_ahora', discount_code: appliedDiscount || '' });
-        var payload = { price: PRICE_ARS };
+        var payload = {};
         if (appliedDiscount) payload.discount_code = appliedDiscount;
 
         fetch(API_URL + '/checkout/create', {
