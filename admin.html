@@ -532,6 +532,7 @@
                     <thead>
                         <tr>
                             <th>Dominio</th>
+                            <th>Estado</th>
                             <th>Versión plugin</th>
                             <th>WP</th>
                             <th>WC</th>
@@ -540,7 +541,7 @@
                         </tr>
                     </thead>
                     <tbody id="installs-tbody">
-                        <tr><td colspan="6" class="loading">Cargando...</td></tr>
+                        <tr><td colspan="7" class="loading">Cargando...</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -764,6 +765,8 @@
     window.toggleDiscount = toggleDiscount;
     window.editDiscount = editDiscount;
     window.deleteDiscount = deleteDiscount;
+    window.loadTrials = loadTrials;
+    window.loadInstalls = loadInstalls;
     window.loadTickets = loadTickets;
     window.viewTicket = viewTicket;
     window.updateTicketStatus = updateTicketStatus;
@@ -1202,18 +1205,29 @@
     }
 
     // Installs
+    var INSTALL_STATUS = {
+        licensed:         { cls: 'badge--green',  text: 'Con licencia' },
+        trial_active:     { cls: 'badge--active', text: 'Prueba activa' },
+        trial_expired:    { cls: 'badge--orange', text: 'Prueba expirada' },
+        license_expired:  { cls: 'badge--orange', text: 'Licencia expirada' },
+        revoked:          { cls: 'badge--red',    text: 'Licencia revocada' },
+        inactive:         { cls: 'badge--red',    text: 'Sin activar' }
+    };
+
     function loadInstalls() {
         var tbody = document.getElementById('installs-tbody');
-        tbody.innerHTML = '<tr><td colspan="6" class="loading">Cargando...</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="7" class="loading">Cargando...</td></tr>';
         apiFetch('/admin/installs').then(function(data) {
             var installs = data.installs || [];
             if (installs.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="6" class="loading">No hay instalaciones registradas</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="7" class="loading">No hay instalaciones registradas</td></tr>';
                 return;
             }
             tbody.innerHTML = installs.map(function(i) {
+                var s = INSTALL_STATUS[i.status] || INSTALL_STATUS.inactive;
                 return '<tr>' +
                     '<td><strong>' + escapeHtml(i.domain) + '</strong></td>' +
+                    '<td><span class="badge ' + s.cls + '">' + s.text + '</span></td>' +
                     '<td>' + escapeHtml(i.cap_version || '-') + '</td>' +
                     '<td>' + escapeHtml(i.wp_version || '-') + '</td>' +
                     '<td>' + escapeHtml(i.wc_version || '-') + '</td>' +
@@ -1222,7 +1236,7 @@
                     '</tr>';
             }).join('');
         }).catch(function() {
-            tbody.innerHTML = '<tr><td colspan="6" class="loading">Error al cargar</td></tr>';
+            tbody.innerHTML = '<tr><td colspan="7" class="loading">Error al cargar</td></tr>';
         });
     }
 
