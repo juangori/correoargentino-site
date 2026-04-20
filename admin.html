@@ -367,6 +367,7 @@
             transition: border-color 0.2s;
         }
         .msg-card:hover { border-color: var(--border-hover); }
+        .msg-card--unread { border-left: 3px solid var(--accent); }
         .msg-card__header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
         .msg-card__from { font-weight: 600; color: var(--text); }
         .msg-card__email { font-size: 0.82rem; color: var(--accent); }
@@ -752,6 +753,7 @@
     window.reactivateLicense = reactivateLicense;
     window.extendLicense = extendLicense;
     window.deleteMessage = deleteMessage;
+    window.markMessageRead = markMessageRead;
     window.loadReviews = loadReviews;
     window.openReviewModal = openReviewModal;
     window.saveReview = saveReview;
@@ -1000,10 +1002,16 @@
                 var websiteHtml = m.website
                     ? '<div class="msg-card__subject"><a href="' + escapeHtml(m.website) + '" target="_blank" rel="noopener">' + escapeHtml(m.website) + '</a></div>'
                     : '';
-                return '<div class="msg-card">' +
+                var readBtn = m.read
+                    ? ''
+                    : '<button class="msg-card__delete" onclick="markMessageRead(\'' + m.id + '\', this)" title="Marcar como leido">Marcar leido</button>';
+                return '<div class="msg-card' + (m.read ? '' : ' msg-card--unread') + '" data-id="' + escapeHtml(m.id) + '">' +
                     '<div class="msg-card__header">' +
                         '<div><span class="msg-card__from">' + escapeHtml(m.name) + '</span> <span class="msg-card__email">&lt;' + escapeHtml(m.email) + '&gt;</span></div>' +
-                        '<button class="msg-card__delete" onclick="deleteMessage(\'' + m.id + '\', this)" title="Eliminar">Eliminar</button>' +
+                        '<div style="display:flex;gap:4px;">' +
+                            readBtn +
+                            '<button class="msg-card__delete" onclick="deleteMessage(\'' + m.id + '\', this)" title="Eliminar">Eliminar</button>' +
+                        '</div>' +
                     '</div>' +
                     websiteHtml +
                     '<div class="msg-card__subject">' + escapeHtml(m.subject) + '</div>' +
@@ -1019,6 +1027,16 @@
         apiFetch('/admin/messages/' + id, { method: 'DELETE' }).then(function() {
             var card = btn.closest('.msg-card');
             if (card) card.remove();
+            loadStats();
+        });
+    }
+
+    function markMessageRead(id, btn) {
+        apiFetch('/admin/messages/' + id + '/read', { method: 'PUT' }).then(function() {
+            var card = btn.closest('.msg-card');
+            if (card) card.classList.remove('msg-card--unread');
+            if (btn) btn.remove();
+            loadStats();
         });
     }
 
