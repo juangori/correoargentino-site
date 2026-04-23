@@ -93,7 +93,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <p class="changelog__intro">Publicamos <strong>todos</strong> los cambios del plugin acá, del más reciente al más viejo. Si viste un bug y querés saber si lo arreglamos, este es el lugar. Si estás evaluando comprar y querés ver qué tan activo está el soporte, también.</p>
 
+        <div class="changelog__search">
+            <input type="search" id="clSearch" placeholder="Buscar por versión (v1.0.X) o título..." autocomplete="off" aria-label="Buscar en el changelog">
+        </div>
+        <div class="changelog__search-empty" id="clEmpty" hidden>
+            Sin resultados para <strong id="clQuery"></strong>. Probá con otra versión o palabra clave.
+        </div>
+
         <div class="changelog__timeline">
+
+            <details class="changelog-group" open data-month="2026-04">
+                <summary>
+                    <span class="changelog-group__title">Abril 2026</span>
+                    <span class="changelog-group__count">16 releases</span>
+                    <span class="changelog-group__chevron" aria-hidden="true"></span>
+                </summary>
+                <div class="changelog-group__body">
 
             <!-- v1.0.35 -->
             <article class="changelog-entry changelog-entry--latest">
@@ -285,6 +300,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="changelog-entry__why"><b>Por qué</b>Un usuario perdió toda su config de remitente al reinstalar y tuvo que cargarla de nuevo. No queríamos que eso vuelva a pasar.</div>
             </article>
 
+                </div>
+            </details>
+
+            <details class="changelog-group" open data-month="2026-03">
+                <summary>
+                    <span class="changelog-group__title">Marzo 2026</span>
+                    <span class="changelog-group__count">10 releases</span>
+                    <span class="changelog-group__chevron" aria-hidden="true"></span>
+                </summary>
+                <div class="changelog-group__body">
+
             <!-- v1.0.17 -->
             <article class="changelog-entry">
                 <div class="changelog-entry__head">
@@ -401,6 +427,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <p>Reemplazamos el renderizado del mapa de sucursales por una versión nueva con mejor performance (carga más rápido en tiendas con mucho tráfico), mejor UX en mobile y endurecimiento contra ataques XSS.</p>
             </article>
 
+                </div>
+            </details>
+
+            <details class="changelog-group" data-month="2026-02">
+                <summary>
+                    <span class="changelog-group__title">Febrero 2026</span>
+                    <span class="changelog-group__count">1 release</span>
+                    <span class="changelog-group__chevron" aria-hidden="true"></span>
+                </summary>
+                <div class="changelog-group__body">
+
             <!-- v1.0.0 -->
             <article class="changelog-entry">
                 <div class="changelog-entry__head">
@@ -421,6 +458,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </ul>
             </article>
 
+                </div>
+            </details>
+
         </div>
 
         <div style="text-align:center; margin-top: 60px; padding: 40px 24px; background: var(--dark-surface); border: 1px solid var(--dark-border); border-radius: 16px; max-width: 640px; margin-left: auto; margin-right: auto;">
@@ -439,6 +479,73 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p style="margin-top: 8px;">No estamos afiliados a Correo Argentino S.A.</p>
     </div>
 </footer>
+
+<script>
+(function() {
+    var input = document.getElementById('clSearch');
+    var groups = document.querySelectorAll('.changelog-group');
+    var emptyMsg = document.getElementById('clEmpty');
+    var queryEl = document.getElementById('clQuery');
+
+    groups.forEach(function(g) {
+        g.dataset.initialOpen = g.hasAttribute('open') ? '1' : '0';
+    });
+
+    function normalize(s) {
+        return s.toLowerCase().replace(/[\u0300-\u036f]/g, '');
+    }
+
+    function filter() {
+        var q = normalize(input.value.trim());
+        var anyMatch = false;
+
+        groups.forEach(function(g) {
+            var entries = g.querySelectorAll('.changelog-entry');
+            var groupHasMatch = false;
+
+            entries.forEach(function(e) {
+                if (q === '') {
+                    e.style.display = '';
+                    groupHasMatch = true;
+                    return;
+                }
+                var version = e.querySelector('.changelog-entry__version');
+                var title = e.querySelector('h3');
+                var body = e.querySelector('p');
+                var hay = normalize(
+                    (version ? version.textContent : '') + ' ' +
+                    (title ? title.textContent : '') + ' ' +
+                    (body ? body.textContent : '')
+                );
+                var matches = hay.indexOf(q) !== -1;
+                e.style.display = matches ? '' : 'none';
+                if (matches) groupHasMatch = true;
+            });
+
+            if (q === '') {
+                g.style.display = '';
+                if (g.dataset.initialOpen === '1') g.setAttribute('open', '');
+                else g.removeAttribute('open');
+            } else {
+                g.style.display = groupHasMatch ? '' : 'none';
+                if (groupHasMatch) g.setAttribute('open', '');
+            }
+
+            if (groupHasMatch) anyMatch = true;
+        });
+
+        if (q !== '' && !anyMatch) {
+            queryEl.textContent = '"' + input.value + '"';
+            emptyMsg.hidden = false;
+        } else {
+            emptyMsg.hidden = true;
+        }
+    }
+
+    input.addEventListener('input', filter);
+    input.addEventListener('search', filter);
+})();
+</script>
 
 </div>
 </body>
