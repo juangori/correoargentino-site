@@ -86,7 +86,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <button class="navbar__toggle" aria-label="Menu" onclick="document.querySelector('.navbar__menu').classList.toggle('open')">&#9776;</button>
             <ul class="navbar__menu">
                 <li><a href="/">Home</a></li>
-                <li><a href="../ayuda.html">Ayuda</a></li>
+                <li class="navbar__dropdown">
+                    <a href="../ayuda.html" class="navbar__dropdown-toggle">Ayuda</a>
+                    <ul class="navbar__submenu">
+                        <li><a href="../ayuda.html"><strong>Centro de Ayuda</strong><span>Guías y documentación</span></a></li>
+                        <li><a href="../log-de-actualizaciones-plugin.html"><strong>Plugin Updates</strong><span>Historial de versiones</span></a></li>
+                    </ul>
+                </li>
                 <li><a href="../faqs.html">FAQs</a></li>
                 <li><a href="./" class="active">Blog</a></li>
                 <li><a href="../contacto.html">Contacto</a></li>

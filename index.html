@@ -114,7 +114,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <ul class="navbar__menu">
                 <li><a href="/" class="active">Home</a></li>
                 <li><a href="#cotizador">Cotizador</a></li>
-                <li><a href="ayuda.html">Ayuda</a></li>
+                <li class="navbar__dropdown">
+                    <a href="ayuda.html" class="navbar__dropdown-toggle">Ayuda</a>
+                    <ul class="navbar__submenu">
+                        <li><a href="ayuda.html"><strong>Centro de Ayuda</strong><span>Guías y documentación</span></a></li>
+                        <li><a href="log-de-actualizaciones-plugin.html"><strong>Plugin Updates</strong><span>Historial de versiones</span></a></li>
+                    </ul>
+                </li>
                 <li><a href="faqs.html">FAQs</a></li>
                 <li><a href="blog/">Blog</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
@@ -143,6 +149,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
 </header>
+
+<!-- Last update widget -->
+<section class="update-widget">
+    <div class="container">
+        <a href="log-de-actualizaciones-plugin.html" class="update-widget__card">
+            <span class="update-widget__dot" aria-hidden="true"></span>
+            <span class="update-widget__text">
+                <strong>Última actualización: v1.0.35</strong>
+                23 de abril de 2026 &middot; Ver historial completo
+            </span>
+            <span class="update-widget__arrow" aria-hidden="true">&rarr;</span>
+        </a>
+    </div>
+</section>
 
 <!-- Features -->
 <section class="features">
