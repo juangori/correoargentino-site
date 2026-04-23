@@ -1904,16 +1904,134 @@ body {
     position: relative;
     max-width: 780px;
     margin: 0 auto;
-    padding-left: 28px;
 }
-.changelog__timeline::before {
+
+/* Search */
+.changelog__search {
+    position: relative;
+    max-width: 520px;
+    margin: 0 auto 40px;
+}
+.changelog__search input {
+    width: 100%;
+    background: var(--dark-surface);
+    color: var(--dark-text);
+    border: 1px solid var(--dark-border);
+    border-radius: 12px;
+    padding: 14px 44px 14px 48px;
+    font-size: 0.95rem;
+    font-family: 'Outfit', sans-serif;
+    outline: none;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+.changelog__search input::placeholder { color: var(--dark-text-muted); }
+.changelog__search input:focus {
+    border-color: rgba(59,130,246,0.5);
+    background: var(--dark-surface-hover);
+}
+.changelog__search::before {
     content: '';
     position: absolute;
-    left: 6px;
-    top: 8px;
-    bottom: 8px;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.45)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='11' cy='11' r='7'/><line x1='21' y1='21' x2='16.5' y2='16.5'/></svg>");
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+}
+.changelog__search-empty {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--dark-text-muted);
+    font-size: 0.95rem;
+    background: var(--dark-surface);
+    border: 1px dashed var(--dark-border);
+    border-radius: 12px;
+    margin-top: 20px;
+}
+.changelog__search-empty strong { color: var(--dark-text); font-weight: 600; }
+
+/* Group (by month) */
+.changelog-group {
+    margin-bottom: 12px;
+}
+.changelog-group summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--dark-border);
+    border-radius: 12px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    user-select: none;
+    margin-bottom: 0;
+}
+.changelog-group summary::-webkit-details-marker { display: none; }
+.changelog-group summary:hover {
+    background: rgba(255,255,255,0.06);
+    border-color: var(--dark-border-hover);
+}
+.changelog-group__title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark-text);
+    letter-spacing: -0.2px;
+    text-transform: capitalize;
+}
+.changelog-group__count {
+    font-size: 0.78rem;
+    color: var(--dark-text-muted);
+    background: rgba(255,255,255,0.05);
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-weight: 500;
+}
+.changelog-group__chevron {
+    margin-left: auto;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid rgba(255,255,255,0.5);
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    transform: rotate(45deg) translate(-2px, -2px);
+    transition: transform 0.25s ease;
+}
+.changelog-group[open] > summary .changelog-group__chevron {
+    transform: rotate(-135deg) translate(-2px, -2px);
+}
+.changelog-group[open] > summary {
+    background: rgba(255,255,255,0.04);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.changelog-group__body {
+    position: relative;
+    padding: 28px 0 12px 28px;
+    border: 1px solid var(--dark-border);
+    border-top: none;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background: rgba(255,255,255,0.01);
+}
+.changelog-group__body::before {
+    content: '';
+    position: absolute;
+    left: 34px; /* aligned with dot center: body padding-left 28 + 6 */
+    top: 24px;
+    bottom: 12px;
     width: 2px;
-    background: linear-gradient(to bottom, rgba(59,130,246,0.4), rgba(6,182,212,0.15) 80%, transparent);
+    background: linear-gradient(to bottom, rgba(59,130,246,0.4), rgba(6,182,212,0.15) 85%, transparent);
+}
+.changelog-group__body .changelog-entry::before {
+    left: 0; /* override default -28 since entries are inside padded body */
+}
+.changelog-group__body .changelog-entry:last-child {
+    margin-bottom: 16px;
 }
 .changelog-entry {
     position: relative;
