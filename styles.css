@@ -113,11 +113,45 @@ body {
 
 /* ── Navbar dropdown ── */
 .navbar__dropdown { position: relative; }
+.navbar__dropdown::after {
+    /* Invisible hover bridge between toggle and submenu (covers the 6px gap) */
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: -10px;
+    right: -10px;
+    height: 14px;
+    pointer-events: none;
+}
+.navbar__dropdown:hover::after,
+.navbar__dropdown:focus-within::after,
+.navbar__dropdown.open::after {
+    pointer-events: auto;
+}
 .navbar__dropdown-toggle {
     display: inline-flex;
     align-items: center;
     gap: 6px;
     cursor: pointer;
+    color: rgba(255,255,255,0.55);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+    user-select: none;
+    outline: none;
+}
+.navbar__dropdown-toggle:hover,
+.navbar__dropdown:hover .navbar__dropdown-toggle,
+.navbar__dropdown:focus-within .navbar__dropdown-toggle,
+.navbar__dropdown-toggle:focus-visible {
+    color: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.06);
+}
+.navbar__dropdown-toggle.active {
+    color: white;
+    background: rgba(255,255,255,0.1);
 }
 .navbar__dropdown-toggle::after {
     content: '';
