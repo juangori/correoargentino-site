@@ -65,3 +65,8 @@ CNAME               # GitHub Pages custom domain
 - El panel admin esta en `admin.html` con `noindex, nofollow`
 - La renovacion se inicia desde el plugin WP con query param `?renew={license_key}`
 - Los reviews del homepage se cargan via API y se renderizan client-side con schema.org AggregateRating
+
+## Changelog del plugin (log-de-actualizaciones-plugin.html)
+Esta página se actualiza en cada release del plugin. El workflow completo (formato de entrada, tags, widget de home, sitemap, deploy) está documentado en [../correoargentino-pro/CLAUDE.md](../correoargentino-pro/CLAUDE.md) bajo "Workflow de release". Disparador: bump de versión en el repo del plugin.
+
+Navbar con dropdown "Ayuda": todas las páginas (root, blog posts, blog hubs, 404) usan `<li class="navbar__dropdown">` con `ayuda.html` + `log-de-actualizaciones-plugin.html` como submenú. Si agregás una página nueva al site, replicá el mismo bloque (ajustando prefijo relativo: raíz → `""`, blog/ → `"../"`, blog/hub/ → `"../../"`).
