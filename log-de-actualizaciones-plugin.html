@@ -105,18 +105,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <details class="changelog-group" open data-month="2026-04">
                 <summary>
                     <span class="changelog-group__title">Abril 2026</span>
-                    <span class="changelog-group__count">16 releases</span>
+                    <span class="changelog-group__count">19 releases</span>
                     <span class="changelog-group__chevron" aria-hidden="true"></span>
                 </summary>
                 <div class="changelog-group__body">
 
-            <!-- v1.0.35 -->
+            <!-- v1.0.38 -->
             <article class="changelog-entry changelog-entry--latest">
+                <div class="changelog-entry__head">
+                    <span class="changelog-entry__version">v1.0.38</span>
+                    <span class="changelog-entry__date">27 de abril, 2026</span>
+                    <span class="changelog-entry__tag changelog-entry__tag--fix">Fix</span>
+                    <span class="changelog-entry__latest-flag">&bull; Última versión</span>
+                </div>
+                <h3>Validación de sucursal también en checkout por bloques</h3>
+                <p>Si el cliente elegía retiro en sucursal pero no seleccionaba ninguna, podía completar la compra igual y la orden quedaba sin sucursal asignada. En el checkout clásico esto ya se bloqueaba desde antes; ahora también se bloquea en el checkout por bloques de WooCommerce, mostrando el mismo mensaje claro antes del pago.</p>
+                <div class="changelog-entry__why"><b>Por qué</b>El comprador llegaba a pagar sin haber elegido sucursal y el problema sólo se descubría después al intentar generar el envío. Cerrar la validación antes del pago evita confusión y demoras de soporte.</div>
+            </article>
+
+            <!-- v1.0.37 -->
+            <article class="changelog-entry">
+                <div class="changelog-entry__head">
+                    <span class="changelog-entry__version">v1.0.37</span>
+                    <span class="changelog-entry__date">27 de abril, 2026</span>
+                    <span class="changelog-entry__tag changelog-entry__tag--fix">Fix crítico</span>
+                </div>
+                <h3>Arreglado: pedidos a sucursal podían salir a domicilio sin avisar</h3>
+                <p>Si por cualquier motivo no se guardaba la sucursal elegida (sesión perdida, timing del checkout, bloques sin validación), antes el envío salía silenciosamente como envío a domicilio a la dirección de facturación, sin error visible. Ahora el plugin frena la creación con un mensaje claro y el admin lo ve en las notas del pedido y en el metabox.</p>
+                <div class="changelog-entry__why"><b>Por qué</b>Detectamos un caso real donde un comprador eligió sucursal y recibió el envío en su domicilio. No queremos fallbacks silenciosos: preferimos un error claro y que el admin decida con la info en la mano.</div>
+            </article>
+
+            <!-- v1.0.36 -->
+            <article class="changelog-entry">
+                <div class="changelog-entry__head">
+                    <span class="changelog-entry__version">v1.0.36</span>
+                    <span class="changelog-entry__date">23 de abril, 2026</span>
+                    <span class="changelog-entry__tag changelog-entry__tag--fix">Fix crítico</span>
+                </div>
+                <h3>Triple blindaje contra envíos duplicados</h3>
+                <p>Tres arreglos del audit del 22 de abril, todos sobre la creación y cancelación de envíos:</p>
+                <ul>
+                    <li>Los reintentos automáticos ya no se aplican a operaciones de creación/cancelación. Si Correo Argentino tarda en responder pero igual recibió el pedido, el plugin no vuelve a mandarlo.</li>
+                    <li>Lock atómico al crear envíos: si dos procesos lo intentan al mismo tiempo (auto-create por cambio de estado + click manual del admin), solo uno pasa.</li>
+                    <li>Una vez que un envío llegó a estado final (entregado, devuelto, cancelado), no se puede pisar con un estado anterior aunque la API devuelva una respuesta atrasada.</li>
+                </ul>
+                <div class="changelog-entry__why"><b>Por qué</b>Cualquiera de los tres podía generar cobros duplicados del acuerdo con Correo Argentino o emails repetidos al cliente. Era una zona delicada que ahora queda blindada.</div>
+            </article>
+
+            <!-- v1.0.35 -->
+            <article class="changelog-entry">
                 <div class="changelog-entry__head">
                     <span class="changelog-entry__version">v1.0.35</span>
                     <span class="changelog-entry__date">23 de abril, 2026</span>
                     <span class="changelog-entry__tag changelog-entry__tag--fix">Fix</span>
-                    <span class="changelog-entry__latest-flag">&bull; Última versión</span>
                 </div>
                 <h3>Tracking más confiable y mejor recuperación de sesión</h3>
                 <p>Tres arreglos en el motor de seguimiento: refinamos la detección de estados, cancelar un envío ya cancelado deja de tirar error, y el plugin ahora se re-autentica solo cuando la sesión con MiCorreo expira (error 401) en lugar de mostrar un error al admin.</p>
