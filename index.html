@@ -355,7 +355,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li>Compatible con HPOS y Checkout por bloques</li>
                 </ul>
 
-                <a href="#" class="pricing-card__btn pricing-card__btn--trial" id="download-btn" download>Empezar prueba gratis &rarr;</a>
+                <button type="button" class="pricing-card__btn pricing-card__btn--trial" id="download-btn" onclick="openTrialModal()">Empezar prueba gratis &rarr;</button>
                 <p class="pricing-card__note">Sin tarjeta de crédito. Se desactiva a los 15 días.</p>
             </div>
 
@@ -421,6 +421,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
 </section>
+
+<!-- Trial lead modal -->
+<div class="modal-overlay" id="trial-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:9999; align-items:center; justify-content:center;">
+    <div style="background:var(--dark-card); border:1px solid var(--border); border-radius:16px; padding:36px 32px; max-width:420px; width:90%; position:relative;">
+        <button onclick="closeTrialModal()" style="position:absolute; top:14px; right:18px; background:none; border:none; color:var(--text-muted); font-size:20px; cursor:pointer; line-height:1;">&times;</button>
+        <h3 style="margin:0 0 8px; font-size:1.25rem;">Empezar prueba gratis</h3>
+        <p style="color:var(--text-muted); font-size:0.9rem; margin:0 0 24px;">15 días con todas las funciones. Sin tarjeta de crédito.</p>
+        <label style="display:block; font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">Tu email</label>
+        <input type="email" id="trial-email-input" placeholder="vos@tutienda.com"
+               style="width:100%; box-sizing:border-box; padding:10px 14px; background:var(--dark-deeper); border:1px solid var(--border); border-radius:8px; color:var(--text); font-size:0.95rem; margin-bottom:6px;" />
+        <p id="trial-modal-error" style="color:#f87171; font-size:0.82rem; min-height:18px; margin:0 0 16px;"></p>
+        <button onclick="submitTrialLead()" id="trial-modal-btn"
+                style="width:100%; padding:12px; background:var(--accent); border:none; border-radius:8px; color:#fff; font-size:1rem; font-weight:600; cursor:pointer;">
+            Descargar plugin &rarr;
+        </button>
+    </div>
+</div>
 
 <!-- Success (shown after payment) -->
 <section class="success-section" id="success-section">
@@ -512,11 +529,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var PRICE_DISPLAY = '$' + PRICE_ARS.toLocaleString('es-AR');
 
     document.getElementById('price-display').innerHTML = PRICE_DISPLAY + ' <span>ARS</span>';
-    document.getElementById('download-btn').href = API_URL + '/download/free';
-    document.getElementById('download-btn').addEventListener('click', function() {
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({ event: 'descarga_gratis' });
+    function openTrialModal() {
+        document.getElementById('trial-modal').style.display = 'flex';
+        document.getElementById('trial-email-input').focus();
+    }
+    function closeTrialModal() {
+        document.getElementById('trial-modal').style.display = 'none';
+        document.getElementById('trial-modal-error').textContent = '';
+    }
+    document.getElementById('trial-modal').addEventListener('click', function(e) {
+        if (e.target === this) closeTrialModal();
     });
+    document.getElementById('trial-email-input').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') submitTrialLead();
+    });
+    function submitTrialLead() {
+        var email = document.getElementById('trial-email-input').value.trim();
+        var errEl = document.getElementById('trial-modal-error');
+        var btn = document.getElementById('trial-modal-btn');
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            errEl.textContent = 'Ingresá un email válido.';
+            return;
+        }
+        errEl.textContent = '';
+        btn.disabled = true;
+        btn.textContent = 'Preparando descarga...';
+        fetch(API_URL + '/trial/lead', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: email })
+        })
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            if (data.token) {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({ event: 'descarga_gratis', email: email });
+                closeTrialModal();
+                window.location.href = API_URL + '/download/free?token=' + data.token;
+            } else {
+                errEl.textContent = data.error || 'Error al procesar. Intentá de nuevo.';
+                btn.disabled = false;
+                btn.textContent = 'Descargar plugin →';
+            }
+        })
+        .catch(function() {
+            errEl.textContent = 'Error de conexión. Intentá de nuevo.';
+            btn.disabled = false;
+            btn.textContent = 'Descargar plugin →';
+        });
+    }
 
     var appliedDiscount = null;
 
