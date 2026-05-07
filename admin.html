@@ -1245,7 +1245,7 @@
             tbody.innerHTML = installs.map(function(i) {
                 var s = INSTALL_STATUS[i.status] || INSTALL_STATUS.inactive;
                 var emailCell = i.email
-                    ? '<a href="mailto:' + escapeHtml(i.email) + '">' + escapeHtml(i.email) + '</a>'
+                    ? '<a href="mailto:' + escapeHtml(i.email) + '" style="color:inherit">' + escapeHtml(i.email) + '</a>'
                     : '<span style="color:var(--text-muted)">—</span>';
                 return '<tr>' +
                     '<td><strong>' + escapeHtml(i.domain) + '</strong></td>' +
