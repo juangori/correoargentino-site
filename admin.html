@@ -534,6 +534,7 @@
                         <tr>
                             <th>Dominio</th>
                             <th>Estado</th>
+                            <th>Email</th>
                             <th>Versión plugin</th>
                             <th>WP</th>
                             <th>WC</th>
@@ -542,7 +543,7 @@
                         </tr>
                     </thead>
                     <tbody id="installs-tbody">
-                        <tr><td colspan="7" class="loading">Cargando...</td></tr>
+                        <tr><td colspan="8" class="loading">Cargando...</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -1234,18 +1235,22 @@
 
     function loadInstalls() {
         var tbody = document.getElementById('installs-tbody');
-        tbody.innerHTML = '<tr><td colspan="7" class="loading">Cargando...</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="8" class="loading">Cargando...</td></tr>';
         apiFetch('/admin/installs').then(function(data) {
             var installs = data.installs || [];
             if (installs.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="7" class="loading">No hay instalaciones registradas</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="8" class="loading">No hay instalaciones registradas</td></tr>';
                 return;
             }
             tbody.innerHTML = installs.map(function(i) {
                 var s = INSTALL_STATUS[i.status] || INSTALL_STATUS.inactive;
+                var emailCell = i.email
+                    ? '<a href="mailto:' + escapeHtml(i.email) + '">' + escapeHtml(i.email) + '</a>'
+                    : '<span style="color:var(--text-muted)">—</span>';
                 return '<tr>' +
                     '<td><strong>' + escapeHtml(i.domain) + '</strong></td>' +
                     '<td><span class="badge ' + s.cls + '">' + s.text + '</span></td>' +
+                    '<td>' + emailCell + '</td>' +
                     '<td>' + escapeHtml(i.cap_version || '-') + '</td>' +
                     '<td>' + escapeHtml(i.wp_version || '-') + '</td>' +
                     '<td>' + escapeHtml(i.wc_version || '-') + '</td>' +
@@ -1254,7 +1259,7 @@
                     '</tr>';
             }).join('');
         }).catch(function() {
-            tbody.innerHTML = '<tr><td colspan="7" class="loading">Error al cargar</td></tr>';
+            tbody.innerHTML = '<tr><td colspan="8" class="loading">Error al cargar</td></tr>';
         });
     }
 
