@@ -529,14 +529,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var PRICE_DISPLAY = '$' + PRICE_ARS.toLocaleString('es-AR');
 
     document.getElementById('price-display').innerHTML = PRICE_DISPLAY + ' <span>ARS</span>';
-    function openTrialModal() {
+    window.openTrialModal = function() {
         document.getElementById('trial-modal').style.display = 'flex';
         document.getElementById('trial-email-input').focus();
-    }
-    function closeTrialModal() {
+    };
+    window.closeTrialModal = function() {
         document.getElementById('trial-modal').style.display = 'none';
         document.getElementById('trial-modal-error').textContent = '';
-    }
+    };
+    window.submitTrialLead = submitTrialLead;
     document.getElementById('trial-modal').addEventListener('click', function(e) {
         if (e.target === this) closeTrialModal();
     });
