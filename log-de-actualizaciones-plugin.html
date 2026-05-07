@@ -105,18 +105,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <details class="changelog-group" open data-month="2026-05">
                 <summary>
                     <span class="changelog-group__title">Mayo 2026</span>
-                    <span class="changelog-group__count">1 release</span>
+                    <span class="changelog-group__count">2 releases</span>
                     <span class="changelog-group__chevron" aria-hidden="true"></span>
                 </summary>
                 <div class="changelog-group__body">
 
-            <!-- v1.0.40 -->
+            <!-- v1.0.41 -->
             <article class="changelog-entry changelog-entry--latest">
+                <div class="changelog-entry__head">
+                    <span class="changelog-entry__version">v1.0.41</span>
+                    <span class="changelog-entry__date">7 de mayo, 2026</span>
+                    <span class="changelog-entry__tag changelog-entry__tag--improve">Mejora</span>
+                    <span class="changelog-entry__latest-flag">&bull; Última versión</span>
+                </div>
+                <h3>El período de prueba ahora pide tu email al activarse</h3>
+                <p>Al activar la prueba gratuita desde el wizard de configuración inicial, el plugin ahora solicita tu email. El campo es obligatorio antes de poder iniciar los 15 días.</p>
+                <div class="changelog-entry__why"><b>Por qué</b>Hasta ahora no teníamos forma de saber quién había descargado el plugin ni cómo contactarlo cuando se le vencía la prueba. Con este cambio podemos asociar cada instalación de prueba con un email y hacer seguimiento real.</div>
+            </article>
+
+            <!-- v1.0.40 -->
+            <article class="changelog-entry">
                 <div class="changelog-entry__head">
                     <span class="changelog-entry__version">v1.0.40</span>
                     <span class="changelog-entry__date">6 de mayo, 2026</span>
                     <span class="changelog-entry__tag changelog-entry__tag--fix">Fix</span>
-                    <span class="changelog-entry__latest-flag">&bull; Última versión</span>
                 </div>
                 <h3>Activación y actualizaciones más resistentes a firewalls de hosting</h3>
                 <p>En tiendas alojadas en hostings con firewalls agresivos o IPs compartidas con mala reputación, las peticiones del plugin a nuestro servidor de licencias podían ser interceptadas por una protección anti-bots y devolver un error <code>HTTP 403</code> con un mensaje "Just a moment...". El resultado: el cliente no podía activar la licencia, validar el estado o recibir actualizaciones automáticas. Ahora el plugin se identifica correctamente al conectarse a nuestro servidor con un User-Agent propio, lo que permite que la protección lo deje pasar sin interferir.</p>
@@ -379,7 +391,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </details>
 
-            <details class="changelog-group" open data-month="2026-03">
+            <details class="changelog-group" data-month="2026-03">
                 <summary>
                     <span class="changelog-group__title">Marzo 2026</span>
                     <span class="changelog-group__count">10 releases</span>
