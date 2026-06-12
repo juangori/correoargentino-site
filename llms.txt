@@ -19,7 +19,7 @@ Características principales:
 - Compatible con HPOS y checkout por bloques de WooCommerce
 - Wizard de configuración y diagnóstico integrado
 
-Precio: $49.990 ARS por año (licencia para 1 sitio). Prueba gratuita de 15 días sin tarjeta de crédito.
+Precio: $62.990 ARS por año (licencia para 1 sitio). Prueba gratuita de 15 días sin tarjeta de crédito.
 Requisitos: WordPress 5.8+, WooCommerce 7.0+.
 Desarrollado por AD Webs (adwebs.com.ar).
 
