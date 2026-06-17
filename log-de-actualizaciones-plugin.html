@@ -105,18 +105,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <details class="changelog-group" open data-month="2026-06">
                 <summary>
                     <span class="changelog-group__title">Junio 2026</span>
-                    <span class="changelog-group__count">1 release</span>
+                    <span class="changelog-group__count">2 releases</span>
                     <span class="changelog-group__chevron" aria-hidden="true"></span>
                 </summary>
                 <div class="changelog-group__body">
 
-            <!-- v1.0.42 -->
+            <!-- v1.0.43 -->
             <article class="changelog-entry changelog-entry--latest">
+                <div class="changelog-entry__head">
+                    <span class="changelog-entry__version">v1.0.43</span>
+                    <span class="changelog-entry__date">17 de junio, 2026</span>
+                    <span class="changelog-entry__tag changelog-entry__tag--fix">Fix</span>
+                    <span class="changelog-entry__latest-flag">&bull; Última versión</span>
+                </div>
+                <h3>El selector de sucursales en el checkout por bloques, ahora sí, en las versiones nuevas de WooCommerce</h3>
+                <p>En las versiones más recientes de WooCommerce (10.x, que integraron el checkout por bloques al núcleo) el selector de sucursales <strong>seguía sin aparecer</strong> a pesar de la corrección anterior: la integración del bloque se enganchaba demasiado temprano en el arranque y nunca llegaba a registrarse, así que el botón "Elegir sucursal" no se cargaba aunque todo lo demás estuviera bien. Ahora se registra en el momento correcto, sin importar la versión de WooCommerce. Además, las instalaciones nuevas arrancan en <strong>modo producción</strong> (antes quedaban en modo sandbox, donde Correo Argentino no devuelve sucursales ni tarifas reales y el selector aparecía vacío), con un aviso claro en el panel y en el diagnóstico si una tienda quedó en sandbox por error. Y si la cuenta de MiCorreo no devuelve el listado de sucursales, el plugin reintenta automáticamente con el catálogo compartido para que el selector nunca quede vacío.</p>
+                <div class="changelog-entry__why"><b>Por qué</b>La corrección anterior resolvía parte del problema, pero en WooCommerce 10+ el selector seguía sin aparecer por una causa más profunda en cómo se cargaba el componente. Esta vez lo verificamos de punta a punta en un entorno idéntico al de las tiendas afectadas (WooCommerce 10.8 + tema Blocksy + checkout por bloques) antes de publicar. El cambio a producción por defecto evita además que instalaciones nuevas muestren un selector vacío sin que el dueño sepa por qué.</div>
+            </article>
+
+            <!-- v1.0.42 -->
+            <article class="changelog-entry">
                 <div class="changelog-entry__head">
                     <span class="changelog-entry__version">v1.0.42</span>
                     <span class="changelog-entry__date">17 de junio, 2026</span>
                     <span class="changelog-entry__tag changelog-entry__tag--fix">Fix</span>
-                    <span class="changelog-entry__latest-flag">&bull; Última versión</span>
                 </div>
                 <h3>El selector de sucursales ahora aparece también en el checkout por bloques</h3>
                 <p>En tiendas que usan el checkout por bloques de WooCommerce (el nuevo, que viene por defecto en las versiones recientes), al elegir "Retiro en sucursal" el comprador veía el pedido de seleccionar una sucursal pero <strong>no aparecía el botón para elegirla</strong>, quedando trabado sin poder finalizar la compra. Se notaba especialmente en temas como Blocksy. Era un error en cómo se montaba el selector dentro del bloque, que fallaba en silencio. Ahora el botón "Elegir sucursal" se muestra correctamente y el flujo con mapa y búsqueda funciona igual que en el checkout clásico.</p>
