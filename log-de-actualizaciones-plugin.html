@@ -105,18 +105,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <details class="changelog-group" open data-month="2026-06">
                 <summary>
                     <span class="changelog-group__title">Junio 2026</span>
-                    <span class="changelog-group__count">2 releases</span>
+                    <span class="changelog-group__count">3 releases</span>
                     <span class="changelog-group__chevron" aria-hidden="true"></span>
                 </summary>
                 <div class="changelog-group__body">
 
-            <!-- v1.0.43 -->
+            <!-- v1.0.44 -->
             <article class="changelog-entry changelog-entry--latest">
+                <div class="changelog-entry__head">
+                    <span class="changelog-entry__version">v1.0.44</span>
+                    <span class="changelog-entry__date">23 de junio, 2026</span>
+                    <span class="changelog-entry__tag changelog-entry__tag--fix">Fix</span>
+                    <span class="changelog-entry__latest-flag">&bull; Última versión</span>
+                </div>
+                <h3>Los envíos con MiCorreo vuelven a crearse y sincronizarse</h3>
+                <p>Al crear un envío con <strong>MiCorreo</strong>, el plugin fallaba con el mensaje <em>"MiCorreo aceptó el envío pero no devolvió un identificador"</em> y el pedido quedaba como "Pendiente", sin sincronizar. La causa: la API de MiCorreo importa los envíos de forma <strong>asíncrona</strong> — deja el envío como "Pendiente" en tu panel de MiCorreo y el número de seguimiento y la etiqueta se generan recién cuando lo cotizás y pagás ahí. El plugin esperaba ese identificador al instante y por eso cortaba con error. Ahora el envío queda marcado como <strong>"Importado"</strong> (sin error), el pedido se sincroniza, y el plugin te indica que completes el pago del envío en el panel de MiCorreo para obtener el seguimiento y la etiqueta. El servicio Paq.Ar sigue funcionando igual, con tracking en tiempo real. De paso corregimos la programación de la sincronización automática de estados de envío.</p>
+                <div class="changelog-entry__why"><b>Por qué</b>Un usuario reportó que, tras comprar la licencia y hacer un envío real con MiCorreo, el pedido no se sincronizaba con WooCommerce. Investigando contra la API real de MiCorreo confirmamos que su flujo de importación es asíncrono (el envío se cotiza y paga desde el panel), distinto al de Paq.Ar. Reescribimos el manejo de MiCorreo para acompañar ese flujo en lugar de pelearse con él, y lo validamos de punta a punta contra una cuenta real antes de publicar.</div>
+            </article>
+
+            <!-- v1.0.43 -->
+            <article class="changelog-entry">
                 <div class="changelog-entry__head">
                     <span class="changelog-entry__version">v1.0.43</span>
                     <span class="changelog-entry__date">17 de junio, 2026</span>
                     <span class="changelog-entry__tag changelog-entry__tag--fix">Fix</span>
-                    <span class="changelog-entry__latest-flag">&bull; Última versión</span>
                 </div>
                 <h3>El selector de sucursales en el checkout por bloques, ahora sí, en las versiones nuevas de WooCommerce</h3>
                 <p>En las versiones más recientes de WooCommerce (10.x, que integraron el checkout por bloques al núcleo) el selector de sucursales <strong>seguía sin aparecer</strong> a pesar de la corrección anterior: la integración del bloque se enganchaba demasiado temprano en el arranque y nunca llegaba a registrarse, así que el botón "Elegir sucursal" no se cargaba aunque todo lo demás estuviera bien. Ahora se registra en el momento correcto, sin importar la versión de WooCommerce. Además, las instalaciones nuevas arrancan en <strong>modo producción</strong> (antes quedaban en modo sandbox, donde Correo Argentino no devuelve sucursales ni tarifas reales y el selector aparecía vacío), con un aviso claro en el panel y en el diagnóstico si una tienda quedó en sandbox por error. Y si la cuenta de MiCorreo no devuelve el listado de sucursales, el plugin reintenta automáticamente con el catálogo compartido para que el selector nunca quede vacío.</p>
