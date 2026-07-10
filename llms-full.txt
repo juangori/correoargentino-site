@@ -1,0 +1,1910 @@
+# Correo Argentino Pro
+
+> Plugin premium de WooCommerce para integrar envíos de Correo Argentino en tiendas online de Argentina. Cotización en tiempo real, mapa de sucursales, etiquetas PDF, tracking automático y acciones masivas.
+
+Sitio oficial: https://correoargentinopro.com/
+
+Correo Argentino Pro es un plugin comercial para WordPress/WooCommerce que permite a tiendas online argentinas ofrecer envíos con Correo Argentino de forma profesional. Se integra con las APIs oficiales de MiCorreo (para PyMEs y monotributistas, con cotización en tiempo real) y Paq.Ar (para empresas con acuerdo comercial, con etiquetas PDF).
+
+**Características principales:**
+
+- Cotización de envíos en tiempo real vía API de MiCorreo, mostrada en el checkout de WooCommerce.
+- Selector de sucursales con mapa interactivo Leaflet (+3000 sucursales), búsqueda, geolocalización y ordenamiento por cercanía.
+- Creación de envíos desde el panel de WooCommerce (MiCorreo y Paq.Ar).
+- Generación de etiquetas PDF / rótulos de envío (Paq.Ar).
+- Tracking automático con timeline visual y notificaciones por email al cliente. Sincronización cada 6 horas.
+- Acciones masivas: crear envíos y generar etiquetas para múltiples pedidos a la vez.
+- Exportación CSV de envíos y reglas de envío gratis configurables.
+- Servicios soportados: Clásico (a domicilio), Envío a sucursal, Expreso.
+- Compatible con HPOS y checkout por bloques de WooCommerce. Wizard de configuración y diagnóstico integrado.
+
+**Precio:** $62.990 ARS por año (licencia para 1 sitio). Prueba gratuita de 15 días sin tarjeta de crédito.
+**Requisitos:** WordPress 5.8+, WooCommerce 7.0+, PHP 7.4+.
+**Desarrollado por** AD Webs (https://adwebs.com.ar). No estamos afiliados a Correo Argentino S.A.
+
+**Contacto y soporte:** soporte@correoargentinopro.com · https://correoargentinopro.com/contacto.html
+
+---
+
+# Correo Argentino para WooCommerce — Plugin de Envíos
+https://correoargentinopro.com/
+
+Plugin Premium para WooCommerce. La integración profesional con Correo Argentino que tu tienda necesita: cotización en tiempo real, mapa de sucursales, etiquetas, tracking y más.
+
+**Probá gratis por 15 días** — sin tarjeta de crédito, todas las funciones incluidas.
+
+## Todo lo que necesitás para enviar con Correo Argentino
+
+- **Cotización en tiempo real** — Tus clientes ven el costo de envío actualizado al instante en el checkout. Integración directa con la API de MiCorreo.
+- **Selector de sucursales con mapa** — Modal interactivo con mapa Leaflet, búsqueda, geolocalización y ordenamiento por cercanía. +3000 sucursales.
+- **Creación de envíos** — Creá envíos en Correo Argentino desde el panel de WooCommerce. Soporta MiCorreo (PyMEs) y Paq.Ar (empresas).
+- **Etiquetas PDF** — Genera e imprime rótulos de envío directamente desde cada pedido. Disponible para clientes Paq.Ar con acuerdo comercial.
+- **Tracking automático** — Seguimiento en tiempo real con timeline visual. Emails automáticos al cambiar de estado. Sincronización cada 6 horas.
+- **Acciones masivas** — Creá envíos y generá etiquetas para múltiples pedidos a la vez. Exportá a CSV. Perfecto para alto volumen.
+
+## Cotizador de envíos Correo Argentino
+
+Calculá el costo estimado de tu envío al instante con precios actualizados de Correo Argentino. Para más opciones, usá la [calculadora completa de envíos Correo Argentino](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html).
+
+## Compatibilidad
+
+Compatible con WooCommerce, WordPress, HPOS, checkout por bloques y mapas Leaflet. Requiere WooCommerce 7.0+, WordPress 5.8+ y PHP 7.4+.
+
+## Precios
+
+- **Prueba gratuita** — Gratis, 15 días sin compromiso. Incluye todas las funciones, sin tarjeta de crédito. Se desactiva sola a los 15 días.
+- **Licencia anual** — Precio de lanzamiento, por año y por sitio. Incluye todas las funciones más actualizaciones automáticas y soporte prioritario por email.
+
+Pago seguro vía Mercado Pago. Tu licencia se entrega al instante.
+
+## Preguntas frecuentes
+
+**¿Puedo probarlo antes de comprar?**
+Sí. La prueba gratuita de 15 días incluye todas las funciones, sin límites y sin tarjeta de crédito. Se desactiva sola al terminar.
+
+**¿Qué pasa si vence mi licencia?**
+El plugin deja de cotizar y crear envíos. Tus datos y configuración se mantienen. Podés renovar en cualquier momento y todo vuelve a funcionar al instante.
+
+**¿Funciona con mi tema y mi versión de WooCommerce?**
+Sí. Compatible con cualquier tema de WooCommerce, HPOS, checkout clásico y checkout por bloques. Requiere WooCommerce 7.0+ y PHP 7.4+.
+
+**¿Cómo recibo el plugin después de pagar?**
+Al instante. Después de pagar con Mercado Pago, tu clave de licencia aparece en pantalla y se envía a tu email junto con el link de descarga. La activación toma 30 segundos.
+
+**¿Puedo cambiar de dominio después?**
+Sí. Desactivás la licencia en el sitio actual y la activás en el nuevo. Sin costo extra, sin contactar soporte.
+
+## Recursos para tu tienda online
+
+Guías, comparativas y tutoriales sobre envíos con Correo Argentino:
+
+- [Envíos de Correo Argentino para tu tienda online: Guía Completa 2026](https://correoargentinopro.com/blog/envios-correo-argentino-tienda-online.html)
+- [WooCommerce en Argentina: Guía Completa para Vender Online](https://correoargentinopro.com/blog/woocommerce-argentina-guia-completa.html)
+- [Mercado Envíos vs Correo Argentino: Cuál Conviene](https://correoargentinopro.com/blog/mercado-envios-vs-correo-argentino.html)
+- [Cómo Integrar Correo Argentino con WooCommerce](https://correoargentinopro.com/blog/como-integrar-correo-argentino-woocommerce.html)
+- [Cotizar Envío con Correo Argentino: Calculadora Online](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html)
+- [Correo Argentino vs OCA vs Andreani: Cuál Elegir](https://correoargentinopro.com/blog/correo-argentino-vs-oca-vs-andreani.html)
+
+[Ver todos los artículos](https://correoargentinopro.com/blog/)
+
+---
+
+Correo Argentino Pro © 2026 · Desarrollado por [AD Webs](https://adwebs.com.ar). No estamos afiliados a Correo Argentino S.A.
+
+---
+
+# Centro de Ayuda
+https://correoargentinopro.com/ayuda.html
+
+## Introduccion
+
+Correo Argentino Pro es un plugin premium para WooCommerce que integra tu tienda con Correo Argentino. Con el podes cotizar envíos en tiempo real, crear envíos, generar etiquetas, hacer seguimiento automático y mucho mas.
+
+#### Activa tu licencia
+
+Ingresa tu clave de licencia en el wizard de configuración inicial o en Configuración > Licencia.
+
+#### Elegi tu servicio
+
+Selecciona entre MiCorreo (PyMEs) o Paq.Ar (empresas con acuerdo comercial).
+
+#### Configura tus credenciales
+
+Carga los datos de tu cuenta de MiCorreo o tu API Key de Paq.Ar.
+
+#### Completa los datos del remitente
+
+Ingresa tu direccion de origen para cotizaciones y envíos.
+
+## Que servicio elegir
+
+El plugin soporta dos plataformas de Correo Argentino. Elegi la que corresponda según tu tipo de cuenta:
+
+|  | MiCorreo | Paq.Ar |
+|---|---|---|
+| **Para quien** | PyMEs, monotributistas, emprendedores | Empresas con acuerdo comercial |
+| **Cuenta necesaria** | MiCorreo | Acuerdo con Correo Argentino |
+| **Cotización automatica** | Si | No (tarifa fija configurable) |
+| **Etiquetas/Rotulos** | Desde el panel de MiCorreo | Generadas desde el plugin |
+| **Cancelar envíos** | Desde el panel de MiCorreo | Desde WooCommerce |
+| **Credenciales** | Email, contrasena, Customer ID | API Key, ID de Acuerdo |
+
+[Artículo relacionado: ¿Qué es MiCorreo de Correo Argentino? →](https://correoargentinopro.com/blog/que-es-micorreo-correo-argentino.html)
+
+## Configurar MiCorreo
+
+Segui estos pasos para conectar tu cuenta de MiCorreo con el plugin:
+
+#### Crea tu cuenta en MiCorreo
+
+Si aun no tenes cuenta, registrate en **MiCorreo**. Es gratuito y esta disponible para PyMEs, monotributistas y emprendedores.
+
+#### Obtene tu Customer ID
+
+El Customer ID se obtiene automáticamente al validar tu cuenta en el plugin, o podes ingresarlo manualmente. Lo encontras en tu perfil de MiCorreo.
+
+#### Carga las credenciales
+
+Anda a **Correo Arg. Pro > Configuración**, selecciona "MiCorreo" como servicio e ingresa tu email, contrasena y Customer ID.
+
+#### Proba la conexion
+
+Usa el boton "Probar conexion" en la pagina de configuración, o anda a **Diagnostico** para verificar que todo este correcto.
+
+[Artículo relacionado: Cómo integrar Correo Argentino con WooCommerce →](https://correoargentinopro.com/blog/como-integrar-correo-argentino-woocommerce.html)
+
+## Configurar Paq.Ar
+
+Para usar Paq.Ar necesitas un acuerdo comercial con Correo Argentino:
+
+#### Tene tu acuerdo comercial
+
+Paq.Ar esta disponible para empresas que tienen un acuerdo comercial vigente con Correo Argentino.
+
+#### Obtene tus credenciales
+
+Correo Argentino te proporcionara un **API Key** y un **ID de Acuerdo** para usar la API de Paq.Ar.
+
+#### Carga API Key y Acuerdo
+
+En **Correo Arg. Pro > Configuración**, selecciona "Paq.Ar" como servicio e ingresa tu API Key y el ID de Acuerdo.
+
+#### Proba la conexion
+
+Usa el boton "Probar conexion" para verificar que las credenciales sean correctas y la API responda.
+
+[Artículo relacionado: Paq.Ar y WooCommerce: Guía completa →](https://correoargentinopro.com/blog/paqar-woocommerce.html)
+
+## Datos del remitente
+
+Los datos del remitente se usan como direccion de origen para el cálculo de tarifas, la creacion de envíos y la generación de etiquetas.
+
+#### Campos obligatorios
+
+- **Razon social / Nombre del negocio**
+- **Calle y numero**
+- **Ciudad**
+- **Provincia** (codigo de Correo Argentino)
+- **Codigo postal** (CPA de 4 digitos)
+
+**Importante:** Es fundamental que el codigo postal sea correcto, ya que afecta directamente el cálculo de tarifas.
+
+Configura estos datos en **Correo Arg. Pro > Configuración > Datos del remitente** o durante el wizard de configuración inicial.
+
+## Zona de envío
+
+Para que Correo Argentino aparezca como opción en el checkout, necesitas agregarlo a una zona de envío de WooCommerce:
+
+#### Anda a Zonas de envío
+
+En tu WordPress, anda a **WooCommerce > Ajustes > Envío > Zonas de envío**.
+
+#### Edita o crea una zona
+
+Selecciona una zona existente (por ejemplo, "Argentina") o crea una nueva que cubra las regiones donde queres enviar.
+
+#### Agrega el metodo de envío
+
+Hace clic en "Agregar metodo de envío" y selecciona **Correo Argentino Pro**.
+
+#### Configura el tipo de entrega
+
+Elegi entre **Envío a domicilio** o **Retiro en sucursal**. Tambien podes seleccionar el tipo de servicio: Clasico (CP) o Express.
+
+#### Tip
+
+Podes agregar el metodo dos veces en la misma zona: una vez para "Envío a domicilio" y otra para "Retiro en sucursal", asi tus clientes pueden elegir.
+
+[Artículo relacionado: Zonas de envío de Correo Argentino →](https://correoargentinopro.com/blog/zonas-envio-correo-argentino.html)
+
+## Flujo de un pedido
+
+Este es el ciclo de vida de un pedido con Correo Argentino Pro:
+
+#### El cliente compra
+
+El cliente realiza la compra y selecciona Correo Argentino como metodo de envío en el checkout. Si eligio retiro en sucursal, ve un mapa interactivo para elegir la sucursal.
+
+#### Se verifica el pago
+
+Cuando el pago se confirma, el pedido pasa a estado "Procesando".
+
+#### Se crea el envío
+
+El envío se crea en Correo Argentino, ya sea automáticamente (si tenes la opción activada) o manualmente desde el detalle del pedido.
+
+#### Etiqueta y despacho
+
+Descarga la etiqueta de envío (PDF), pegala en el paquete y despacha. El tracking se actualiza automáticamente.
+
+## Envío a sucursal
+
+Cuando el cliente elige "Retiro en sucursal" en el checkout, se le muestra un selector interactivo con las siguientes funcionalidades:
+
+- **Mapa interactivo:** Muestra todas las sucursales de Correo Argentino en un mapa con Leaflet.
+- **Busqueda:** El cliente puede buscar por nombre de sucursal o direccion.
+- **Geolocalizacion:** Si el cliente lo permite, las sucursales se ordenan por distancia.
+- **Distancia:** Se muestra la distancia a cada sucursal desde la ubicacion del cliente.
+
+Al seleccionar una sucursal, los campos de direccion se completan automáticamente y quedan como solo lectura. La sucursal seleccionada se guarda con el pedido.
+
+[Artículo relacionado: Envío a sucursal vs domicilio →](https://correoargentinopro.com/blog/envio-sucursal-vs-domicilio-correo-argentino.html)
+
+## Etiquetas y rotulos
+
+El proceso para obtener las etiquetas depende del servicio que uses:
+
+#### MiCorreo
+
+1. Ingresa al panel de MiCorreo
+2. Busca el envío por numero de tracking
+3. Descarga el PDF del rotulo
+4. Imprimilo y pegalo en el paquete
+
+Las etiquetas de MiCorreo se gestionan directamente desde su plataforma.
+
+#### Paq.Ar
+
+1. Anda al detalle del pedido en WooCommerce
+2. En el metabox de Correo Argentino Pro, hace clic en "Generar rotulo"
+3. El PDF se descarga automáticamente
+4. Tambien podes generarlos en lote desde la lista de pedidos
+
+## Seguimiento de envíos
+
+El plugin sincroniza automáticamente el estado de todos los envíos activos cada 6 horas. Tambien podes actualizar manualmente desde el detalle del pedido.
+
+### Estados de envío
+
+| Estado | Descripcion |
+|---|---|
+| Creado | Registrado en Correo Argentino, pendiente de despacho. |
+| Retirado | Correo Argentino retiro el paquete. |
+| En transito | El paquete esta en camino al destino. |
+| En reparto | Sale a reparto hoy, se entrega en el dia. |
+| Entregado | Entregado al destinatario exitosamente. |
+| Devuelto | No se pudo entregar, devuelto al remitente. |
+| Cancelado | El envío fue cancelado. |
+
+### Donde ve el cliente el tracking
+
+- **Mi Cuenta:** En el detalle del pedido, con un timeline visual del estado.
+- **Emails:** Recibe notificaciones automáticas cuándo el estado cambia.
+- **Pagina publica:** Podes crear una pagina de tracking con el shortcode `[cap_tracking]`.
+
+## Acciones masivas
+
+Desde la lista de pedidos de WooCommerce podes realizar acciones sobre multiples pedidos a la vez:
+
+- **Crear envíos:** Crea envíos en Correo Argentino para todos los pedidos seleccionados.
+- **Generar etiquetas:** Genera los rotulos PDF de todos los pedidos seleccionados (solo Paq.Ar).
+- **Actualizar tracking:** Sincroniza el estado de seguimiento de los pedidos seleccionados.
+
+Para usarlas, selecciona los pedidos con las casillas de verificacion, elegi la accion del menu desplegable "Acciones en lote" y hace clic en "Aplicar".
+
+## Tarifas con Paq.Ar
+
+Paq.Ar no ofrece cotización automatica por API. En su lugar, podes configurar una tarifa fija para tus clientes:
+
+- **Tarifa fija:** Configura un monto fijo en pesos que se mostrara en el checkout.
+- **Envío gratis condicional:** Podes ofrecer envío gratis a partir de un monto mínimo de carrito.
+- **Envío siempre gratis:** Configura la tarifa en $0 para ofrecer envío gratis en todos los pedidos.
+
+Estos valores se configuran al editar el metodo de envío dentro de la zona de envío correspondiente en **WooCommerce > Ajustes > Envío**.
+
+## Auto-completar al entregar
+
+Cuando esta opción esta activada, el plugin marca automáticamente el pedido como "Completado" cuándo el tracking indica que el paquete fue entregado.
+
+- Solo aplica a pedidos en estado "Procesando".
+- Se agrega una nota al pedido indicando que fue completado automáticamente.
+- El cliente recibe el email de pedido completado de WooCommerce.
+
+Activa esta opción en **Correo Arg. Pro > Configuración > Opciones avanzadas**.
+
+## Exportar a CSV
+
+Desde el Dashboard del plugin podes exportar los envíos recientes a un archivo CSV. El archivo incluye:
+
+- Numero de pedido
+- Numero de tracking
+- Estado del envío
+- Fecha de creacion
+
+Hace clic en el boton "Exportar CSV" en la seccion de envíos recientes del Dashboard.
+
+## Validador de productos
+
+El plugin detecta productos que no tienen peso o dimensiones configurados y muestra un aviso en el Dashboard y en la lista de productos de WooCommerce.
+
+#### Por qué es importante
+
+Los productos sin peso ni dimensiones usan valores por defecto (1 gramo, 1 cm) que generan cotizaciones incorrectas. Esto puede hacer que tus clientes paguen de mas o de menos por el envío.
+
+**Como corregirlo:** Edita el producto en WooCommerce > Productos, anda a la pestaña "Envío" e ingresa el peso (en kg) y las dimensiones (en cm).
+
+## Modo Sandbox
+
+El modo Sandbox te permite probar toda la integración sin crear envíos reales. Es ideal para:
+
+- Probar el flujo completo de compra antes de salir a produccion.
+- Verificar que las cotizaciones, creacion de envíos y etiquetas funcionen correctamente.
+- Hacer pruebas de integración sin afectar tu cuenta real.
+
+#### Importante
+
+Recorda desactivar el modo Sandbox antes de poner tu tienda en produccion. Los envíos creados en Sandbox no son reales y no se van a despachar.
+
+Activa o desactiva el Sandbox en **Correo Arg. Pro > Configuración > Conexion API**.
+
+## Errores comunes
+
+#### "Customer ID de MiCorreo no configurado"
+
+Falta el Customer ID en la configuración. Anda a **Configuración > Conexion API** e ingresa tu Customer ID. Se obtiene automáticamente al validar tu cuenta o lo encontras en tu perfil de MiCorreo.
+
+#### "Servicio no configurado"
+
+No seleccionaste un servicio. Anda a **Configuración > Conexion API** y elegi MiCorreo o Paq.Ar.
+
+#### "El envío aun no fue creado"
+
+Si tenes la creacion automatica activada, el envío se crea cuándo el pedido pasa a "Procesando" o "Completado". Si el pedido esta en otro estado, cambialo manualmente o crea el envío desde el detalle del pedido.
+
+#### "No aparece Correo Argentino en el checkout"
+
+Verifica que:
+
+- El metodo de envío esta agregado a una zona que cubra la direccion del cliente.
+- Los productos del carrito tienen peso y dimensiones.
+- Las credenciales estan configuradas correctamente.
+- El codigo postal del cliente es valido.
+
+#### "Tarifa muestra $0 o un valor incorrecto"
+
+Verifica que todos los productos del carrito tengan peso y dimensiones configurados. Los productos sin estos datos usan valores por defecto que generan cotizaciones incorrectas.
+
+#### "Conexion API — Error"
+
+Puede ser por credenciales incorrectas, la API de Correo Argentino temporalmente caida, o un firewall bloqueando las conexiones salientes. Verifica tus credenciales y proba de nuevo.
+
+#### "No puedo cancelar un envío de MiCorreo"
+
+Los envíos de MiCorreo solo se pueden cancelar desde el panel de MiCorreo directamente. Esta es una limitacion de la plataforma.
+
+#### "El Dashboard muestra numeros incorrectos"
+
+Las estadisticas del Dashboard se cachean durante 15 minutos. Espera un momento y recarga la pagina para ver los valores actualizados.
+
+---
+
+# Preguntas Frecuentes
+https://correoargentinopro.com/faqs.html
+
+### Que servicios de Correo Argentino soporta?
+
+Soporta MiCorreo (para PyMEs y monotributistas, con cotización) y Paq.Ar v2 (para empresas con acuerdo comercial, con etiquetas). [Leer más →](https://correoargentinopro.com/blog/que-es-micorreo-correo-argentino.html)
+
+### Necesito tener cuenta en Correo Argentino?
+
+Si. Necesitas una cuenta en MiCorreo o un acuerdo comercial Paq.Ar. El plugin se conecta a tu cuenta existente.
+
+### La licencia es por sitio?
+
+Si, cada licencia anual es valida para 1 dominio. Podes desactivarla y moverla a otro sitio cuándo quieras.
+
+### Cuanto dura la licencia?
+
+La licencia tiene una vigencia de 1 año. Incluye actualizaciones y soporte durante ese periodo. Al vencer, podes renovarla para seguir recibiendo actualizaciones y soporte.
+
+### Que pasa cuándo vence la licencia?
+
+El plugin deja de funcionar (cotizar, crear envíos, generar etiquetas). Desde el panel del plugin vas a ver un aviso con el link para renovarla.
+
+### Incluye actualizaciones?
+
+Si, mientras tu licencia este activa. Las actualizaciones llegan directamente a tu WordPress, como cualquier plugin del repositorio oficial.
+
+### Es compatible con mi tema?
+
+El plugin funciona con cualquier tema compatible con WooCommerce. Soporta HPOS y el checkout por bloques. [Ver guía de integración →](https://correoargentinopro.com/blog/como-integrar-correo-argentino-woocommerce.html)
+
+### Como recibo la licencia?
+
+Despues de pagar con Mercado Pago, tu clave de licencia aparece en pantalla y se envia a tu email. La activacion es instantanea.
+
+### Puedo usar el plugin en mas de un sitio?
+
+Cada licencia es para 1 sitio. Si necesitas usarlo en multiples sitios, podes comprar licencias adicionales.
+
+### Que pasa si cambio de dominio?
+
+Podes desactivar la licencia en el sitio actual y activarla en el nuevo dominio desde el panel del plugin.
+
+### Funciona con el checkout por bloques?
+
+Si. El plugin es totalmente compatible con el nuevo checkout por bloques de WooCommerce, ademas del checkout clásico. [Ver guía WooCommerce →](https://correoargentinopro.com/blog/woocommerce-argentina-guia-completa.html)
+
+### Que version de WooCommerce necesito?
+
+Se requiere WooCommerce 7.0 o superior. Recomendamos siempre usar la ultima version disponible.
+
+## Recursos relacionados
+
+- [Envíos ecommerce con Correo Argentino](https://correoargentinopro.com/blog/envios-correo-argentino-tienda-online.html)
+- [¿Cuánto cuesta enviar un paquete?](https://correoargentinopro.com/blog/cuanto-cuesta-enviar-paquete-correo-argentino.html)
+- [Tipos de envío disponibles](https://correoargentinopro.com/blog/tipos-envio-correo-argentino.html)
+- [Integrar Paq.Ar con WooCommerce](https://correoargentinopro.com/blog/paqar-woocommerce.html)
+- [Documentación completa](https://correoargentinopro.com/ayuda.html)
+
+---
+
+# Cotizar Envío Correo Argentino: Calculadora Gratis 2026
+https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html
+
+Si necesitas **cotizar un envío con Correo Argentino**, estas en el lugar indicado. En esta guía te explicamos todas las formas de obtener una cotización actualizada, que factores afectan el precio y cómo automatizar el cálculo en tu [tienda online](https://correoargentinopro.com/blog/envios-correo-argentino-tienda-online.html) para que tus clientes vean el costo de envío en tiempo real. ¿Tenés WooCommerce? Con [Correo Argentino Pro](https://correoargentinopro.com/) mostrás las tarifas actualizadas directamente en el checkout.
+
+> Usá el [cotizador interactivo gratuito](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html#cotizador) en la página para calcular el costo de tu envío al instante: elegí el tipo de servicio, ingresá los códigos postales de origen y destino, cargá el peso y las dimensiones, y obtené el precio estimado.
+
+## Como cotizar un envío con Correo Argentino
+
+Existen varias formas de conocer el costo de un envío con Correo Argentino antes de despachar tu paquete. La mas rapida es usar el **cotizador que te ofrecemos arriba**: simplemente completa el tipo de servicio, los codigos postales de origen y destino, y las dimensiones del paquete para obtener una estimacion al instante.
+
+Ademas del cotizador de esta pagina, podes usar las siguientes alternativas:
+
+- **Plataforma MiCorreo:** Ingresa al panel de *MiCorreo*, registrate de forma gratuita y accede al cotizador integrado en la plataforma. MiCorreo te muestra las tarifas de lista para los servicios disponibles según tu ruta.
+- **API de MiCorreo:** Si sos desarrollador o tenes una tienda online, podes consultar la API de cotización de MiCorreo programaticamente. El endpoint de rates devuelve los precios para cada servicio habilitado en tu cuenta.
+- **Sucursal de Correo Argentino:** Podes acercarte a cualquier sucursal con tu paquete y solicitar una cotización presencial. No es la opción mas eficiente, pero es valida si necesitas asesoramiento personalizado.
+
+## Factores que afectan el precio de un envío
+
+El costo de **cotizar un envío con Correo Argentino** no es un valor fijo. Depende de varios factores que la API evalua en cada consulta:
+
+- **Peso del paquete:** A mayor peso, mayor costo. Correo Argentino acepta paquetes de hasta 25 kg en servicios estandar.
+- **Dimensiones (largo, ancho, alto):** Ademas del peso real, se calcula el [peso volumetrico](https://correoargentinopro.com/blog/peso-volumetrico-correo-argentino.html). Si tu paquete ocupa mucho espacio pero pesa poco, el peso volumétrico puede superar al real y se tarifica por el mayor de los dos.
+- **Codigo postal de origen y destino:** La distancia entre las zonas influye directamente. Un envío dentro de la misma provincia es mas economico que un envío interprovincial de punta a punta.
+- **Tipo de servicio:** El envío a sucursal suele ser mas barato que el envío a domicilio. El servicio expreso tiene un costo mayor pero plazos de entrega mas cortos. Consulta nuestra guía completa de [tipos de envío de Correo Argentino](https://correoargentinopro.com/blog/tipos-envio-correo-argentino.html) para mas detalles.
+
+## Tarifas MiCorreo vs tarifas Paq.Ar
+
+Es importante entender que hay dos esquemas de precios en Correo Argentino. La plataforma **MiCorreo** utiliza las tarifas de lista, que son las tarifas publicas disponibles para cualquier usuario registrado. Estas son las que se muestran en nuestro cotizador y las que tu tienda online obtiene al consultar la API.
+
+Por otro lado, **Paq.Ar** es el servicio corporativo que requiere un acuerdo comercial previo con Correo Argentino. Las tarifas de Paq.Ar son **negociadas según el volumen de envíos** de cada empresa, por lo que suelen ser considerablemente mas bajas que las de MiCorreo. Sin embargo, para acceder a ellas necesitas gestionar el contrato directamente con el area comercial de Correo Argentino.
+
+Si recien empezas con tu tienda online, MiCorreo es la opción ideal para comenzar a operar sin requisitos previos. A medida que tu volumen de envíos crezca, podes negociar un acuerdo Paq.Ar para reducir tus costos logisticos. Para entender mejor los costos según cada modalidad, te recomendamos leer nuestro articulo sobre [cuánto cuesta enviar un paquete con Correo Argentino](https://correoargentinopro.com/blog/cuanto-cuesta-enviar-paquete-correo-argentino.html).
+
+## Cotización automatica en tu tienda WooCommerce
+
+Mostrar el costo de envío en tiempo real durante el checkout es fundamental para reducir el abandono de carrito. Si usas WooCommerce, podes automatizar la cotización con el plugin [Correo Argentino Pro](https://correoargentinopro.com/).
+
+El plugin consulta la API de Correo Argentino en cada compra y muestra los servicios disponibles con su precio actualizado. Tus clientes pueden elegir entre envío a domicilio o retiro en sucursal (con mapa interactivo), y el costo se calcula automáticamente según la direccion del comprador y las dimensiones de los productos en el carrito.
+
+Las ventajas de la cotización automatica con Correo Argentino Pro incluyen:
+
+- **Precios siempre actualizados:** No necesitas mantener tablas de tarifas manuales. El plugin consulta la API en cada cotización.
+- **Soporte MiCorreo y Paq.Ar:** Funciona con ambos servicios. Si tenes un acuerdo Paq.Ar, el plugin usa tus tarifas negociadas.
+- **Multiples servicios:** Muestra envío clásico, expreso y a sucursal para que el cliente elija.
+- **Creacion de envíos:** Ademas de cotizar, podes crear el envío y generar la etiqueta directamente desde el pedido en WooCommerce.
+
+Si todavia no tenes el plugin instalado, consulta la [guía completa de envíos ecommerce con Correo Argentino](https://correoargentinopro.com/blog/envios-correo-argentino-tienda-online.html) para entender todo el flujo desde la cotización hasta la entrega.
+
+## Consejos para reducir costos de envío
+
+Optimizar los costos de envío impacta directamente en tu rentabilidad y en la satisfaccion de tus clientes. Estos son algunos consejos prácticos:
+
+- **Ofrece retiro en sucursal:** El envío a sucursal de Correo Argentino suele ser entre un 15% y un 30% mas barato que el envío a domicilio. Muchos compradores prefieren esta opción por comodidad horaria.
+- **Optimiza el packaging:** Usa cajas lo mas ajustadas posible al producto. Recorda que el peso volumétrico se calcula como *(largo x ancho x alto) / 6000*. Una caja mas chica puede significar una tarifa menor.
+- **Configura [envio gratis en WooCommerce](https://correoargentinopro.com/blog/envio-gratis-woocommerce-correo-argentino.html) con monto mínimo:** Absorber el costo de envío a partir de cierto monto de compra incentiva a tus clientes a agregar mas productos al carrito, aumentando tu ticket promedio.
+- **Usa dimensiones reales por producto:** Si cargas las dimensiones correctas en cada producto de WooCommerce, el plugin calcula el costo exacto. Evitas cobrar de mas (y perder ventas) o cobrar de menos (y perder margen).
+- **Negocia un acuerdo Paq.Ar:** Si superas los 100 envíos mensuales, comunicate con el area comercial de Correo Argentino para acceder a tarifas preferenciales.
+
+## Preguntas frecuentes
+
+### ¿Cotizar un envío es gratis?
+
+Sí. El [cotizador de esta página](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html#cotizador) es gratuito y no requiere registro. Completás el tipo de envío, los códigos postales y las dimensiones del paquete y obtenés el costo estimado al instante, sin costo alguno.
+
+### ¿Los precios del cotizador están actualizados?
+
+Sí. El cotizador consulta la API de MiCorreo en cada búsqueda y devuelve las tarifas de lista vigentes, por lo que los precios reflejan los valores actuales de Correo Argentino y no tablas manuales desactualizadas.
+
+### ¿Puedo cotizar un envío a sucursal?
+
+Sí. En el tipo de envío podés elegir la opción *Paquete a sucursal*. El envío a sucursal suele ser mas económico que el envío a domicilio, entre un 15% y un 30% mas barato según la ruta.
+
+### ¿Sirve para mi tienda WooCommerce?
+
+El cotizador de esta página es para consultas puntuales. Para mostrar tarifas automáticas en el checkout de tu tienda podés instalar el plugin [Correo Argentino Pro](https://correoargentinopro.com/), que consulta la API en cada compra y muestra el costo actualizado según la direccion del comprador y las dimensiones de los productos del carrito. Mira la [guía de envíos para tu tienda online](https://correoargentinopro.com/blog/envios-correo-argentino-tienda-online.html) para ver el flujo completo.
+
+## Empieza a cotizar tus envíos hoy
+
+Ya tenes todas las herramientas para **cotizar envíos con Correo Argentino**. Usa el cotizador de arriba para calcular el costo de tu proximo envío al instante, o instala [Correo Argentino Pro](https://correoargentinopro.com/) en tu WooCommerce para que tus clientes vean las tarifas actualizadas en el checkout.
+
+Si tenes preguntas sobre la integración o los servicios disponibles, revisa nuestras [preguntas frecuentes](https://correoargentinopro.com/faqs.html) o [contactanos directamente](https://correoargentinopro.com/contacto.html). Estamos para ayudarte.
+
+---
+
+# Cuánto Cuesta un Envío por Correo Argentino: Tarifas 2026
+https://correoargentinopro.com/blog/cuanto-cuesta-enviar-paquete-correo-argentino.html
+
+Una de las preguntas más frecuentes de cualquier vendedor online en Argentina es: **cuánto cuesta enviar un paquete por Correo Argentino**. La respuesta corta es que depende de varios factores. La respuesta larga es lo que vas a encontrar en esta guía, donde te explicamos todo lo que influye en el precio, las diferencias entre servicios y cómo conseguir la tarifa más conveniente para tu negocio.
+
+## Factores que determinan el costo de envío
+
+El precio de un envío por Correo Argentino no es fijo. Se calcula en base a una combinación de variables que el sistema evalúa al momento de cotizar:
+
+- **Peso del paquete:** Es el factor principal. Correo Argentino utiliza el concepto de *peso aforado*, que compara el peso real con el [peso volumétrico](https://correoargentinopro.com/blog/peso-volumetrico-correo-argentino.html) (calculado a partir de las dimensiones) y toma el mayor de los dos. Esto significa que un paquete liviano pero grande puede costar lo mismo que uno pesado pero compacto.
+- **Dimensiones:** Largo, ancho y alto del paquete se usan para calcular el peso volumétrico. Por eso es importante usar un [embalaje adecuado](https://correoargentinopro.com/blog/embalaje-medidas-maximas-correo-argentino.html) al tamaño del producto y no dejar demasiado espacio vacío.
+- **Origen y destino:** No cuesta lo mismo enviar un paquete dentro de la misma provincia que mandarlo de Buenos Aires a Tierra del Fuego. La distancia entre el punto de origen y el destino impacta directamente en la tarifa.
+- **Tipo de servicio:** Correo Argentino ofrece distintas modalidades: envío clásico, expreso, a domicilio o a sucursal. Cada uno tiene un precio diferente.
+- **Plataforma de envío:** Las tarifas varían dependiendo de si usás MiCorreo (tarifas públicas) o Paq.Ar (tarifas negociadas).
+
+## Tarifas de MiCorreo: precios públicos y cotización en tiempo real
+
+MiCorreo es la plataforma de Correo Argentino para emprendedores y PyMEs. No necesitás ningún acuerdo comercial para usarla, solo darte de alta en **MiCorreo**.
+
+Las tarifas de MiCorreo son públicas y se actualizan periódicamente. La ventaja principal es que MiCorreo ofrece una **API de cotización en tiempo real**: le enviás el peso, las dimensiones, el origen y el destino, y te devuelve el precio exacto al instante. Esto es ideal para tiendas online porque permite mostrar el costo de envío actualizado directamente en el checkout, sin necesidad de mantener tablas de precios manuales.
+
+Si querés conocer los [tipos de envío disponibles en Correo Argentino](https://correoargentinopro.com/blog/tipos-envio-correo-argentino.html), te recomendamos leer nuestra guía dedicada donde explicamos cada modalidad en detalle.
+
+## Tarifas de Paq.Ar: precios negociados para empresas
+
+Paq.Ar es el servicio corporativo de Correo Argentino, pensado para empresas con un volumen de envíos medio o alto. Para acceder necesitás firmar un acuerdo comercial con Correo Argentino, pero a cambio obtenés **tarifas preferenciales** que suelen ser significativamente más bajas que las de MiCorreo.
+
+Las tarifas de Paq.Ar no son públicas: se negocian caso por caso según el volumen comprometido, el tipo de productos y las zonas de envío. En general, cuanto mayor sea tu volumen mensual de envíos, mejor tarifa vas a conseguir. A diferencia de MiCorreo, Paq.Ar no ofrece una API de cotización en tiempo real, sino que trabaja con tablas de tarifas fijas acordadas previamente.
+
+Si recién empezás, MiCorreo es el camino más directo. Si ya tenés un volumen considerable, vale la pena contactar a Correo Argentino para negociar un acuerdo Paq.Ar. Para una comparación completa, podés leer nuestro artículo sobre [envíos ecommerce con Correo Argentino](https://correoargentinopro.com/blog/envios-correo-argentino-tienda-online.html).
+
+## Envío a domicilio vs envío a sucursal
+
+Esta es una de las formas más simples de impactar en el costo. Correo Argentino ofrece dos modalidades de entrega principales:
+
+- **Envío a domicilio:** El paquete se entrega en la dirección del destinatario. Es la opción más cómoda para el comprador, pero también la más cara porque requiere logística de última milla.
+- **Envío a sucursal:** El paquete se envía a una sucursal de Correo Argentino cercana al destinatario, quien lo retira personalmente. Esta opción es **más económica** porque elimina el costo de la entrega puerta a puerta.
+
+La diferencia de precio entre ambas modalidades puede ser considerable. Si querés entender a fondo las ventajas de cada opción, leé nuestro artículo sobre [envío a sucursal vs domicilio](https://correoargentinopro.com/blog/envio-sucursal-vs-domicilio-correo-argentino.html). Si vendés online, ofrecer la opción de retiro en sucursal le da a tus clientes una alternativa más barata, lo que puede mejorar tu tasa de conversión.
+
+## Cómo saber el costo exacto de un envío
+
+Hay varias formas de consultar cuánto te va a costar enviar un paquete por Correo Argentino:
+
+### Desde la web de MiCorreo
+
+Podés ingresar al panel de **MiCorreo**, cargar los datos del paquete (peso, dimensiones, origen y destino) y obtener la cotización al instante. Es la forma más directa si necesitás consultar un envío puntual.
+
+### Con nuestro cotizador en vivo (la forma más rápida)
+
+Si querés saber el precio exacto sin registrarte en ningún lado, usá nuestro [cotizador de envíos de Correo Argentino](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html): cargás el peso, las medidas, el código postal de origen y el de destino, y te muestra la tarifa actualizada al instante. Es la manera más simple de saber cuánto vas a pagar antes de despachar.
+
+### Automáticamente en tu tienda con Correo Argentino Pro
+
+Si tenés una tienda WooCommerce, la mejor solución es automatizar la cotización. Con [Correo Argentino Pro](https://correoargentinopro.com/), el plugin consulta la API de Correo Argentino en tiempo real y muestra el costo de envío directamente en el checkout de tu tienda. Tus clientes ven el precio actualizado sin que vos tengas que hacer nada.
+
+Además, el plugin permite que el comprador elija entre envío a domicilio y retiro en sucursal (con un mapa interactivo para seleccionar la sucursal más cercana), lo que simplifica todo el proceso.
+
+## Tips para reducir el costo de envío
+
+Si vendés online y los envíos representan una parte importante de tus costos (o de las quejas de tus clientes), acá van algunos consejos prácticos para optimizar:
+
+- **Ofrecé retiro en sucursal:** el envío a sucursal es más barato que el envío a domicilio. Habilitar esta opción le da a tus compradores una alternativa económica y puede aumentar tus ventas.
+- **Configurá un monto mínimo para envío gratis:** el envío gratuito es un incentivo poderoso. Configurar un umbral aumenta el ticket promedio de tu tienda y absorbés el costo del envío con un margen mayor.
+- **Usá el embalaje correcto:** no metas un producto chico en una caja enorme. El peso volumétrico puede hacer que pagues de más. Elegir cajas del tamaño adecuado es una de las formas más fáciles de ahorrar en cada envío.
+- **Cargá las dimensiones de tus productos:** si usás un plugin de cotización automática, asegurate de tener bien cargados el peso y las dimensiones de cada producto en WooCommerce. Así la cotización es precisa y evitás sorpresas.
+- **Considerá Paq.Ar si tenés volumen:** si ya enviás varias decenas de paquetes por mes, las tarifas negociadas de Paq.Ar pueden representar un ahorro significativo respecto a las tarifas públicas de MiCorreo.
+
+## Preguntas frecuentes
+
+### ¿De qué depende el precio de un envío por Correo Argentino?
+
+Depende del **peso aforado** (el mayor entre el peso real y el peso volumétrico), las dimensiones del paquete, el origen y el destino, el tipo de servicio y la plataforma que uses: MiCorreo (tarifas públicas) o Paq.Ar (tarifas negociadas). No hay un precio fijo: se calcula combinando todas esas variables.
+
+### ¿Cómo sé el costo exacto de un envío?
+
+La forma más precisa es una cotización en tiempo real: cargás peso, dimensiones, origen y destino, y la API de Correo Argentino devuelve el precio exacto al instante. Podés hacerlo desde nuestro [cotizador de envíos](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html) o, si tenés una tienda WooCommerce, automatizarlo en el checkout con [Correo Argentino Pro](https://correoargentinopro.com/).
+
+### ¿Es más barato enviar a sucursal o a domicilio?
+
+El envío a sucursal es **más económico** que el envío a domicilio, porque elimina el costo de la entrega puerta a puerta. Si [vendés online](https://correoargentinopro.com/blog/envios-correo-argentino-tienda-online.html), ofrecer retiro en sucursal le da a tus compradores una alternativa más barata y puede mejorar tu tasa de conversión.
+
+## Automatizá tus envíos y olvidate de cotizar manualmente
+
+Consultar precios a mano, copiar datos y generar guías una por una no escala. Si tenés una tienda online en WooCommerce, [Correo Argentino Pro](https://correoargentinopro.com/) te permite automatizar todo el proceso: cotización en tiempo real en el checkout, creación de envíos con un click, generación de etiquetas y seguimiento automático con notificaciones para tus clientes.
+
+Si querés saber más sobre cómo funciona la integración, leé nuestra [guía completa de envíos ecommerce con Correo Argentino](https://correoargentinopro.com/blog/envios-correo-argentino-tienda-online.html). Y si tenés alguna duda, revisá las [preguntas frecuentes](https://correoargentinopro.com/faqs.html) o [contactanos](https://correoargentinopro.com/contacto.html).
+
+---
+
+# Correo Argentino vs OCA vs Andreani: cuál conviene 2026
+https://correoargentinopro.com/blog/correo-argentino-vs-oca-vs-andreani.html
+
+Si tenés una tienda online en Argentina, elegir el operador logístico correcto puede marcar la diferencia entre un cliente satisfecho y una venta perdida. **Correo Argentino, OCA y Andreani** son los tres principales jugadores del mercado, y cada uno tiene sus fortalezas y debilidades. En esta guía comparamos todo lo que necesitás saber para decidir cuál conviene para tu ecommerce.
+
+## Cobertura y alcance nacional
+
+La cobertura geográfica es probablemente el factor más importante a la hora de elegir un operador logístico. De nada sirve tener tarifas bajas si no podés llegar a donde están tus clientes.
+
+### Correo Argentino
+
+Correo Argentino tiene la **red logística más extensa de la Argentina**, con más de 5.000 sucursales y puntos de entrega distribuidos en las 23 provincias y CABA. Es el único operador que llega a prácticamente todas las localidades del país, incluyendo pueblos y zonas rurales donde los operadores privados no tienen presencia. Esto lo convierte en la opción ineludible si vendés a todo el país.
+
+### OCA
+
+OCA cuenta con aproximadamente 1.500 puntos de admisión y entrega. Su cobertura es sólida en las grandes ciudades y el área metropolitana, pero se reduce considerablemente en localidades chicas del interior. Si tu público está concentrado en Buenos Aires y las principales capitales de provincia, OCA puede ser suficiente. Si necesitás llegar más lejos, vas a tener limitaciones.
+
+### Andreani
+
+Andreani tiene alrededor de 500 sucursales propias y puntos de entrega, complementados con una red de operadores asociados. Su cobertura es buena en las principales zonas urbanas y excelente para logística corporativa, pero en localidades medianas y chicas queda por detrás de Correo Argentino e incluso de OCA.
+
+**Ganador en cobertura: Correo Argentino**, sin discusión. Con más de 5.000 puntos de entrega, triplica la cobertura de OCA y multiplica por diez la de Andreani.
+
+## Comparativa de precios y tarifas
+
+Las tarifas de envío impactan directamente en tu tasa de conversión. Un costo de envío alto es la principal razón de abandono de carrito en Argentina. Veamos cómo se comparan los tres operadores.
+
+### Correo Argentino
+
+Las tarifas de Correo Argentino a través de **MiCorreo** son muy competitivas, especialmente para envíos a sucursal. El retiro en sucursal suele ser la opción más económica del mercado, y la entrega a domicilio también se mantiene en rangos accesibles. Además, MiCorreo no requiere acuerdo comercial: cualquier vendedor puede empezar a usar el servicio de forma inmediata. Si manejás un volumen alto, podés acceder a **Paq.Ar**, que ofrece tarifas corporativas aún más ventajosas. Si querés estimar cuánto te puede costar un envío, usá nuestro [cotizador de envíos de Correo Argentino en vivo](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html) o consultá la guía sobre [cuánto cuesta enviar un paquete por Correo Argentino](https://correoargentinopro.com/blog/cuanto-cuesta-enviar-paquete-correo-argentino.html).
+
+### OCA
+
+OCA maneja tarifas que dependen mucho del tipo de acuerdo comercial que tengas. Sin acuerdo, las tarifas tienden a ser más altas que las de Correo Argentino. Con acuerdo, los precios pueden ser competitivos para envíos dentro de las zonas de mayor densidad. El problema es que conseguir un acuerdo comercial puede requerir un volumen mínimo y una negociación que no siempre es accesible para tiendas chicas.
+
+### Andreani
+
+Andreani está orientado a empresas medianas y grandes. Sus tarifas de lista son generalmente las más altas de los tres operadores, pero ofrece descuentos importantes a clientes con alto volumen. Para un emprendedor o tienda chica sin acuerdo comercial, Andreani suele ser la opción más cara.
+
+**Ganador en precio: Correo Argentino**, sobre todo para tiendas chicas y medianas. MiCorreo permite acceder a tarifas competitivas sin necesidad de negociar un acuerdo ni tener un volumen mínimo.
+
+## Tiempos de entrega
+
+La velocidad de entrega es clave para la satisfacción del cliente. Los tres operadores manejan distintos niveles de servicio.
+
+### Correo Argentino
+
+Correo Argentino ofrece distintas modalidades con diferentes plazos. El servicio clásico a domicilio demora entre 3 y 7 días hábiles según la zona, mientras que el servicio expreso puede reducir ese plazo a 1-3 días hábiles en las principales ciudades. El envío a sucursal suele ser ligeramente más rápido que el envío a domicilio porque elimina la etapa de distribución final. Para más detalle sobre los plazos, te recomendamos leer [cuánto tarda un envío por Correo Argentino](https://correoargentinopro.com/blog/cuanto-tarda-envio-correo-argentino.html) y conocer los [tipos de envío disponibles](https://correoargentinopro.com/blog/tipos-envio-correo-argentino.html).
+
+### OCA
+
+OCA maneja plazos de entrega de 2 a 5 días hábiles en sus servicios estándar, con opciones de entrega en 24 horas para zonas del AMBA. Su principal ventaja en velocidad está en los envíos dentro de Buenos Aires y alrededores, donde la red de distribución es más densa.
+
+### Andreani
+
+Andreani tiene plazos similares a OCA: 2-5 días hábiles para envíos estándar, con servicios express de 24-48 horas en las principales ciudades. Para logística de grandes volúmenes, Andreani suele ofrecer mayor previsibilidad en los tiempos gracias a su infraestructura corporativa.
+
+**Ganador en tiempos de entrega:** Empate relativo en zonas urbanas. Los tres operadores ofrecen plazos comparables en las principales ciudades. En el interior profundo, Correo Argentino gana por ser el único que realmente llega.
+
+## Tracking y seguimiento de envíos
+
+Tanto vos como tus clientes necesitan saber dónde está cada paquete. La calidad del tracking varía bastante entre los tres operadores.
+
+### Correo Argentino
+
+Correo Argentino ofrece tracking con actualizaciones en cada etapa del envío: admisión, despacho, llegada a planta, en distribución y entregado. Las actualizaciones pueden tener un delay de algunas horas, pero en general son confiables. A través de MiCorreo, el tracking se integra directamente con tu cuenta y podés seguir todos tus envíos en un solo panel.
+
+### OCA
+
+OCA tiene un sistema de tracking sólido con actualizaciones frecuentes. Su API permite integración directa, y los estados de seguimiento son detallados. Es probablemente el operador con las actualizaciones de tracking más rápidas.
+
+### Andreani
+
+Andreani ofrece tracking completo con una API bien documentada. Las actualizaciones son frecuentes y detalladas, especialmente para clientes corporativos. Su sistema de seguimiento es robusto y confiable.
+
+**Ganador en tracking:** OCA y Andreani tienen una leve ventaja en velocidad de actualización. Correo Argentino ofrece tracking funcional y confiable, aunque las actualizaciones pueden ser un poco más espaciadas.
+
+## Opciones de despacho y retiro
+
+Cómo despachás los paquetes y cómo los recibe tu cliente son dos aspectos fundamentales de la experiencia.
+
+### Correo Argentino
+
+- **Despacho:** Podés llevar tus envíos a cualquiera de las 5.000+ sucursales o solicitar retiro en domicilio con Paq.Ar.
+- **Entrega al cliente:** A domicilio o retiro en sucursal. La opción de retiro en sucursal es muy popular porque permite al comprador elegir la sucursal más conveniente y suele tener un costo menor.
+
+### OCA
+
+- **Despacho:** En sucursales OCA, puntos OCA (como kioscos asociados) o con retiro a domicilio para clientes con acuerdo.
+- **Entrega al cliente:** A domicilio o retiro en sucursal OCA.
+
+### Andreani
+
+- **Despacho:** En sucursales Andreani o con retiro a domicilio programado.
+- **Entrega al cliente:** A domicilio, retiro en sucursal o entrega en puntos de proximidad.
+
+**Ganador en opciones de retiro: Correo Argentino**, por la enorme cantidad de sucursales disponibles. Tus clientes siempre van a tener una sucursal cerca, sin importar dónde vivan.
+
+## Integración con ecommerce y WooCommerce
+
+Para una tienda online, la integración con tu plataforma es esencial. Necesitás cotización automática en el checkout, creación de envíos sin salir de tu panel, generación de etiquetas y tracking automático. Acá es donde las diferencias se notan mucho.
+
+### Correo Argentino + WooCommerce
+
+[Correo Argentino Pro](https://correoargentinopro.com/) es el plugin más completo para integrar Correo Argentino con WooCommerce. Ofrece cotización en tiempo real, selector de sucursales con mapa interactivo, creación de envíos (MiCorreo y Paq.Ar), generación de etiquetas PDF, tracking automático con notificaciones al cliente, y acciones masivas para alto volumen. Es compatible con HPOS y con el checkout por bloques de WooCommerce. Si querés ver cómo queda todo funcionando en tu tienda, mirá nuestra guía de [envíos de Correo Argentino para tu tienda online](https://correoargentinopro.com/blog/envios-correo-argentino-tienda-online.html). Y para una comparativa detallada de plugins de envíos, te recomendamos leer [nuestra guía sobre el mejor plugin de envíos para WooCommerce en Argentina](https://correoargentinopro.com/blog/mejor-plugin-envios-argentina-woocommerce.html).
+
+### OCA + WooCommerce
+
+Existen varios plugins para OCA en WooCommerce, tanto gratuitos como pagos. La mayoría ofrece cotización básica y en algunos casos creación de envíos. La integración tiende a ser menos completa que la de Correo Argentino Pro: pocos ofrecen selector de sucursales con mapa, tracking automático o acciones masivas.
+
+### Andreani + WooCommerce
+
+Andreani tiene un plugin oficial para WooCommerce que ofrece cotización y creación de envíos. La integración es funcional pero requiere tener un acuerdo comercial activo con Andreani para poder usarla, lo que la hace inaccesible para muchas tiendas chicas.
+
+**Ganador en integración WooCommerce: Correo Argentino**, gracias a Correo Argentino Pro. La combinación de funcionalidades, facilidad de uso y accesibilidad (no necesitás acuerdo comercial para empezar con MiCorreo) lo convierte en la opción más práctica.
+
+## Pros y contras de cada operador
+
+### Correo Argentino
+
+**Pros:**
+
+- Mayor cobertura nacional con más de 5.000 sucursales.
+- Tarifas accesibles, especialmente para envíos a sucursal.
+- No requiere acuerdo comercial para empezar (MiCorreo).
+- Opción de escalar a Paq.Ar cuando crecés.
+- Integración completa con WooCommerce vía Correo Argentino Pro.
+- Retiro en sucursal muy económico y conveniente para el comprador.
+- Marca reconocida y confiable para los compradores.
+
+**Contras:**
+
+- Tiempos de entrega pueden ser un poco más largos en el servicio clásico.
+- Actualizaciones de tracking ligeramente más espaciadas que los operadores privados.
+- Atención al cliente puede ser lenta en momentos de alta demanda.
+
+### OCA
+
+**Pros:**
+
+- Buenos tiempos de entrega en zonas urbanas.
+- Tracking con actualizaciones rápidas.
+- Red de puntos OCA (kioscos) complementa las sucursales.
+- Buena reputación en el mercado de ecommerce.
+
+**Contras:**
+
+- Cobertura limitada fuera de las grandes ciudades (aproximadamente 1.500 puntos vs 5.000+).
+- Tarifas sin acuerdo comercial son elevadas.
+- Conseguir acuerdo comercial puede requerir volumen mínimo.
+- Integraciones con WooCommerce menos completas.
+
+### Andreani
+
+**Pros:**
+
+- Excelente para logística corporativa y alto volumen.
+- Tracking detallado y confiable.
+- Buenos tiempos de entrega en zonas urbanas.
+- Infraestructura sólida para grandes operaciones.
+
+**Contras:**
+
+- La menor cobertura de los tres (aproximadamente 500 sucursales propias).
+- Tarifas de lista elevadas, solo competitivo con acuerdo comercial.
+- Requiere acuerdo comercial para la mayoría de las integraciones.
+- Orientado a empresas, no es ideal para emprendedores y tiendas chicas.
+
+## Tabla resumen
+
+| Criterio | Correo Argentino | OCA | Andreani |
+|---|---|---|---|
+| Sucursales / puntos | **5.000+** | ~1.500 | ~500 |
+| Tarifas sin acuerdo | **Accesibles** | Elevadas | Elevadas |
+| Requiere acuerdo | **No (MiCorreo)** | Recomendado | Sí |
+| Tiempo entrega estándar | 3-7 días | 2-5 días | 2-5 días |
+| Cobertura interior | **Excelente** | Limitada | Básica |
+| Plugin WooCommerce | **Completo (Pro)** | Básico | Básico |
+| Ideal para | **Todos los tamaños** | Tiendas urbanas | Empresas grandes |
+
+## Entonces, ¿cuál conviene para tu tienda online?
+
+La respuesta depende de tu situación particular, pero para la **mayoría de las tiendas online en Argentina**, Correo Argentino es la mejor opción. Y estas son las razones:
+
+- **Si vendés a todo el país:** Correo Argentino es el único operador que garantiza cobertura en prácticamente todas las localidades. Si un cliente en un pueblo del interior quiere comprarte, con OCA o Andreani probablemente no puedas enviarle. Con Correo Argentino, sí.
+- **Si estás empezando o sos emprendedor:** MiCorreo no requiere acuerdo comercial, no tiene volumen mínimo, y las tarifas son competitivas desde el primer envío. OCA y Andreani te van a pedir negociar un acuerdo para darte precios razonables.
+- **Si usás WooCommerce:** [Correo Argentino Pro](https://correoargentinopro.com/) te da una integración que ningún otro operador tiene al mismo nivel: cotización en tiempo real, selector de sucursales con mapa, creación de envíos, etiquetas, tracking automático y acciones masivas. Todo desde tu panel de WooCommerce.
+- **Si ya tenés volumen:** Podés escalar a Paq.Ar para acceder a tarifas corporativas, retiro en domicilio y mayor capacidad operativa. Y Correo Argentino Pro soporta ambos servicios (MiCorreo y Paq.Ar).
+
+La única situación donde OCA o Andreani podrían ser preferibles es si tu operación está 100% concentrada en AMBA y necesitás tiempos de entrega express de 24 horas como prioridad absoluta. Pero incluso en ese caso, podés complementar con Correo Argentino para cubrir el resto del país.
+
+## Combinar operadores: la estrategia avanzada
+
+Muchas tiendas con volumen alto usan una combinación de operadores: OCA o Andreani para envíos urgentes en AMBA, y Correo Argentino para todo el resto del país. Esta estrategia te da lo mejor de cada mundo, pero implica gestionar múltiples integraciones. Si estás en WooCommerce, podés instalar Correo Argentino Pro para Correo Argentino y un plugin adicional para el otro operador.
+
+Sin embargo, para la gran mayoría de las tiendas, usar solo Correo Argentino es la forma más simple y efectiva de cubrir todo el territorio. La diferencia en tiempos de entrega en zonas urbanas es marginal, y la ventaja en cobertura y precio es significativa.
+
+## Conclusión
+
+**Correo Argentino es la mejor relación costo-beneficio para ecommerce en Argentina.** Ofrece la mayor cobertura nacional, tarifas accesibles sin necesidad de acuerdo comercial, múltiples opciones de envío y retiro, y la integración más completa con WooCommerce gracias a [Correo Argentino Pro](https://correoargentinopro.com/).
+
+OCA y Andreani son buenos operadores con fortalezas específicas, pero no igualan la combinación de cobertura, accesibilidad y precio que ofrece Correo Argentino. Si tenés una tienda online y querés llegar a más clientes, gastar menos en envíos y simplificar tu operativa, Correo Argentino es la respuesta.
+
+Si querés empezar ahora, [instalá Correo Argentino Pro](https://correoargentinopro.com/) y tené tu tienda integrada en minutos. Seguí nuestra [guía de integración de Correo Argentino con WooCommerce](https://correoargentinopro.com/blog/como-integrar-correo-argentino-woocommerce.html) para configurar todo paso a paso.
+
+## Preguntas frecuentes
+
+### ¿Cuál es más barato para ecommerce: Correo Argentino, OCA o Andreani?
+
+Para la mayoría de las tiendas online, **Correo Argentino es el más económico**, sobre todo a través de MiCorreo y con la opción de retiro en sucursal. No requiere acuerdo comercial ni volumen mínimo, así que accedés a tarifas competitivas desde el primer envío. OCA y Andreani suelen tener tarifas de lista más altas y recién se vuelven competitivos con un acuerdo comercial. Como los precios cambian con la inflación, lo mejor es estimar tu caso concreto con el [cotizador de envíos en vivo](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html).
+
+### ¿Cuál tiene mejor cobertura nacional?
+
+**Correo Argentino, sin discusión.** Con más de 5.000 sucursales y puntos de entrega llega a prácticamente todas las localidades del país, incluyendo pueblos y zonas rurales. OCA ronda los 1.500 puntos y Andreani unos 500, con foco en las grandes ciudades. Si vendés a todo el país, Correo Argentino es el único que garantiza que vas a poder entregar en el interior profundo.
+
+### ¿Cuál conviene integrar con WooCommerce?
+
+**Correo Argentino**, gracias a [Correo Argentino Pro](https://correoargentinopro.com/). Ofrece cotización en tiempo real, selector de sucursales con mapa, creación de envíos (MiCorreo y Paq.Ar), etiquetas PDF, tracking automático y acciones masivas, y es compatible con HPOS y el checkout por bloques. Los plugins de OCA y Andreani suelen ser más básicos y el de Andreani, además, requiere un acuerdo comercial activo para funcionar.
+
+## También te puede interesar
+
+- [Envíos ecommerce con Correo Argentino: guía completa](https://correoargentinopro.com/blog/envios-correo-argentino-tienda-online.html)
+- [Zonas de envío de Correo Argentino](https://correoargentinopro.com/blog/zonas-envio-correo-argentino.html)
+
+---
+
+# Ecommerce Correo Argentino: Envíos para tu Tienda Online
+https://correoargentinopro.com/blog/envios-correo-argentino-tienda-online.html
+
+Si vendés productos físicos desde Argentina, **Correo Argentino para ecommerce** es la opción con mayor cobertura nacional: más de 3.000 puntos de entrega en todo el país. Usar **Correo Argentino en tu tienda online** te permite llegar a cualquier localidad, ofrecer envío a domicilio o retiro en sucursal y competir en costos con el resto del mercado. En esta guía te explicamos todo lo que necesitás saber para gestionar los envíos de tu tienda online con Correo Argentino, desde la cotización automática en el checkout hasta el seguimiento, y cómo [automatizarlo con un plugin](https://correoargentinopro.com/) en WooCommerce.
+
+Vamos a cubrir los servicios disponibles (**MiCorreo** vs **Paq.Ar**), cómo integrar Correo Argentino en una tienda online, la cotización en tiempo real durante la compra, las etiquetas y el tracking, y los consejos para optimizar cada envío. Si solo querés saber cuánto sale un envío, pasá directo al [cotizador de envíos de Correo Argentino](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html).
+
+## Servicios de envíos ecommerce en Correo Argentino
+
+### MiCorreo: para emprendedores y PyMEs
+
+MiCorreo es la plataforma de Correo Argentino pensada para pequeños y medianos vendedores online. No necesitás un acuerdo comercial especial, solo registrarte en **MiCorreo**.
+
+Con MiCorreo podés:
+
+- Cotizar envíos a cualquier punto del país.
+- Crear envíos a domicilio o a sucursal.
+- Obtener un número de seguimiento para cada envío.
+- Pagar el envío online o en sucursal.
+
+MiCorreo ofrece una API que permite integrar la cotización directamente en tu tienda, para que tus clientes vean el costo de envío en tiempo real durante el checkout.
+
+### Paq.Ar: para empresas con volumen
+
+Paq.Ar es el servicio corporativo de Correo Argentino. Requiere un acuerdo comercial previo y está pensado para empresas con volumen medio a alto de envíos. Las ventajas de Paq.Ar incluyen:
+
+- **Tarifas preferenciales** negociadas según volumen.
+- **Etiquetas PDF** generadas automáticamente vía API.
+- **Recolección** en tu depósito (según acuerdo).
+- **Tracking avanzado** con estados detallados.
+
+## Comparativa rápida: MiCorreo vs Paq.Ar
+
+| Característica | MiCorreo | Paq.Ar |
+|---|---|---|
+| Acuerdo comercial | No requiere | Requerido |
+| Cotización por API | Sí | No (tarifas fijas) |
+| Etiquetas PDF | No | Sí |
+| Creación de envíos | Sí | Sí |
+| Tracking | Sí | Sí |
+| Ideal para | PyMEs / emprendedores | Empresas con volumen |
+
+La mayoría de las tiendas online arrancan con **MiCorreo** porque no requiere ningún trámite previo y ya trae cotización por API. Cuando el volumen crece y las tarifas empiezan a pesar en el margen, conviene evaluar un acuerdo **Paq.Ar** para negociar precios y sumar etiquetas PDF. Lo bueno es que no tenés que elegir para siempre: podés empezar con MiCorreo y migrar más adelante sin rehacer tu tienda.
+
+## Cómo integrar Correo Argentino en tu tienda online
+
+Integrar **Correo Argentino en una tienda online** significa conectar tu plataforma de ecommerce con la API del correo para que la cotización, la creación de envíos y el seguimiento sucedan sin salir de tu panel. En una tienda WooCommerce, el flujo típico es este:
+
+1. **Obtené tus credenciales:** registrate en MiCorreo (o activá tu acuerdo Paq.Ar) para conseguir el usuario y la clave de API que autorizan las consultas de tarifas y la creación de envíos.
+2. **Instalá el plugin de envío:** en WooCommerce, agregá un plugin que hable con la API de Correo Argentino. Con [Correo Argentino Pro](https://correoargentinopro.com/) se instala como cualquier plugin de WordPress, sin tocar código.
+3. **Cargá tus datos de origen:** ingresá el código postal y el domicilio desde donde despachás. Este dato es clave porque la tarifa se calcula según la distancia entre origen y destino.
+4. **Definí peso y dimensiones:** asegurate de que tus productos tengan peso y medidas cargadas, o configurá valores por defecto para que la cotización nunca falle.
+5. **Habilitá los servicios:** activá envío a domicilio, retiro en sucursal, o ambos. El cliente elige en el checkout.
+
+Una vez conectada la tienda, cada compra dispara automáticamente la cotización correcta y quedás listo para crear el envío con un click. Si querés el detalle completo con capturas, seguí nuestra [guía de integración de Correo Argentino con WooCommerce](https://correoargentinopro.com/blog/como-integrar-correo-argentino-woocommerce.html).
+
+## Cotización automática en el checkout
+
+El mayor beneficio de integrar Correo Argentino en tu ecommerce es la **cotización en tiempo real**. En lugar de mostrar una tarifa plana o pedirle al cliente que espere un presupuesto, el costo de envío aparece calculado en el momento, mientras completa la compra.
+
+Así funciona: cuando el comprador ingresa su **código postal**, el plugin consulta la API de MiCorreo con el peso y las dimensiones del carrito y devuelve el precio exacto del envío a domicilio y a sucursal. El cliente ve cuánto va a pagar antes de finalizar, lo que reduce el abandono de carrito por costos inesperados.
+
+- **Precio siempre actualizado:** si Correo Argentino cambia sus tarifas, tu checkout se ajusta solo. No mantenés tablas manuales.
+- **Domicilio y sucursal:** el cliente compara ambas modalidades y elige la que le conviene. El retiro en sucursal suele ser más barato.
+- **Selector de sucursal con mapa:** quien elige retirar puede buscar la sucursal más cercana sobre un mapa interactivo.
+
+Podés probar cómo se calcula una tarifa vos mismo desde nuestro [cotizador de envíos de Correo Argentino](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html) antes de configurarlo en tu tienda.
+
+## Etiquetas y seguimiento (tracking)
+
+Una vez confirmada la venta, quedan dos tareas: despachar el paquete y mantener informado al cliente. Integrar Correo Argentino en tu tienda automatiza ambas.
+
+**Etiquetas:** con un acuerdo Paq.Ar generás la etiqueta PDF directamente desde el pedido, con los datos del destinatario ya cargados. Si manejás muchos pedidos por día, podés generar [etiquetas masivas en WooCommerce](https://correoargentinopro.com/blog/imprimir-etiquetas-masivas-woocommerce.html) en una sola operación, sin copiar direcciones a mano.
+
+**Tracking:** al crear el envío, Correo Argentino asigna un número de seguimiento que queda guardado en el pedido. El plugin puede notificar automáticamente a tu cliente por email con ese número, para que siga su paquete sin escribirte. Esto baja las consultas de "dónde está mi pedido" y mejora la experiencia post-venta.
+
+## Cómo automatizar envíos ecommerce con Correo Argentino
+
+Gestionar envíos manualmente (entrar a MiCorreo, copiar datos, pegar direcciones, generar guías) consume mucho tiempo. La solución es **automatizar el proceso** integrando Correo Argentino directamente en tu panel de WooCommerce.
+
+Con un plugin como [Correo Argentino Pro](https://correoargentinopro.com/), todo el flujo se automatiza:
+
+1. **Checkout:** el cliente ve el costo de envío en tiempo real y puede elegir envío a domicilio o retiro en sucursal (con mapa interactivo).
+2. **Creación del envío:** desde el pedido en WooCommerce, creás el envío en Correo Argentino con un click.
+3. **Etiqueta:** si usás Paq.Ar, generás la etiqueta PDF directamente.
+4. **Tracking:** el número de seguimiento se asigna automáticamente y tus clientes reciben emails cuando el estado cambia.
+
+## Costos de envío con Correo Argentino
+
+Las tarifas de Correo Argentino varían según varios factores. Para conocer los precios exactos, podés usar nuestro [cotizador de envíos de Correo Argentino](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html) o leer nuestra guía de [cuánto cuesta enviar un paquete por Correo Argentino](https://correoargentinopro.com/blog/cuanto-cuesta-enviar-paquete-correo-argentino.html). Los principales factores son:
+
+- **Peso y dimensiones** del paquete.
+- **Origen y destino** (distancia entre provincias).
+- **Tipo de servicio** (clásico, expreso, a sucursal).
+- **Tipo de cliente** (MiCorreo tiene tarifa pública, Paq.Ar tiene tarifa negociada).
+
+Con la **cotización en tiempo real** de Correo Argentino Pro, no necesitás mantener una tabla de tarifas manual. El plugin consulta la API de Correo Argentino y muestra el precio actualizado directamente en el checkout de tu tienda.
+
+## Consejos para optimizar tus envíos
+
+- **Configurá dimensiones por defecto:** así el plugin puede cotizar aunque el producto no tenga dimensiones cargadas.
+- **Ofrecé retiro en sucursal:** es más barato que el envío a domicilio y muchos compradores lo prefieren.
+- **Activá el envío gratis:** configurá un monto mínimo para envío gratuito. Te explicamos cómo en nuestra guía de [envío gratis en WooCommerce con Correo Argentino](https://correoargentinopro.com/blog/envio-gratis-woocommerce-correo-argentino.html).
+- **Usá las acciones masivas:** si tenés muchos pedidos por día, creá envíos y generá [etiquetas masivas en WooCommerce](https://correoargentinopro.com/blog/imprimir-etiquetas-masivas-woocommerce.html).
+
+## Preguntas frecuentes
+
+### ¿Cómo integro Correo Argentino en mi tienda online?
+
+Instalás un plugin que conecta tu tienda con la API de Correo Argentino. En WooCommerce, [Correo Argentino Pro](https://correoargentinopro.com/) se instala como cualquier plugin, cargás las credenciales de MiCorreo (o de tu acuerdo Paq.Ar) y el domicilio de origen, y quedan habilitados los servicios a domicilio y a sucursal en el checkout. A partir de ahí cotizás, creás envíos y seguís el tracking desde el panel de pedidos, sin cargar nada a mano en el sitio de Correo Argentino. El paso a paso completo está en nuestra [guía de integración con WooCommerce](https://correoargentinopro.com/blog/como-integrar-correo-argentino-woocommerce.html).
+
+### ¿Necesito una cuenta de MiCorreo para vender online?
+
+Para la mayoría de los emprendedores y PyMEs, sí: MiCorreo es la puerta de entrada y no requiere un acuerdo comercial especial, solo registrarte. Con esa cuenta obtenés las credenciales de API para cotizar y crear envíos automáticamente. Si tenés volumen alto, podés sumar un acuerdo Paq.Ar con tarifas negociadas y etiquetas PDF, pero para arrancar alcanza con MiCorreo.
+
+### ¿Se puede cotizar el envío automáticamente en el checkout?
+
+Sí. Con la API de MiCorreo, el plugin consulta la tarifa en tiempo real según el código postal de destino, el peso y las dimensiones del carrito, y muestra el costo exacto de envío a domicilio o a sucursal mientras el cliente completa la compra. No necesitás mantener tablas de tarifas manuales: si Correo Argentino actualiza precios, el checkout se ajusta solo. Podés [probar el cotizador acá](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html).
+
+### ¿Sirve para WooCommerce?
+
+Sí. [Correo Argentino Pro](https://correoargentinopro.com/) está desarrollado específicamente para tiendas WooCommerce sobre WordPress. Agrega los métodos de envío de Correo Argentino, un selector de sucursal con mapa, cotización en tiempo real, creación de envíos con un click, generación de etiquetas (Paq.Ar) y tracking automático que notifica a tus clientes por email.
+
+## Siguiente paso
+
+Si querés integrar Correo Argentino con tu WooCommerce, leé nuestra [guía de integración paso a paso](https://correoargentinopro.com/blog/como-integrar-correo-argentino-woocommerce.html) o [probá Correo Argentino Pro gratis por 15 días](https://correoargentinopro.com/) para automatizar la cotización, las etiquetas y el tracking de tu tienda online. Y si tenés dudas, revisá las [preguntas frecuentes](https://correoargentinopro.com/faqs.html) o [contactanos](https://correoargentinopro.com/contacto.html).
+
+---
+
+# Cómo integrar Correo Argentino con WooCommerce en 2026
+https://correoargentinopro.com/blog/como-integrar-correo-argentino-woocommerce.html
+
+Si tenes una tienda online con WooCommerce y queres ofrecer envíos a traves de **Correo Argentino**, necesitas una forma de conectar ambos sistemas. En esta guía te mostramos cómo hacerlo de forma profesional, con cotización en tiempo real, creacion de envíos automatizada, etiquetas PDF y tracking.
+
+## Por que integrar Correo Argentino con tu tienda WooCommerce?
+
+Correo Argentino es la empresa de logística con mayor cobertura en Argentina. Con mas de 3.000 sucursales en todo el pais, ofrece opciones tanto para envío a domicilio como para retiro en sucursal. Integrar Correo Argentino con tu WooCommerce te permite:
+
+- **Cotizar envíos en tiempo real** para que tus clientes vean el costo exacto en el checkout.
+- **Ofrecer retiro en sucursal** con un selector de sucursales interactivo con mapa.
+- **Crear envíos automáticamente** desde el panel de WooCommerce, sin entrar al sistema de Correo Argentino.
+- **Generar etiquetas PDF** listas para imprimir y pegar en el paquete.
+- **Hacer tracking automático** con notificaciones por email a tus clientes.
+
+## Opciones disponibles: MiCorreo vs Paq.Ar
+
+Correo Argentino ofrece dos servicios principales para e-commerce. Si queres entender a fondo las diferencias, te recomendamos nuestro articulo sobre [que es MiCorreo](https://correoargentinopro.com/blog/que-es-micorreo-correo-argentino.html) y nuestra guia de [Paq.Ar y WooCommerce](https://correoargentinopro.com/blog/paqar-woocommerce.html).
+
+### MiCorreo
+
+**MiCorreo** es el servicio pensado para PyMEs, emprendedores y monotributistas. Sus principales ventajas:
+
+- No requiere acuerdo comercial previo.
+- Permite cotizar envíos por API (el plugin muestra el precio en el checkout).
+- Soporta envío a domicilio y retiro en sucursal.
+- Podes crear envíos y generar la documentación necesaria.
+
+Es ideal si recien empezas o si tenes un volumen de envíos bajo a medio.
+
+### Paq.Ar v2
+
+**Paq.Ar** es el servicio para empresas con acuerdo comercial con Correo Argentino. Incluye:
+
+- Tarifas preferenciales según el acuerdo.
+- Generación de etiquetas PDF oficiales.
+- Creacion de envíos via API.
+- Tracking avanzado.
+
+Si ya tenes un acuerdo con Correo Argentino o manejas alto volumen, Paq.Ar es la mejor opción.
+
+## Paso a paso: configurar Correo Argentino en WooCommerce
+
+### 1. Instalar el plugin
+
+Instala [Correo Argentino Pro](https://correoargentinopro.com/) desde el panel de WordPress: **Plugins > Agregar nuevo > Subir plugin**. Subi el archivo .zip, activa el plugin e ingresa tu clave de licencia en **Correo Arg. Pro > Configuración > Licencia**.
+
+### 2. Configurar las credenciales de la API
+
+El plugin incluye un **wizard de configuración** que te guía paso a paso. Necesitas:
+
+- **Para MiCorreo:** tu email y contrasena de la cuenta MiCorreo.
+- **Para Paq.Ar:** tu usuario, contrasena y codigo de cliente del acuerdo comercial.
+
+El wizard prueba la conexion automáticamente para asegurarte de que todo funcione.
+
+### 3. Configurar las opciones de envío
+
+En **WooCommerce > Ajustes > Envío**, agrega el metodo de envío "Correo Argentino Pro" a las zonas de envío donde quieras ofrecer Correo Argentino. Podes configurar:
+
+- Servicios habilitados (domicilio, sucursal, clásico, expreso).
+- Recargo o descuento sobre la tarifa.
+- Envío gratis a partir de cierto monto.
+- Dimensiones y peso por defecto.
+
+### 4. Probar el checkout
+
+Agrega un producto al carrito y hace una compra de prueba. Deberias ver las opciones de envío de Correo Argentino con el precio cotizado en tiempo real. Si seleccionas retiro en sucursal, se abre el mapa con las sucursales mas cercanas.
+
+### 5. Gestionar envíos
+
+Desde cada pedido en WooCommerce, podes crear el envío en Correo Argentino con un solo click. El tracking se asigna automáticamente y tus clientes reciben notificaciones por email cuándo el estado del envío cambia.
+
+## Requisitos
+
+- WordPress 5.8 o superior.
+- WooCommerce 7.0 o superior.
+- PHP 7.4 o superior.
+- Cuenta en MiCorreo o acuerdo Paq.Ar con Correo Argentino.
+- Licencia activa de [Correo Argentino Pro](https://correoargentinopro.com/).
+
+## Preguntas frecuentes
+
+Tenes mas dudas? Revisa nuestra [seccion de preguntas frecuentes](https://correoargentinopro.com/faqs.html) o consulta la [documentación completa](https://correoargentinopro.com/ayuda.html). Tambien podes [contactarnos](https://correoargentinopro.com/contacto.html) directamente.
+
+## Tambien te puede interesar
+
+- [Envios ecommerce con Correo Argentino: guia completa](https://correoargentinopro.com/blog/envios-correo-argentino-tienda-online.html)
+- [Cotizar envios con Correo Argentino online](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html)
+- [Todo sobre la etiqueta de envio de Correo Argentino](https://correoargentinopro.com/blog/etiqueta-envio-correo-argentino.html)
+- [WooCommerce en Argentina: guia completa](https://correoargentinopro.com/blog/woocommerce-argentina-guia-completa.html)
+
+---
+
+# Cómo Configurar Envío Gratis en WooCommerce con Correo Argentino
+https://correoargentinopro.com/blog/envio-gratis-woocommerce-correo-argentino.html
+
+Ofrecer **envío gratis** es una de las estrategias mas efectivas para aumentar las conversiones en tu tienda online. Segun estudios de e-commerce, mas del 70% de los compradores argentinos abandonan el carrito cuándo ven costos de envío inesperados. En esta guía te explicamos como configurar envío gratis en WooCommerce cuándo usas **Correo Argentino** como metodo de envío, y como [Correo Argentino Pro](https://correoargentinopro.com/) te facilita todo el proceso.
+
+## Por que ofrecer envío gratis en tu tienda WooCommerce?
+
+El envío gratis no es solo un beneficio para el comprador: es una herramienta comercial poderosa que impacta directamente en tus ventas. Estos son los principales motivos para implementarlo:
+
+- **Reduce el abandono de carrito:** el costo de envío es la razon numero uno por la que los usuarios no completan la compra. Eliminarlo (o absorberlo) mejora tu tasa de conversion.
+- **Aumenta el ticket promedio:** si condicionas el envío gratis a un monto mínimo, tus clientes van a agregar mas productos al carrito para llegar a ese umbral.
+- **Mejora la experiencia de compra:** un checkout sin sorpresas genera confianza y fideliza clientes.
+- **Te diferencia de la competencia:** en un mercado competitivo, ofrecer free shipping puede ser el factor decisivo.
+
+Por supuesto, alguien tiene que absorber el costo. Mas adelante te mostramos estrategias para que el envío gratis no te coma el margen.
+
+## Como funciona el envío gratis en WooCommerce
+
+WooCommerce incluye un metodo de envío nativo llamado **"Envío gratuito"** (Free Shipping). Este metodo se configura dentro de las **zonas de envío** y te permite definir bajo que condiciones se aplica. Las opciones disponibles son:
+
+- **Sin condiciones:** envío gratis para todos los pedidos, sin importar el monto.
+- **Monto mínimo del pedido:** envío gratis cuándo el subtotal del carrito supera un valor que vos definis (por ejemplo, $50.000).
+- **Cupon de descuento:** envío gratis cuándo el cliente aplica un cupon especifico.
+- **Monto mínimo O cupon:** cualquiera de las dos condiciones activa el free shipping.
+- **Monto mínimo Y cupon:** ambas condiciones deben cumplirse.
+
+Es importante entender que el envío gratuito nativo de WooCommerce es un **metodo de envío separado**. Esto quiere decir que cuándo se activa, aparece como opción adicional junto a los demas metodos (como Correo Argentino a domicilio o a sucursal). El cliente puede elegir si quiere el envío gratis o pagar por un servicio mas rapido, por ejemplo.
+
+## Configurar envío gratis paso a paso
+
+### 1. Acceder a las zonas de envío
+
+Anda a **WooCommerce > Ajustes > Envío > Zonas de envío**. Si todavia no tenes zonas creadas, necesitas configurar al menos una. Por ejemplo, podes tener una zona "Argentina" que cubra todo el pais, o zonas separadas como "AMBA", "Interior" y "Patagonia" con reglas distintas.
+
+Si no sabes cómo funcionan las zonas de envío de WooCommerce, te recomendamos leer nuestra [guía de integración de Correo Argentino con WooCommerce](https://correoargentinopro.com/blog/como-integrar-correo-argentino-woocommerce.html) donde explicamos la configuración base.
+
+### 2. Agregar el metodo "Envío gratuito"
+
+Dentro de la zona de envío que quieras, hace click en **"Agregar metodo de envío"** y selecciona **"Envío gratuito"**. Una vez agregado, hace click en "Editar" para configurar las condiciones.
+
+### 3. Definir las condiciones
+
+En la configuración del metodo, vas a ver un campo **"El envío gratuito requiere..."** con las opciones que mencionamos antes. La mas comun es **"Un monto mínimo del pedido"**. Ingresa el monto en pesos (por ejemplo, 50000) y guarda.
+
+Tip: no pongas el signo de pesos ni puntos, solo el numero. WooCommerce usa la configuración de moneda que tengas en **WooCommerce > Ajustes > General**.
+
+### 4. Verificar que coexista con Correo Argentino
+
+Tu zona de envío ahora deberia tener al menos dos metodos: **Correo Argentino Pro** (con las tarifas cotizadas en tiempo real) y **Envío gratuito** (que aparece cuándo se cumple la condicion). Cuando el cliente llega al checkout:
+
+- Si el carrito **no alcanza** el monto mínimo, solo ve las opciones de Correo Argentino con su precio cotizado.
+- Si el carrito **supera** el monto mínimo, ve las opciones de Correo Argentino Y ademas la opción de envío gratuito.
+
+Esto funciona bien, pero hay un problema: el cliente sigue viendo las opciones pagas. Si queres que **solo** aparezca el envío gratis cuándo se cumple la condicion (y que desaparezcan las opciones pagas), necesitas usar la funcionalidad integrada de Correo Argentino Pro, que explicamos mas abajo.
+
+## Envío gratis integrado en Correo Argentino Pro
+
+[Correo Argentino Pro](https://correoargentinopro.com/) incluye una opción nativa de envío gratis qué es mas limpia y facil de configurar que el metodo nativo de WooCommerce. Desde la configuración del plugin, podes activar:
+
+- **Envío gratis a partir de un monto:** definis el importe mínimo y, cuándo el carrito lo alcanza, las tarifas de Correo Argentino se muestran con precio $0 automáticamente. No necesitas agregar un metodo de envío separado.
+- **Envío gratis por zona:** podes configurar montos diferentes para cada zona de envío. Por ejemplo, envío gratis a partir de $30.000 en AMBA y a partir de $50.000 en el interior.
+
+La ventaja de usar la opción integrada del plugin es que el cliente sigue viendo los servicios de Correo Argentino (domicilio, sucursal, clásico, expreso) pero con **precio cero**. No hay confusi on entre un metodo "Envío gratuito" generico y los servicios reales del correo.
+
+## Estrategias de envío gratis que funcionan
+
+No todas las tiendas pueden ofrecer envío gratis sin condiciones. Aca te compartimos estrategias probadas para implementarlo sin destruir tu rentabilidad:
+
+### 1. Envío gratis con monto mínimo
+
+Es la estrategia mas popular y la mas equilibrada. Definis un umbral (por ejemplo, $40.000 o $60.000) y solo los pedidos que superen ese monto tienen envío gratis. Esto incentiva al cliente a comprar mas para "ganar" el beneficio.
+
+**Como calcularlo:** toma tu ticket promedio actual y ponelo un 20-30% mas arriba. Si tu ticket promedio es $35.000, ofrece envío gratis a partir de $45.000. Asi empujas al cliente a agregar un producto mas.
+
+Para saber cuanto te va a costar absorber el envío, podes [cotizar envíos de Correo Argentino](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html) y calcular el costo promedio según tus destinos mas frecuentes.
+
+### 2. Envío gratis en productos seleccionados
+
+WooCommerce permite crear **clases de envío** que agrupan productos con condiciones especiales. Podes crear una clase "Envío gratis" y asignarla a los productos donde quieras absorber el costo. Esto es ideal para:
+
+- Productos con alto margen donde el costo de envío es insignificante.
+- Productos livianos o pequenos cuyo [costo de envío por Correo Argentino](https://correoargentinopro.com/blog/cuanto-cuesta-enviar-paquete-correo-argentino.html) es bajo.
+- Productos en promocion donde queres dar un empujon extra.
+- Productos digitales o combos donde el envío gratis es un diferenciador clave.
+
+### 3. Envío gratis por zona geografica
+
+El costo de envío varia mucho según el destino. Un envío a CABA puede costar la mitad que uno a Ushuaia. Si queres entender como se determinan estas diferencias, lee nuestra guía sobre [zonas de envío de Correo Argentino](https://correoargentinopro.com/blog/zonas-envio-correo-argentino.html). Por eso, muchas tiendas ofrecen envío gratis solo en las zonas donde el costo es razonable, y en las zonas mas caras aplican un subsidio parcial.
+
+Con WooCommerce podes tener zonas de envío separadas con reglas distintas:
+
+- **CABA y GBA:** envío gratis sin monto mínimo (el costo de envío es bajo).
+- **Interior del pais:** envío gratis a partir de $50.000.
+- **Patagonia y zonas remotas:** descuento parcial en el envío, pero no gratis.
+
+Esta segmentacion te permite ser competitivo donde importa sin perder plata en envíos caros a destinos lejanos.
+
+### 4. Envío gratis con cupon
+
+Otra opción es crear un **cupon de envío gratis** en WooCommerce (en **Marketing > Cupones**) y distribuirlo estrategicamente. Podes usarlo para:
+
+- Campanas de email marketing.
+- Primera compra de clientes nuevos.
+- Eventos especiales como Hot Sale, CyberMonday o Black Friday.
+- Fidelizacion de clientes recurrentes.
+
+La ventaja es que controlas exactamente cuándo y a quien le ofreces el beneficio, sin impactar en todos tus pedidos.
+
+### 5. Incluir el envío en el precio del producto
+
+Algunos vendedores prefieren subir ligeramente el precio de sus productos y ofrecer "envío gratis" en todos los casos. Psicologicamente, un producto de $15.000 con envío gratis vende mejor que uno de $12.000 + $3.000 de envío, aunque el total sea el mismo.
+
+Si vas por esta estrategia, asegurate de que tus precios sigan siendo competitivos comparados con la competencia. Y tene en cuenta que el costo real del envío varia según el destino, asi que con esta estrategia vas a subsidiar mas los envíos al interior que los de CABA.
+
+## Como combinar envío gratis con tarifas de Correo Argentino
+
+El escenario mas comun es querer mostrar las tarifas reales de Correo Argentino para pedidos chicos, y envío gratis para pedidos grandes. Con [Correo Argentino Pro](https://correoargentinopro.com/), la configuración es directa:
+
+1. Anda a **Correo Arg. Pro > Configuración > Envío**.
+2. Activa la opción **"Envío gratis a partir de"**.
+3. Ingresa el monto mínimo.
+4. Guarda los cambios.
+
+Listo. Cuando un cliente agrega productos al carrito y el subtotal supera el monto que definiste, los servicios de Correo Argentino aparecen con tarifa $0. Si el cliente saca productos y baja del umbral, las tarifas vuelven a mostrarse con el precio real cotizado en tiempo real.
+
+Esto es mucho mas prolijo que tener un metodo "Envío gratuito" separado, porque el cliente siempre ve los mismos servicios de Correo Argentino (a domicilio, a sucursal, clásico, expreso) y solo cambia el precio.
+
+## Consideraciones importantes
+
+### Calcula el impacto en tu margen
+
+Antes de activar envío gratis, hace los numeros. Si tu margen bruto es del 40% y el envío promedio cuesta $5.000, necesitas que cada venta sea de al menos $12.500 para no perder plata. Conoce tus [costos de envío con Correo Argentino](https://correoargentinopro.com/blog/cuanto-cuesta-enviar-paquete-correo-argentino.html) antes de definir el umbral.
+
+### Mostra el beneficio claramente
+
+No alcanza con tener envío gratis configurado: tenes que comunicarlo. Agrega banners en tu tienda, mencionalo en las fichas de producto y en el header. Un mensaje como **"Envío gratis a todo el pais en compras mayores a $50.000"** puede ser el empujon que necesita el cliente para comprar.
+
+### Usa envío gratis como herramienta de marketing
+
+El envío gratis puede ser temporal. Podes activarlo durante fechas especiales (Dia de la Madre, Navidad, Hot Sale) y desactivarlo despues. WooCommerce y Correo Argentino Pro te permiten cambiar la configuración en segundos.
+
+### Cuidado con los productos pesados o voluminosos
+
+Si vendes productos de gran tamaño o peso, el envío gratis puede ser muy costoso. Considera excluir ciertos productos o categorias del beneficio usando clases de envío en WooCommerce.
+
+## Ejemplo practico: tienda de indumentaria
+
+Supongamos que tenes una tienda de ropa con WooCommerce. Tu ticket promedio es $25.000 y el costo de envío promedio por Correo Argentino es $4.500. Asi podrias configurar tu estrategia:
+
+1. **Zona CABA/GBA:** envío gratis a partir de $30.000 (el costo de envío aca es de ~$3.000, manejable).
+2. **Zona Interior:** envío gratis a partir de $45.000 (el costo sube a ~$5.500, necesitas un ticket mas alto).
+3. **Zona Patagonia:** descuento fijo de $3.000 en el envío a partir de $45.000, pero no gratis (el costo puede superar $8.000).
+
+Con esta configuración, la mayoria de los clientes van a agregar una prenda mas al carrito para alcanzar el envío gratis, subiendo tu ticket promedio. Y en las zonas mas caras, ofreces un beneficio parcial que sigue siendo atractivo sin comer tu margen.
+
+## Envío gratis vs envío con tarifa plana
+
+Otra alternativa al envío gratis total es ofrecer una **tarifa plana** (flat rate). En lugar de gratis, cobras un monto fijo bajo (por ejemplo, $2.000) sin importar el destino. Esto es mas sostenible financieramente y sigue siendo atractivo para el comprador.
+
+Con Correo Argentino Pro, podes configurar un recargo o descuento sobre la tarifa real. Por ejemplo, si queres que el cliente siempre pague $2.000, podes aplicar un descuento que reduzca la tarifa cotizada a ese valor. Aunque esto requiere ajustes manuales, es una opción intermedia interesante.
+
+## Preguntas frecuentes sobre envío gratis
+
+### El envío gratis aplica para retiro en sucursal tambien?
+
+Si, cuándo configuras envío gratis en Correo Argentino Pro, aplica a todos los servicios habilitados, incluyendo retiro en sucursal. El cliente puede elegir la sucursal mas cercana desde el mapa del checkout y el envío sigue siendo gratis. Para entender las diferencias entre ambas modalidades, consulta nuestra comparativa de [envío a sucursal vs envío a domicilio](https://correoargentinopro.com/blog/envio-sucursal-vs-domicilio-correo-argentino.html).
+
+### Puedo ofrecer envío gratis solo en algunos servicios?
+
+Con el metodo nativo de WooCommerce, el envío gratuito es un metodo separado y no distingue entre servicios. Con Correo Argentino Pro, el envío gratis aplica a todos los servicios habilitados. Si queres que solo aplique a "Clasico" pero no a "Expreso", podes combinar el metodo nativo de WooCommerce con las tarifas del plugin.
+
+### Como se que monto mínimo poner?
+
+Analiza tu ticket promedio, tu margen bruto y tu costo de envío promedio. Una formula simple: el monto mínimo deberia ser al menos **ticket promedio + 20%**, y tu margen bruto en ese monto debe cubrir el costo de envío. Podes [usar nuestro cotizador](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html) para estimar los costos de envío según tus destinos.
+
+### Afecta al SEO ofrecer envío gratis?
+
+Indirectamente, si. Google valora la experiencia de usuario, y una tienda con envío gratis tiene menores tasas de rebote y mayor tiempo en pagina. Ademas, podes usar datos estructurados (`shippingDetails` en schema.org) para que Google muestre el beneficio de envío gratis en los resultados de busqueda.
+
+## Conclusion
+
+Configurar envío gratis en WooCommerce con Correo Argentino es mas simple de lo que parece, especialmente si usas [Correo Argentino Pro](https://correoargentinopro.com/). La clave esta en elegir la estrategia correcta para tu negocio: monto mínimo, productos seleccionados, zonas geograficas o cupones. Lo importante es que el beneficio sea sostenible para vos y atractivo para tus clientes.
+
+Si todavia no integraste Correo Argentino con tu WooCommerce, te recomendamos empezar por nuestra [guía de integración completa](https://correoargentinopro.com/blog/como-integrar-correo-argentino-woocommerce.html). Y si queres entender mejor los costos antes de definir tu estrategia de envío gratis, revisa nuestro articulo sobre [cuánto cuesta enviar un paquete por Correo Argentino](https://correoargentinopro.com/blog/cuanto-cuesta-enviar-paquete-correo-argentino.html).
+
+Tenes dudas? Revisa nuestra [seccion de preguntas frecuentes](https://correoargentinopro.com/faqs.html), consulta la [documentación](https://correoargentinopro.com/ayuda.html) o [contactanos](https://correoargentinopro.com/contacto.html) directamente.
+
+---
+
+# Etiqueta de Envío Correo Argentino: Cómo Generarla y Pegarla Correctamente
+https://correoargentinopro.com/blog/etiqueta-envio-correo-argentino.html
+
+Si vendes online y usas Correo Argentino para tus envíos, la **etiqueta de envío** (tambien llamada rotulo de envío) es un elemento clave del proceso. Sin una etiqueta correcta, tu paquete no puede ser procesado, rastreado ni entregado. En esta guía te explicamos que es, qué datos contiene, como generarla desde las distintas plataformas y como pegarla correctamente en tu paquete para evitar problemas.
+
+## Qué es una etiqueta de envío de Correo Argentino
+
+La **etiqueta de envío de Correo Argentino** es el documento que se pega en el exterior del paquete y contiene toda la información necesaria para que el correo pueda procesar, transportar y entregar tu envío. Es, basicamente, la "identidad" de tu paquete dentro del sistema logistico.
+
+Sin esta etiqueta, la sucursal de Correo Argentino no va a aceptar tu paquete. Por eso es fundamental generarla correctamente antes de despachar. Si todavia no tenes claro como funciona el proceso completo de envío, te recomendamos leer primero nuestra guía sobre [cómo hacer un envío con Correo Argentino](https://correoargentinopro.com/blog/como-hacer-envio-correo-argentino.html).
+
+## Que datos contiene la etiqueta de envío
+
+Una etiqueta de envío de Correo Argentino incluye los siguientes datos:
+
+- **Datos del remitente:** Nombre o razon social, direccion completa, codigo postal, localidad y provincia de origen.
+- **Datos del destinatario:** Nombre completo, direccion de entrega (o sucursal de destino), codigo postal, localidad, provincia y telefono de contacto.
+- **Numero de seguimiento (tracking):** El codigo unico que permite rastrear el paquete en todo momento.
+- **Codigo de barras:** La representacion grafica del numero de seguimiento, que las sucursales escanean para registrar cada movimiento del paquete.
+- **Tipo de servicio:** Si es envío a domicilio, a sucursal, clásico o expreso.
+- **Peso y dimensiones:** En algunos formatos se incluye el peso declarado del paquete.
+
+Si queres conocer en detalle todos los datos que necesitas tener preparados antes de generar un envío, consulta nuestra guía de [qué datos necesito para enviar un paquete por Correo Argentino](https://correoargentinopro.com/blog/que-datos-necesito-enviar-paquete-correo-argentino.html).
+
+## Como generar etiquetas con MiCorreo (forma manual)
+
+Si usas **MiCorreo**, la plataforma de Correo Argentino para emprendedores y PyMEs, el proceso de generación de etiquetas es manual:
+
+1. **Ingresa a tu cuenta** en MiCorreo.
+2. **Crea un nuevo envío** completando los datos del remitente, destinatario, peso y dimensiones del paquete.
+3. **Selecciona el tipo de servicio** (a domicilio o a sucursal, clásico o expreso).
+4. **Confirma y paga el envío** (online o en sucursal, según tu preferencia).
+5. **Descarga o imprime la etiqueta** que el sistema genera con los datos del envío y el codigo de seguimiento.
+
+Este metodo funciona bien si tenes pocos envíos por dia, pero se vuelve muy tedioso cuándo manejas un volumen importante. Cada envío requiere que cargues los datos a mano, lo cual consume tiempo y aumenta la posibilidad de errores. Si manejas volumen, te va a interesar nuestra guia de [impresion masiva de etiquetas en WooCommerce](https://correoargentinopro.com/blog/imprimir-etiquetas-masivas-woocommerce.html).
+
+## Como generar etiquetas con Paq.Ar (via API)
+
+Si tu empresa tiene un acuerdo comercial con Correo Argentino y usa el servicio **Paq.Ar**, las etiquetas se generan de forma diferente. Paq.Ar ofrece una API que permite crear envíos y obtener las etiquetas en formato PDF de manera programatica.
+
+Las etiquetas de Paq.Ar se pueden generar en distintos formatos:
+
+- **Formato 10x15 cm:** Ideal para impresoras térmicas de etiquetas (como las Zebra). Es el formato mas comun en operaciones con volumen porque no necesitas recortar nada.
+- **Formato A4:** Para imprimir en una impresora comun. La etiqueta viene en una hoja A4 y despues la recortas para pegarla en el paquete.
+
+La ventaja de Paq.Ar es que, al generar la etiqueta via API, automáticamente se crea el envío en el sistema de Correo Argentino y se asigna el numero de seguimiento. No necesitas cargar nada manualmente en la web. Pero para aprovechar esta API, necesitas desarrollo tecnico o un plugin que se encargue de la integración. Podes leer mas sobre la integración con WooCommerce en nuestra guía de [Paq.Ar con WooCommerce](https://correoargentinopro.com/blog/paqar-woocommerce.html).
+
+## Como generar etiquetas automáticamente con Correo Argentino Pro
+
+Si tenes una tienda WooCommerce, la forma mas eficiente de generar la **etiqueta de envío de Correo Argentino** es usando el plugin [Correo Argentino Pro](https://correoargentinopro.com/). El plugin se conecta con la API de Correo Argentino y automatiza todo el proceso.
+
+Asi funciona:
+
+1. **Un cliente hace una compra** en tu tienda y elige envío por Correo Argentino en el checkout.
+2. **Abris el pedido en WooCommerce** y con un solo click creas el envío en Correo Argentino.
+3. **El plugin genera la etiqueta PDF** automáticamente, tomando todos los datos del pedido (nombre, direccion, CP, telefono) sin que tengas que escribir nada.
+4. **Descargas la etiqueta** directamente desde el panel del pedido, la imprimis y la pegas en el paquete.
+
+Este flujo elimina la necesidad de entrar a MiCorreo o al panel de Paq.Ar por separado. Todo se hace desde WooCommerce, donde ya tenes toda la información del cliente.
+
+## Generación masiva de etiquetas para multiples pedidos
+
+Si tenes muchos pedidos por dia, generar etiquetas una por una sigue siendo lento, incluso con un plugin. Por eso [Correo Argentino Pro](https://correoargentinopro.com/) incluye **acciones masivas**: desde el listado de pedidos de WooCommerce, seleccionas todos los pedidos que necesitas despachar y con una sola accion creas los envíos y generas todas las etiquetas en lote.
+
+El resultado es un PDF con todas las etiquetas listas para imprimir, una tras otra. Esto es especialmente util si usas una impresora termica, porque podes imprimir la tanda completa de una sola vez y despues ir pegando cada etiqueta en su paquete correspondiente.
+
+## Como imprimir y pegar la etiqueta correctamente
+
+Generar la etiqueta es solo la mitad del trabajo. Pegarla correctamente en el paquete es igual de importante. Segui estos consejos:
+
+- **Impresion clara:** Asegurate de que la etiqueta se imprima con buena calidad. El codigo de barras tiene que ser legible para los scanners de la sucursal. Si usas impresora de tinta, verifica que no quede borroso.
+- **Ubicacion:** Pega la etiqueta en la cara mas grande del paquete, bien centrada. Evita doblarla sobre bordes o esquinas.
+- **Superficie lisa:** La etiqueta debe quedar sobre una superficie plana, sin arrugas ni burbujas. Si el paquete tiene textura irregular, pega primero un papel liso y encima la etiqueta.
+- **Proteccion:** Si vas a despachar el paquete en un dia de lluvia o el embalaje es oscuro, cubri la etiqueta con cinta transparente ancha para protegerla. Pero cuidado: no pongas cinta sobre el codigo de barras si genera reflejo excesivo, porque puede dificultar la lectura.
+- **Una sola etiqueta visible:** Si estas reutilizando una caja, elimina o tacha completamente cualquier etiqueta anterior. Si hay dos etiquetas visibles, el paquete puede ser enviado al destino equivocado.
+
+## Errores comunes al generar y usar etiquetas de envío
+
+Estos son los errores que vemos con mas frecuencia y que conviene evitar:
+
+- **Codigo postal incorrecto:** Si el CP del destinatario esta mal, el paquete puede ir a la sucursal equivocada y demorarse dias. Siempre verifica el CP antes de generar la etiqueta.
+- **Datos del destinatario incompletos:** Falta el piso, el departamento o el telefono. Esto genera problemas en la entrega a domicilio. Asegurate de que tu formulario de checkout pida todos los campos necesarios.
+- **Imprimir la etiqueta demasiado chica:** Si achicas la etiqueta para que entre en un papel mas chico, el codigo de barras puede quedar ilegible. Respeta el tamaño original.
+- **No pegar la etiqueta antes de ir a la sucursal:** Si llegas a la sucursal con el paquete sin etiqueta, vas a perder tiempo. Siempre lleva todo listo.
+- **Reutilizar un numero de seguimiento:** Cada envío tiene su propio tracking. Nunca copies una etiqueta de un envío anterior para otro paquete.
+- **Olvidar generar el envío en el sistema:** Imprimir una etiqueta no es suficiente. El envío tiene que estar creado en la plataforma de Correo Argentino para que el tracking funcione.
+
+## Automatiza tus etiquetas con Correo Argentino Pro
+
+Si todavia estas generando etiquetas a mano, te estas perdiendo horas de trabajo que podrias ahorrarte. Con [Correo Argentino Pro](https://correoargentinopro.com/), todo el proceso de etiquetas se resuelve desde WooCommerce: un click para crear el envío, un click para descargar la etiqueta, y acciones masivas para despachar decenas de pedidos en minutos.
+
+El plugin soporta tanto MiCorreo como Paq.Ar, se adapta a tu tipo de cuenta y genera las etiquetas en el formato que necesites. Ademas, el tracking se actualiza automáticamente y tus clientes reciben notificaciones del estado de su envío.
+
+Si tenes dudas sobre como funciona, revisa las [preguntas frecuentes](https://correoargentinopro.com/faqs.html) o [escribinos](https://correoargentinopro.com/contacto.html) y te ayudamos a configurar todo.
+
+## Tambien te puede interesar
+
+- [Como hacer seguimiento de un envio de Correo Argentino](https://correoargentinopro.com/blog/seguimiento-envio-correo-argentino.html)
+- [Como integrar Correo Argentino con WooCommerce](https://correoargentinopro.com/blog/como-integrar-correo-argentino-woocommerce.html)
+
+---
+
+# Cómo Armar una Encomienda para Enviar por Correo Argentino
+https://correoargentinopro.com/blog/como-armar-encomienda-correo-argentino.html
+
+Si tenes que mandar un paquete y no sabes bien **como armar una encomienda para enviar por Correo Argentino**, esta guía es para vos. Te explicamos paso a paso como elegir la caja, proteger el contenido, respetar los límites de peso y medidas, etiquetar correctamente y evitar los errores mas comunes que pueden arruinar tu envío.
+
+## Qué es una encomienda en Correo Argentino
+
+Una **encomienda** es, basicamente, un paquete o bulto que envias a traves del servicio postal. En el contexto de Correo Argentino, una encomienda es cualquier envío que supera el formato de carta o sobre y que necesita ser embalado en una caja o envoltorio rigido para su transporte. Puede ser un producto que vendiste por internet, un regalo para alguien en otra provincia, o cualquier objeto que necesites despachar de un punto a otro del pais.
+
+Para que la encomienda sea aceptada en la sucursal, tiene que cumplir ciertos requisitos de embalaje, peso, dimensiones y etiquetado. Si no los cumple, te la van a rechazar y vas a perder tiempo. Asi que mejor preparar todo bien desde casa.
+
+## Paso a paso: como embalar tu encomienda correctamente
+
+El embalaje es la parte mas importante del proceso. Un paquete mal armado puede romperse durante el transporte, y Correo Argentino no se hace responsable si el embalaje era inadecuado. Segui estos pasos:
+
+### 1. Elegi la caja adecuada
+
+Usa una caja de carton corrugado que sea resistente y del tamaño apropiado para lo que vas a enviar. Evita cajas demasiado grandes para objetos chicos: el contenido se mueve durante el transporte y puede danarse. Si la caja es muy grande, recortala y ajustala al tamaño del producto. Asegurate de que el carton no este humedo, roto ni debilitado. Si estas reutilizando una caja, verifica que no tenga perforaciones ni dobleces que comprometan su estructura.
+
+### 2. Protege el contenido con material de relleno
+
+Una vez que el producto esta dentro de la caja, no puede quedar suelto. Rellena los espacios vacios con papel kraft arrugado, papel burbuja (pluriball), bolsas de aire o espuma. El objetivo es que el contenido no se mueva si sacudis la caja. Una buena prueba: cerra la caja y agitala suavemente. Si sentis que algo se desplaza, necesitas mas relleno.
+
+### 3. Sella la caja correctamente
+
+Usa cinta de embalar ancha (de al menos 5 cm) para sellar la caja. Aplica cinta en la abertura superior e inferior, y refuerza las juntas laterales con una o dos pasadas extra. No uses cuerda, hilo sisal ni precintos metalicos, ya que pueden engancharse en las cintas transportadoras y danar otros paquetes. El cierre tiene que ser firme: si la caja se abre durante el transporte, se pierde el contenido.
+
+## Limites de peso y dimensiones en Correo Argentino
+
+Antes de embalar, tene en cuenta los límites que establece Correo Argentino para encomiendas:
+
+- **Peso máximo:** 25 kg por paquete. Si tu producto pesa mas, vas a tener que dividirlo en dos bultos. Tene en cuenta que tambien se calcula el [peso volumetrico](https://correoargentinopro.com/blog/peso-volumetrico-correo-argentino.html), que puede afectar el costo del envio.
+- **Dimensiones máximas:** La suma del largo + ancho + alto no puede superar los 150 cm. Ademas, ninguno de los lados puede superar los 100 cm individualmente. Para mas detalle, lee nuestra guia de [embalaje y medidas maximas de Correo Argentino](https://correoargentinopro.com/blog/embalaje-medidas-maximas-correo-argentino.html).
+- **Peso mínimo:** No hay un mínimo oficial, pero para envíos muy livianos (menos de 500 g) puede convenir usar el servicio de sobre o paqueteria liviana en lugar de encomienda.
+
+Si vendes online, es fundamental que tengas bien cargados el peso y las dimensiones de tus productos. Asi evitas sorpresas en la sucursal. Si queres saber mas sobre el proceso completo de envío, incluyendo como cotizar, te recomendamos leer [cómo hacer un envío con Correo Argentino](https://correoargentinopro.com/blog/como-hacer-envio-correo-argentino.html).
+
+## Que NO podes incluir en una encomienda
+
+Correo Argentino tiene una lista de **artículos prohibidos** que no podes despachar bajo ningun concepto. Algunos de los mas importantes:
+
+- **Materiales peligrosos:** Liquidos inflamables, gases comprimidos, sustancias corrosivas, explosivos, materiales radioactivos.
+- **Armas y municiones:** De cualquier tipo, incluyendo replicas funcionales.
+- **Drogas y estupefacientes:** Sustancias ilegales o controladas.
+- **Animales vivos:** De ninguna especie.
+- **Dinero en efectivo:** Billetes o monedas. Para enviar valores existe un servicio aparte.
+- **Productos perecederos:** Alimentos que requieran cadena de frio o que puedan descomponerse durante el transporte.
+- **Baterias de litio sueltas:** Las baterias integradas en dispositivos tienen restricciones especificas.
+
+Si incluiste algo prohibido y el paquete es inspeccionado, va a ser retenido y puede haber consecuencias legales. Ante la duda, consulta directamente con la sucursal antes de despachar.
+
+## Tips para etiquetar tu encomienda correctamente
+
+La etiqueta es lo que permite que tu paquete llegue a destino. Si esta mal hecha o es ilegible, el envío se demora o se pierde. Estos son los puntos clave:
+
+- **Datos del destinatario completos:** Nombre y apellido, direccion con calle y numero, piso y departamento si corresponde, codigo postal, localidad y provincia. No te olvides del telefono de contacto.
+- **Datos del remitente:** Tu nombre, direccion y telefono. Si el paquete no puede entregarse, vuelve al remitente.
+- **Etiqueta generada por el sistema:** Si ya creaste el envío en MiCorreo o Paq.Ar, la etiqueta incluye el codigo de barras y el numero de seguimiento. Imprimila con buena calidad y pegala en la cara mas grande del paquete.
+- **No cubras el codigo de barras:** Tiene que quedar visible y legible para los scanners de las sucursales.
+
+Para una guía detallada sobre etiquetas, incluyendo formatos de impresión y errores comunes, lee nuestra nota sobre [la etiqueta de envío de Correo Argentino](https://correoargentinopro.com/blog/etiqueta-envio-correo-argentino.html). Y si queres saber exactamente qué datos necesitas tener listos antes de crear el envío, consulta [qué datos necesito para enviar un paquete por Correo Argentino](https://correoargentinopro.com/blog/que-datos-necesito-enviar-paquete-correo-argentino.html).
+
+## Como embalar artículos frágiles
+
+Si vas a enviar algo fragil (ceramica, vidrio, electronica, instrumentos musicales), el embalaje estandar no alcanza. Necesitas proteccion extra:
+
+- **Envolve cada pieza por separado** con papel burbuja. Minimo dos capas para objetos de vidrio o ceramica.
+- **Usa doble caja:** Coloca el producto envuelto en una caja interna, y esa caja dentro de una caja mas grande con relleno entre ambas. Este sistema de "caja dentro de caja" absorbe los golpes mucho mejor que una sola caja.
+- **Marca el paquete como fragil:** Escribi "FRAGIL" en al menos dos caras visibles de la caja con marcador grueso. Tambien podes usar stickers de fragil si los conseguis.
+- **Evita el contacto directo entre objetos:** Si envias varios items frágiles en la misma caja, separa cada uno con carton o espuma. Nunca deben tocarse entre si.
+- **Usa esquineros de carton o espuma** si el objeto tiene bordes o esquinas que sobresalen.
+
+Tene en cuenta que la marca de "FRAGIL" es una indicacion, no una garantia de manejo especial. El mejor seguro es un embalaje solido que aguante golpes y caidas moderadas.
+
+## Errores comunes al armar una encomienda
+
+Estos son los errores que mas vemos y que conviene evitar a toda costa:
+
+- **Usar bolsas de plastico en vez de caja:** Las bolsas no protegen el contenido y se rompen facilmente. Salvo que se trate de ropa blanda, siempre usa caja de carton.
+- **No rellenar los espacios vacios:** El producto se mueve y se golpea contra las paredes de la caja. Resultado: llega roto.
+- **Sellar con cinta comun (de pintor o scotch):** Estas cintas no tienen la adherencia necesaria. La caja se puede abrir durante el transporte. Usa siempre cinta de embalar.
+- **Exceder los límites de peso sin darse cuenta:** Si tu paquete pesa mas de 25 kg, la sucursal te lo rechaza. Pesa todo antes de salir de tu casa o deposito.
+- **Dejar etiquetas viejas en cajas reutilizadas:** Si la caja tiene codigos de barras o etiquetas de envíos anteriores, pueden confundir al sistema de clasificacion. Eliminalas o tachalas completamente.
+- **No verificar las dimensiones:** Armas la caja, la emballas perfecto, pero cuándo llegas a la sucursal supera los 150 cm de suma total. Medi antes de cerrar.
+
+## Como Correo Argentino Pro simplifica el proceso para tiendas online
+
+Si tenes una tienda online con WooCommerce, armar la encomienda es solo una parte del trabajo. Despues tenes que generar el envío, crear la etiqueta, cargar los datos del destinatario, validar dimensiones y peso, y gestionar el seguimiento. Todo eso, pedido por pedido, consume horas.
+
+[Correo Argentino Pro](https://correoargentinopro.com/) automatiza toda esa parte logística. El plugin toma los datos del pedido directamente desde WooCommerce y genera el envío con un solo click. La etiqueta se crea automáticamente con todos los datos correctos: nombre, direccion, codigo postal, peso y dimensiones del paquete. Si los datos estan incompletos o las dimensiones exceden los límites, el sistema te avisa antes de generar el envío, evitando rechazos en la sucursal.
+
+Ademas, si manejas volumen, podes usar las acciones masivas para crear envíos y descargar todas las etiquetas de una sola vez. Esto significa que tu unica tarea manual es armar las cajas y pegar las etiquetas. El resto lo hace el plugin.
+
+Vos concentrate en embalar bien tus productos. De la logística digital se encarga [Correo Argentino Pro](https://correoargentinopro.com/).
+
+Si queres saber cuanto te va a salir el envio, usa nuestro [cotizador de envios de Correo Argentino](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html). Y si tenes dudas sobre el proceso, revisa las [preguntas frecuentes](https://correoargentinopro.com/faqs.html) o [escribinos](https://correoargentinopro.com/contacto.html) y te ayudamos.
+
+---
+
+# Qué es MiCorreo de Correo Argentino y Cómo Usarlo para Envíos Ecommerce
+https://correoargentinopro.com/blog/que-es-micorreo-correo-argentino.html
+
+Si tenes una tienda online o vendes por redes sociales, seguramente necesitas una forma accesible de enviar tus productos a todo el pais. Ahi es donde entra **MiCorreo de Correo Argentino**, la plataforma digital pensada para que emprendedores, freelancers y PyMEs puedan gestionar sus envíos sin necesidad de firmar contratos comerciales ni tener un volumen mínimo. En esta guía te contamos todo: que es, como funciona, que podes hacer con su API, cuales son sus limitaciones y cómo integrarlo con tu WooCommerce.
+
+## Qué es MiCorreo de Correo Argentino
+
+**MiCorreo** es la plataforma digital de Correo Argentino dirigida a particulares y pequenas y medianas empresas. A diferencia de los servicios corporativos como Paq.Ar, MiCorreo no requiere un acuerdo comercial previo: cualquier persona puede registrarse y empezar a enviar paquetes a traves de la red de mas de 3.000 puntos de Correo Argentino en toda la Argentina.
+
+La plataforma funciona desde el navegador, sin necesidad de instalar nada. Desde ahi podes cotizar, crear envíos, pagar y hacer seguimiento de tus paquetes. Es la puerta de entrada mas simple para empezar a despachar pedidos con Correo Argentino, especialmente si recien arrancas con tu emprendimiento o todavia no tenes el volumen suficiente para negociar un contrato corporativo.
+
+## Como registrarte en MiCorreo
+
+El proceso de registro es bastante directo:
+
+1. Ingresa al panel de **MiCorreo** desde tu navegador.
+2. Hace click en "Registrarse" y completa tus datos personales: nombre, apellido, DNI o CUIT, email y telefono.
+3. Crea una contrasena y acepta los terminos y condiciones del servicio.
+4. Valida tu cuenta a traves del email de confirmacion que vas a recibir.
+5. Una vez dentro, ya podes empezar a cotizar y crear envíos.
+
+No te van a pedir documentación adicional ni tiene costo de alta. Es gratuito registrarse y solo pagas cuándo efectivamente generas un envío.
+
+## Funciones principales de MiCorreo
+
+Dentro de la plataforma vas a encontrar las herramientas basicas para gestionar tus despachos:
+
+- **Cotizar envíos:** Ingresando origen, destino, peso y dimensiones del paquete, MiCorreo te muestra el costo estimado de envío a domicilio o a sucursal. Las tarifas son las publicas de Correo Argentino. Si queres cotizar ahora mismo, usa nuestro [cotizador online de Correo Argentino](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html).
+- **Crear envíos:** Una vez que cotizaste, podes generar el envío completando los datos del destinatario. El sistema te asigna un numero de seguimiento unico para cada paquete.
+- **Seguimiento de envíos:** Desde tu panel podes ver el estado de todos tus envíos activos, con los eventos de tracking que va registrando Correo Argentino en cada etapa (admision, en camino, en sucursal, entregado).
+- **Pago online:** Podes abonar el costo del envío directamente desde la plataforma con tarjeta o mediante otros medios habilitados, sin necesidad de ir a una sucursal a pagar.
+
+## La API de MiCorreo: integración con tu tienda
+
+Mas alla de la interfaz web, MiCorreo ofrece una **API (interfaz de programacion)** que permite conectar tu tienda online directamente con los servicios de Correo Argentino. A traves de esta API podes:
+
+- **Cotizar en tiempo real:** Tu tienda consulta la API de MiCorreo y le muestra al cliente el costo de envío exacto durante el checkout, basado en el peso del carrito y la direccion de destino.
+- **Crear envíos programaticamente:** En lugar de entrar a la web de MiCorreo para cada pedido, podes generar el envío desde tu sistema o plugin.
+- **Consultar tracking:** Tu tienda puede obtener el estado de cada envío y actualizar al comprador automáticamente.
+
+Esta API es la que usan plugins como [Correo Argentino Pro](https://correoargentinopro.com/) para conectar WooCommerce con Correo Argentino de forma transparente. Si te interesa una guía completa de como funciona esta integración, te recomendamos leer nuestra [guía de integración de Correo Argentino con WooCommerce](https://correoargentinopro.com/blog/como-integrar-correo-argentino-woocommerce.html).
+
+## Limitaciones de MiCorreo
+
+Si bien MiCorreo es una herramienta muy util para arrancar, tiene algunas limitaciones que conviene conocer antes de elegirlo como tu solucion definitiva:
+
+- **No genera etiquetas PDF:** A diferencia de Paq.Ar, MiCorreo no te permite descargar etiquetas de envío en formato PDF listas para pegar en el paquete. Esto significa que tenes que completar la documentación de forma manual o en sucursal.
+- **No soporta operaciones masivas:** Si tenes 20 o 50 pedidos por dia, vas a tener que crear cada envío uno por uno. No hay forma de hacer despachos en lote desde la plataforma web.
+- **Proceso manual:** Sin una integración via API, el flujo es completamente manual: copiar datos del pedido, pegarlos en MiCorreo, cotizar, crear el envío, copiar el tracking y mandarselo al cliente. Esto consume mucho tiempo y es propenso a errores.
+- **Tarifas publicas:** Las tarifas de MiCorreo son las de lista, sin descuento por volumen. Si envias muchos paquetes, Paq.Ar te va a ofrecer mejores precios.
+
+## MiCorreo vs Paq.Ar: cuándo usar cada uno
+
+Esta es una de las dudas mas comunes. La respuesta depende de tu volumen y tus necesidades. Aca te dejamos una comparativa rapida:
+
+| Caracteristica | MiCorreo | Paq.Ar |
+|---|---|---|
+| Registro | Libre, sin requisitos | Requiere acuerdo comercial |
+| Tarifas | Publicas (sin descuento) | Negociadas por volumen |
+| Cotización por API | Si | No (tarifas fijas) |
+| Etiquetas PDF | No | Si, via API |
+| Operaciones masivas | No | Si |
+| Recoleccion en deposito | No | Segun acuerdo |
+| Ideal para | Emprendedores y PyMEs | Empresas con volumen medio-alto |
+
+En resumen: si recien empezas o tenes un volumen bajo-medio de envíos, **MiCorreo es tu mejor opción**. Si ya moves muchos paquetes por dia y necesitas etiquetas automáticas y tarifas preferenciales, te conviene gestionar un acuerdo con [Paq.Ar](https://correoargentinopro.com/blog/paqar-woocommerce.html).
+
+## Cómo integrar MiCorreo con WooCommerce
+
+Usar MiCorreo manualmente esta bien para los primeros envíos, pero a medida que crece tu tienda se vuelve insostenible. La solucion es automatizar la conexion entre tu WooCommerce y la API de MiCorreo.
+
+Con [Correo Argentino Pro](https://correoargentinopro.com/), el plugin se conecta directamente a la API de MiCorreo para que todo funcione de forma automatica:
+
+1. **Cotización en tiempo real en el checkout:** Tus clientes ven el precio exacto de envío calculado por Correo Argentino mientras compran. Sin tablas de precios manuales que se desactualizan.
+2. **Seleccion de sucursal:** Si ofreces retiro en sucursal, el comprador puede elegir la sucursal mas cercana desde un mapa interactivo.
+3. **Creacion de envíos desde WooCommerce:** Desde cada pedido, con un click generas el envío en Correo Argentino sin salir de tu panel de WordPress.
+4. **Tracking automático:** El numero de seguimiento se asigna al pedido y tus clientes reciben notificaciones cuándo el estado del envío cambia.
+
+El plugin soporta tanto MiCorreo como Paq.Ar, asi que si en el futuro escalaras a un acuerdo corporativo, no necesitas cambiar de herramienta. Simplemente cambias la configuración y seguis operando desde el mismo lugar.
+
+Para una guía detallada del proceso de configuración, visita nuestra [guía paso a paso de integración](https://correoargentinopro.com/blog/como-integrar-correo-argentino-woocommerce.html). Si queres entender mejor las diferencias entre los servicios de envío disponibles, lee tambien nuestro articulo sobre [envíos ecommerce con Correo Argentino](https://correoargentinopro.com/blog/envios-correo-argentino-tienda-online.html).
+
+## Empeza a enviar con MiCorreo hoy
+
+MiCorreo de Correo Argentino es la forma mas simple de empezar a despachar pedidos de tu tienda online con cobertura nacional. Registrate gratis, y cuándo estes listo para automatizar todo el proceso, instala [Correo Argentino Pro](https://correoargentinopro.com/) en tu WooCommerce para que la cotización, creacion de envíos y tracking funcionen sin intervencion manual.
+
+Si tenes dudas sobre como funciona el plugin o necesitas ayuda con la configuración, revisa nuestras [preguntas frecuentes](https://correoargentinopro.com/faqs.html) o [escribinos directamente](https://correoargentinopro.com/contacto.html).
+
+## Tambien te puede interesar
+
+- [Como hacer seguimiento de un envio de Correo Argentino](https://correoargentinopro.com/blog/seguimiento-envio-correo-argentino.html)
+- [Plugin oficial de Correo Argentino vs Correo Argentino Pro](https://correoargentinopro.com/blog/correo-argentino-plugin-oficial-vs-pro.html)
+
+---
+
+# Cómo Hacer Seguimiento de un Envío de Correo Argentino
+https://correoargentinopro.com/blog/seguimiento-envio-correo-argentino.html
+
+Mandaste un paquete por Correo Argentino y queres saber donde esta? O tenes una tienda online y tus clientes te bombardean con "donde esta mi pedido"? El **seguimiento de envíos de Correo Argentino** es una herramienta fundamental tanto para compradores como para vendedores. En esta guía te explicamos paso a paso cómo hacer tracking, que significa cada estado, qué hacer si el seguimiento no se actualiza y cómo automatizar todo el proceso en tu tienda WooCommerce.
+
+## Qué es el numero de seguimiento (tracking)
+
+Cuando se despacha un paquete por Correo Argentino, se le asigna un **numero de seguimiento** (tambien llamado numero de tracking o codigo de rastreo). Este codigo alfanumerico unico te permite consultar en que etapa del proceso logistico se encuentra tu envío en cualquier momento.
+
+El numero de seguimiento generalmente tiene un formato como **XX123456789AR** (dos letras, nueve numeros y el codigo de pais). Lo podes encontrar en:
+
+- El comprobante que te dieron al despachar el paquete en la sucursal.
+- El email de confirmacion del envío (si compraste online).
+- Tu panel de MiCorreo si usas la plataforma de Correo Argentino para gestionar envíos. Si todavia no la conoces, te recomendamos leer nuestra [guía sobre MiCorreo](https://correoargentinopro.com/blog/que-es-micorreo-correo-argentino.html).
+- La pagina de seguimiento del pedido en la tienda online donde compraste.
+
+## Cómo hacer seguimiento por la web de Correo Argentino
+
+La forma mas directa de rastrear un envío es a traves del sitio web oficial de Correo Argentino. Segui estos pasos:
+
+1. Ingresa a **correoargentino.com.ar**.
+2. En la pagina principal vas a ver un campo de texto que dice "Seguimiento" o "Rastrea tu envío".
+3. Ingresa tu **numero de tracking** completo en el campo.
+4. Hace click en el boton de buscar o presiona Enter.
+5. Se va a mostrar el **historial completo de movimientos** de tu paquete, con fechas, horarios y ubicaciones.
+
+Tambien podes acceder al seguimiento directamente desde la seccion "Envíos" del sitio, donde hay un buscador dedicado. Si tenes una cuenta en MiCorreo, podes ver todos tus envíos agrupados sin necesidad de ingresar cada tracking individualmente.
+
+## Cómo hacer seguimiento desde la app de Correo Argentino
+
+Correo Argentino tiene una **aplicacion oficial para celulares** disponible en Google Play y App Store. La app te permite:
+
+- **Rastrear envíos:** Ingresa el numero de tracking y ve el estado actualizado del paquete.
+- **Recibir notificaciones push:** Activa las alertas para que te avise cuándo el estado del envío cambie (por ejemplo, cuándo sale del centro de distribucion o cuándo esta en camino al domicilio).
+- **Guardar multiples trackings:** Si esperas varios paquetes, podes cargarlos todos y seguirlos desde un solo lugar.
+- **Buscar sucursales cercanas:** Util si tu paquete llego a una sucursal y necesitas saber donde queda y en que horario atiende.
+
+La app es especialmente practica si sos comprador frecuente o si tenes que retirar paquetes en sucursal. Te ahorra entrar al sitio web cada vez que queres chequear el estado.
+
+## Estados del seguimiento: que significa cada uno
+
+Cuando consultas el tracking de tu envío, vas a ver una serie de estados que pueden resultar confusos si no sabes que significan. Aca te los explicamos uno por uno:
+
+| Estado | Que significa |
+|---|---|
+| **Admitido / Recibido** | El paquete fue entregado en una sucursal o centro de admision de Correo Argentino. Ya esta en el sistema. |
+| **En proceso de clasificacion** | El paquete llego a un centro de distribucion y esta siendo clasificado para ser enviado a la zona de destino. |
+| **En transito** | El paquete esta viajando hacia la localidad de destino. Puede pasar por varios centros de distribucion en el camino. |
+| **En camino / En distribucion** | El paquete ya salio del centro de distribucion local y esta en manos del cartero, camino al domicilio del destinatario. Es la ultima etapa antes de la entrega. |
+| **Disponible en sucursal** | Si el envío es a sucursal, significa que el paquete ya llego y esta listo para ser retirado. El destinatario tiene un plazo limitado (generalmente 5 dias habiles) para pasar a buscarlo. |
+| **Entregado** | El paquete fue entregado exitosamente al destinatario o a alguien autorizado en el domicilio. |
+| **Ausente / No entregado** | El cartero paso por el domicilio pero no habia nadie para recibir el paquete. Generalmente se deja un aviso y se reintenta la entrega o se deriva a sucursal. |
+| **Devuelto a origen** | El paquete no pudo ser entregado (domicilio incorrecto, multiples intentos fallidos, destinatario no lo retiro de sucursal) y esta volviendo al remitente. |
+| **Extraviado / En investigacion** | Hay un problema con el paquete y Correo Argentino esta investigando. Puede deberse a una perdida o a un error de clasificacion. En este caso es recomendable hacer un reclamo formal. |
+
+Es normal que entre un estado y otro pasen algunas horas o incluso un dia sin actualizacion. Los escaneos se hacen en puntos especificos del circuito logistico, no de forma continua.
+
+## Cuanto tarda en actualizarse el tracking
+
+Una duda muy comun es por que el seguimiento no se actualiza inmediatamente despues de despachar el paquete. Esto es lo que tenes que saber:
+
+- **Despues del despacho:** El primer estado ("Admitido") puede tardar entre **2 y 24 horas** en aparecer, dependiendo de la sucursal y el horario en que se hizo la imposicion.
+- **Durante el transito:** Las actualizaciones se generan cada vez que el paquete pasa por un punto de escaneo (sucursal de origen, centro de distribucion, sucursal de destino). Es normal que haya periodos de **24 a 48 horas** sin novedades, especialmente en envíos de larga distancia.
+- **Fines de semana y feriados:** El tracking generalmente no se actualiza en dias no habiles. Si despachaste un viernes a la tarde, es probable que no veas movimientos hasta el lunes o martes.
+
+Si queres tener una idea mas clara de cuanto deberia tardar tu envío en llegar, te recomendamos leer nuestra guía de [cuánto tarda un envío por Correo Argentino](https://correoargentinopro.com/blog/cuanto-tarda-envio-correo-argentino.html). Los tiempos varian segun las [zonas de envío](https://correoargentinopro.com/blog/zonas-envio-correo-argentino.html) y el tipo de servicio contratado.
+
+## Que hacer si el seguimiento no se actualiza
+
+Si pasaron varios dias y el tracking sigue mostrando el mismo estado, no entres en panico. Segui estos pasos:
+
+### 1. Espera un tiempo razonable
+
+Como mencionamos, los envíos interprovinciales pueden tardar entre 3 y 5 dias habiles, y en zonas alejadas hasta 7. Si el envío fue reciente, dale tiempo. No todos los movimientos se registran en tiempo real.
+
+### 2. Verifica el numero de tracking
+
+Asegurate de que estas ingresando correctamente el numero de seguimiento. Un solo caracter mal ingresado puede darte un resultado vacio o mostrarte el tracking de otro paquete.
+
+### 3. Consulta en la sucursal
+
+Si pasaron mas de **5 dias habiles** sin actualizacion, acercate a la sucursal de Correo Argentino donde despachaste el paquete (o llama por telefono). Ellos pueden consultar el estado interno del envío y darte mas información.
+
+### 4. Hace un reclamo formal
+
+Si el paquete parece perdido o el tracking no se actualiza despues de un tiempo prolongado, podes iniciar un **reclamo formal** a traves de:
+
+- La seccion de reclamos del sitio web de Correo Argentino.
+- El telefono de atencion al cliente: **0800-888-2672**.
+- Las redes sociales oficiales de Correo Argentino (suelen responder por Twitter/X y Facebook).
+
+Para hacer el reclamo vas a necesitar el numero de tracking, los datos del remitente y del destinatario, y la fecha de despacho. Si necesitas mas ayuda sobre como proceder, consulta nuestra guía detallada sobre [qué hacer si un envío de Correo Argentino no llega](https://correoargentinopro.com/blog/envio-correo-argentino-no-llega.html).
+
+### 5. Contacta al vendedor
+
+Si sos el comprador, comunicate con la tienda donde hiciste la compra. El vendedor tiene acceso a herramientas adicionales para rastrear el envío y puede iniciar el reclamo por vos desde su cuenta de MiCorreo.
+
+## Problemas frecuentes con el seguimiento
+
+Estos son algunos de los inconvenientes mas comunes que podrian surgir y como resolverlos:
+
+- **"Numero de tracking no encontrado":** Si acabas de despachar el paquete, espera unas horas. Si ya pasaron mas de 24 horas, verifica que el numero sea correcto. Si persiste, consulta en la sucursal de origen.
+- **El tracking dice "Entregado" pero no lo recibiste:** Puede que se lo hayan entregado a un vecino, portero o familiar. Si no es el caso, hace el reclamo inmediatamente.
+- **El paquete esta "En transito" hace muchos dias:** Puede estar retenido en un centro de distribucion por volumen alto o algun problema operativo. Espera 2 dias habiles mas y si no hay cambios, consulta.
+- **"Ausente" y no recibi aviso:** A veces el aviso se pierde o no lo dejan. Consulta en la sucursal mas cercana a tu domicilio si el paquete fue derivado ahi.
+- **"Devuelto a origen" sin razon aparente:** Puede deberse a un domicilio mal cargado, un codigo postal incorrecto o que se vencio el plazo de retiro en sucursal. Para evitar estos problemas, asegurate de cargar bien los [datos necesarios para enviar un paquete](https://correoargentinopro.com/blog/que-datos-necesito-enviar-paquete-correo-argentino.html).
+
+## Seguimiento para vendedores de tiendas online
+
+Si tenes una tienda online, el seguimiento de envíos no es solo una cuestion logística: es una parte critica de la **experiencia del cliente**. Un comprador que no puede rastrear su paquete se pone ansioso, te manda mensajes y hasta puede dejar una resena negativa.
+
+Aca van las mejores prácticas para gestionar el seguimiento en tu ecommerce:
+
+- **Envia el tracking apenas despachas:** No esperes al dia siguiente. Cuanto antes tu cliente tenga el numero de seguimiento, menos consultas vas a recibir.
+- **Incluye un link directo al tracking:** No obligues al cliente a copiar y pegar el numero en el sitio de Correo Argentino. Mandale un link que lo lleve directo al resultado.
+- **Mantene actualizado el estado del pedido:** Si usas WooCommerce, cambia el estado del pedido a "Completado" cuándo despachas y agrega el numero de seguimiento en las notas del pedido.
+- **Anticipa las consultas:** Si ves que un envío tiene demora, contacta al cliente proactivamente. Es mejor que se entere por vos que por el tracking.
+
+Si te interesa optimizar toda la operacion de envíos en tu tienda, te recomendamos leer nuestra [guía completa de envíos con Correo Argentino para ecommerce](https://correoargentinopro.com/blog/envios-correo-argentino-tienda-online.html).
+
+## Como Correo Argentino Pro automatiza el seguimiento en WooCommerce
+
+Gestionar el seguimiento manualmente es viable cuándo tenes pocos pedidos, pero se vuelve insostenible cuándo tu tienda crece. Ahi es donde [Correo Argentino Pro](https://correoargentinopro.com/) marca la diferencia.
+
+Nuestro plugin para WooCommerce **automatiza todo el ciclo de vida del envío**, incluyendo el seguimiento. Esto es lo que hace por vos:
+
+### Tracking automático sin intervencion manual
+
+Cuando creas un envío desde el panel de WooCommerce con Correo Argentino Pro, el numero de tracking se asocia automáticamente al pedido. No tenes que copiarlo ni pegarlo en ningun lado. El cliente puede ver el estado del envío directamente desde la pagina de seguimiento de su pedido en tu tienda.
+
+### Notificaciones por email al cliente
+
+Cada vez que el estado del envío cambia (admitido, en transito, en distribucion, entregado), el cliente recibe un **email automático** con la actualizacion. Esto elimina por completo la consulta mas repetitiva de cualquier tienda online: "donde esta mi pedido".
+
+### Panel centralizado de envíos
+
+Desde el dashboard de WooCommerce podes ver todos tus envíos en curso, sus estados, y detectar rapidamente si alguno tiene problemas. No necesitas entrar a MiCorreo por separado ni consultar tracking por tracking en el sitio de Correo Argentino.
+
+### Integración completa con el flujo de trabajo
+
+Correo Argentino Pro no solo gestiona el tracking. Tambien te permite [cotizar envíos en tiempo real](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html) en el checkout, generar [etiquetas de envío](https://correoargentinopro.com/blog/etiqueta-envio-correo-argentino.html) con un click, y ofrecer multiples [tipos de envío](https://correoargentinopro.com/blog/tipos-envio-correo-argentino.html) a tus clientes. Todo desde un solo plugin, sin salir de WooCommerce.
+
+## Consejos para reducir problemas de seguimiento
+
+La mejor forma de lidiar con problemas de tracking es prevenirlos. Segui estos consejos:
+
+- **Carga bien los datos del destinatario:** Un domicilio incompleto o un codigo postal incorrecto pueden provocar que el paquete se pierda o se demore. Revisa nuestra guía de [datos necesarios para enviar un paquete](https://correoargentinopro.com/blog/que-datos-necesito-enviar-paquete-correo-argentino.html).
+- **Elegir el tipo de envío adecuado:** Si tu cliente necesita recibir rapido, usa envío expreso. Si prefiere ahorrar y puede ir a buscar el paquete, ofrece envío a sucursal. Conoce todas las opciones en nuestra guía de [tipos de envío](https://correoargentinopro.com/blog/tipos-envio-correo-argentino.html).
+- **Empaqueta correctamente:** Un paquete mal armado puede danarse y quedar retenido. Lee nuestra guía de [como armar una encomienda](https://correoargentinopro.com/blog/como-armar-encomienda-correo-argentino.html) para hacerlo bien.
+- **Despacha en horarios tempranos:** Si llevas el paquete a la sucursal a primera hora, es mas probable que entre en el circuito del mismo dia.
+- **Guarda siempre el comprobante:** El comprobante de imposicion es tu prueba de que despachaste el paquete. Si hay un reclamo, lo vas a necesitar.
+
+## Automatiza y olvidate: el seguimiento no deberia ser un dolor de cabeza
+
+El seguimiento de envíos es una de esas tareas que parece simple pero consume mucho tiempo cuándo lo haces manualmente. Responder consultas, copiar trackings, chequear estados uno por uno... todo eso se acumula.
+
+Con [Correo Argentino Pro](https://correoargentinopro.com/) podes **automatizar todo el proceso**: desde la cotización en el carrito hasta las notificaciones de tracking al cliente. Tu tienda funciona de forma profesional, tus clientes estan informados y vos te podes enfocar en vender.
+
+Conoce todas las funcionalidades en nuestra [pagina principal](https://correoargentinopro.com/), revisa las [preguntas frecuentes](https://correoargentinopro.com/faqs.html) o [contactanos](https://correoargentinopro.com/contacto.html) si tenes alguna duda.
+
+---
+
+# Mejor plugin de envíos para WooCommerce en Argentina (2026)
+https://correoargentinopro.com/blog/mejor-plugin-envios-argentina-woocommerce.html
+
+Gestionar envíos es uno de los mayores desafios para las tiendas online en Argentina. No existe un unico plugin que cubra todos los operadores logisticos, por lo que la eleccion depende de **con quien envias** y **que funcionalidades necesitas**. En esta comparativa analizamos las opciones disponibles.
+
+## El panorama de envíos en Argentina
+
+Los principales operadores logisticos para e-commerce en Argentina son (si queres una comparativa detallada, lee nuestro articulo sobre [Correo Argentino vs OCA vs Andreani](https://correoargentinopro.com/blog/correo-argentino-vs-oca-vs-andreani.html)):
+
+- **Correo Argentino** — Mayor cobertura nacional. MiCorreo (PyMEs) y Paq.Ar (empresas).
+- **OCA** — Operador privado con buena cobertura urbana.
+- **Andreani** — Fuerte en logística corporativa y e-commerce.
+- **Mercado Envíos (Mercado Libre)** — Solo disponible si vendes en Mercado Libre.
+
+## Opciones de plugins para WooCommerce
+
+### Para Correo Argentino: Correo Argentino Pro
+
+[Correo Argentino Pro](https://correoargentinopro.com/) es la solucion mas completa para integrar Correo Argentino con WooCommerce. Incluye:
+
+- Cotización en tiempo real via API MiCorreo.
+- Selector de sucursales con mapa interactivo (+3.000 sucursales).
+- Creacion de envíos desde WooCommerce (MiCorreo + Paq.Ar).
+- Generación de etiquetas PDF (Paq.Ar).
+- Tracking automático con emails al cliente.
+- Acciones masivas para alto volumen.
+- Compatible con HPOS y checkout por bloques.
+
+**Precio:** Licencia anual. Incluye actualizaciones y soporte.
+
+**Ideal para:** Cualquier tienda WooCommerce que envie con Correo Argentino, desde emprendedores hasta empresas con acuerdo Paq.Ar.
+
+### Para OCA
+
+Existen plugins gratuitos y pagos para OCA en WooCommerce. Las funcionalidades varian, pero generalmente ofrecen cotización basica y en algunos casos creacion de envíos. La cobertura de OCA es menor que la de Correo Argentino fuera de las grandes ciudades.
+
+### Para Andreani
+
+Andreani tiene integraciones disponibles, principalmente orientadas a empresas con acuerdo comercial. Los plugins disponibles suelen ofrecer cotización y creacion de envíos basica.
+
+### Multi-operador
+
+Algunos plugins intentan cubrir multiples operadores en un solo producto. La ventaja es tener un solo plugin; la desventaja es que la integración con cada operador suele ser menos profunda.
+
+## Que mirar al elegir un plugin de envíos
+
+- **Cotización en tiempo real:** Que el cliente vea el costo exacto en el checkout, no un precio fijo o estimado.
+- **Creacion de envíos:** Poder crear el envío desde WooCommerce sin entrar al sistema del operador.
+- **Etiquetas:** Generar e imprimir rotulos directamente desde el panel.
+- **Tracking:** Seguimiento automático con notificaciones al cliente.
+- **Compatibilidad:** Que soporte HPOS (la nueva forma de almacenar pedidos de WooCommerce) y el checkout por bloques.
+- **Soporte y actualizaciones:** Que el desarrollador mantenga el plugin actualizado y brinde soporte cuándo lo necesites.
+- **Acciones masivas:** Si manejas volumen, necesitas poder crear envíos y etiquetas en lote.
+
+## Por que Correo Argentino es la mejor opción para la mayoria
+
+Si tu prioridad es **cobertura nacional**, Correo Argentino es imbatible. Con mas de 3.000 sucursales, llega a localidades donde ningun operador privado tiene presencia. Ademas:
+
+- MiCorreo no requiere acuerdo comercial — cualquier vendedor puede empezar a usarlo.
+- Las tarifas de retiro en sucursal son muy competitivas.
+- Los compradores confian en Correo Argentino como marca.
+
+Con [Correo Argentino Pro](https://correoargentinopro.com/), toda la operativa se gestiona directamente desde WooCommerce, sin necesidad de usar interfaces externas.
+
+## Conclusion
+
+No hay un "mejor plugin de envíos" universal — depende de con quien envias. Pero si usas **Correo Argentino** (o planeas hacerlo), [Correo Argentino Pro](https://correoargentinopro.com/) es la integración mas completa disponible para WooCommerce. Te mostramos como configurarlo en nuestra [guia de integración paso a paso](https://correoargentinopro.com/blog/como-integrar-correo-argentino-woocommerce.html).
+
+Si ya te decidiste por Correo Argentino, quizas te interese saber [cuanto cuesta enviar un paquete](https://correoargentinopro.com/blog/cuanto-cuesta-enviar-paquete-correo-argentino.html), como funciona el [plugin oficial vs Correo Argentino Pro](https://correoargentinopro.com/blog/correo-argentino-plugin-oficial-vs-pro.html) y nuestra [guia completa de WooCommerce en Argentina](https://correoargentinopro.com/blog/woocommerce-argentina-guia-completa.html).
+
+Tenes dudas? Revisa las [preguntas frecuentes](https://correoargentinopro.com/faqs.html), consulta la [documentación](https://correoargentinopro.com/ayuda.html) o [escribinos](https://correoargentinopro.com/contacto.html).
+
+---
+
+# Paq.Ar y WooCommerce: Cómo Integrar el Servicio de Correo Argentino en tu Tienda
+https://correoargentinopro.com/blog/paqar-woocommerce.html
+
+Si tu tienda online ya supero la etapa inicial y estas moviendo un volumen importante de paquetes, probablemente necesites algo mas robusto que MiCorreo. Ahi es donde entra **Paq.Ar**, el servicio corporativo de envíos de Correo Argentino. En esta guía te contamos qué es **Paq.Ar**, como funciona la integración de **Paq.Ar con WooCommerce**, y por que puede ser la mejor opción para escalar tus envíos.
+
+## Qué es Paq.Ar
+
+Paq.Ar es la plataforma de envíos corporativos de Correo Argentino, disenada para empresas y tiendas online que manejan un volumen medio o alto de despachos. A diferencia de MiCorreo (que esta orientado a emprendedores y PyMEs que recien arrancan), Paq.Ar te da acceso a herramientas avanzadas pensadas para operaciones logísticas mas exigentes.
+
+Entre las caracteristicas principales de Paq.Ar se encuentran:
+
+- **Tarifas preferenciales:** Negocias las tarifas directamente con Correo Argentino según tu volumen de envíos. Cuanto mas envias, mejores precios conseguis.
+- **API de integración:** Paq.Ar ofrece una API que permite crear envíos, generar etiquetas y consultar estados de tracking de forma programatica.
+- **Generación de etiquetas PDF:** Cada envío genera automáticamente una etiqueta lista para imprimir, sin necesidad de completar formularios manuales.
+- **Recoleccion en deposito:** Dependiendo del acuerdo, Correo Argentino puede pasar a retirar los paquetes por tu deposito o centro de distribucion.
+- **Tracking detallado:** Acceso a estados de seguimiento mas granulares que los disponibles en MiCorreo.
+
+## Requisitos para usar Paq.Ar
+
+Antes de integrar **Paq.Ar con WooCommerce**, necesitas cumplir algunos requisitos previos:
+
+1. **Acuerdo comercial con Correo Argentino:** Tenes que contactar al area comercial de Correo Argentino y firmar un convenio. Este proceso incluye definir volumenes estimados, tipos de servicio (domicilio, sucursal) y tarifas.
+2. **Credenciales de API:** Una vez firmado el acuerdo, Correo Argentino te proporciona las credenciales necesarias para conectarte a la API de Paq.Ar: usuario, contrasena y codigo de cliente.
+3. **CUIT activo:** Tu empresa debe tener CUIT registrado y estar habilitada para facturar.
+4. **Volumen mínimo:** Si bien no hay un numero oficial publicado, Paq.Ar esta pensado para operaciones con al menos varias decenas de envíos mensuales. Si haces menos de 20 envíos por mes, MiCorreo probablemente sea suficiente.
+
+Si todavia estas en una etapa temprana y no tenes acuerdo comercial, te recomendamos leer nuestra [guía completa de envíos ecommerce con Correo Argentino](https://correoargentinopro.com/blog/envios-correo-argentino-tienda-online.html), donde explicamos las diferencias entre MiCorreo y Paq.Ar en detalle.
+
+## Como funciona Paq.Ar con WooCommerce
+
+La integración de **Paq.Ar con WooCommerce** se realiza a traves del plugin [Correo Argentino Pro](https://correoargentinopro.com/). Este plugin conecta tu tienda WooCommerce directamente con la API de Paq.Ar, automatizando todo el flujo de envíos sin que tengas que salir de tu panel de WordPress.
+
+### Funcionalidades clave de la integración
+
+- **Creacion de envíos via API:** Cuando un cliente hace una compra, podes crear el envío en Paq.Ar directamente desde el pedido de WooCommerce. El plugin envia los datos del destinatario, las dimensiones del paquete y el tipo de servicio a la API de Correo Argentino.
+- **Generación automatica de etiquetas:** Cada envío creado genera una etiqueta en formato PDF que podes descargar e imprimir directamente. No necesitas entrar a ninguna plataforma externa.
+- **Envíos masivos:** Si tenes muchos pedidos pendientes, podes seleccionarlos y crear todos los envíos de una sola vez con la funcion de acciones masivas. Lo mismo aplica para la generación de etiquetas en lote.
+- **Tracking automático:** El numero de seguimiento se asigna automáticamente al pedido. Tus clientes reciben notificaciones por email cuándo el estado del envío cambia, sin que vos tengas qué hacer nada.
+- **Selector de sucursales:** Si ofreces retiro en sucursal, tus clientes pueden elegir la sucursal de Correo Argentino mas cercana directamente en el checkout, con un mapa interactivo.
+
+## Paso a paso: integrar Paq.Ar con WooCommerce
+
+Si ya tenes tu acuerdo comercial y tus credenciales, estos son los pasos para poner todo en marcha:
+
+### 1. Instalar el plugin Correo Argentino Pro
+
+Descarga el plugin desde [correoargentinopro.com](https://correoargentinopro.com/) y subilo a tu WordPress desde *Plugins > Agregar nuevo > Subir plugin*. Activa la licencia con la clave que recibiste por email.
+
+### 2. Configurar las credenciales de Paq.Ar
+
+Anda a *WooCommerce > Ajustes > Correo Argentino Pro* y selecciona Paq.Ar como servicio. Ingresa tu usuario, contrasena y codigo de cliente que te proporciono Correo Argentino. El plugin va a validar la conexion automáticamente.
+
+### 3. Configurar las zonas de envío
+
+En *WooCommerce > Ajustes > Envíos*, crea una zona de envío para Argentina y agrega el metodo de envío "Correo Argentino Pro". Desde ahi podes configurar:
+
+- Tipos de servicio habilitados (envío a domicilio, envío a sucursal).
+- Dimensiones y peso por defecto para productos sin datos cargados.
+- Monto mínimo para envío gratuito (si queres ofrecerlo).
+- Margen o ajuste sobre la tarifa (por ejemplo, un descuento que quieras trasladar al cliente).
+
+### 4. Probar el flujo completo
+
+Hace un pedido de prueba en tu tienda, crea el envío desde el panel del pedido, genera la etiqueta y verifica que el tracking se asigne correctamente. Te recomendamos probar tanto envío a domicilio como retiro en sucursal.
+
+Si necesitas una guía mas detallada sobre la instalacion general del plugin, consulta nuestro articulo sobre [como integrar Correo Argentino con WooCommerce](https://correoargentinopro.com/blog/como-integrar-correo-argentino-woocommerce.html).
+
+## Paq.Ar vs MiCorreo: cual te conviene para WooCommerce
+
+La eleccion entre Paq.Ar y MiCorreo depende del volumen y la madurez de tu operacion. Aca te dejamos una comparacion practica:
+
+| Aspecto | MiCorreo | Paq.Ar |
+|---|---|---|
+| Registro | Libre, sin acuerdo | Requiere convenio comercial |
+| Tarifas | Publicas, fijas | Negociadas según volumen |
+| Cotización en checkout | Si, via API en tiempo real | Si, con tarifas precargadas |
+| Etiquetas PDF | No disponible | Si, automáticas via API |
+| Envíos masivos | Limitado | Completo, con acciones en lote |
+| Recoleccion | No | Segun acuerdo |
+| Ideal para | Hasta ~50 envíos/mes | Mas de 50 envíos/mes |
+
+Si tu tienda WooCommerce esta creciendo y las limitaciones de MiCorreo empiezan a frenarte (falta de etiquetas, proceso manual repetitivo, tarifas sin descuento), **Paq.Ar es el paso natural**. La integración con Correo Argentino Pro te permite aprovechar todas las ventajas de Paq.Ar sin cambiar tu flujo de trabajo.
+
+## Ventajas concretas de usar Paq.Ar con WooCommerce
+
+- **Ahorro de tiempo:** La generación automatica de etiquetas y la creacion de envíos masivos te puede ahorrar horas de trabajo manual por semana.
+- **Menos errores:** Al automatizar el envío de datos a la API, eliminas errores de tipeo en direcciones, codigos postales o nombres de destinatarios.
+- **Mejor experiencia del cliente:** Tracking automático, notificaciones por email y la posibilidad de elegir sucursal en un mapa hacen que tus compradores tengan una experiencia de envío profesional.
+- **Costos mas bajos:** Las tarifas negociadas de Paq.Ar son significativamente menores que las tarifas publicas de MiCorreo, especialmente en envíos de larga distancia.
+- **Escalabilidad:** Podes pasar de 50 a 500 envíos mensuales sin cambiar de herramienta ni de proceso.
+
+## Proximos pasos
+
+Si ya tenes tu acuerdo comercial con Correo Argentino, podes empezar hoy mismo. [Descarga Correo Argentino Pro](https://correoargentinopro.com/), configura tus credenciales de Paq.Ar y automatiza tus envíos desde WooCommerce.
+
+Si todavia no tenes acuerdo comercial, contacta al area comercial de Correo Argentino para iniciar el tramite. Mientras tanto, podes usar MiCorreo con el mismo plugin y migrar a Paq.Ar cuándo estes listo.
+
+Revisa nuestras [preguntas frecuentes](https://correoargentinopro.com/faqs.html) si tenes dudas sobre la configuración, o [contactanos](https://correoargentinopro.com/contacto.html) para que te ayudemos con la integración.
+
+## Tambien te puede interesar
+
+- [Todo sobre la etiqueta de envio de Correo Argentino](https://correoargentinopro.com/blog/etiqueta-envio-correo-argentino.html)
+- [Como imprimir etiquetas masivas en WooCommerce](https://correoargentinopro.com/blog/imprimir-etiquetas-masivas-woocommerce.html)
+- [Plugin oficial de Correo Argentino vs Correo Argentino Pro](https://correoargentinopro.com/blog/correo-argentino-plugin-oficial-vs-pro.html)

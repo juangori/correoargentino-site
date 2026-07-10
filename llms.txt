@@ -2,6 +2,12 @@
 
 > Plugin premium de WooCommerce para integrar envíos de Correo Argentino en tiendas online de Argentina. Cotización en tiempo real, mapa de sucursales, etiquetas PDF, tracking automático y acciones masivas.
 
+## Versión completa
+
+- [llms-full.txt](https://correoargentinopro.com/llms-full.txt): versión completa con el contenido concatenado de las páginas núcleo (inicio, ayuda, FAQs y guías principales del blog) en un solo archivo Markdown, listo para ingesta y citado por LLMs.
+
+> Cada página tiene su espejo en Markdown accesible agregando `.md` a la URL. Por ejemplo, `https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html` está disponible en `https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.md`, e `https://correoargentinopro.com/` en `https://correoargentinopro.com/index.md`.
+
 ## Acerca del producto
 
 Correo Argentino Pro es un plugin comercial para WordPress/WooCommerce que permite a tiendas online argentinas ofrecer envíos con Correo Argentino de forma profesional. Se integra con las APIs oficiales de MiCorreo (para PyMEs) y Paq.Ar (para empresas con acuerdo comercial).
