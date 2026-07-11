@@ -1,6 +1,6 @@
 > Fuente: https://correoargentinopro.com/blog/como-armar-encomienda-correo-argentino.html
 
-# Cómo Armar una Encomienda para Enviar por Correo Argentino
+# Cómo Armar una Encomienda en Correo Argentino 2026
 
 Si tenes que mandar un paquete y no sabes bien **como armar una encomienda para enviar por Correo Argentino**, esta guía es para vos. Te explicamos paso a paso como elegir la caja, proteger el contenido, respetar los límites de peso y medidas, etiquetar correctamente y evitar los errores mas comunes que pueden arruinar tu envío.
 
@@ -95,3 +95,25 @@ Ademas, si manejas volumen, podes usar las acciones masivas para crear envíos y
 Vos concentrate en embalar bien tus productos. De la logística digital se encarga [Correo Argentino Pro](https://correoargentinopro.com/).
 
 Si queres saber cuanto te va a salir el envio, usa nuestro [cotizador de envios de Correo Argentino](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html). Y si tenes dudas sobre el proceso, revisa las [preguntas frecuentes](https://correoargentinopro.com/faqs.html) o [escribinos](https://correoargentinopro.com/contacto.html) y te ayudamos.
+
+## Preguntas frecuentes
+
+### ¿Cómo embalar una encomienda para Correo Argentino?
+
+Elegí una caja de carton corrugado resistente del tamaño justo, rellená los espacios vacios con papel kraft o papel burbuja para que el contenido no se mueva, y sellá la caja con cinta de embalar ancha en la parte superior, inferior y las juntas laterales. Para articulos frágiles, envolvé cada pieza por separado y usá el sistema de doble caja.
+
+### ¿Cuál es el peso y las medidas máximas de una encomienda?
+
+El peso máximo por paquete es de 25 kg. En cuanto a dimensiones, la suma de largo + ancho + alto no puede superar los 150 cm y ningun lado individual puede pasar los 100 cm. Tené en cuenta que ademas se calcula el [peso volumetrico](https://correoargentinopro.com/blog/peso-volumetrico-correo-argentino.html), que puede afectar el costo del envio.
+
+### ¿Cómo calculo cuánto cuesta enviar una encomienda?
+
+El costo depende del peso, las dimensiones y el destino del paquete. Podés estimarlo al instante con el [cotizador de envios de Correo Argentino](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html), cargando el codigo postal de origen y destino junto con el peso y las medidas. Si vendes online, tambien te conviene revisar las [tarifas de Correo Argentino 2026](https://correoargentinopro.com/blog/tarifas-correo-argentino-2026.html).
+
+### ¿Conviene enviar a domicilio o a sucursal?
+
+El envio a domicilio llega hasta la puerta del destinatario, mientras que a sucursal el destinatario retira el paquete en la oficina mas cercana. La entrega a sucursal suele ser mas economica porque no incluye la ultima milla. Compará ambas opciones en el [cotizador](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html) antes de despachar.
+
+### ¿Qué artículos no puedo incluir en una encomienda?
+
+No se pueden despachar materiales peligrosos (liquidos inflamables, gases, corrosivos, explosivos), armas y municiones, drogas, animales vivos, dinero en efectivo, productos perecederos que requieran cadena de frio ni baterias de litio sueltas. Ante la duda, consultá en la sucursal antes de despachar.

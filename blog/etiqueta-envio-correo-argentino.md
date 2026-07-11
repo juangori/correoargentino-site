@@ -1,6 +1,6 @@
 > Fuente: https://correoargentinopro.com/blog/etiqueta-envio-correo-argentino.html
 
-# Etiqueta de Envío Correo Argentino: Cómo Generarla y Pegarla Correctamente
+# Etiqueta de Envío Correo Argentino: Cómo Imprimirla 2026
 
 Si vendes online y usas Correo Argentino para tus envíos, la **etiqueta de envío** (tambien llamada rotulo de envío) es un elemento clave del proceso. Sin una etiqueta correcta, tu paquete no puede ser procesado, rastreado ni entregado. En esta guía te explicamos que es, qué datos contiene, como generarla desde las distintas plataformas y como pegarla correctamente en tu paquete para evitar problemas.
 
@@ -30,7 +30,7 @@ Si usas **MiCorreo**, la plataforma de Correo Argentino para emprendedores y PyM
 1. **Ingresa a tu cuenta** en MiCorreo.
 2. **Crea un nuevo envío** completando los datos del remitente, destinatario, peso y dimensiones del paquete.
 3. **Selecciona el tipo de servicio** (a domicilio o a sucursal, clásico o expreso).
-4. **Confirma y paga el envío** (online o en sucursal, según tu preferencia).
+4. **Confirma y paga el envío** (online o en sucursal, según tu preferencia). Si queres saber cuánto va a salir antes de confirmar, usa el [cotizador de envíos de Correo Argentino](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html).
 5. **Descarga o imprime la etiqueta** que el sistema genera con los datos del envío y el codigo de seguimiento.
 
 Este metodo funciona bien si tenes pocos envíos por dia, pero se vuelve muy tedioso cuándo manejas un volumen importante. Cada envío requiere que cargues los datos a mano, lo cual consume tiempo y aumenta la posibilidad de errores. Si manejas volumen, te va a interesar nuestra guia de [impresion masiva de etiquetas en WooCommerce](https://correoargentinopro.com/blog/imprimir-etiquetas-masivas-woocommerce.html).
@@ -48,7 +48,7 @@ La ventaja de Paq.Ar es que, al generar la etiqueta via API, automáticamente se
 
 ## Como generar etiquetas automáticamente con Correo Argentino Pro
 
-Si tenes una tienda WooCommerce, la forma mas eficiente de generar la **etiqueta de envío de Correo Argentino** es usando el plugin [Correo Argentino Pro](https://correoargentinopro.com/). El plugin se conecta con la API de Correo Argentino y automatiza todo el proceso.
+Si tenes una [tienda online con Correo Argentino](https://correoargentinopro.com/blog/envios-correo-argentino-tienda-online.html) en WooCommerce, la forma mas eficiente de generar la **etiqueta de envío de Correo Argentino** es usando el plugin [Correo Argentino Pro](https://correoargentinopro.com/). El plugin se conecta con la API de Correo Argentino y automatiza todo el proceso.
 
 Asi funciona:
 
@@ -93,6 +93,28 @@ Si todavia estas generando etiquetas a mano, te estas perdiendo horas de trabajo
 El plugin soporta tanto MiCorreo como Paq.Ar, se adapta a tu tipo de cuenta y genera las etiquetas en el formato que necesites. Ademas, el tracking se actualiza automáticamente y tus clientes reciben notificaciones del estado de su envío.
 
 Si tenes dudas sobre como funciona, revisa las [preguntas frecuentes](https://correoargentinopro.com/faqs.html) o [escribinos](https://correoargentinopro.com/contacto.html) y te ayudamos a configurar todo.
+
+## Preguntas frecuentes
+
+### ¿Cómo imprimo la etiqueta de envío de Correo Argentino?
+
+Generás el envío en MiCorreo (o en Paq.Ar por API) y el sistema te devuelve la etiqueta lista para descargar. La imprimís en una impresora común (formato A4, después recortás) o en una impresora térmica de etiquetas (formato 10x15 cm). Si vendés con WooCommerce, el plugin [Correo Argentino Pro](https://correoargentinopro.com/) genera la etiqueta en PDF con un solo click, tomando los datos del pedido.
+
+### ¿En qué formato conviene imprimir la etiqueta?
+
+El formato 10x15 cm es ideal para impresoras térmicas y no requiere recortar nada. El formato A4 sirve para impresoras comunes: imprimís la hoja y después recortás la etiqueta. En ambos casos respetá el tamaño original para que el código de barras quede legible.
+
+### ¿Puedo generar varias etiquetas a la vez?
+
+Sí. Con el plugin Correo Argentino Pro para WooCommerce podés seleccionar varios pedidos desde el listado y, con una sola acción masiva, crear todos los envíos y generar todas las etiquetas en un único PDF listo para imprimir. Te lo contamos en detalle en la guía de [impresión masiva de etiquetas en WooCommerce](https://correoargentinopro.com/blog/imprimir-etiquetas-masivas-woocommerce.html).
+
+### ¿Dónde tengo que pegar la etiqueta en el paquete?
+
+Pegala en la cara más grande del paquete, bien centrada, sobre una superficie plana y sin arrugas ni burbujas. Evitá doblarla sobre bordes o esquinas y asegurate de que el código de barras quede legible para los scanners de la sucursal.
+
+### ¿Alcanza con imprimir la etiqueta o hay que generar el envío en el sistema?
+
+No alcanza con imprimir una etiqueta: el envío tiene que estar creado en la plataforma de Correo Argentino para que el número de seguimiento funcione. Cada envío tiene su propio tracking, así que nunca reutilices una etiqueta de un envío anterior.
 
 ## Tambien te puede interesar
 

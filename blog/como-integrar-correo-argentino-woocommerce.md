@@ -1,8 +1,8 @@
 > Fuente: https://correoargentinopro.com/blog/como-integrar-correo-argentino-woocommerce.html
 
-# Cómo integrar Correo Argentino con WooCommerce en 2026
+# Cómo integrar Correo Argentino con WooCommerce (5 pasos)
 
-Si tenes una tienda online con WooCommerce y queres ofrecer envíos a traves de **Correo Argentino**, necesitas una forma de conectar ambos sistemas. En esta guía te mostramos cómo hacerlo de forma profesional, con cotización en tiempo real, creacion de envíos automatizada, etiquetas PDF y tracking.
+Si tenes una [tienda online con WooCommerce](https://correoargentinopro.com/blog/envios-correo-argentino-tienda-online.html) y queres ofrecer envíos a traves de **Correo Argentino**, necesitas una forma de conectar ambos sistemas. En esta guía te mostramos cómo hacerlo de forma profesional, con cotización en tiempo real, creacion de envíos automatizada, etiquetas PDF y tracking.
 
 ## Por que integrar Correo Argentino con tu tienda WooCommerce?
 
@@ -81,6 +81,22 @@ Desde cada pedido en WooCommerce, podes crear el envío en Correo Argentino con 
 - Licencia activa de [Correo Argentino Pro](https://correoargentinopro.com/).
 
 ## Preguntas frecuentes
+
+### ¿Se puede integrar Correo Argentino con WooCommerce?
+
+Sí. Correo Argentino ofrece las API de MiCorreo y Paq.Ar, que permiten conectar tu tienda WooCommerce para cotizar envíos, ofrecer retiro en sucursal, crear los envíos y hacer tracking sin salir de WordPress.
+
+### ¿Necesito un plugin?
+
+Sí. WooCommerce no trae Correo Argentino de fábrica, así que necesitás un plugin que consuma las API de MiCorreo o Paq.Ar. [Correo Argentino Pro](https://correoargentinopro.com/) incluye un wizard que carga las credenciales y prueba la conexión automáticamente, sin tocar código.
+
+### ¿Cotiza en el checkout?
+
+Sí. Una vez integrado, el precio del envío se calcula en tiempo real durante el checkout según el código postal, el peso y las dimensiones del pedido, tanto para envío a domicilio como para retiro en sucursal. Podés estimarlo antes con nuestro [cotizador online](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html).
+
+### ¿Es gratis?
+
+Crear una cuenta en MiCorreo es gratis y Correo Argentino Pro tiene una [prueba gratis de 15 días](https://correoargentinopro.com/). El costo de cada envío depende del destino, el peso y el servicio elegido, no del plugin.
 
 Tenes mas dudas? Revisa nuestra [seccion de preguntas frecuentes](https://correoargentinopro.com/faqs.html) o consulta la [documentación completa](https://correoargentinopro.com/ayuda.html). Tambien podes [contactarnos](https://correoargentinopro.com/contacto.html) directamente.
 

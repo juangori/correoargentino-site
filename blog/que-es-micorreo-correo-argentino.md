@@ -1,6 +1,6 @@
 > Fuente: https://correoargentinopro.com/blog/que-es-micorreo-correo-argentino.html
 
-# Qué es MiCorreo de Correo Argentino y Cómo Usarlo para Envíos Ecommerce
+# Qué es MiCorreo de Correo Argentino: Guía Completa 2026
 
 Si tenes una tienda online o vendes por redes sociales, seguramente necesitas una forma accesible de enviar tus productos a todo el pais. Ahi es donde entra **MiCorreo de Correo Argentino**, la plataforma digital pensada para que emprendedores, freelancers y PyMEs puedan gestionar sus envíos sin necesidad de firmar contratos comerciales ni tener un volumen mínimo. En esta guía te contamos todo: que es, como funciona, que podes hacer con su API, cuales son sus limitaciones y cómo integrarlo con tu WooCommerce.
 
@@ -8,7 +8,7 @@ Si tenes una tienda online o vendes por redes sociales, seguramente necesitas un
 
 **MiCorreo** es la plataforma digital de Correo Argentino dirigida a particulares y pequenas y medianas empresas. A diferencia de los servicios corporativos como Paq.Ar, MiCorreo no requiere un acuerdo comercial previo: cualquier persona puede registrarse y empezar a enviar paquetes a traves de la red de mas de 3.000 puntos de Correo Argentino en toda la Argentina.
 
-La plataforma funciona desde el navegador, sin necesidad de instalar nada. Desde ahi podes cotizar, crear envíos, pagar y hacer seguimiento de tus paquetes. Es la puerta de entrada mas simple para empezar a despachar pedidos con Correo Argentino, especialmente si recien arrancas con tu emprendimiento o todavia no tenes el volumen suficiente para negociar un contrato corporativo.
+La plataforma funciona desde el navegador, sin necesidad de instalar nada. Desde ahi podes cotizar, crear envíos, pagar y hacer seguimiento de tus paquetes. Es la puerta de entrada mas simple para empezar a despachar pedidos con Correo Argentino, especialmente si recien arrancas con tu emprendimiento o todavia no tenes el volumen suficiente para negociar un contrato corporativo. Si estas empezando, te puede servir nuestra [guía de Correo Argentino para emprendedores](https://correoargentinopro.com/blog/correo-argentino-emprendedores.html).
 
 ## Como registrarte en MiCorreo
 
@@ -87,7 +87,25 @@ MiCorreo de Correo Argentino es la forma mas simple de empezar a despachar pedid
 
 Si tenes dudas sobre como funciona el plugin o necesitas ayuda con la configuración, revisa nuestras [preguntas frecuentes](https://correoargentinopro.com/faqs.html) o [escribinos directamente](https://correoargentinopro.com/contacto.html).
 
+## Preguntas frecuentes sobre MiCorreo
+
+**¿Qué es MiCorreo de Correo Argentino?**
+Es la plataforma digital de Correo Argentino para particulares y PyMEs. No requiere acuerdo comercial: cualquiera puede registrarse y despachar por la red de más de 3.000 puntos del país.
+
+**¿Es gratis registrarse en MiCorreo?**
+Sí. El alta es gratuita, sin volumen mínimo ni documentación adicional. Solo pagás cuando generás un envío, con tarifas públicas de Correo Argentino. Podés ver cuánto sale tu paquete con nuestro [cotizador de Correo Argentino](https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html).
+
+**¿Cuál es la diferencia entre MiCorreo y Paq.Ar?**
+MiCorreo es de registro libre, con tarifas públicas y cotización por API, para emprendedores y PyMEs. Paq.Ar requiere acuerdo comercial y ofrece tarifas por volumen, etiquetas PDF y operaciones masivas.
+
+**¿MiCorreo genera etiquetas PDF?**
+No. La documentación se completa de forma manual o en la sucursal.
+
+**¿Cómo se integra MiCorreo con WooCommerce?**
+Mediante su API. Plugins como Correo Argentino Pro la usan para cotizar en el checkout, elegir sucursal, crear envíos desde cada pedido y actualizar el tracking automáticamente.
+
 ## Tambien te puede interesar
 
+- [Correo Argentino para emprendedores](https://correoargentinopro.com/blog/correo-argentino-emprendedores.html)
 - [Como hacer seguimiento de un envio de Correo Argentino](https://correoargentinopro.com/blog/seguimiento-envio-correo-argentino.html)
 - [Plugin oficial de Correo Argentino vs Correo Argentino Pro](https://correoargentinopro.com/blog/correo-argentino-plugin-oficial-vs-pro.html)
