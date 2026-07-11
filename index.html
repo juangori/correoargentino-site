@@ -20,6 +20,7 @@
     <meta name="twitter:image" content="https://correoargentinopro.com/og-image.png">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script type="application/ld+json">
@@ -267,7 +268,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="ss__wrap">
             <button class="ss__arr ss__arr--l" onclick="ssGo(-1)" aria-label="Anterior">&#8249;</button>
             <div class="ss__frame">
-                <img id="ss-img" src="assets/screenshot-map.png" alt="">
+                <img id="ss-img" src="assets/screenshot-map.webp" alt="">
             </div>
             <button class="ss__arr ss__arr--r" onclick="ssGo(1)" aria-label="Siguiente">&#8250;</button>
         </div>
@@ -913,10 +914,10 @@ function homeCotizar() {
 
 // Screenshots carousel
 var _ss = [
-    { src: 'assets/screenshot-map.png', label: '<strong>Mapa de sucursales</strong> — Tus clientes eligen sucursal con mapa interactivo, búsqueda y geolocalización' },
-    { src: 'assets/screenshot-cart.png', label: '<strong>Envío en el carrito</strong> — Cotización en tiempo real con opción de domicilio o sucursal' },
-    { src: 'assets/screenshot-dashboard.png', label: '<strong>Dashboard del plugin</strong> — Estadísticas de envíos, estado de conexión y acciones rápidas' },
-    { src: 'assets/screenshot-diagnostics.png', label: '<strong>Diagnóstico del sistema</strong> — Verificación automática de requisitos, credenciales y conexión API' }
+    { src: 'assets/screenshot-map.webp', label: '<strong>Mapa de sucursales</strong> — Tus clientes eligen sucursal con mapa interactivo, búsqueda y geolocalización' },
+    { src: 'assets/screenshot-cart.webp', label: '<strong>Envío en el carrito</strong> — Cotización en tiempo real con opción de domicilio o sucursal' },
+    { src: 'assets/screenshot-dashboard.webp', label: '<strong>Dashboard del plugin</strong> — Estadísticas de envíos, estado de conexión y acciones rápidas' },
+    { src: 'assets/screenshot-diagnostics.webp', label: '<strong>Diagnóstico del sistema</strong> — Verificación automática de requisitos, credenciales y conexión API' }
 ];
 var _ssI = 0, _ssT;
 function ssSet(i) {
