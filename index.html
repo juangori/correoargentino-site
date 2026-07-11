@@ -770,6 +770,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var renewKey = params.get('renew');
     var status = params.get('status');
 
+    function trackPurchase(txId, amount, currency) {
+        if (!txId) return;
+        try {
+            var k = 'purchase_' + txId;
+            if (localStorage.getItem(k)) return;   // evita doble conteo si revisita el success
+            localStorage.setItem(k, '1');
+        } catch (e) {}
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            event: 'purchase',
+            transaction_id: String(txId),
+            value: amount ? parseFloat(amount) : undefined,
+            currency: currency || 'ARS'
+        });
+    }
+
     // Handle renewal redirect from plugin
     if (renewKey) {
         fetch(API_URL + '/checkout/renew', {
@@ -801,6 +817,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             document.getElementById('success-download').style.display = 'none';
             document.getElementById('success-section').classList.add('active');
             document.getElementById('success-section').scrollIntoView({ behavior: 'smooth' });
+            trackPurchase(params.get('payment_id') || ('renew_' + lk), params.get('amount'), 'ARS');
         }
     }
 
@@ -814,6 +831,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 document.getElementById('download-link').href = API_URL + '/download/' + data.license_key;
                 document.getElementById('success-section').classList.add('active');
                 document.getElementById('success-section').scrollIntoView({ behavior: 'smooth' });
+                trackPurchase(data.license_key, data.amount, data.currency);
             }
         })
         .catch(function() {});

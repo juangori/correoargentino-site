@@ -441,6 +441,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     return;
                 }
 
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({ event: 'cotizar_envio', cot_origen: origen, cot_destino: destino, cot_peso: peso });
+
                 var btn = document.getElementById('cotizarBtn');
                 var loading = document.getElementById('cotLoading');
                 var errorDiv = document.getElementById('cotError');
