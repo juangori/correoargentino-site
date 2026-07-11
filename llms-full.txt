@@ -1908,3 +1908,66 @@ Revisa nuestras [preguntas frecuentes](https://correoargentinopro.com/faqs.html)
 - [Todo sobre la etiqueta de envio de Correo Argentino](https://correoargentinopro.com/blog/etiqueta-envio-correo-argentino.html)
 - [Como imprimir etiquetas masivas en WooCommerce](https://correoargentinopro.com/blog/imprimir-etiquetas-masivas-woocommerce.html)
 - [Plugin oficial de Correo Argentino vs Correo Argentino Pro](https://correoargentinopro.com/blog/correo-argentino-plugin-oficial-vs-pro.html)
+
+---
+
+# Tarifas de Correo Argentino 2026: Precios de Envío
+https://correoargentinopro.com/blog/tarifas-correo-argentino-2026.html
+
+Las tarifas de Correo Argentino no son un número único ni una tabla fija: el precio de cada envío se arma combinando el peso, las dimensiones, la distancia y el servicio elegido. En vez de listar montos que quedan viejos con cada actualización, esta guía explica cómo se calculan las tarifas y de qué dependen los precios, y para el número exacto remite al cotizador en vivo (API de MiCorreo en tiempo real).
+
+## Cómo se calculan las tarifas
+- **Peso real vs peso volumétrico:** Correo Argentino cobra por el peso aforado, el mayor entre el peso real y el volumétrico (calculado a partir de las dimensiones). Una caja liviana pero grande puede tarifar como si pesara varios kilos.
+- **Código postal de origen y destino:** la distancia y la zona tarifaria impactan directo. No cuesta lo mismo un envío dentro del AMBA que uno a Ushuaia.
+- **Servicio elegido:** a sucursal cuesta menos que a domicilio; el expreso cuesta más que el clásico pero llega antes.
+
+## Servicios y diferencia de precio
+- **Paquete Clásico a domicilio:** entrega puerta a puerta; la opción más cómoda pero más cara por la última milla.
+- **Paquete a sucursal:** el destinatario retira en sucursal; notablemente más barato al eliminar la última milla.
+- **Paquete Expreso:** a domicilio con plazo más corto; tarifa más alta a cambio de rapidez.
+
+## MiCorreo vs Paq.Ar
+- **MiCorreo:** plataforma para emprendedores y PyMEs, con tarifas de lista públicas, sin contrato, y API de cotización en tiempo real. Son las tarifas que muestra el cotizador.
+- **Paq.Ar:** servicio corporativo con tarifas negociadas según volumen (más bajas), pero requiere acuerdo comercial y no cotiza en tiempo real.
+
+## Cómo pagar menos
+Ofrecer retiro en sucursal, optimizar el peso volumétrico con cajas ajustadas, cargar bien las dimensiones, elegir el servicio correcto para cada caso y negociar Paq.Ar si hay volumen.
+
+## Tarifas para tu tienda online
+Con Correo Argentino Pro para WooCommerce el plugin consulta la API en cada compra y muestra el precio actualizado en el checkout según la dirección del comprador y las dimensiones del carrito, sin mantener tablas. El cliente elige domicilio o sucursal (con mapa) y desde el pedido se crea el envío y se genera la etiqueta.
+
+Las tarifas de MiCorreo se actualizan varias veces al año por el contexto inflacionario, por lo que conviene cotizar en tiempo real en lugar de fiarse de listados fijos.
+
+---
+
+# Correo Argentino para Emprendedores: Envíos 2026
+https://correoargentinopro.com/blog/correo-argentino-emprendedores.html
+
+Para la mayoría de los emprendedores argentinos que venden por redes o por una tienda online, Correo Argentino es el punto de partida más lógico para los envíos. Esta guía explica por qué conviene, cómo empezar con MiCorreo y cómo escalar cuando el volumen crece.
+
+## Por qué le conviene a un emprendedor
+- **Cobertura nacional real:** llega a todo el país, incluso a localidades chicas donde muchos couriers privados no operan.
+- **Precios pensados para PyMEs:** tarifas de MiCorreo públicas y competitivas, sin sobreprecios por ser chico.
+- **Sin volumen mínimo:** se puede enviar uno o cien paquetes; no hay piso que cumplir.
+- **Red de sucursales enorme:** puntos de despacho y retiro en casi todas las ciudades.
+
+## MiCorreo: la puerta de entrada
+MiCorreo es la plataforma para emprendedores y PyMEs: cuenta gratuita, tarifas preferenciales públicas, sin acuerdo comercial (a diferencia de Paq.Ar) y con API de cotización en tiempo real, clave para vender online.
+
+## Cómo empezar a enviar
+1. Crear la cuenta gratuita en MiCorreo.
+2. Cargar los datos de remitente (nombre/emprendimiento, domicilio de origen, contacto).
+3. Preparar el paquete: pesar el producto embalado y medir largo, ancho y alto.
+4. Cotizar y generar el envío con peso, dimensiones y código postal de destino.
+5. Despachar en una sucursal (o coordinar retiro según el servicio).
+
+## Cómo cotizar tus envíos
+El precio depende del peso, las dimensiones, el origen, el destino y el tipo de servicio, así que hay que cotizar cada caso. El cotizador de envíos gratuito devuelve la tarifa actualizada al instante sin registrarse, ideal para pasarle el costo al cliente por mensaje o calcular el margen antes de publicar.
+
+## Envío a sucursal para bajar costos
+Al eliminar la última milla, el envío a sucursal es más económico que el envío a domicilio: baja el costo de cada envío y ofrece al comprador una alternativa más barata. Conviene ofrecer ambas opciones.
+
+## Cuando el emprendimiento crece: automatizá
+Con volumen creciente, cotizar y generar envíos a mano se vuelve un cuello de botella. En una tienda WooCommerce, Correo Argentino Pro automatiza el flujo: cotización en el checkout en tiempo real, elección de domicilio o sucursal (con mapa), etiquetas con un click y tracking automático. Se sigue usando Correo Argentino, pero sin trabajo manual.
+
+Para empezar con MiCorreo alcanza con darse de alta con los datos personales; no se necesita CUIT ni acuerdo para usar el servicio de envíos (el CUIT/monotributo es una cuestión impositiva del emprendimiento, aparte).
