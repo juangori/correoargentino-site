@@ -2300,6 +2300,24 @@ body {
     font-weight: 600;
 }
 .blog-sidebar .blog-toc a.is-active::before { color: var(--primary-light); }
+.blog-toc__more {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    padding: 7px 10px;
+    border: none;
+    background: none;
+    color: var(--primary-light);
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.blog-toc__more:hover { background: var(--bg-subtle); }
+.blog-toc__more::after { content: " \25be"; }
+.blog-toc__more[aria-expanded="true"]::after { content: " \25b4"; }
 
 /* Sidebar CTA card */
 .blog-cta-card {
