@@ -145,25 +145,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="container blog-layout">
         <div class="blog-main legal__content">
 
-            <p>Si vendes online en Argentina, emitir <strong>facturas electronicas</strong> a traves de AFIP no es opcional: es una obligacion fiscal. Ya seas monotributista o responsable inscripto, cada venta que realices en tu tienda WooCommerce debe estar respaldada por un comprobante fiscal valido. La buena noticia es que existen herramientas que te permiten automatizar este proceso y conectar tu WooCommerce directamente con el webservice de facturacion de AFIP.</p>
+            <p>Si vendes online en Argentina, emitir <strong>facturas electrónicas</strong> a través de AFIP no es opcional: es una obligación fiscal. Ya seas monotributista o responsable inscripto, cada venta que realices en tu tienda WooCommerce debe estar respaldada por un comprobante fiscal valido. La buena noticia es que existen herramientas que te permiten automatizar este proceso y conectar tu WooCommerce directamente con el webservice de facturación de AFIP.</p>
 
             <h2>Es obligatorio facturar cada venta online?</h2>
-            <p>Si, <strong>AFIP exige que cada operacion de venta sea facturada</strong>, sin importar el monto ni el canal de venta. Esto aplica tanto para monotributistas como para responsables inscriptos. Las ventas realizadas a traves de una tienda online no son la excepcion.</p>
+            <p>Si, <strong>AFIP exige que cada operación de venta sea facturada</strong>, sin importar el monto ni el canal de venta. Esto aplica tanto para monotributistas como para responsables inscriptos. Las ventas realizadas a través de una tienda online no son la excepción.</p>
             <p>Las consecuencias de no facturar pueden ser severas:</p>
             <ul>
-                <li><strong>Multas:</strong> AFIP puede aplicar sanciones economicas por facturacion irregular o faltante.</li>
+                <li><strong>Multas:</strong> AFIP puede aplicar sanciones económicas por facturación irregular o faltante.</li>
                 <li><strong>Clausura temporal:</strong> en casos graves, puede ordenar la clausura del establecimiento o la baja del sitio web.</li>
-                <li><strong>Problemas con la categoria de monotributo:</strong> si tus ingresos no coinciden con lo facturado, podrias ser recategorizado o excluido del regimen.</li>
-                <li><strong>Imposibilidad de deducir gastos:</strong> sin facturacion correcta, no podes justificar ingresos ni deducir costos asociados, como los de envio. Te recomendamos leer nuestra guia sobre <a href="costos-envio-deduccion-impuestos-argentina.html">costos de envio y deduccion de impuestos</a> para entender este punto.</li>
+                <li><strong>Problemas con la categoría de monotributo:</strong> si tus ingresos no coinciden con lo facturado, podrias ser recategorizado o excluido del regimen.</li>
+                <li><strong>Imposibilidad de deducir gastos:</strong> sin facturación correcta, no podes justificar ingresos ni deducir costos asociados, como los de envío. Te recomendamos leer nuestra guia sobre <a href="costos-envio-deduccion-impuestos-argentina.html">costos de envío y deducción de impuestos</a> para entender este punto.</li>
             </ul>
 
             <h2>Que necesitas para empezar</h2>
             <p>Antes de conectar tu WooCommerce con AFIP, necesitas tener en orden algunos requisitos previos:</p>
             <ol>
-                <li><strong>CUIT activo:</strong> tu Clave Unica de Identificacion Tributaria debe estar habilitada y sin irregularidades.</li>
-                <li><strong>Clave fiscal nivel 3 o superior:</strong> necesitas acceso al portal de AFIP con clave fiscal de nivel 3 como minimo para administrar los webservices.</li>
-                <li><strong>Certificado digital para webservice:</strong> AFIP requiere un certificado digital que autoriza a tu aplicacion (el plugin de WooCommerce) a emitir facturas en tu nombre.</li>
-                <li><strong>Punto de venta electronico autorizado:</strong> debes dar de alta un punto de venta especifico para la facturacion electronica desde el portal de AFIP, en la seccion "Administracion de puntos de venta y domicilios".</li>
+                <li><strong>CUIT activo:</strong> tu Clave Única de Identificación Tributaria debe estar habilitada y sin irregularidades.</li>
+                <li><strong>Clave fiscal nivel 3 o superior:</strong> necesitas acceso al portal de AFIP con clave fiscal de nivel 3 como mínimo para administrar los webservices.</li>
+                <li><strong>Certificado digital para webservice:</strong> AFIP requiere un certificado digital que autoriza a tu aplicación (el plugin de WooCommerce) a emitir facturas en tu nombre.</li>
+                <li><strong>Punto de venta electrónico autorizado:</strong> debes dar de alta un punto de venta específico para la facturación electrónica desde el portal de AFIP, en la sección "Administración de puntos de venta y domicilios".</li>
             </ol>
             <p>Estos pasos se realizan directamente en el sitio web de AFIP (<strong>afip.gob.ar</strong>) y son un requisito previo indispensable antes de configurar cualquier plugin.</p>
 
@@ -172,77 +172,77 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="/" class="blog-cta__btn">Probar gratis por 15 días &rarr;</a>
             </div>
 
-            <h2>Plugins de WooCommerce para facturacion AFIP</h2>
-            <p>Existen varios plugins que permiten conectar WooCommerce con el webservice de facturacion electronica de AFIP (<strong>WSFEV1</strong>). Al evaluar opciones, busca las siguientes funcionalidades clave:</p>
+            <h2>Plugins de WooCommerce para facturación AFIP</h2>
+            <p>Existen varios plugins que permiten conectar WooCommerce con el webservice de facturación electrónica de AFIP (<strong>WSFEV1</strong>). Al evaluar opciones, busca las siguientes funcionalidades clave:</p>
             <ul>
-                <li><strong>Generacion automatica de facturas:</strong> el plugin deberia emitir la factura automaticamente cuando el pedido cambia a estado "completado" o "procesando".</li>
+                <li><strong>Generación automática de facturas:</strong> el plugin deberia emitir la factura automaticamente cuando el pedido cambia a estado "completado" o "procesando".</li>
                 <li><strong>Descarga de PDF:</strong> tanto el administrador como el cliente deberian poder descargar la factura en formato PDF.</li>
-                <li><strong>Envio por email:</strong> la factura deberia adjuntarse automaticamente al email de confirmacion del pedido.</li>
-                <li><strong>Soporte para notas de credito:</strong> si necesitas hacer una devolucion, el plugin debe permitir emitir notas de credito asociadas a la factura original.</li>
-                <li><strong>Compatibilidad con tipos de comprobante:</strong> Factura A, B y C segun corresponda.</li>
+                <li><strong>Envío por email:</strong> la factura deberia adjuntarse automaticamente al email de confirmación del pedido.</li>
+                <li><strong>Soporte para notas de crédito:</strong> si necesitas hacer una devolución, el plugin debe permitir emitir notas de crédito asociadas a la factura original.</li>
+                <li><strong>Compatibilidad con tipos de comprobante:</strong> Factura A, B y C según corresponda.</li>
             </ul>
-            <p>Algunos plugins son gratuitos y cubren lo basico, mientras que las versiones premium ofrecen automatizacion completa, soporte prioritario y funcionalidades avanzadas como facturacion masiva.</p>
+            <p>Algunos plugins son gratuitos y cubren lo básico, mientras que las versiones premium ofrecen automatización completa, soporte prioritario y funcionalidades avanzadas como facturación masiva.</p>
 
             <h2>Como configurar el webservice de AFIP</h2>
-            <p>La configuracion del webservice es el paso mas tecnico del proceso. A continuacion te explicamos como hacerlo:</p>
+            <p>La configuración del webservice es el paso mas técnico del proceso. A continuación te explicamos como hacerlo:</p>
             <ol>
                 <li><strong>Accede a AFIP con clave fiscal:</strong> ingresa a afip.gob.ar con tu CUIT y clave fiscal.</li>
-                <li><strong>Busca "Administrador de Relaciones de Clave Fiscal":</strong> desde el menu de servicios, accede al administrador de relaciones.</li>
-                <li><strong>Autoriza el webservice:</strong> busca "Webservice de Facturacion Electronica" (WSFE) y autoriza el acceso para tu CUIT.</li>
-                <li><strong>Genera el certificado digital:</strong> desde la seccion de "Certificados Digitales", genera un nuevo certificado. El plugin te proporcionara un archivo CSR (Certificate Signing Request) que debes subir a AFIP para obtener el certificado firmado.</li>
+                <li><strong>Busca "Administrador de Relaciones de Clave Fiscal":</strong> desde el menú de servicios, accede al administrador de relaciones.</li>
+                <li><strong>Autoriza el webservice:</strong> busca "Webservice de Facturación Electrónica" (WSFE) y autoriza el acceso para tu CUIT.</li>
+                <li><strong>Genera el certificado digital:</strong> desde la sección de "Certificados Digitales", genera un nuevo certificado. El plugin te proporcionara un archivo CSR (Certificate Signing Request) que debes subir a AFIP para obtener el certificado firmado.</li>
                 <li><strong>Descarga e instala el certificado:</strong> AFIP te devuelve un archivo .crt que debes subir al plugin en tu WooCommerce.</li>
-                <li><strong>Configura el punto de venta:</strong> en el plugin, indica el numero de punto de venta que diste de alta previamente.</li>
-                <li><strong>Testa en homologacion:</strong> antes de operar en produccion, usa el entorno de homologacion (testing) de AFIP para verificar que todo funcione correctamente. Este paso es crucial para evitar errores en facturas reales.</li>
+                <li><strong>Configura el punto de venta:</strong> en el plugin, indica el número de punto de venta que diste de alta previamente.</li>
+                <li><strong>Testa en homologación:</strong> antes de operar en producción, usa el entorno de homologación (testing) de AFIP para verificar que todo funcione correctamente. Este paso es crucial para evitar errores en facturas reales.</li>
             </ol>
 
             <h2>Monotributo vs Responsable Inscripto</h2>
-            <p>El tipo de factura que emite tu tienda depende de tu condicion fiscal:</p>
+            <p>El tipo de factura que emite tu tienda depende de tu condición fiscal:</p>
             <h3>Monotributo</h3>
             <ul>
                 <li>Emite unicamente <strong>Factura C</strong>.</li>
                 <li>No discrimina IVA (el IVA esta incluido en el precio final).</li>
                 <li>Emite Factura C tanto a consumidores finales como a responsables inscriptos.</li>
-                <li>Es la opcion mas simple desde el punto de vista de configuracion del plugin.</li>
+                <li>Es la opción mas simple desde el punto de vista de configuración del plugin.</li>
             </ul>
             <h3>Responsable Inscripto</h3>
             <ul>
                 <li>Emite <strong>Factura A</strong> a otros responsables inscriptos (discriminando IVA).</li>
                 <li>Emite <strong>Factura B</strong> a consumidores finales y monotributistas.</li>
-                <li>El plugin debe detectar automaticamente el tipo de comprobante segun el CUIT o DNI del comprador.</li>
+                <li>El plugin debe detectar automaticamente el tipo de comprobante según el CUIT o DNI del comprador.</li>
                 <li>Es importante configurar correctamente la alicuota de IVA (generalmente 21%) en los productos.</li>
             </ul>
-            <p>Un buen plugin de facturacion pedira al comprador su condicion fiscal (Consumidor Final, Responsable Inscripto, Monotributo, Exento) y su CUIT o DNI en el checkout, y emitira el comprobante correspondiente automaticamente.</p>
+            <p>Un buen plugin de facturación pedira al comprador su condición fiscal (Consumidor Final, Responsable Inscripto, Monotributo, Exento) y su CUIT o DNI en el checkout, y emitira el comprobante correspondiente automaticamente.</p>
 
-            <h2>Como facturar el envio</h2>
-            <p>Un punto que genera dudas frecuentes es <strong>como incluir el costo de envio en la factura</strong>. Hay dos enfoques principales:</p>
+            <h2>Como facturar el envío</h2>
+            <p>Un punto que genera dudas frecuentes es <strong>como incluir el costo de envío en la factura</strong>. Hay dos enfoques principales:</p>
             <ul>
-                <li><strong>Como item separado:</strong> el envio aparece como una linea adicional en la factura, con su propia descripcion e IVA (si corresponde).</li>
-                <li><strong>Incluido en el total:</strong> el costo de envio se suma al total sin discriminar como item separado.</li>
+                <li><strong>Como item separado:</strong> el envío aparece como una linea adicional en la factura, con su propia descripción e IVA (si corresponde).</li>
+                <li><strong>Incluido en el total:</strong> el costo de envío se suma al total sin discriminar como item separado.</li>
             </ul>
-            <p>Para responsables inscriptos, el envio esta gravado con IVA al 21%, por lo que es importante que el plugin lo contemple correctamente. Te recomendamos leer nuestra guia completa sobre <a href="como-facturar-envios-ecommerce-argentina.html">como facturar envios en ecommerce en Argentina</a> donde explicamos este tema en detalle.</p>
+            <p>Para responsables inscriptos, el envío esta gravado con IVA al 21%, por lo que es importante que el plugin lo contemple correctamente. Te recomendamos leer nuestra guia completa sobre <a href="como-facturar-envios-ecommerce-argentina.html">como facturar envíos en ecommerce en Argentina</a> donde explicamos este tema en detalle.</p>
 
             <h2>Errores comunes</h2>
             <p>Estos son los errores mas frecuentes al conectar WooCommerce con AFIP, y como evitarlos:</p>
             <ul>
-                <li><strong>Punto de venta incorrecto:</strong> el numero de punto de venta configurado en el plugin debe coincidir exactamente con el que diste de alta en AFIP. Un numero diferente genera rechazo.</li>
-                <li><strong>Certificado vencido:</strong> los certificados digitales de AFIP tienen fecha de expiracion. Si tu plugin deja de emitir facturas de un dia para el otro, verifica la vigencia del certificado.</li>
-                <li><strong>Errores de CAE:</strong> el CAE (Codigo de Autorizacion Electronico) es el numero que AFIP asigna a cada factura. Si el webservice devuelve errores de CAE, generalmente se debe a datos incorrectos en la solicitud.</li>
-                <li><strong>Saltos en la numeracion:</strong> AFIP exige que la numeracion de facturas sea consecutiva. Si hay saltos (por ejemplo, de la factura 10 a la 12), puede generar alertas y problemas fiscales.</li>
-                <li><strong>No testar en homologacion:</strong> pasar directamente a produccion sin probar en el entorno de testing es la causa mas comun de problemas. Siempre testa primero.</li>
-                <li><strong>Condicion fiscal incorrecta:</strong> emitir Factura A a un consumidor final o Factura B a un responsable inscripto genera comprobantes invalidos.</li>
+                <li><strong>Punto de venta incorrecto:</strong> el número de punto de venta configurado en el plugin debe coincidir exactamente con el que diste de alta en AFIP. Un número diferente genera rechazo.</li>
+                <li><strong>Certificado vencido:</strong> los certificados digitales de AFIP tienen fecha de expiración. Si tu plugin deja de emitir facturas de un día para el otro, verifica la vigencia del certificado.</li>
+                <li><strong>Errores de CAE:</strong> el CAE (Código de Autorización Electrónico) es el número que AFIP asigna a cada factura. Si el webservice devuelve errores de CAE, generalmente se debe a datos incorrectos en la solicitud.</li>
+                <li><strong>Saltos en la numeración:</strong> AFIP exige que la numeración de facturas sea consecutiva. Si hay saltos (por ejemplo, de la factura 10 a la 12), puede generar alertas y problemas fiscales.</li>
+                <li><strong>No testar en homologación:</strong> pasar directamente a producción sin probar en el entorno de testing es la causa mas común de problemas. Siempre testa primero.</li>
+                <li><strong>Condición fiscal incorrecta:</strong> emitir Factura A a un consumidor final o Factura B a un responsable inscripto genera comprobantes invalidos.</li>
             </ul>
 
-            <h2>Automatizar todo: pagos + envios + facturacion</h2>
+            <h2>Automatizar todo: pagos + envíos + facturación</h2>
             <p>El escenario ideal para una tienda WooCommerce en Argentina es tener los tres pilares automatizados:</p>
             <ol>
                 <li><strong>Pagos:</strong> un plugin de medios de pago como Mercado Pago o Mobbex que procese el cobro automaticamente.</li>
-                <li><strong>Envios:</strong> un plugin como <a href="/">Correo Argentino Pro</a> que cotice el envio en tiempo real, permita la creacion automatica de envios y genere etiquetas PDF con un click.</li>
-                <li><strong>Facturacion:</strong> un plugin de facturacion AFIP que emita el comprobante automaticamente al completarse el pedido.</li>
+                <li><strong>Envíos:</strong> un plugin como <a href="/">Correo Argentino Pro</a> que cotice el envío en tiempo real, permita la creación automática de envíos y genere etiquetas PDF con un click.</li>
+                <li><strong>Facturación:</strong> un plugin de facturación AFIP que emita el comprobante automaticamente al completarse el pedido.</li>
             </ol>
-            <p>Con estos tres componentes funcionando en conjunto, el flujo es completamente automatico: el cliente elige sus productos, ve el costo de envio en tiempo real, paga con su metodo preferido, recibe la factura por email y el envio se genera automaticamente. Vos solo tenes que preparar el paquete y entregarlo al correo.</p>
-            <p>Si queres profundizar en como configurar el envio, nuestra <a href="como-integrar-correo-argentino-woocommerce.html">guia de integracion de Correo Argentino con WooCommerce</a> te explica todo el proceso paso a paso. Y para una vision general de como armar tu tienda completa, visita nuestra <a href="woocommerce-argentina-guia-completa.html">guia completa de WooCommerce en Argentina</a>.</p>
+            <p>Con estos tres componentes funcionando en conjunto, el flujo es completamente automático: el cliente elige sus productos, ve el costo de envío en tiempo real, paga con su método preferido, recibe la factura por email y el envío se genera automaticamente. Vos solo tenes que preparar el paquete y entregarlo al correo.</p>
+            <p>Si queres profundizar en como configurar el envío, nuestra <a href="como-integrar-correo-argentino-woocommerce.html">guia de integración de Correo Argentino con WooCommerce</a> te explica todo el proceso paso a paso. Y para una visión general de como armar tu tienda completa, visita nuestra <a href="woocommerce-argentina-guia-completa.html">guia completa de WooCommerce en Argentina</a>.</p>
 
-            <p>Si tenes dudas sobre la configuracion o necesitas ayuda, consulta nuestras <a href="../faqs.html">preguntas frecuentes</a> o <a href="../contacto.html">escribinos</a> y te orientamos.</p>
+            <p>Si tenes dudas sobre la configuración o necesitas ayuda, consulta nuestras <a href="../faqs.html">preguntas frecuentes</a> o <a href="../contacto.html">escribinos</a> y te orientamos.</p>
 
         </div>
 
