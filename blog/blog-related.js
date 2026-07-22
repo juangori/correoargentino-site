@@ -73,6 +73,33 @@
     }).join('');
   }
 
+  function slugify(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+      .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 50);
+  }
+
+  // Construye el TOC del sidebar a partir de los H2 del contenido (asigna IDs si faltan).
+  function buildToc() {
+    var nav = document.querySelector('.blog-sidebar .blog-toc');
+    var main = document.querySelector('.blog-main');
+    if (!nav || !main) return;
+    var hs = [].slice.call(main.querySelectorAll('h2')).filter(function (h) {
+      return (h.textContent || '').trim();
+    });
+    if (hs.length < 2) { nav.style.display = 'none'; return; }
+    var used = {};
+    var lis = hs.map(function (h) {
+      var id = h.id || slugify(h.textContent) || 'sec';
+      if (used[id]) { var n = 2; while (used[id + '-' + n]) n++; id = id + '-' + n; }
+      used[id] = 1;
+      h.id = id;
+      if (!h.style.scrollMarginTop) h.style.scrollMarginTop = '24px';
+      var label = h.getAttribute('data-toc') || h.textContent.trim();
+      return '<li><a href="#' + id + '">' + esc(label) + '</a></li>';
+    }).join('');
+    nav.innerHTML = '<p class="blog-toc__title">En esta guía</p><ol>' + lis + '</ol>';
+  }
+
   function initTocCollapse() {
     var ol = document.querySelector('.blog-sidebar .blog-toc ol');
     if (!ol) return;
@@ -122,7 +149,7 @@
     update();
   }
 
-  function init() { renderRelated(); initTocCollapse(); initTocSpy(); }
+  function init() { renderRelated(); buildToc(); initTocCollapse(); initTocSpy(); }
   if (document.readyState !== 'loading') init();
   else document.addEventListener('DOMContentLoaded', init);
 })();
