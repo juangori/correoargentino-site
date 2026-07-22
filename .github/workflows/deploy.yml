@@ -33,6 +33,9 @@ jobs:
       - name: Regenerate sitemap.xml
         run: node scripts/build-sitemap.js
 
+      - name: Regenerate blog posts data
+        run: node scripts/build-blog-data.js
+
       - name: Strip non-public files from build artifact
         run: |
           rm -rf scripts gsc-reports node_modules .github
