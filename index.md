@@ -21,7 +21,7 @@ Calculá el costo estimado de tu envío al instante con precios actualizados de 
 
 ## Compatibilidad
 
-Compatible con WooCommerce, WordPress, HPOS, checkout por bloques y mapas Leaflet. Requiere WooCommerce 7.0+, WordPress 5.8+ y PHP 7.4+.
+Compatible con WooCommerce, WordPress, HPOS, checkout por bloques y mapas Leaflet. Requiere WooCommerce 6.0+, WordPress 5.8+ y PHP 7.4+.
 
 ## Precios
 
@@ -39,7 +39,7 @@ Sí. La prueba gratuita de 15 días incluye todas las funciones, sin límites y 
 El plugin deja de cotizar y crear envíos. Tus datos y configuración se mantienen. Podés renovar en cualquier momento y todo vuelve a funcionar al instante.
 
 **¿Funciona con mi tema y mi versión de WooCommerce?**
-Sí. Compatible con cualquier tema de WooCommerce, HPOS, checkout clásico y checkout por bloques. Requiere WooCommerce 7.0+ y PHP 7.4+.
+Sí. Compatible con cualquier tema de WooCommerce, HPOS, checkout clásico y checkout por bloques. Requiere WooCommerce 6.0+ y PHP 7.4+.
 
 **¿Cómo recibo el plugin después de pagar?**
 Al instante. Después de pagar con Mercado Pago, tu clave de licencia aparece en pantalla y se envía a tu email junto con el link de descarga. La activación toma 30 segundos.

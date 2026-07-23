@@ -19,7 +19,7 @@ Correo Argentino Pro es un plugin comercial para WordPress/WooCommerce que permi
 - Compatible con HPOS y checkout por bloques de WooCommerce. Wizard de configuración y diagnóstico integrado.
 
 **Precio:** $62.990 ARS por año (licencia para 1 sitio). Prueba gratuita de 15 días sin tarjeta de crédito.
-**Requisitos:** WordPress 5.8+, WooCommerce 7.0+, PHP 7.4+.
+**Requisitos:** WordPress 5.8+, WooCommerce 6.0+, PHP 7.4+.
 **Desarrollado por** AD Webs (https://adwebs.com.ar). No estamos afiliados a Correo Argentino S.A.
 
 **Contacto y soporte:** soporte@correoargentinopro.com · https://correoargentinopro.com/contacto.html
@@ -48,7 +48,7 @@ Calculá el costo estimado de tu envío al instante con precios actualizados de 
 
 ## Compatibilidad
 
-Compatible con WooCommerce, WordPress, HPOS, checkout por bloques y mapas Leaflet. Requiere WooCommerce 7.0+, WordPress 5.8+ y PHP 7.4+.
+Compatible con WooCommerce, WordPress, HPOS, checkout por bloques y mapas Leaflet. Requiere WooCommerce 6.0+, WordPress 5.8+ y PHP 7.4+.
 
 ## Precios
 
@@ -66,7 +66,7 @@ Sí. La prueba gratuita de 15 días incluye todas las funciones, sin límites y 
 El plugin deja de cotizar y crear envíos. Tus datos y configuración se mantienen. Podés renovar en cualquier momento y todo vuelve a funcionar al instante.
 
 **¿Funciona con mi tema y mi versión de WooCommerce?**
-Sí. Compatible con cualquier tema de WooCommerce, HPOS, checkout clásico y checkout por bloques. Requiere WooCommerce 7.0+ y PHP 7.4+.
+Sí. Compatible con cualquier tema de WooCommerce, HPOS, checkout clásico y checkout por bloques. Requiere WooCommerce 6.0+ y PHP 7.4+.
 
 **¿Cómo recibo el plugin después de pagar?**
 Al instante. Después de pagar con Mercado Pago, tu clave de licencia aparece en pantalla y se envía a tu email junto con el link de descarga. La activación toma 30 segundos.
@@ -447,7 +447,7 @@ Si. El plugin es totalmente compatible con el nuevo checkout por bloques de WooC
 
 ### Que version de WooCommerce necesito?
 
-Se requiere WooCommerce 7.0 o superior. Recomendamos siempre usar la ultima version disponible.
+Se requiere WooCommerce 6.0 o superior. Recomendamos siempre usar la ultima version disponible.
 
 ## Recursos relacionados
 
@@ -1065,7 +1065,7 @@ Desde cada pedido en WooCommerce, podes crear el envío en Correo Argentino con 
 ## Requisitos
 
 - WordPress 5.8 o superior.
-- WooCommerce 7.0 o superior.
+- WooCommerce 6.0 o superior.
 - PHP 7.4 o superior.
 - Cuenta en MiCorreo o acuerdo Paq.Ar con Correo Argentino.
 - Licencia activa de [Correo Argentino Pro](https://correoargentinopro.com/).

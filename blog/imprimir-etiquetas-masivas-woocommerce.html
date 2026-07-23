@@ -147,20 +147,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <p>Si manejas una tienda online con WooCommerce y despachas varios pedidos por día, seguramente ya te diste cuenta de que <strong>imprimir etiquetas de envío una por una es un proceso lento, repetitivo y propenso a errores</strong>. Entrar a cada pedido, generar la etiqueta, descargar el PDF, imprimirlo, y repetir todo para el siguiente... multiplicado por 20, 50 o 100 pedidos diarios, se convierte en horas de trabajo perdido.</p>
 
-            <p>En esta guía te explicamos como pasar de ese proceso manual a la <strong>impresión masiva de etiquetas de envío en WooCommerce</strong>, usando acciones en lote, el plugin <a href="/">Correo Argentino Pro</a> y las mejores prácticas para impresoras de etiquetas y formatos de papel.</p>
+            <p>En esta guía te explicamos cómo pasar de ese proceso manual a la <strong>impresión masiva de etiquetas de envío en WooCommerce</strong>, usando acciones en lote, el plugin <a href="/">Correo Argentino Pro</a> y las mejores prácticas para impresoras de etiquetas y formatos de papel.</p>
 
             <h2>El problema: imprimir etiquetas de envío una por una</h2>
 
-            <p>El flujo típico de una tienda WooCommerce sin automatización de etiquetas es mas o menos así:</p>
+            <p>El flujo típico de una tienda WooCommerce sin automatización de etiquetas es más o menos así:</p>
 
             <ol>
                 <li>Entras a la lista de pedidos en WooCommerce.</li>
-                <li>Abris un pedido.</li>
+                <li>Abrís un pedido.</li>
                 <li>Copias los datos del cliente (nombre, dirección, CP, teléfono).</li>
                 <li>Vas a MiCorreo o al panel de Paq.Ar y cargas esos datos manualmente para crear el envío.</li>
                 <li>Generas la etiqueta y la descargas como PDF.</li>
-                <li>La imprimis.</li>
-                <li>Volves a WooCommerce y repetis todo con el siguiente pedido.</li>
+                <li>La imprimís.</li>
+                <li>Volvés a WooCommerce y repetís todo con el siguiente pedido.</li>
             </ol>
 
             <p>Este proceso tiene varios problemas evidentes:</p>
@@ -169,10 +169,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li><strong>Tiempo:</strong> Cada etiqueta te lleva entre 3 y 5 minutos. Con 30 pedidos diarios, son entre 90 y 150 minutos solo en etiquetas.</li>
                 <li><strong>Errores de tipeo:</strong> Al copiar direcciones a mano, es común equivocarse en un número de calle, un código postal o un piso. Un error en la etiqueta significa un envío que no llega o que se demora.</li>
                 <li><strong>Fragmentación:</strong> Trabajas en dos plataformas a la vez (WooCommerce y el panel de Correo Argentino), lo que complica el seguimiento y aumenta la posibilidad de olvidar pedidos.</li>
-                <li><strong>Impresión ineficiente:</strong> Si imprimis cada etiqueta por separado, desperdiciamos papel y tiempo de impresora. Además, cada impresión individual requiere abrir el PDF, configurar la impresora y confirmar.</li>
+                <li><strong>Impresión ineficiente:</strong> Si imprimís cada etiqueta por separado, desperdiciamos papel y tiempo de impresora. Además, cada impresión individual requiere abrir el PDF, configurar la impresora y confirmar.</li>
             </ul>
 
-            <p>Si todavia estas trabajando de esta forma, no sos el único. Muchas tiendas arrancan así, pero a medida que el volumen de ventas crece, este método manual se vuelve insostenible. La buena noticia es que hay formas mucho mas eficientes de hacerlo.</p>
+            <p>Si todavía estás trabajando de esta forma, no sos el único. Muchas tiendas arrancan así, pero a medida que el volumen de ventas crece, este método manual se vuelve insostenible. La buena noticia es que hay formas mucho más eficientes de hacerlo.</p>
 
             <h2>El proceso manual vs. el automatizado: comparación</h2>
 
@@ -190,18 +190,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <p><strong>Proceso automatizado (con Correo Argentino Pro):</strong></p>
             <ul>
-                <li>Los datos del cliente ya estan en WooCommerce, el plugin los toma automáticamente.</li>
-                <li>Seleccionas los pedidos que queres despachar desde el listado.</li>
+                <li>Los datos del cliente ya están en WooCommerce, el plugin los toma automáticamente.</li>
+                <li>Seleccionas los pedidos que querés despachar desde el listado.</li>
                 <li>Con una acción masiva creas todos los envíos y generas todas las etiquetas de una sola vez.</li>
                 <li>Descargas un único PDF con todas las etiquetas.</li>
-                <li>Imprimis todo de una sola vez.</li>
+                <li>Imprimís todo de una sola vez.</li>
                 <li>El tracking se asigna automáticamente a cada pedido.</li>
                 <li>Tiempo estimado: 30 segundos para 50 pedidos.</li>
             </ul>
 
-            <p>La diferencia es enorme. Pasar de 150 minutos a medio minuto para la misma cantidad de pedidos libera tiempo que podes dedicar a hacer crecer tu negocio en vez de pelear con etiquetas.</p>
+            <p>La diferencia es enorme. Pasar de 150 minutos a medio minuto para la misma cantidad de pedidos libera tiempo que podés dedicar a hacer crecer tu negocio en vez de pelear con etiquetas.</p>
 
-            <h2>Como usar las acciones masivas de WooCommerce</h2>
+            <h2>Cómo usar las acciones masivas de WooCommerce</h2>
 
             <p>WooCommerce incluye un sistema de <strong>acciones masivas (bulk actions)</strong> en el listado de pedidos. Este sistema te permite seleccionar varios pedidos a la vez y aplicarles una acción común. Por defecto, las opciones nativas son limitadas (cambiar estado, eliminar), pero los plugins pueden agregar acciones personalizadas a este menú.</p>
 
@@ -209,13 +209,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <ol>
                 <li><strong>Anda a WooCommerce > Pedidos</strong> en el panel de administración de WordPress.</li>
-                <li><strong>Filtra los pedidos</strong> que necesitas. Podes usar los filtros de fecha, estado (por ejemplo "En proceso") o buscar por rango de fechas para encontrar los pedidos listos para despachar.</li>
-                <li><strong>Selecciona los pedidos</strong> usando las casillas de verificación a la izquierda. Podes usar la casilla superior para seleccionar todos los pedidos de la página.</li>
-                <li><strong>Abri el menú desplegable de "Acciones en lote"</strong> que aparece en la parte superior del listado.</li>
-                <li><strong>Selecciona la acción</strong> que queres aplicar y hace click en "Aplicar".</li>
+                <li><strong>Filtra los pedidos</strong> que necesitas. Podés usar los filtros de fecha, estado (por ejemplo "En proceso") o buscar por rango de fechas para encontrar los pedidos listos para despachar.</li>
+                <li><strong>Selecciona los pedidos</strong> usando las casillas de verificación a la izquierda. Podés usar la casilla superior para seleccionar todos los pedidos de la página.</li>
+                <li><strong>Abrí el menú desplegable de "Acciones en lote"</strong> que aparece en la parte superior del listado.</li>
+                <li><strong>Selecciona la acción</strong> que querés aplicar y hace click en "Aplicar".</li>
             </ol>
 
-            <p>Cuando tenes instalado <a href="/">Correo Argentino Pro</a>, este menú de acciones masivas se enriquece con opciones específicas para la generación de envíos y etiquetas. Veamos como funciona en detalle.</p>
+            <p>Cuando tenés instalado <a href="/">Correo Argentino Pro</a>, este menú de acciones masivas se enriquece con opciones específicas para la generación de envíos y etiquetas. Veamos cómo funciona en detalle.</p>
 
             
             <div class="blog-cta">
@@ -230,64 +230,64 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <ol>
                 <li><strong>Filtra los pedidos listos para despachar:</strong> Usa el filtro de estado para mostrar solo los pedidos "En proceso" o el estado que uses para pedidos pagados y pendientes de envío.</li>
                 <li><strong>Selecciona los pedidos:</strong> Marca las casillas de todos los pedidos que vas a despachar. Si son todos los de la página, usa la casilla "Seleccionar todos".</li>
-                <li><strong>Elegi la acción masiva "Crear envíos y generar etiquetas":</strong> En el dropdown de acciones en lote, selecciona la opción que agrega el plugin para crear los envíos en Correo Argentino.</li>
+                <li><strong>Elegí la acción masiva "Crear envíos y generar etiquetas":</strong> En el dropdown de acciones en lote, selecciona la opción que agrega el plugin para crear los envíos en Correo Argentino.</li>
                 <li><strong>Aplica la acción:</strong> El plugin procesa todos los pedidos seleccionados, crea los envíos en la API de Correo Argentino, obtiene los números de seguimiento y genera las etiquetas para cada uno.</li>
-                <li><strong>Descarga el PDF con todas las etiquetas:</strong> Una vez procesados, podes descargar un único archivo PDF que contiene todas las etiquetas en secuencia, listas para imprimir.</li>
+                <li><strong>Descarga el PDF con todas las etiquetas:</strong> Una vez procesados, podés descargar un único archivo PDF que contiene todas las etiquetas en secuencia, listas para imprimir.</li>
             </ol>
 
             <p>Todo este proceso se hace sin salir de WooCommerce. No necesitas abrir MiCorreo ni Paq.Ar, ni copiar datos a mano. El plugin toma automáticamente el nombre, la dirección, el código postal, la localidad, la provincia y el teléfono de cada pedido y los usa para generar el envío en Correo Argentino.</p>
 
-            <p>Si todavia no tenes el plugin instalado y queres ver como se integra con tu tienda, te recomendamos leer nuestra guía sobre <a href="como-integrar-correo-argentino-woocommerce.html">como integrar Correo Argentino con WooCommerce</a>.</p>
+            <p>Si todavía no tenés el plugin instalado y querés ver cómo se integra con tu tienda, te recomendamos leer nuestra guía sobre <a href="como-integrar-correo-argentino-woocommerce.html">cómo integrar Correo Argentino con WooCommerce</a>.</p>
 
             <h2>Descarga masiva de etiquetas ya generadas</h2>
 
-            <p>En algunos casos, puede que ya hayas creado los envíos individualmente a lo largo del día y solo necesites descargar todas las etiquetas juntas para imprimirlas de una sola vez antes de ir a la sucursal. <a href="/">Correo Argentino Pro</a> también cubre este caso: podes seleccionar pedidos que ya tienen envío creado y descargar las etiquetas en lote sin regenerarlas.</p>
+            <p>En algunos casos, puede que ya hayas creado los envíos individualmente a lo largo del día y solo necesites descargar todas las etiquetas juntas para imprimirlas de una sola vez antes de ir a la sucursal. <a href="/">Correo Argentino Pro</a> también cubre este caso: podés seleccionar pedidos que ya tienen envío creado y descargar las etiquetas en lote sin regenerarlas.</p>
 
-            <p>Esto es util si, por ejemplo, creas los envíos a medida que entran los pedidos durante la mañana, y a la tarde te sentas a imprimir y preparar todos los paquetes de una sola vez.</p>
+            <p>Esto es útil si, por ejemplo, creas los envíos a medida que entran los pedidos durante la mañana, y a la tarde te sentás a imprimir y preparar todos los paquetes de una sola vez.</p>
 
             <h2>Impresoras de etiquetas: cuál conviene para envíos</h2>
 
-            <p>Si despachas mas de 10 pedidos por día, invertir en una <strong>impresora termica de etiquetas</strong> es una de las mejores decisiones que podes tomar. Estas impresoras estan disenadas especificamente para imprimir etiquetas de envío de forma rápida y sin tinta.</p>
+            <p>Si despachas más de 10 pedidos por día, invertir en una <strong>impresora térmica de etiquetas</strong> es una de las mejores decisiones que podés tomar. Estas impresoras están diseñadas específicamente para imprimir etiquetas de envío de forma rápida y sin tinta.</p>
 
             <p><strong>Ventajas de las impresoras térmicas:</strong></p>
 
             <ul>
-                <li><strong>Sin tinta ni toner:</strong> Usan calor para imprimir sobre papel termico. No tenes que comprar cartuchos ni preocuparte por que se seque la tinta.</li>
+                <li><strong>Sin tinta ni toner:</strong> Usan calor para imprimir sobre papel térmico. No tenés que comprar cartuchos ni preocuparte por que se seque la tinta.</li>
                 <li><strong>Velocidad:</strong> Imprimen una etiqueta en 1-2 segundos. Perfecto para tandas grandes.</li>
                 <li><strong>Formato listo para pegar:</strong> Las etiquetas salen en el tamaño exacto (generalmente 10x15 cm) con adhesivo incluido. No necesitas recortar nada.</li>
-                <li><strong>Código de barras nitido:</strong> La impresión termica produce códigos de barras muy nitidos que los scanners leen sin problemas.</li>
+                <li><strong>Código de barras nítido:</strong> La impresión térmica produce códigos de barras muy nítidos que los scanners leen sin problemas.</li>
             </ul>
 
             <p><strong>Modelos populares en Argentina:</strong></p>
 
             <ul>
-                <li><strong>Zebra GK420d / ZD220:</strong> Las mas usadas en operaciones logísticas. Robustas, confiables y con buena disponibilidad de insumos.</li>
-                <li><strong>Honeywell PC42d:</strong> Buena relación precio-calidad, compatible con la mayoria de los formatos de etiqueta.</li>
-                <li><strong>Brother QL-800 / QL-820NWB:</strong> Opciones mas accesibles, ideales para tiendas con volumen medio.</li>
-                <li><strong>Impresoras genericas chinas:</strong> Modelos como Xprinter o Gainscha que se consiguen en Mercado Libre a buen precio. Funcionan bien para etiquetas de envío, aunque la durabilidad es menor.</li>
+                <li><strong>Zebra GK420d / ZD220:</strong> Las más usadas en operaciones logísticas. Robustas, confiables y con buena disponibilidad de insumos.</li>
+                <li><strong>Honeywell PC42d:</strong> Buena relación precio-calidad, compatible con la mayoría de los formatos de etiqueta.</li>
+                <li><strong>Brother QL-800 / QL-820NWB:</strong> Opciones más accesibles, ideales para tiendas con volumen medio.</li>
+                <li><strong>Impresoras genéricas chinas:</strong> Modelos como Xprinter o Gainscha que se consiguen en Mercado Libre a buen precio. Funcionan bien para etiquetas de envío, aunque la durabilidad es menor.</li>
             </ul>
 
-            <p>Si recien arrancas y no queres invertir en una impresora termica, podes imprimir las etiquetas en una impresora común (laser o inkjet) usando hojas A4 y después recortar cada etiqueta. Es mas trabajo, pero funciona.</p>
+            <p>Si recién arrancas y no querés invertir en una impresora térmica, podés imprimir las etiquetas en una impresora común (láser o inkjet) usando hojas A4 y después recortar cada etiqueta. Es más trabajo, pero funciona.</p>
 
             <h2>Tamaños de papel y formatos de etiqueta</h2>
 
             <p>Elegir el formato correcto de etiqueta es importante para evitar problemas de impresión y asegurarte de que el código de barras sea legible en la sucursal de Correo Argentino.</p>
 
-            <p><strong>Formatos mas comunes:</strong></p>
+            <p><strong>Formatos más comunes:</strong></p>
 
             <ul>
                 <li><strong>10 x 15 cm (4" x 6"):</strong> El formato estándar para impresoras térmicas. Es el tamaño que usa Correo Argentino en sus etiquetas de Paq.Ar. Entra toda la información sin quedar apretada y el código de barras tiene un tamaño legible.</li>
-                <li><strong>10 x 10 cm (4" x 4"):</strong> Un formato mas compacto que algunos usan para paquetes chicos. Puede funcionar, pero el espacio para los datos es mas reducido.</li>
+                <li><strong>10 x 10 cm (4" x 4"):</strong> Un formato más compacto que algunos usan para paquetes chicos. Puede funcionar, pero el espacio para los datos es más reducido.</li>
                 <li><strong>A4 (21 x 29.7 cm):</strong> Para imprimir en impresora común. La etiqueta ocupa una parte de la hoja y el resto queda en blanco. Después recortas la etiqueta y la pegas en el paquete. Algunos formatos ponen 2 o 4 etiquetas por hoja A4 para aprovechar mejor el papel.</li>
             </ul>
 
             <p><strong>Tips para la impresión:</strong></p>
 
             <ul>
-                <li>Si usas impresora termica, configura el driver para que el tamaño del papel coincida con el rollo de etiquetas que compraste. Si no coincide, la etiqueta puede salir cortada o descentrada.</li>
-                <li>Si usas impresora laser o inkjet con hojas A4, asegurate de imprimir al 100% (sin "ajustar a página") para que el código de barras mantenga su tamaño real.</li>
-                <li>Antes de imprimir una tanda grande, imprime una etiqueta de prueba y verificala: que se lea bien el código de barras, que los datos esten completos y que no se corte ningun texto.</li>
-                <li>Si el papel termico es de mala calidad, la impresión puede borrarse con el calor o la humedad. Usa rollos de buena calidad, especialmente en verano.</li>
+                <li>Si usas impresora térmica, configura el driver para que el tamaño del papel coincida con el rollo de etiquetas que compraste. Si no coincide, la etiqueta puede salir cortada o descentrada.</li>
+                <li>Si usas impresora láser o inkjet con hojas A4, asegurate de imprimir al 100% (sin "ajustar a página") para que el código de barras mantenga su tamaño real.</li>
+                <li>Antes de imprimir una tanda grande, imprime una etiqueta de prueba y verificala: que se lea bien el código de barras, que los datos estén completos y que no se corte ningún texto.</li>
+                <li>Si el papel térmico es de mala calidad, la impresión puede borrarse con el calor o la humedad. Usa rollos de buena calidad, especialmente en verano.</li>
             </ul>
 
             <h2>Organización de etiquetas por fecha de despacho</h2>
@@ -299,61 +299,61 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <ul>
                 <li><strong>Despacha por tandas:</strong> Define horarios fijos de despacho (por ejemplo, a las 11 y a las 17). Imprime las etiquetas de cada tanda por separado y preparalas juntas. Esto es mejor que imprimir todo a la mañana y tener etiquetas dando vueltas todo el día.</li>
                 <li><strong>Agrupa por tipo de servicio:</strong> Si usas envío a domicilio y envío a sucursal, separa las etiquetas en dos grupos. Algunos Correos tienen ventanillas o procesos diferentes para cada tipo.</li>
-                <li><strong>Ordena las etiquetas igual que los paquetes:</strong> Antes de ir a la sucursal, ordena las etiquetas en el mismo orden en que acomodaste los paquetes. Así, cuándo te pidan el paquete para un envío, no tenes que buscarlo entre 30 cajas.</li>
-                <li><strong>Usa el número de pedido como referencia:</strong> Las etiquetas de Correo Argentino Pro incluyen el número de pedido de WooCommerce. Esto te permite cruzar fácilmente el paquete fisico con el pedido en tu tienda si surge algun inconveniente.</li>
-                <li><strong>Lleva un registro de lo despachado:</strong> Marca los pedidos como "Completado" en WooCommerce una vez que los entregaste en la sucursal. De esta forma, al día siguiente solo ves en la lista los pedidos que todavia faltan despachar.</li>
+                <li><strong>Ordena las etiquetas igual que los paquetes:</strong> Antes de ir a la sucursal, ordena las etiquetas en el mismo orden en que acomodaste los paquetes. Así, cuándo te pidan el paquete para un envío, no tenés que buscarlo entre 30 cajas.</li>
+                <li><strong>Usa el número de pedido como referencia:</strong> Las etiquetas de Correo Argentino Pro incluyen el número de pedido de WooCommerce. Esto te permite cruzar fácilmente el paquete físico con el pedido en tu tienda si surge algún inconveniente.</li>
+                <li><strong>Lleva un registro de lo despachado:</strong> Marca los pedidos como "Completado" en WooCommerce una vez que los entregaste en la sucursal. De esta forma, al día siguiente solo ves en la lista los pedidos que todavía faltan despachar.</li>
             </ul>
 
-            <h2>Que pasa si una etiqueta sale mal</h2>
+            <h2>Qué pasa si una etiqueta sale mal</h2>
 
-            <p>A veces, a pesar de hacer todo bien, una etiqueta puede salir con un error: un dato incorrecto del cliente, un problema de impresión o un envío que se creo con el peso equivocado. En estos casos:</p>
+            <p>A veces, a pesar de hacer todo bien, una etiqueta puede salir con un error: un dato incorrecto del cliente, un problema de impresión o un envío que se creó con el peso equivocado. En estos casos:</p>
 
             <ul>
-                <li><strong>Si el envío no se despacho todavia:</strong> Podes anular el envío desde el panel de WooCommerce (con Correo Argentino Pro) o desde el portal de Correo Argentino, y generar uno nuevo con los datos corregidos.</li>
-                <li><strong>Si ya imprimiste la etiqueta pero el dato esta mal:</strong> No pegues la etiqueta. Corregila, generala de nuevo e imprimila otra vez. Una etiqueta con datos incorrectos va a generar problemas en la entrega.</li>
-                <li><strong>Si la impresión salio borrosa o cortada:</strong> Simplemente volvela a imprimir. El envío ya esta creado en el sistema, así que reimprimir la etiqueta no genera un duplicado.</li>
+                <li><strong>Si el envío no se despachó todavía:</strong> Podés anular el envío desde el panel de WooCommerce (con Correo Argentino Pro) o desde el portal de Correo Argentino, y generar uno nuevo con los datos corregidos.</li>
+                <li><strong>Si ya imprimiste la etiqueta pero el dato está mal:</strong> No pegues la etiqueta. Corregila, generala de nuevo e imprimila otra vez. Una etiqueta con datos incorrectos va a generar problemas en la entrega.</li>
+                <li><strong>Si la impresión salió borrosa o cortada:</strong> Simplemente volvela a imprimir. El envío ya está creado en el sistema, así que reimprimir la etiqueta no genera un duplicado.</li>
             </ul>
 
-            <p>Para mas detalles sobre como funciona la etiqueta de envío de Correo Argentino, qué datos contiene y como pegarla correctamente, te recomendamos nuestra guía completa sobre <a href="etiqueta-envio-correo-argentino.html">etiquetas de envío de Correo Argentino</a>.</p>
+            <p>Para más detalles sobre cómo funciona la etiqueta de envío de Correo Argentino, qué datos contiene y cómo pegarla correctamente, te recomendamos nuestra guía completa sobre <a href="etiqueta-envio-correo-argentino.html">etiquetas de envío de Correo Argentino</a>.</p>
 
             <h2>Checklist para la impresión masiva de etiquetas</h2>
 
             <p>Antes de sentarte a imprimir tus etiquetas del día, repasa esta lista:</p>
 
             <ol>
-                <li><strong>Verifica que todos los pedidos tengan datos completos:</strong> Dirección, código postal, localidad, provincia y teléfono del destinatario. Si no sabes exactamente qué información se necesita, revisa nuestra guía sobre <a href="que-datos-necesito-enviar-paquete-correo-argentino.html">qué datos necesito para enviar un paquete</a>. Si falta algun dato, contacta al cliente antes de generar el envío.</li>
-                <li><strong>Filtra los pedidos por estado:</strong> Solo genera etiquetas para pedidos confirmados y pagados. Evita generar envíos para pedidos que todavia pueden cancelarse.</li>
+                <li><strong>Verifica que todos los pedidos tengan datos completos:</strong> Dirección, código postal, localidad, provincia y teléfono del destinatario. Si no sabes exactamente qué información se necesita, revisa nuestra guía sobre <a href="que-datos-necesito-enviar-paquete-correo-argentino.html">qué datos necesito para enviar un paquete</a>. Si falta algún dato, contacta al cliente antes de generar el envío.</li>
+                <li><strong>Filtra los pedidos por estado:</strong> Solo genera etiquetas para pedidos confirmados y pagados. Evita generar envíos para pedidos que todavía pueden cancelarse.</li>
                 <li><strong>Revisa el peso y las dimensiones:</strong> Si tu tienda usa peso automático por producto, verifica que los valores sean correctos. Un peso mal declarado puede generar diferencias de costo en la sucursal.</li>
                 <li><strong>Selecciona los pedidos y ejecuta la acción masiva:</strong> Usa la función de Correo Argentino Pro para crear los envíos y generar todas las etiquetas en lote.</li>
-                <li><strong>Descarga el PDF y revisalo:</strong> Antes de mandar a imprimir, abri el PDF y dale una mirada rápida. Verifica que la cantidad de etiquetas coincida con la cantidad de pedidos seleccionados.</li>
-                <li><strong>Configura la impresora:</strong> Asegurate de que el tamaño de papel este bien configurado (10x15 para termica, A4 para común) y que la impresora tenga papel/rollos suficientes.</li>
+                <li><strong>Descarga el PDF y revisalo:</strong> Antes de mandar a imprimir, abrí el PDF y dale una mirada rápida. Verifica que la cantidad de etiquetas coincida con la cantidad de pedidos seleccionados.</li>
+                <li><strong>Configura la impresora:</strong> Asegurate de que el tamaño de papel esté bien configurado (10x15 para térmica, A4 para común) y que la impresora tenga papel/rollos suficientes.</li>
                 <li><strong>Imprime y organiza:</strong> Imprime toda la tanda, recorta si es necesario, y organiza las etiquetas junto a los paquetes correspondientes.</li>
                 <li><strong>Actualiza los estados:</strong> Una vez que despachaste los paquetes en la sucursal, marca los pedidos como "Completado" en WooCommerce para mantener tu panel limpio.</li>
             </ol>
 
             <h2>Beneficios de automatizar la impresión de etiquetas</h2>
 
-            <p>Mas allá del ahorro de tiempo evidente, automatizar la generación e impresión de etiquetas de envío tiene otros beneficios que impactan directamente en tu operación:</p>
+            <p>Más allá del ahorro de tiempo evidente, automatizar la generación e impresión de etiquetas de envío tiene otros beneficios que impactan directamente en tu operación:</p>
 
             <ul>
-                <li><strong>Menos errores:</strong> Al eliminar la carga manual de datos, se reducen drasticamente los errores de tipeo en direcciones y códigos postales. Esto significa menos envíos devueltos y menos reclamos de clientes.</li>
+                <li><strong>Menos errores:</strong> Al eliminar la carga manual de datos, se reducen drásticamente los errores de tipeo en direcciones y códigos postales. Esto significa menos envíos devueltos y menos reclamos de clientes.</li>
                 <li><strong>Tracking automático:</strong> Cuando generas los envíos con Correo Argentino Pro, el <a href="seguimiento-envio-correo-argentino.html">número de seguimiento se asigna automáticamente</a> al pedido de WooCommerce. Tus clientes reciben la información de tracking sin que tengas qué hacer nada.</li>
-                <li><strong>Escalabilidad:</strong> Un proceso manual funciona con 5 pedidos por día, pero colapsa con 50. La automatización te permite escalar tus ventas sin tener que contratar mas gente solo para despachar.</li>
+                <li><strong>Escalabilidad:</strong> Un proceso manual funciona con 5 pedidos por día, pero colapsa con 50. La automatización te permite escalar tus ventas sin tener que contratar más gente solo para despachar.</li>
                 <li><strong>Profesionalismo:</strong> Las etiquetas generadas por el plugin son prolijas, con todos los datos en su lugar y el código de barras en el formato correcto. Eso transmite confianza cuándo el cliente recibe su paquete.</li>
-                <li><strong>Trazabilidad completa:</strong> Al tener todo centralizado en WooCommerce, podes ver el historial completo de cada pedido: cuándo se pago, cuándo se creo el envío, cual es el tracking y cual es el estado actual de la entrega.</li>
+                <li><strong>Trazabilidad completa:</strong> Al tener todo centralizado en WooCommerce, podés ver el historial completo de cada pedido: cuándo se pagó, cuándo se creó el envío, cuál es el tracking y cuál es el estado actual de la entrega.</li>
             </ul>
 
-            <p>Si queres conocer todos los beneficios de usar Correo Argentino para los envíos de tu tienda online, revisa nuestra nota sobre <a href="envios-correo-argentino-tienda-online.html">envíos de Correo Argentino para tiendas online</a>.</p>
+            <p>Si querés conocer todos los beneficios de usar Correo Argentino para los envíos de tu tienda online, revisa nuestra nota sobre <a href="envios-correo-argentino-tienda-online.html">envíos de Correo Argentino para tiendas online</a>.</p>
 
             <h2>Conclusión: deja de perder tiempo con etiquetas manuales</h2>
 
-            <p>Imprimir etiquetas de envío una por una es uno de esos problemas que parece menor hasta que te das cuenta de cuantas horas le estas dedicando por semana. Si ya llegaste al punto en que el proceso manual te frena, es momento de automatizar.</p>
+            <p>Imprimir etiquetas de envío una por una es uno de esos problemas que parece menor hasta que te das cuenta de cuántas horas le estás dedicando por semana. Si ya llegaste al punto en que el proceso manual te frena, es momento de automatizar.</p>
 
-            <p>Con <a href="/">Correo Argentino Pro</a> podes generar etiquetas en lote directamente desde WooCommerce, sin copiar datos, sin cambiar de plataforma y sin perder tiempo. Selecciona los pedidos, ejecuta la acción masiva, descarga el PDF, imprime y despacha. Así de simple.</p>
+            <p>Con <a href="/">Correo Argentino Pro</a> podés generar etiquetas en lote directamente desde WooCommerce, sin copiar datos, sin cambiar de plataforma y sin perder tiempo. Selecciona los pedidos, ejecuta la acción masiva, descarga el PDF, imprime y despacha. Así de simple.</p>
 
             <p>También te puede interesar: <a href="logistica-inversa-devolucion-correo-argentino.html">cómo gestionar devoluciones con logística inversa</a> y <a href="cotizar-envio-correo-argentino.html">cómo cotizar envíos de Correo Argentino</a>.</p>
 
-            <p>Si tenes dudas sobre la instalación o la configuración del plugin, consulta nuestra <a href="../ayuda.html">documentación</a>, revisa las <a href="../faqs.html">preguntas frecuentes</a> o <a href="../contacto.html">escribinos</a> y te ayudamos a dejarlo andando.</p>
+            <p>Si tenés dudas sobre la instalación o la configuración del plugin, consulta nuestra <a href="../ayuda.html">documentación</a>, revisa las <a href="../faqs.html">preguntas frecuentes</a> o <a href="../contacto.html">escribinos</a> y te ayudamos a dejarlo andando.</p>
 
         </div>
 

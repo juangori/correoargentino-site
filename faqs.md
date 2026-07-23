@@ -48,7 +48,7 @@ Si. El plugin es totalmente compatible con el nuevo checkout por bloques de WooC
 
 ### Que version de WooCommerce necesito?
 
-Se requiere WooCommerce 7.0 o superior. Recomendamos siempre usar la ultima version disponible.
+Se requiere WooCommerce 6.0 o superior. Recomendamos siempre usar la ultima version disponible.
 
 ## Recursos relacionados
 

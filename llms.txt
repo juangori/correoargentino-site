@@ -26,7 +26,7 @@ Características principales:
 - Wizard de configuración y diagnóstico integrado
 
 Precio: $62.990 ARS por año (licencia para 1 sitio). Prueba gratuita de 15 días sin tarjeta de crédito.
-Requisitos: WordPress 5.8+, WooCommerce 7.0+.
+Requisitos: WordPress 5.8+, WooCommerce 6.0+.
 Desarrollado por AD Webs (adwebs.com.ar).
 
 ## Páginas principales

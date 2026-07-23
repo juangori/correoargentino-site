@@ -1,4 +1,21 @@
+# Este sitio permite el rastreo y la citación de su contenido por buscadores
+# y motores de respuesta con IA.
+# Resumen legible por LLMs: https://correoargentinopro.com/llms.txt
+
 User-agent: *
+Allow: /
+Disallow: /admin.html
+
+# Crawlers de IA / motores de respuesta — explícitamente bienvenidos
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: anthropic-ai
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
 Allow: /
 Disallow: /admin.html
 
