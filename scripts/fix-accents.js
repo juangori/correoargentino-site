@@ -98,7 +98,9 @@ function fixText(text) {
 }
 
 // Recorre el HTML dejando intactos tags, <script>, <style> y entidades.
-const PROTECT = /<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<[^>]+>|&[a-zA-Z#0-9]+;/g;
+// URLs absolutas y rutas .html se protegen aun en texto visible, para no acentuar slugs
+// (ej. .../envio-...html -> .../envío-...html). Van ANTES de las entidades en la alternancia.
+const PROTECT = /<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<[^>]+>|https?:\/\/[^\s"'<>]+|[A-Za-z0-9._~%/+-]+\.html\b|&[a-zA-Z#0-9]+;/g;
 function fixHtml(html) {
   let out = '', last = 0, m;
   PROTECT.lastIndex = 0;
