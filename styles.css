@@ -2467,6 +2467,7 @@ body {
 .post-hero .post-hero__text .post-hero__date { margin: 10px 0 0; }
 .post-hero__art { display: flex; justify-content: center; align-items: center; }
 .post-hero__art svg { width: 100%; max-width: 340px; height: auto; }
+.post-hero__art img { width: 100%; max-width: 460px; height: auto; border-radius: 18px; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 24px 60px rgba(0,0,0,0.42); }
 
 /* Acento por categoría (badge) */
 .post-hero--envios .post-hero__badge { background: rgba(6,182,212,0.15); border-color: rgba(6,182,212,0.32); color: #67e8f9; }
