@@ -57,8 +57,54 @@
             {
                 "@type": "ListItem",
                 "position": 2,
+                "name": "WooCommerce",
+                "item": "https://correoargentinopro.com/blog/woocommerce/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
                 "name": "Cómo Conectar WooCommerce con AFIP: Facturación Electrónica Automática",
                 "item": "https://correoargentinopro.com/blog/conectar-woocommerce-afip-factura-electronica.html"
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Cómo conecto WooCommerce con AFIP para facturar?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Con un plugin que se conecte al webservice de facturación electrónica de AFIP (WSFEV1). El proceso es: entrar a afip.gob.ar con CUIT y clave fiscal, autorizar el Webservice de Facturación Electrónica (WSFE) desde el Administrador de Relaciones de Clave Fiscal, generar el certificado digital subiendo el archivo CSR que te da el plugin, cargar en WooCommerce el .crt que devuelve AFIP e indicar el número de punto de venta. Antes de operar en producción, testeá siempre en el entorno de homologación."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué necesito antes de configurar la facturación electrónica?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cuatro requisitos previos, todos gestionados en el sitio de AFIP: CUIT activo y sin irregularidades, clave fiscal de nivel 3 o superior, un certificado digital que autorice a tu aplicación a emitir facturas en tu nombre y un punto de venta electrónico dado de alta en la sección Administración de puntos de venta y domicilios. Sin esto no vas a poder configurar ningún plugin."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué tipo de factura emite mi tienda: A, B o C?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Depende de tu condición fiscal. Si sos monotributista emitís únicamente Factura C, sin discriminar IVA, tanto a consumidores finales como a responsables inscriptos. Si sos responsable inscripto, emitís Factura A a otros responsables inscriptos (discriminando IVA) y Factura B a consumidores finales y monotributistas; el plugin debería detectar automáticamente el tipo de comprobante según el CUIT o DNI del comprador."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cómo se incluye el costo de envío en la factura?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Hay dos enfoques: como ítem separado, con su propia descripción e IVA si corresponde, o incluido en el total sin discriminarlo. Para responsables inscriptos el envío está gravado con IVA al 21%, así que es clave que el plugin lo contemple correctamente."
+                }
             }
         ]
     }
@@ -111,7 +157,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
     <div class="page-header__body post-hero__body">
         <div class="post-hero__text">
-            <p class="page-header__breadcrumb"><a href="./">Blog</a> &rarr;</p>
+            <p class="page-header__breadcrumb"><a href="./">Blog</a> &rarr; <a href="woocommerce/">WooCommerce</a> &rarr;</p>
             <span class="post-hero__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg> WooCommerce</span>
             <h1>Cómo Conectar WooCommerce con AFIP: Facturación Electrónica Automática</h1>
             <p class="post-hero__meta">Automatizá la facturación de tu tienda online con AFIP</p>
@@ -231,6 +277,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li><strong>No testar en homologación:</strong> pasar directamente a producción sin probar en el entorno de testing es la causa más común de problemas. Siempre testa primero.</li>
                 <li><strong>Condición fiscal incorrecta:</strong> emitir Factura A a un consumidor final o Factura B a un responsable inscripto genera comprobantes inválidos.</li>
             </ul>
+
+            <h2>Preguntas frecuentes</h2>
+
+            <h3>¿Cómo conecto WooCommerce con AFIP para facturar?</h3>
+            <p>Con un plugin que se conecte al <strong>webservice de facturación electrónica de AFIP (WSFEV1)</strong>. El proceso es: entrar a afip.gob.ar con CUIT y clave fiscal, autorizar el Webservice de Facturación Electrónica (WSFE) desde el Administrador de Relaciones de Clave Fiscal, generar el certificado digital subiendo el archivo CSR que te da el plugin, cargar en WooCommerce el .crt que devuelve AFIP e indicar el número de punto de venta. Antes de operar en producción, testeá siempre en el entorno de homologación.</p>
+
+            <h3>¿Qué necesito antes de configurar la facturación electrónica?</h3>
+            <p>Cuatro requisitos previos, todos gestionados en el sitio de AFIP: <strong>CUIT activo</strong> y sin irregularidades, <strong>clave fiscal de nivel 3 o superior</strong>, un <strong>certificado digital</strong> que autorice a tu aplicación a emitir facturas en tu nombre y un <strong>punto de venta electrónico</strong> dado de alta en la sección "Administración de puntos de venta y domicilios". Sin esto no vas a poder configurar ningún plugin.</p>
+
+            <h3>¿Qué tipo de factura emite mi tienda: A, B o C?</h3>
+            <p>Depende de tu condición fiscal. Si sos <strong>monotributista</strong> emitís únicamente Factura C, sin discriminar IVA, tanto a consumidores finales como a responsables inscriptos. Si sos <strong>responsable inscripto</strong>, emitís Factura A a otros responsables inscriptos (discriminando IVA) y Factura B a consumidores finales y monotributistas; el plugin debería detectar automáticamente el tipo de comprobante según el CUIT o DNI del comprador.</p>
+
+            <h3>¿Cómo se incluye el costo de envío en la factura?</h3>
+            <p>Hay dos enfoques: como <strong>ítem separado</strong>, con su propia descripción e IVA si corresponde, o <strong>incluido en el total</strong> sin discriminarlo. Para responsables inscriptos el envío está gravado con IVA al 21%, así que es clave que el plugin lo contemple correctamente. Lo explicamos en detalle en nuestra guía sobre <a href="como-facturar-envios-ecommerce-argentina.html">cómo facturar envíos en ecommerce en Argentina</a>.</p>
 
             <h2>Automatizar todo: pagos + envíos + facturación</h2>
             <p>El escenario ideal para una tienda WooCommerce en Argentina es tener los tres pilares automatizados:</p>

@@ -40,7 +40,7 @@
             "name": "Correo Argentino Pro",
             "url": "https://correoargentinopro.com"
         },
-        "mainEntityOfPage": "https://correoargentinopro.com/blog/zonas-envío-correo-argentino.html"
+        "mainEntityOfPage": "https://correoargentinopro.com/blog/zonas-envio-correo-argentino.html"
     }
     </script>
     <script type="application/ld+json">
@@ -57,8 +57,54 @@
             {
                 "@type": "ListItem",
                 "position": 2,
+                "name": "Envíos",
+                "item": "https://correoargentinopro.com/blog/envios/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
                 "name": "Zonas de Envío de Correo Argentino: Cómo Funcionan y Qué Tarifas Tienen",
                 "item": "https://correoargentinopro.com/blog/zonas-envio-correo-argentino.html"
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Cómo funcionan las zonas de envío de Correo Argentino?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Correo Argentino divide el país en zonas según la relación entre el origen y el destino del envío. En lugar de calcular cada despacho por la distancia exacta en kilómetros, agrupa las localidades en zonas y aplica tarifas fijas entre cada par de zonas. Por eso el costo depende de la combinación específica de origen y destino, no solo de la distancia en línea recta."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cuáles son las zonas de envío de Correo Argentino?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "El esquema general se estructura en tres categorías: la zona local (envíos dentro de una misma ciudad o área metropolitana, la más económica, con entregas de 1 a 3 días hábiles), la zona regional (entre provincias cercanas, con costo intermedio y plazos de 3 a 5 días hábiles) y la zona nacional o de larga distancia (entre regiones distantes del país, la más costosa, con plazos de 5 a 7 días hábiles o más)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cómo sé qué zona aplica a mi envío?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Necesitás el código postal de origen y el código postal de destino: con esos dos datos, Correo Argentino identifica en qué zona cae cada extremo y aplica la tarifa correspondiente. Podés averiguar el precio zonificado con el cotizador online de Correo Argentino, con las tablas tarifarias oficiales o con la API de MiCorreo."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Las zonas de envío de WooCommerce son iguales a las de Correo Argentino?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Las zonas de WooCommerce son genéricas y manuales: vos creás las agrupaciones de provincias o códigos postales y les asignás un precio fijo, que se desactualiza cada vez que Correo Argentino cambia sus tarifas y puede no coincidir con las zonas reales. Las zonas de Correo Argentino son mucho más granulares (a nivel de código postal) y se actualizan cuando el operador modifica su estructura tarifaria."
+                }
             }
         ]
     }
@@ -111,7 +157,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
     <div class="page-header__body post-hero__body">
         <div class="post-hero__text">
-            <p class="page-header__breadcrumb"><a href="./">Blog</a> &rarr;</p>
+            <p class="page-header__breadcrumb"><a href="./">Blog</a> &rarr; <a href="envios/">Envíos</a> &rarr;</p>
             <span class="post-hero__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18H3a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h11v12"/><path d="M14 9h4l3 3v5a1 1 0 0 1-1 1h-2"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg> Envíos</span>
             <h1>Zonas de Envío de Correo Argentino: Cómo Funcionan y Qué Tarifas Tienen</h1>
             <p class="post-hero__meta">Todo sobre las zonas de envío, la matriz tarifaria y cómo calcular el costo según destino</p>
@@ -320,7 +366,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <h2>Cómo se actualizan las tarifas por zona</h2>
 
-            <p>En Argentina, las tarifas de envío se actualizan con frecuencia debido a la inflación y los ajustes de costos operativos. Correo Argentino puede modificar sus tarifas varias veces al anio, y cuándo lo hace, toda la matriz de zonas se actualiza simultáneamente.</p>
+            <p>En Argentina, las tarifas de envío se actualizan con frecuencia debido a la inflación y los ajustes de costos operativos. Correo Argentino puede modificar sus tarifas varias veces al año, y cuándo lo hace, toda la matriz de zonas se actualiza simultáneamente.</p>
 
             <p>Si manejas tus precios de envío de forma manual en WooCommerce, cada actualización tarifaria implica revisar y corregir todas las combinaciones de zona y peso que hayas configurado. Con decenas de combinaciones posibles, es un trabajo tedioso y propenso a errores.</p>
 
@@ -329,6 +375,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h2>Cotiza tu envío por zona ahora mismo</h2>
 
             <p>Si querés saber cuánto te va a costar un envío a una zona específica, podés usar nuestro <a href="cotizar-envio-correo-argentino.html">cotizador online de Correo Argentino</a>. Solo necesitas ingresar el código postal de origen, el código postal de destino y el peso del paquete. En segundos vas a ver las opciones de envío disponibles con sus precios reales, que ya incluyen la zonificación correspondiente.</p>
+
+            <h2>Preguntas frecuentes</h2>
+
+            <h3>¿Cómo funcionan las zonas de envío de Correo Argentino?</h3>
+            <p>Correo Argentino divide el país en zonas según la relación entre el <strong>origen y el destino</strong> del envío. En lugar de calcular cada despacho por la distancia exacta en kilómetros, agrupa las localidades en zonas y aplica tarifas fijas entre cada par de zonas. Por eso el costo depende de la combinación específica de origen y destino, no solo de la distancia en línea recta.</p>
+
+            <h3>¿Cuáles son las zonas de envío de Correo Argentino?</h3>
+            <p>El esquema general se estructura en tres categorías: la <strong>zona local</strong> (envíos dentro de una misma ciudad o área metropolitana, la más económica, con entregas de 1 a 3 días hábiles), la <strong>zona regional</strong> (entre provincias cercanas, con costo intermedio y plazos de 3 a 5 días hábiles) y la <strong>zona nacional o de larga distancia</strong> (entre regiones distantes del país, la más costosa, con plazos de 5 a 7 días hábiles o más).</p>
+
+            <h3>¿Cómo sé qué zona aplica a mi envío?</h3>
+            <p>Necesitás el <strong>código postal de origen</strong> y el <strong>código postal de destino</strong>: con esos dos datos, Correo Argentino identifica en qué zona cae cada extremo y aplica la tarifa correspondiente. Podés averiguar el precio zonificado con nuestro <a href="cotizar-envio-correo-argentino.html">cotizador online de Correo Argentino</a>, con las tablas tarifarias oficiales o con la API de MiCorreo.</p>
+
+            <h3>¿Las zonas de envío de WooCommerce son iguales a las de Correo Argentino?</h3>
+            <p>No. Las zonas de WooCommerce son <strong>genéricas y manuales</strong>: vos creás las agrupaciones de provincias o códigos postales y les asignás un precio fijo, que se desactualiza cada vez que Correo Argentino cambia sus tarifas y puede no coincidir con las zonas reales. Las zonas de Correo Argentino son mucho más granulares (a nivel de código postal) y se actualizan cuando el operador modifica su estructura tarifaria.</p>
 
             <h2>Siguiente paso</h2>
 

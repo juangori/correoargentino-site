@@ -57,8 +57,54 @@
             {
                 "@type": "ListItem",
                 "position": 2,
+                "name": "WooCommerce",
+                "item": "https://correoargentinopro.com/blog/woocommerce/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
                 "name": "Qué es HPOS en WooCommerce? Todo lo que Necesitás Saber (2026)",
                 "item": "https://correoargentinopro.com/blog/que-es-hpos-woocommerce.html"
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Qué es HPOS en WooCommerce?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "HPOS son las siglas de High-Performance Order Storage, el almacenamiento de pedidos de alto rendimiento de WooCommerce. Antes, los pedidos se guardaban en wp_posts, la misma tabla que WordPress usa para entradas, páginas, productos e imágenes. Con HPOS, WooCommerce usa tablas dedicadas exclusivamente a los pedidos, y eso hace que las consultas a la base de datos sean mucho más rápidas."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Desde qué versión de WooCommerce viene HPOS activado?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "HPOS es el sistema por defecto a partir de WooCommerce 8.2, lanzado a finales de 2023. Si instalás WooCommerce hoy en un sitio nuevo, ya viene activado. Si tenés una tienda existente, WooCommerce te ofrece la opción de migrar cuando quieras."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cómo sé si mi tienda ya usa HPOS?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Andá a WooCommerce > Ajustes > Avanzado > Funcionalidades en tu panel de WordPress y buscá la opción High-Performance Order Storage. Si está activada, tu tienda ya está usando HPOS. También podés verificarlo en WooCommerce > Estado, donde figura si está corriendo en modo compatibilidad o en modo nativo."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué pasa si un plugin no es compatible con HPOS?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Puede pasar una de dos cosas: que el plugin no funcione correctamente (datos que no se guardan, campos que no aparecen, errores en el panel), o que tengas que usar el modo compatibilidad, que mantiene los dos sistemas en paralelo y anula las ventajas de rendimiento de HPOS. Por eso conviene revisar que tus plugins de envíos, pagos y gestión de pedidos declaren compatibilidad antes de activarlo. Correo Argentino Pro es compatible con HPOS desde el primer día."
+                }
             }
         ]
     }
@@ -111,7 +157,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
     <div class="page-header__body post-hero__body">
         <div class="post-hero__text">
-            <p class="page-header__breadcrumb"><a href="./">Blog</a> &rarr;</p>
+            <p class="page-header__breadcrumb"><a href="./">Blog</a> &rarr; <a href="woocommerce/">WooCommerce</a> &rarr;</p>
             <span class="post-hero__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg> WooCommerce</span>
             <h1>&iquest;Qu&eacute; es HPOS en WooCommerce? Todo lo que Necesit&aacute;s Saber (2026)</h1>
             <p class="post-hero__meta">El nuevo sistema de almacenamiento de pedidos de WooCommerce explicado simple</p>
@@ -199,6 +245,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p><a href="/">Correo Argentino Pro</a> es <strong>totalmente compatible con HPOS desde el primer día</strong>. Todos los datos relacionados con los envíos, como números de seguimiento, etiquetas, selección de sucursales y cotizaciones, se almacenan utilizando el sistema nativo de metadata de pedidos de WooCommerce. Esto significa que funcionan perfectamente tanto con el sistema legacy como con HPOS.</p>
             <p>No necesitas configurar nada especial ni activar ninguna opción. Si tenés HPOS activado, Correo Argentino Pro lo detecta automáticamente y funciona sin ningún problema. Si todavía estás usando el sistema legacy, también funciona perfecto. Es completamente transparente.</p>
             <p>Podés ver cómo instalar y configurar el plugin en nuestra guía paso a paso sobre <a href="como-integrar-correo-argentino-woocommerce.html">cómo integrar Correo Argentino con WooCommerce</a>.</p>
+
+            <h2>Preguntas frecuentes</h2>
+
+            <h3>¿Qué es HPOS en WooCommerce?</h3>
+            <p>HPOS son las siglas de <strong>High-Performance Order Storage</strong>, el almacenamiento de pedidos de alto rendimiento de WooCommerce. Antes, los pedidos se guardaban en <code>wp_posts</code>, la misma tabla que WordPress usa para entradas, páginas, productos e imágenes. Con HPOS, WooCommerce usa <strong>tablas dedicadas exclusivamente a los pedidos</strong>, y eso hace que las consultas a la base de datos sean mucho más rápidas.</p>
+
+            <h3>¿Desde qué versión de WooCommerce viene HPOS activado?</h3>
+            <p>HPOS es <strong>el sistema por defecto a partir de WooCommerce 8.2</strong>, lanzado a finales de 2023. Si instalás WooCommerce hoy en un sitio nuevo, ya viene activado. Si tenés una tienda existente, WooCommerce te ofrece la opción de migrar cuando quieras.</p>
+
+            <h3>¿Cómo sé si mi tienda ya usa HPOS?</h3>
+            <p>Andá a <strong>WooCommerce &gt; Ajustes &gt; Avanzado &gt; Funcionalidades</strong> en tu panel de WordPress y buscá la opción "High-Performance Order Storage". Si está activada, tu tienda ya está usando HPOS. También podés verificarlo en <strong>WooCommerce &gt; Estado</strong>, donde figura si está corriendo en modo compatibilidad o en modo nativo.</p>
+
+            <h3>¿Qué pasa si un plugin no es compatible con HPOS?</h3>
+            <p>Puede pasar una de dos cosas: que el plugin <strong>no funcione correctamente</strong> (datos que no se guardan, campos que no aparecen, errores en el panel), o que tengas que usar el <strong>modo compatibilidad</strong>, que mantiene los dos sistemas en paralelo y anula las ventajas de rendimiento de HPOS. Por eso conviene revisar que tus plugins de envíos, pagos y gestión de pedidos declaren compatibilidad antes de activarlo. <a href="/">Correo Argentino Pro</a> es compatible con HPOS desde el primer día.</p>
 
             <h2>Conclusión</h2>
             <p>HPOS es un cambio positivo para WooCommerce que hace que tu tienda funcione mejor, especialmente a medida que crece. Como dueño de tienda, lo único que necesitas recordar es: <strong>asegurate de que los plugins que usas sean compatibles con HPOS</strong> antes de activarlo. Si todos tus plugins lo soportan, activa HPOS y disfruta de un panel de administración más rápido.</p>

@@ -57,8 +57,54 @@
             {
                 "@type": "ListItem",
                 "position": 2,
+                "name": "WooCommerce",
+                "item": "https://correoargentinopro.com/blog/woocommerce/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
                 "name": "Checkout por Bloques en WooCommerce: Qué Es y Por Qué Importa (2026)",
                 "item": "https://correoargentinopro.com/blog/checkout-por-bloques-woocommerce.html"
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Qué es el checkout por bloques de WooCommerce?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Es el nuevo sistema de checkout de WooCommerce que reemplaza al clásico. En vez de generar la página con el shortcode [woocommerce_checkout], usa el editor de bloques de WordPress (Gutenberg): la página está compuesta por bloques individuales que podés mover, agregar o quitar desde el editor visual, sin tocar código. Además carga más rápido y soporta funcionalidades nuevas que el checkout clásico no puede usar."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cómo sé si mi tienda usa el checkout clásico o el de bloques?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "En tu panel de WordPress andá a Páginas, buscá la página de Checkout (o Finalizar compra) y editala. Si ves bloques en el editor, con el bloque Checkout de WooCommerce y sus sub-bloques para dirección, envío y pago, estás usando el checkout por bloques. Si en el contenido ves el shortcode [woocommerce_checkout], seguís con el clásico."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Desde qué versión de WooCommerce el checkout por bloques es el predeterminado?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A partir de WooCommerce 8.3+, las instalaciones nuevas usan el checkout por bloques por defecto. Las tiendas existentes pueden migrar cuando quieran, y WooCommerce ofrece herramientas para hacer la transición de forma gradual."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué pasa si un plugin no es compatible con el checkout por bloques?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sus opciones simplemente no aparecen en el checkout: el cliente no ve el campo, el selector ni la opción que el plugin debería mostrar. Esto ocurre porque el checkout clásico se extiende con hooks de PHP y el de bloques usa un sistema basado en JavaScript y React. Es especialmente riesgoso con plugins de envío: si el selector de sucursales no aparece, el cliente no puede elegir dónde retirar su paquete."
+                }
             }
         ]
     }
@@ -111,7 +157,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
     <div class="page-header__body post-hero__body">
         <div class="post-hero__text">
-            <p class="page-header__breadcrumb"><a href="./">Blog</a> &rarr;</p>
+            <p class="page-header__breadcrumb"><a href="./">Blog</a> &rarr; <a href="woocommerce/">WooCommerce</a> &rarr;</p>
             <span class="post-hero__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg> WooCommerce</span>
             <h1>Checkout por Bloques en WooCommerce: Qu&eacute; Es y Por Qu&eacute; Importa (2026)</h1>
             <p class="post-hero__meta">El nuevo checkout de WooCommerce explicado para due&ntilde;os de tiendas</p>
@@ -165,7 +211,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li>Usa el shortcode <code>[woocommerce_checkout]</code>.</li>
                 <li>La estructura está definida por templates PHP que vienen con WooCommerce o con tu tema.</li>
                 <li>Personalizar requiere editar archivos PHP o usar plugins adicionales.</li>
-                <li>Funciona bien, pero es una tecnología de hace 10 anios.</li>
+                <li>Funciona bien, pero es una tecnología de hace 10 años.</li>
                 <li>Muchos plugins fueron desarrollados para este checkout, así que la compatibilidad es amplia.</li>
             </ul>
             <h3>Checkout por bloques</h3>
@@ -195,7 +241,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <h2>El problema de compatibilidad con plugins</h2>
             <p>Acá es donde las cosas se ponen importantes. Al igual que con <a href="que-es-hpos-woocommerce.html">HPOS (High-Performance Order Storage)</a>, el checkout por bloques requiere que los plugins sean <strong>específicamente compatibles</strong>.</p>
-            <p>En el checkout clásico, los plugins agregaban campos, botones y opciones usando "hooks" de PHP, un sistema que lleva anios funcionando y que todos los desarrolladores de WooCommerce conocen. El checkout por bloques usa un sistema completamente diferente basado en JavaScript y React. Esto significa que un plugin que funcionaba perfecto en el checkout clásico <strong>puede no funcionar en el de bloques</strong> si no fue actualizado.</p>
+            <p>En el checkout clásico, los plugins agregaban campos, botones y opciones usando "hooks" de PHP, un sistema que lleva años funcionando y que todos los desarrolladores de WooCommerce conocen. El checkout por bloques usa un sistema completamente diferente basado en JavaScript y React. Esto significa que un plugin que funcionaba perfecto en el checkout clásico <strong>puede no funcionar en el de bloques</strong> si no fue actualizado.</p>
             <p>Los plugins más afectados son:</p>
             <ul>
                 <li><strong>Plugins de envío:</strong> que muestran opciones, selectores o campos adicionales en el checkout (como selectores de sucursales, horarios de entrega, etc.).</li>
@@ -225,6 +271,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li><strong>Datos del envío en el pedido:</strong> toda la información (sucursal elegida, cotización, tipo de envío) se guarda en el pedido de WooCommerce de forma nativa.</li>
             </ul>
             <p>No necesitas configurar nada distinto según el tipo de checkout que uses. Instala el plugin, configura tus métodos de envío y Correo Argentino Pro detecta automáticamente qué tipo de checkout tiene tu tienda y se adapta. Podés ver el proceso completo en nuestra guía sobre <a href="como-integrar-correo-argentino-woocommerce.html">cómo integrar Correo Argentino con WooCommerce</a>.</p>
+
+            <h2>Preguntas frecuentes</h2>
+
+            <h3>¿Qué es el checkout por bloques de WooCommerce?</h3>
+            <p>Es el nuevo sistema de checkout de WooCommerce que reemplaza al clásico. En vez de generar la página con el shortcode <code>[woocommerce_checkout]</code>, usa el <strong>editor de bloques de WordPress</strong> (Gutenberg): la página está compuesta por bloques individuales que podés mover, agregar o quitar desde el editor visual, sin tocar código. Además carga más rápido y soporta funcionalidades nuevas que el checkout clásico no puede usar.</p>
+
+            <h3>¿Cómo sé si mi tienda usa el checkout clásico o el de bloques?</h3>
+            <p>En tu panel de WordPress andá a <strong>Páginas</strong>, buscá la página de <strong>Checkout</strong> (o "Finalizar compra") y editala. Si ves <strong>bloques en el editor</strong>, con el bloque "Checkout" de WooCommerce y sus sub-bloques para dirección, envío y pago, estás usando el checkout por bloques. Si en el contenido ves el shortcode <code>[woocommerce_checkout]</code>, seguís con el clásico.</p>
+
+            <h3>¿Desde qué versión de WooCommerce el checkout por bloques es el predeterminado?</h3>
+            <p>A partir de <strong>WooCommerce 8.3+</strong>, las instalaciones nuevas usan el checkout por bloques por defecto. Las tiendas existentes pueden migrar cuando quieran, y WooCommerce ofrece herramientas para hacer la transición de forma gradual.</p>
+
+            <h3>¿Qué pasa si un plugin no es compatible con el checkout por bloques?</h3>
+            <p>Sus opciones <strong>simplemente no aparecen</strong> en el checkout: el cliente no ve el campo, el selector ni la opción que el plugin debería mostrar. Esto ocurre porque el checkout clásico se extiende con hooks de PHP y el de bloques usa un sistema basado en JavaScript y React. Es especialmente riesgoso con plugins de envío: si el selector de sucursales no aparece, el cliente no puede elegir dónde retirar su paquete.</p>
 
             <h2>Nuestra recomendación</h2>
             <p>Si estás creando una tienda nueva, usa el checkout por bloques. Es el estándar actual de WooCommerce, carga más rápido, se ve mejor y te da más flexibilidad para personalizar.</p>

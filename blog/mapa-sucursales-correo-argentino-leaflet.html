@@ -57,8 +57,54 @@
             {
                 "@type": "ListItem",
                 "position": 2,
+                "name": "WooCommerce",
+                "item": "https://correoargentinopro.com/blog/woocommerce/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
                 "name": "Mapa de Sucursales de Correo Argentino en tu Tienda WooCommerce (2026)",
                 "item": "https://correoargentinopro.com/blog/mapa-sucursales-correo-argentino-leaflet.html"
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Cómo agrego un mapa de sucursales de Correo Argentino en el checkout?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Instalá y activá Correo Argentino Pro en tu tienda, andá a WooCommerce > Ajustes > Envío, elegí la zona de envío que querés configurar y agregá Correo Argentino Pro como método de envío. En el tipo de entrega seleccioná Retiro en sucursal y listo: el mapa aparece automáticamente cuando tus clientes eligen esa opción en el checkout."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Necesito una clave de Google Maps para mostrar el mapa?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. No hace falta configurar APIs de mapas ni obtener claves de Google Maps ni hacer nada técnico: el plugin se encarga de todo. Además funciona tanto con el checkout clásico como con el nuevo checkout por bloques de WooCommerce, así que no importa qué versión de checkout uses."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿El mapa de sucursales funciona bien en el celular?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí. En celular el layout se adapta: el mapa y la lista de sucursales se apilan verticalmente, con botones grandes y fáciles de tocar, y el mapa responde a gestos táctiles (pinch para zoom, swipe para mover). La geolocalización también funciona en mobile y ahí es donde mejor rinde, porque el GPS es más preciso: el cliente ve al toque cuál es la sucursal más cercana, con la distancia indicada."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué datos de la sucursal quedan guardados en el pedido?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Toda la información de la sucursal elegida se guarda automáticamente en el pedido de WooCommerce: nombre, dirección completa (calle, número y localidad), ciudad y provincia, y código postal. Cuando ves el pedido en tu panel sabés exactamente a qué sucursal despachar, sin ambigüedades ni errores. Esto es clave al momento de generar las etiquetas de envío, porque la sucursal de destino tiene que coincidir con la que eligió el cliente."
+                }
             }
         ]
     }
@@ -111,7 +157,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
     <div class="page-header__body post-hero__body">
         <div class="post-hero__text">
-            <p class="page-header__breadcrumb"><a href="./">Blog</a> &rarr;</p>
+            <p class="page-header__breadcrumb"><a href="./">Blog</a> &rarr; <a href="woocommerce/">WooCommerce</a> &rarr;</p>
             <span class="post-hero__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg> WooCommerce</span>
             <h1>Mapa de Sucursales de Correo Argentino en tu Tienda WooCommerce</h1>
             <p class="post-hero__meta">Selector visual de sucursales con mapa interactivo en el checkout</p>
@@ -214,6 +260,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </ol>
             <p>No necesitas configurar APIs de mapas, ni obtener claves de Google Maps, ni hacer nada técnico. El plugin se encarga de todo. Podés ver el proceso completo en nuestra guía sobre <a href="como-integrar-correo-argentino-woocommerce.html">cómo integrar Correo Argentino con WooCommerce</a>.</p>
             <p>El mapa funciona tanto con el checkout clásico como con el nuevo <a href="checkout-por-bloques-woocommerce.html">checkout por bloques de WooCommerce</a>, así que no importa qué versión de checkout uses.</p>
+
+            <h2>Preguntas frecuentes</h2>
+
+            <h3>¿Cómo agrego un mapa de sucursales de Correo Argentino en el checkout?</h3>
+            <p>Instalá y activá <a href="/">Correo Argentino Pro</a> en tu tienda, andá a <strong>WooCommerce &gt; Ajustes &gt; Envío</strong>, elegí la zona de envío que querés configurar y agregá "Correo Argentino Pro" como método de envío. En el tipo de entrega seleccioná <strong>"Retiro en sucursal"</strong> y listo: el mapa aparece automáticamente cuando tus clientes eligen esa opción en el checkout.</p>
+
+            <h3>¿Necesito una clave de Google Maps para mostrar el mapa?</h3>
+            <p>No. <strong>No hace falta configurar APIs de mapas ni obtener claves de Google Maps</strong> ni hacer nada técnico: el plugin se encarga de todo. Además funciona tanto con el checkout clásico como con el nuevo <a href="checkout-por-bloques-woocommerce.html">checkout por bloques de WooCommerce</a>, así que no importa qué versión de checkout uses.</p>
+
+            <h3>¿El mapa de sucursales funciona bien en el celular?</h3>
+            <p>Sí. En celular el layout se adapta: el mapa y la lista de sucursales se apilan verticalmente, con botones grandes y fáciles de tocar, y el mapa responde a gestos táctiles (pinch para zoom, swipe para mover). La <strong>geolocalización</strong> también funciona en mobile y ahí es donde mejor rinde, porque el GPS es más preciso: el cliente ve al toque cuál es la sucursal más cercana, con la distancia indicada. Como la mayoría de las compras online en Argentina se hacen desde el celular, esa optimización es fundamental.</p>
+
+            <h3>¿Qué datos de la sucursal quedan guardados en el pedido?</h3>
+            <p>Toda la información de la sucursal elegida se guarda automáticamente en el pedido de WooCommerce: <strong>nombre, dirección completa (calle, número y localidad), ciudad y provincia, y código postal</strong>. Cuando ves el pedido en tu panel sabés exactamente a qué sucursal despachar, sin ambigüedades ni errores. Esto es clave al momento de <a href="como-integrar-correo-argentino-woocommerce.html">generar las etiquetas de envío</a>, porque la sucursal de destino tiene que coincidir con la que eligió el cliente.</p>
 
             <h2>Conclusión</h2>
             <p>El selector de sucursales con mapa interactivo es una de las funcionalidades que más impacto tiene en la experiencia de compra de tu tienda. Reduce la fricción en el checkout, minimiza errores en la selección de sucursales y hace que el proceso de retiro sea claro tanto para el comprador como para vos.</p>

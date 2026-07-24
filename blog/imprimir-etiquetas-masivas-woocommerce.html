@@ -57,8 +57,54 @@
             {
                 "@type": "ListItem",
                 "position": 2,
+                "name": "WooCommerce",
+                "item": "https://correoargentinopro.com/blog/woocommerce/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
                 "name": "Cómo Imprimir Varias Etiquetas de Envío en WooCommerce (Masivo)",
                 "item": "https://correoargentinopro.com/blog/imprimir-etiquetas-masivas-woocommerce.html"
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Cómo imprimo varias etiquetas de envío en WooCommerce?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Con las acciones masivas (bulk actions) del listado de pedidos. Andá a WooCommerce > Pedidos, filtrá por estado (por ejemplo En proceso), seleccioná los pedidos con las casillas de la izquierda, abrí el menú Acciones en lote y aplicá la acción. Con Correo Argentino Pro ese menú suma la opción de crear los envíos y generar todas las etiquetas de una sola vez, y después descargás un único PDF con todas las etiquetas listas para imprimir."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Puedo descargar en lote etiquetas de envíos que ya había creado?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí. Podés seleccionar pedidos que ya tienen el envío creado y descargar sus etiquetas en lote sin regenerarlas. Es el caso típico de quien crea los envíos a medida que entran los pedidos durante la mañana y a la tarde se sienta a imprimir y preparar todos los paquetes juntos."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué impresora y qué tamaño de etiqueta conviene?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Si despachás más de 10 pedidos por día, una impresora térmica es la mejor inversión: no usa tinta ni toner, imprime una etiqueta en 1-2 segundos y el código de barras sale muy nítido. El formato estándar es 10 x 15 cm (4 x 6 pulgadas), que es el tamaño que usa Correo Argentino en sus etiquetas de Paq.Ar. Si recién arrancás, también podés imprimir en A4 con una impresora común al 100% (sin ajustar a página) y recortar cada etiqueta."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué hago si una etiqueta sale mal?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Depende del caso. Si el envío todavía no se despachó, podés anularlo desde el panel de WooCommerce o desde el portal de Correo Argentino y generar uno nuevo con los datos corregidos. Si ya imprimiste la etiqueta pero un dato está mal, no la pegues: corregí, generala de nuevo e imprimila otra vez. Y si solo salió borrosa o cortada, volvé a imprimirla: el envío ya está creado, así que reimprimir no genera un duplicado."
+                }
             }
         ]
     }
@@ -111,7 +157,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
     <div class="page-header__body post-hero__body">
         <div class="post-hero__text">
-            <p class="page-header__breadcrumb"><a href="./">Blog</a> &rarr;</p>
+            <p class="page-header__breadcrumb"><a href="./">Blog</a> &rarr; <a href="woocommerce/">WooCommerce</a> &rarr;</p>
             <span class="post-hero__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg> WooCommerce</span>
             <h1>Cómo Imprimir Varias Etiquetas de Envío en WooCommerce</h1>
             <p class="post-hero__meta">Generación e impresión masiva de etiquetas de Correo Argentino</p>
@@ -344,6 +390,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </ul>
 
             <p>Si querés conocer todos los beneficios de usar Correo Argentino para los envíos de tu tienda online, revisa nuestra nota sobre <a href="envios-correo-argentino-tienda-online.html">envíos de Correo Argentino para tiendas online</a>.</p>
+
+            <h2>Preguntas frecuentes</h2>
+
+            <h3>¿Cómo imprimo varias etiquetas de envío en WooCommerce?</h3>
+            <p>Con las <strong>acciones masivas (bulk actions)</strong> del listado de pedidos. Andá a <strong>WooCommerce &gt; Pedidos</strong>, filtrá por estado (por ejemplo "En proceso"), seleccioná los pedidos con las casillas de la izquierda, abrí el menú "Acciones en lote" y aplicá la acción. Con <a href="/">Correo Argentino Pro</a> ese menú suma la opción de crear los envíos y generar todas las etiquetas de una sola vez, y después descargás <strong>un único PDF con todas las etiquetas</strong> listas para imprimir.</p>
+
+            <h3>¿Puedo descargar en lote etiquetas de envíos que ya había creado?</h3>
+            <p>Sí. Podés seleccionar pedidos que <strong>ya tienen el envío creado</strong> y descargar sus etiquetas en lote sin regenerarlas. Es el caso típico de quien crea los envíos a medida que entran los pedidos durante la mañana y a la tarde se sienta a imprimir y preparar todos los paquetes juntos.</p>
+
+            <h3>¿Qué impresora y qué tamaño de etiqueta conviene?</h3>
+            <p>Si despachás más de 10 pedidos por día, una <strong>impresora térmica</strong> es la mejor inversión: no usa tinta ni toner, imprime una etiqueta en 1-2 segundos y el código de barras sale muy nítido. El formato estándar es <strong>10 x 15 cm (4" x 6")</strong>, que es el tamaño que usa Correo Argentino en sus etiquetas de Paq.Ar. Si recién arrancás, también podés imprimir en A4 con una impresora común al 100% (sin "ajustar a página") y recortar cada etiqueta.</p>
+
+            <h3>¿Qué hago si una etiqueta sale mal?</h3>
+            <p>Depende del caso. Si el envío todavía no se despachó, podés <strong>anularlo</strong> desde el panel de WooCommerce o desde el portal de Correo Argentino y generar uno nuevo con los datos corregidos. Si ya imprimiste la etiqueta pero un dato está mal, no la pegues: corregí, generala de nuevo e imprimila otra vez. Y si solo salió borrosa o cortada, volvé a imprimirla: el envío ya está creado, así que reimprimir <strong>no genera un duplicado</strong>.</p>
 
             <h2>Conclusión: deja de perder tiempo con etiquetas manuales</h2>
 
