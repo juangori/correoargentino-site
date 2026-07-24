@@ -2440,6 +2440,12 @@ body {
 .post-hero h1 { text-align: left; margin-bottom: 12px; }
 .post-hero__meta { text-align: left; max-width: none; margin: 0; }
 .post-hero__date { text-align: left; margin: 10px 0 0; font-size: 0.85rem; font-weight: 500; color: rgba(255,255,255,0.42); }
+/* Los <p> del hero heredaban `.page-header p` (max-width:520px + margin:0 auto),
+   que los centraba y desalineaba respecto al h1 y la ceja. Reset con specificity suficiente. */
+.post-hero .post-hero__text p { max-width: none; }
+.post-hero .post-hero__text .page-header__breadcrumb { margin: 0 0 12px; }
+.post-hero .post-hero__text .post-hero__meta { margin: 0; }
+.post-hero .post-hero__text .post-hero__date { margin: 10px 0 0; }
 .post-hero__art { display: flex; justify-content: center; align-items: center; }
 .post-hero__art svg { width: 100%; max-width: 340px; height: auto; }
 
