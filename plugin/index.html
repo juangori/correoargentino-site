@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plugin de Correo Argentino para WooCommerce | Correo Argentino Pro</title>
+    <meta name="description" content="El plugin de Correo Argentino para WooCommerce: cotización en tiempo real, selector de sucursales con mapa, etiquetas PDF y tracking automático. Licencia anual desde $62.990. Probalo gratis 15 días.">
+    <link rel="canonical" href="https://correoargentinopro.com/plugin/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Correo Argentino Pro">
+    <meta property="og:title" content="Plugin de Correo Argentino para WooCommerce | Correo Argentino Pro">
+    <meta property="og:description" content="El plugin de Correo Argentino para WooCommerce: cotización en tiempo real, selector de sucursales con mapa, etiquetas PDF y tracking automático. Probalo gratis 15 días.">
+    <meta property="og:url" content="https://correoargentinopro.com/plugin/">
+    <meta property="og:image" content="https://correoargentinopro.com/og-image.png">
+    <meta property="og:locale" content="es_AR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Plugin de Correo Argentino para WooCommerce">
+    <meta name="twitter:description" content="Cotización en tiempo real, sucursales con mapa, etiquetas y tracking. Probalo gratis 15 días.">
+    <meta name="twitter:image" content="https://correoargentinopro.com/og-image.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preload" href="/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/styles.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Correo Argentino Pro",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "WordPress, WooCommerce",
+        "description": "Plugin premium de WooCommerce para integrar Correo Argentino. Cotización en tiempo real vía MiCorreo, selector de sucursales con mapa interactivo, creación de envíos, etiquetas PDF, tracking automático y acciones masivas.",
+        "url": "https://correoargentinopro.com/plugin/",
+        "image": "https://correoargentinopro.com/og-image.png",
+        "offers": {
+            "@type": "Offer",
+            "price": "62990",
+            "priceCurrency": "ARS",
+            "availability": "https://schema.org/InStock",
+            "url": "https://correoargentinopro.com/plugin/",
+            "priceValidUntil": "2026-12-31"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "AD Webs",
+            "url": "https://adwebs.com.ar"
+        },
+        "softwareRequirements": "WooCommerce 6.0+, WordPress 5.8+, PHP 7.4+",
+        "dateModified": "2026-07-25",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "6",
+            "bestRating": "5"
+        },
+        "featureList": [
+            "Cotización en tiempo real vía API MiCorreo",
+            "Selector de sucursales con mapa interactivo Leaflet",
+            "Creación de envíos MiCorreo y Paq.Ar",
+            "Generación de etiquetas PDF",
+            "Tracking automático con notificaciones por email",
+            "Acciones masivas y exportación CSV",
+            "Compatible con HPOS y checkout por bloques"
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://correoargentinopro.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Plugin", "item": "https://correoargentinopro.com/plugin/" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Qué es el plugin Correo Argentino Pro?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Es un plugin premium para WooCommerce que integra Correo Argentino en tu tienda: cotiza envíos en tiempo real en el checkout, muestra un selector de sucursales con mapa, crea envíos en MiCorreo y Paq.Ar, genera etiquetas PDF y hace el seguimiento automático de cada pedido." }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Puedo probar el plugin antes de comprar?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sí. La prueba gratuita de 15 días incluye todas las funciones, sin límites y sin tarjeta de crédito. Se desactiva sola al terminar." }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Funciona con mi tema y mi versión de WooCommerce?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sí. Es compatible con cualquier tema de WooCommerce, con HPOS, checkout clásico y checkout por bloques. Requiere WooCommerce 6.0+, WordPress 5.8+ y PHP 7.4+." }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cómo recibo el plugin después de pagar?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Al instante. Después de pagar con Mercado Pago, tu clave de licencia aparece en pantalla y se envía a tu email junto con el link de descarga. La activación toma 30 segundos." }
+            },
+            {
+                "@type": "Question",
+                "name": "¿La licencia sirve para cuántos sitios?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Cada licencia anual habilita 1 sitio. Podés cambiar de dominio cuando quieras: desactivás la licencia en el sitio actual y la activás en el nuevo, sin costo extra." }
+            }
+        ]
+    }
+    </script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5PL6T2RH');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PL6T2RH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="dark-page">
+
+<!-- Hero (navbar inside) -->
+<header class="pg-hero">
+    <nav class="navbar">
+        <div class="navbar__inner">
+            <a href="/" class="navbar__brand">
+                <svg width="38" height="38" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="nEnv" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient>
+                        <linearGradient id="nPro" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient>
+                    </defs>
+                    <rect x="6" y="18" width="56" height="40" rx="8" fill="white" opacity="0.95"/>
+                    <path d="M6 24 L34 44 L62 24" stroke="url(#nEnv)" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <rect x="40" y="44" width="36" height="20" rx="7" fill="url(#nPro)"/>
+                    <text x="58" y="58.5" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="12.5" font-weight="800" fill="white" letter-spacing="2.5">PRO</text>
+                </svg>
+                <span class="navbar__brand-text">CA Pro</span>
+            </a>
+            <button class="navbar__toggle" aria-label="Menu" onclick="document.querySelector('.navbar__menu').classList.toggle('open')">&#9776;</button>
+            <ul class="navbar__menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/plugin/" class="active">Plugin</a></li>
+                <li><a href="/#cotizador">Cotizador</a></li>
+                <li class="navbar__dropdown">
+                    <span class="navbar__dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Ayuda</span>
+                    <ul class="navbar__submenu">
+                        <li><a href="/ayuda.html"><strong>Centro de Ayuda</strong><span>Guías y documentación</span></a></li>
+                        <li><a href="/log-de-actualizaciones-plugin.html"><strong>Plugin Updates</strong><span>Historial de versiones</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="/faqs.html">FAQs</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="pg-hero__body">
+        <div class="container pg-hero__grid">
+            <div class="pg-hero__text">
+                <span class="hero__badge">Plugin Premium para WooCommerce</span>
+                <h1>El plugin de Correo Argentino para WooCommerce</h1>
+                <p>Cotización en tiempo real, sucursales con mapa, etiquetas y tracking automático. Todo lo que tu tienda necesita para vender y despachar con Correo Argentino, sin cargar cada envío a mano.</p>
+                <div class="pg-hero__cta-row">
+                    <a href="#precio" class="pg-btn pg-btn--primary">Comprar licencia &rarr;</a>
+                    <button type="button" class="pg-btn pg-btn--ghost" onclick="openTrialModal()">Probar gratis 15 días</button>
+                </div>
+                <ul class="pg-trust">
+                    <li><span class="pg-trust__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4,8/5 &middot; tiendas reales</li>
+                    <li>Sin tarjeta de crédito para la prueba</li>
+                    <li>WooCommerce 6.0+ &middot; HPOS &middot; Checkout por bloques</li>
+                </ul>
+            </div>
+            <div class="pg-hero__media" aria-hidden="false">
+                <div class="pg-hero__frame">
+                    <img src="/assets/screenshot-dashboard.webp" width="1100" height="595" alt="Panel de Correo Argentino Pro dentro de WooCommerce con estadísticas de envíos y estado de conexión" fetchpriority="high" decoding="async">
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Last update widget -->
+<section class="update-widget">
+    <div class="container">
+        <a href="/log-de-actualizaciones-plugin.html" class="update-widget__card">
+            <span class="update-widget__dot" aria-hidden="true"></span>
+            <span class="update-widget__text">
+                <strong>Última actualización: v1.0.44</strong>
+                23 de junio de 2026 &middot; Ver historial completo
+            </span>
+            <span class="update-widget__arrow" aria-hidden="true">&rarr;</span>
+        </a>
+    </div>
+</section>
+
+<!-- Compatibility -->
+<section class="compat">
+    <div class="container">
+        <p class="compat__label">Compatible con</p>
+        <div class="compat__grid">
+            <div class="compat__item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="68" height="22" viewBox="0 0 95 26" aria-label="Woo"><path d="M12.0825 25.2704C14.8471 25.2704 17.0657 23.9052 18.7381 20.7651L22.4584 13.8023V19.707C22.4584 23.1884 24.7111 25.2704 28.1925 25.2704C30.923 25.2704 32.9368 24.0758 34.8822 20.7651L43.4492 6.29339C45.3264 3.11918 43.9953 0.72998 39.8654 0.72998C37.6469 0.72998 36.2134 1.44674 34.9164 3.87006L29.0117 14.9628V5.09879C29.0117 2.1635 27.6123 0.72998 25.0183 0.72998C22.9704 0.72998 21.3321 1.6174 20.0692 4.07485L14.5058 14.9628V5.20119C14.5058 2.0611 13.2088 0.72998 10.0687 0.72998H3.65206C1.22873 0.72998 0 1.85632 0 3.93833C0 6.02034 1.29699 7.21494 3.65206 7.21494H6.28017V19.6729C6.28017 23.1884 8.63523 25.2704 12.0825 25.2704Z" fill="#7f54b3"/><path fill-rule="evenodd" clip-rule="evenodd" d="M55.9772 0.72998C48.9803 0.72998 43.6217 5.95208 43.6217 13.0173C43.6217 20.0825 49.0144 25.2704 55.9772 25.2704C62.94 25.2704 68.2645 20.0483 68.2986 13.0173C68.2986 5.95208 62.94 0.72998 55.9772 0.72998ZM55.9772 17.7274C53.3491 17.7274 51.5401 15.7478 51.5401 13.0173C51.5401 10.2868 53.3491 8.27301 55.9772 8.27301C58.6053 8.27301 60.4143 10.2868 60.4143 13.0173C60.4143 15.7478 58.6395 17.7274 55.9772 17.7274Z" fill="#7f54b3"/><path fill-rule="evenodd" clip-rule="evenodd" d="M70.0369 13.0173C70.0369 5.95208 75.3955 0.72998 82.3583 0.72998C89.3211 0.72998 94.6797 5.98621 94.6797 13.0173C94.6797 20.0483 89.3211 25.2704 82.3583 25.2704C75.3955 25.2704 70.0369 20.0825 70.0369 13.0173ZM77.9554 13.0173C77.9554 15.7478 79.6961 17.7274 82.3583 17.7274C84.9864 17.7274 86.7954 15.7478 86.7954 13.0173C86.7954 10.2868 84.9864 8.27301 82.3583 8.27301C79.7302 8.27301 77.9554 10.2868 77.9554 13.0173Z" fill="#7f54b3"/></svg>
+            </div>
+            <div class="compat__item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-2 2.5h3L12 7"/><path d="M12 22V7"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/></svg>
+                <span>HPOS</span>
+            </div>
+            <div class="compat__item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+                <span>Checkout por bloques</span>
+            </div>
+            <div class="compat__item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                <span>MiCorreo + Paq.Ar</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="features" id="funciones">
+    <div class="container">
+        <h2 class="features__title">Todo lo que necesitás para enviar con Correo Argentino</h2>
+        <div class="features__grid">
+            <div class="feature-card">
+                <div class="feature-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg></div>
+                <h3>Cotización en tiempo real</h3>
+                <p>Tus clientes ven el costo de envío actualizado al instante en el checkout. Integración directa con la API de MiCorreo.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></div>
+                <h3>Selector de sucursales con mapa</h3>
+                <p>Modal interactivo con mapa Leaflet, búsqueda, geolocalización y ordenamiento por cercanía. +3000 sucursales.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/></svg></div>
+                <h3>Creación de envíos</h3>
+                <p>Creá envíos en Correo Argentino desde el panel de WooCommerce. Soporta MiCorreo (PyMEs) y Paq.Ar (empresas).</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><line x1="10" x2="8" y1="9" y2="9"/></svg></div>
+                <h3>Etiquetas PDF</h3>
+                <p>Genera e imprime rótulos de envío directamente desde cada pedido. Disponible para clientes Paq.Ar con acuerdo comercial.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg></div>
+                <h3>Tracking automático</h3>
+                <p>Seguimiento en tiempo real con timeline visual. Emails automáticos al cambiar de estado. Sincronización cada 6 horas.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+                <h3>Acciones masivas</h3>
+                <p>Creá envíos y generá etiquetas para múltiples pedidos a la vez. Exportá a CSV. Perfecto para alto volumen.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Screenshots -->
+<section class="ss" id="capturas">
+    <div class="container">
+        <h2 class="ss__title">Mirá el plugin en acción</h2>
+        <p class="ss__sub">Interfaz profesional para tu tienda y tu panel de administración</p>
+        <div class="ss__wrap">
+            <button class="ss__arr ss__arr--l" onclick="ssGo(-1)" aria-label="Anterior">&#8249;</button>
+            <div class="ss__frame">
+                <img id="ss-img" src="/assets/screenshot-map.webp" alt="">
+            </div>
+            <button class="ss__arr ss__arr--r" onclick="ssGo(1)" aria-label="Siguiente">&#8250;</button>
+        </div>
+        <p class="ss__label" id="ss-label"><strong>Mapa de sucursales</strong> — Tus clientes eligen sucursal con mapa interactivo, búsqueda y geolocalización</p>
+        <div class="ss__dots" id="ss-dots">
+            <button class="ss__dot active" onclick="ssSet(0)"></button>
+            <button class="ss__dot" onclick="ssSet(1)"></button>
+            <button class="ss__dot" onclick="ssSet(2)"></button>
+            <button class="ss__dot" onclick="ssSet(3)"></button>
+        </div>
+    </div>
+</section>
+
+<!-- How it works -->
+<section class="pg-steps">
+    <div class="container">
+        <h2 class="features__title">Del plugin al primer envío en 3 pasos</h2>
+        <div class="pg-steps__grid">
+            <div class="pg-step">
+                <span class="pg-step__num">1</span>
+                <h3>Instalás el plugin</h3>
+                <p>Subís el ZIP a WordPress y lo activás en menos de un minuto. Sin tocar código ni servidores.</p>
+            </div>
+            <div class="pg-step">
+                <span class="pg-step__num">2</span>
+                <h3>Activás tu licencia</h3>
+                <p>Pegás tu clave y conectás MiCorreo o Paq.Ar con el wizard guiado. El diagnóstico verifica que todo esté OK.</p>
+            </div>
+            <div class="pg-step">
+                <span class="pg-step__num">3</span>
+                <h3>Cotizás y despachás</h3>
+                <p>Tus clientes ven el costo real en el checkout y vos generás envíos, etiquetas y tracking desde cada pedido.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Comparison -->
+<section class="pg-compare-section">
+    <div class="container">
+        <h2 class="features__title">Con el plugin vs. hacerlo a mano</h2>
+        <p class="pg-compare-sub">Automatizá lo que hoy hacés cargando cada envío en MiCorreo pedido por pedido.</p>
+        <div class="pg-compare-wrap">
+            <table class="pg-compare">
+                <thead>
+                    <tr>
+                        <th>Tarea</th>
+                        <th>Sin el plugin</th>
+                        <th class="pg-compare__pro">Con Correo Argentino Pro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Costo de envío en el checkout</td>
+                        <td class="pg-compare__no">Monto fijo o "a coordinar"</td>
+                        <td class="pg-compare__yes">Cotización real en tiempo real</td>
+                    </tr>
+                    <tr>
+                        <td>Elección de sucursal</td>
+                        <td class="pg-compare__no">El cliente la busca aparte</td>
+                        <td class="pg-compare__yes">Mapa con +3000 sucursales</td>
+                    </tr>
+                    <tr>
+                        <td>Generar el envío</td>
+                        <td class="pg-compare__no">Cargarlo a mano en MiCorreo</td>
+                        <td class="pg-compare__yes">1 clic desde el pedido</td>
+                    </tr>
+                    <tr>
+                        <td>Etiquetas de despacho</td>
+                        <td class="pg-compare__no">Copiar datos y armarlas aparte</td>
+                        <td class="pg-compare__yes">Etiqueta PDF automática (Paq.Ar)</td>
+                    </tr>
+                    <tr>
+                        <td>Seguimiento del pedido</td>
+                        <td class="pg-compare__no">Buscar el tracking uno por uno</td>
+                        <td class="pg-compare__yes">Tracking y emails automáticos</td>
+                    </tr>
+                    <tr>
+                        <td>Muchos pedidos a la vez</td>
+                        <td class="pg-compare__no">Uno por uno</td>
+                        <td class="pg-compare__yes">Acciones masivas + CSV</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="pg-compare-note">¿Venís del plugin oficial gratuito? Mirá la <a href="/blog/correo-argentino-plugin-oficial-vs-pro.html">comparación detallada entre el plugin oficial y Correo Argentino Pro</a>.</p>
+    </div>
+</section>
+
+<!-- Reviews -->
+<section class="reviews" id="reviews-section">
+    <div class="container">
+        <h2 class="reviews__title">Lo que dicen nuestros usuarios</h2>
+        <p class="reviews__subtitle">Tiendas reales que ya usan Correo Argentino Pro</p>
+        <div class="reviews__summary" id="reviews-summary" style="display:none;">
+            <div class="reviews__stars" id="reviews-stars"></div>
+            <div class="reviews__avg" id="reviews-avg"></div>
+        </div>
+        <div class="reviews__grid" id="reviews-grid">
+            <div class="reviews__empty">Cargando reseñas...</div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing -->
+<section class="pricing" id="precio">
+    <div class="container">
+        <h2 class="pricing__title">Simple, transparente, sin sorpresas</h2>
+        <p class="pricing__subtitle">Probalo gratis o comprá la licencia completa. Todas las funciones incluidas.</p>
+
+        <div class="pricing-grid">
+            <!-- Free Trial Card -->
+            <div class="pricing-card pricing-card--trial">
+                <div class="pricing-card__name">Prueba gratuita</div>
+                <div class="pricing-card__price">Gratis</div>
+                <div class="pricing-card__period">15 días &middot; sin compromiso</div>
+
+                <ul class="pricing-card__features">
+                    <li>Cotización en tiempo real (MiCorreo)</li>
+                    <li>Selector de sucursales con mapa interactivo</li>
+                    <li>Creación de envíos (MiCorreo + Paq.Ar)</li>
+                    <li>Etiquetas PDF (Paq.Ar)</li>
+                    <li>Tracking automático con notificaciones</li>
+                    <li>Acciones masivas y exportación CSV</li>
+                    <li>Wizard de configuración y diagnóstico</li>
+                    <li>Compatible con HPOS y Checkout por bloques</li>
+                </ul>
+
+                <button type="button" class="pricing-card__btn pricing-card__btn--trial" id="download-btn" onclick="openTrialModal()">Empezar prueba gratis &rarr;</button>
+                <p class="pricing-card__note">Sin tarjeta de crédito. Se desactiva a los 15 días.</p>
+            </div>
+
+            <!-- Paid License Card -->
+            <div class="pricing-card pricing-card--featured" id="comprar">
+                <div class="pricing-card__badge">Recomendado</div>
+                <div class="pricing-card__name">Licencia anual</div>
+                <div style="font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:1.5px; color:var(--accent); margin-bottom:4px;">Precio de lanzamiento</div>
+                <div class="pricing-card__price" id="price-display"></div>
+                <div class="pricing-card__period">por año &middot; 1 sitio</div>
+
+                <ul class="pricing-card__features">
+                    <li>Cotización en tiempo real (MiCorreo)</li>
+                    <li>Selector de sucursales con mapa interactivo</li>
+                    <li>Creación de envíos (MiCorreo + Paq.Ar)</li>
+                    <li>Etiquetas PDF (Paq.Ar)</li>
+                    <li>Tracking automático con notificaciones</li>
+                    <li>Acciones masivas y exportación CSV</li>
+                    <li>Wizard de configuración y diagnóstico</li>
+                    <li>Compatible con HPOS y Checkout por bloques</li>
+                    <li><strong>Actualizaciones automáticas</strong></li>
+                    <li><strong>Soporte prioritario por email</strong></li>
+                </ul>
+
+                <div class="discount-row" id="discount-row">
+                    <input type="text" id="discount-input" placeholder="Código de descuento" style="text-transform:uppercase">
+                    <button type="button" id="discount-apply-btn">Aplicar</button>
+                </div>
+                <div class="discount-msg" id="discount-msg"></div>
+
+                <a href="#" class="pricing-card__btn" id="buy-btn">Comprar ahora</a>
+            </div>
+        </div>
+        <p class="pricing__guarantee">Pago seguro vía Mercado Pago. Tu licencia se entrega al instante.</p>
+    </div>
+</section>
+
+<!-- Pre-purchase FAQs -->
+<section class="prefaq">
+    <div class="container prefaq__container">
+        <h3 class="prefaq__title">Dudas antes de comprar</h3>
+        <div class="prefaq__list">
+            <details class="prefaq__item">
+                <summary class="prefaq__q">Puedo probarlo antes de comprar?<span class="prefaq__icon">+</span></summary>
+                <p class="prefaq__a">Sí. La prueba gratuita de 15 días incluye todas las funciones, sin límites y sin tarjeta de crédito. Se desactiva sola al terminar.</p>
+            </details>
+            <details class="prefaq__item">
+                <summary class="prefaq__q">Funciona con mi tema y mi versión de WooCommerce?<span class="prefaq__icon">+</span></summary>
+                <p class="prefaq__a">Sí. Compatible con cualquier tema de WooCommerce, HPOS, checkout clásico y checkout por bloques. Requiere WooCommerce 6.0+, WordPress 5.8+ y PHP 7.4+.</p>
+            </details>
+            <details class="prefaq__item">
+                <summary class="prefaq__q">Cómo recibo el plugin después de pagar?<span class="prefaq__icon">+</span></summary>
+                <p class="prefaq__a">Al instante. Después de pagar con Mercado Pago, tu clave de licencia aparece en pantalla y se envía a tu email junto con el link de descarga. La activación toma 30 segundos.</p>
+            </details>
+            <details class="prefaq__item">
+                <summary class="prefaq__q">Para cuántos sitios sirve la licencia?<span class="prefaq__icon">+</span></summary>
+                <p class="prefaq__a">Cada licencia anual habilita 1 sitio. Podés cambiar de dominio cuando quieras: desactivás la licencia en el sitio actual y la activás en el nuevo, sin costo extra.</p>
+            </details>
+            <details class="prefaq__item">
+                <summary class="prefaq__q">Qué pasa si vence mi licencia?<span class="prefaq__icon">+</span></summary>
+                <p class="prefaq__a">El plugin deja de cotizar y crear envíos. Tus datos y configuración se mantienen. Podés renovar en cualquier momento y todo vuelve a funcionar al instante.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="pg-cta-band">
+    <div class="container">
+        <h2>Empezá a enviar con Correo Argentino hoy</h2>
+        <p>Probá todas las funciones gratis por 15 días. Sin tarjeta, sin compromiso.</p>
+        <div class="pg-hero__cta-row pg-hero__cta-row--center">
+            <a href="#precio" class="pg-btn pg-btn--primary">Comprar licencia &rarr;</a>
+            <button type="button" class="pg-btn pg-btn--ghost" onclick="openTrialModal()">Probar gratis 15 días</button>
+        </div>
+    </div>
+</section>
+
+<!-- Trial lead modal -->
+<div class="modal-overlay" id="trial-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:9999; align-items:center; justify-content:center;">
+    <div style="background:#1e293b; border:1px solid rgba(255,255,255,0.12); border-radius:16px; padding:36px 32px; max-width:420px; width:90%; position:relative;">
+        <button onclick="closeTrialModal()" style="position:absolute; top:14px; right:18px; background:none; border:none; color:rgba(255,255,255,0.5); font-size:20px; cursor:pointer; line-height:1;">&times;</button>
+        <h3 style="margin:0 0 8px; font-size:1.25rem; color:#fff;">Empezar prueba gratis</h3>
+        <p style="color:rgba(255,255,255,0.6); font-size:0.9rem; margin:0 0 24px;">15 días con todas las funciones. Sin tarjeta de crédito.</p>
+        <label style="display:block; font-size:0.85rem; color:rgba(255,255,255,0.6); margin-bottom:6px;">Tu email</label>
+        <input type="email" id="trial-email-input" placeholder="vos@tutienda.com"
+               style="width:100%; box-sizing:border-box; padding:10px 14px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:8px; color:#fff; font-size:0.95rem; margin-bottom:6px;" />
+        <p id="trial-modal-error" style="color:#f87171; font-size:0.82rem; min-height:18px; margin:0 0 16px;"></p>
+        <button onclick="submitTrialLead()" id="trial-modal-btn"
+                style="width:100%; padding:16px; background:linear-gradient(135deg,#3b82f6,#2563eb); border:none; border-radius:14px; color:#fff; font-size:1.05rem; font-weight:700; letter-spacing:-0.3px; font-family:inherit; cursor:pointer; box-shadow:0 4px 16px rgba(59,130,246,0.3); transition:all 0.3s ease;">
+            Descargar plugin &rarr;
+        </button>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="site-footer__grid">
+            <div class="site-footer__brand">
+                <a href="/" class="site-footer__logo">
+                    <svg width="34" height="34" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="fEnv" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient>
+                            <linearGradient id="fPro" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient>
+                        </defs>
+                        <rect x="6" y="18" width="56" height="40" rx="8" fill="white" opacity="0.95"/>
+                        <path d="M6 24 L34 44 L62 24" stroke="url(#fEnv)" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <rect x="40" y="44" width="36" height="20" rx="7" fill="url(#fPro)"/>
+                        <text x="58" y="58.5" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="12.5" font-weight="800" fill="white" letter-spacing="2.5">PRO</text>
+                    </svg>
+                    <span>Correo Argentino <strong>Pro</strong></span>
+                </a>
+                <p class="site-footer__tagline">Integrá Correo Argentino con WooCommerce: cotización en tiempo real, sucursales con mapa, etiquetas y tracking automático.</p>
+                <p class="site-footer__dev">Desarrollado por <a href="https://adwebs.com.ar">AD Webs</a></p>
+            </div>
+            <nav class="site-footer__col" aria-label="Producto">
+                <p class="site-footer__heading">Producto</p>
+                <ul>
+                    <li><a href="/plugin/">El plugin</a></li>
+                    <li><a href="/plugin/#precio">Precios y licencia</a></li>
+                    <li><a href="/#cotizador">Cotizador de envíos</a></li>
+                    <li><a href="/log-de-actualizaciones-plugin.html">Novedades del plugin</a></li>
+                </ul>
+            </nav>
+            <nav class="site-footer__col" aria-label="Recursos">
+                <p class="site-footer__heading">Recursos</p>
+                <ul>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/ayuda.html">Centro de ayuda</a></li>
+                    <li><a href="/faqs.html">Preguntas frecuentes</a></li>
+                    <li><a href="/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <nav class="site-footer__col" aria-label="Empresa">
+                <p class="site-footer__heading">Empresa</p>
+                <ul>
+                    <li><a href="/blog/autor/ad-webs.html">Sobre nosotros</a></li>
+                    <li><a href="/terminos.html">Términos y condiciones</a></li>
+                    <li><a href="/privacidad.html">Política de privacidad</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="site-footer__bottom">
+            <div class="site-footer__pay">
+                <span class="site-footer__pay-label">Pago seguro con</span>
+                <span class="pay-badge pay-badge--mp">Mercado Pago</span>
+                <span class="pay-badge pay-badge--visa">VISA</span>
+                <span class="pay-badge pay-badge--mc" aria-label="Mastercard"><svg width="26" height="16" viewBox="0 0 26 16" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="8" r="6" fill="#eb001b"/><circle cx="16" cy="8" r="6" fill="#f79e1b" fill-opacity="0.9"/></svg></span>
+                <span class="pay-badge pay-badge--amex">AMEX</span>
+            </div>
+            <p class="site-footer__copy">&copy; 2026 Correo Argentino Pro &middot; No estamos afiliados a Correo Argentino S.A.</p>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+<script>
+(function() {
+    var API_URL = 'https://api.correoargentinopro.com';
+    var PRICE_ARS = 62990;
+    var PRICE_DISPLAY = '$' + PRICE_ARS.toLocaleString('es-AR');
+
+    document.getElementById('price-display').innerHTML = PRICE_DISPLAY + ' <span>ARS</span>';
+    window.openTrialModal = function() {
+        document.getElementById('trial-modal').style.display = 'flex';
+        document.getElementById('trial-email-input').focus();
+    };
+    window.closeTrialModal = function() {
+        document.getElementById('trial-modal').style.display = 'none';
+        document.getElementById('trial-modal-error').textContent = '';
+    };
+    window.submitTrialLead = submitTrialLead;
+    document.getElementById('trial-modal').addEventListener('click', function(e) {
+        if (e.target === this) closeTrialModal();
+    });
+    document.getElementById('trial-email-input').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') submitTrialLead();
+    });
+    function submitTrialLead() {
+        var email = document.getElementById('trial-email-input').value.trim();
+        var errEl = document.getElementById('trial-modal-error');
+        var btn = document.getElementById('trial-modal-btn');
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            errEl.textContent = 'Ingresá un email válido.';
+            return;
+        }
+        errEl.textContent = '';
+        btn.disabled = true;
+        btn.textContent = 'Preparando descarga...';
+        fetch(API_URL + '/trial/lead', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: email })
+        })
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            if (data.token) {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({ event: 'descarga_gratis', email: email });
+                closeTrialModal();
+                window.location.href = API_URL + '/download/free?token=' + data.token;
+            } else {
+                errEl.textContent = data.error || 'Error al procesar. Intentá de nuevo.';
+                btn.disabled = false;
+                btn.textContent = 'Descargar plugin →';
+            }
+        })
+        .catch(function() {
+            errEl.textContent = 'Error de conexión. Intentá de nuevo.';
+            btn.disabled = false;
+            btn.textContent = 'Descargar plugin →';
+        });
+    }
+
+    var appliedDiscount = null;
+
+    // Discount code handling
+    document.getElementById('discount-apply-btn').addEventListener('click', function() {
+        var code = document.getElementById('discount-input').value.trim().toUpperCase();
+        var msg = document.getElementById('discount-msg');
+        if (!code) { msg.textContent = 'Ingresá un código de descuento.'; msg.className = 'discount-msg error'; return; }
+
+        msg.textContent = 'Validando...';
+        msg.className = 'discount-msg';
+
+        fetch(API_URL + '/discount/validate', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ code: code })
+        })
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            if (data.valid) {
+                appliedDiscount = data.code;
+                var desc = data.type === 'percentage' ? data.value + '% de descuento' : '$' + data.value.toLocaleString('es-AR') + ' de descuento';
+                msg.textContent = desc + (data.description ? ' — ' + data.description : '');
+                msg.className = 'discount-msg success';
+                var priceEl = document.getElementById('price-display');
+                priceEl.innerHTML = '<span class="discount-original-price">' + PRICE_DISPLAY + '</span>$' + data.final_price.toLocaleString('es-AR') + ' <span>ARS</span>';
+            } else {
+                appliedDiscount = null;
+                msg.textContent = data.error || 'Código inválido.';
+                msg.className = 'discount-msg error';
+                document.getElementById('price-display').innerHTML = PRICE_DISPLAY + ' <span>ARS</span>';
+            }
+        })
+        .catch(function() {
+            msg.textContent = 'Error de conexión.';
+            msg.className = 'discount-msg error';
+        });
+    });
+
+    document.getElementById('discount-input').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') { e.preventDefault(); document.getElementById('discount-apply-btn').click(); }
+    });
+
+    document.getElementById('buy-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'comprar_ahora', discount_code: appliedDiscount || '' });
+        var payload = {};
+        if (appliedDiscount) payload.discount_code = appliedDiscount;
+
+        fetch(API_URL + '/checkout/create', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        })
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            if (data.checkout_url) {
+                window.location.href = data.checkout_url;
+            } else {
+                alert(data.error || 'Error al crear el pago. Intenta de nuevo.');
+            }
+        })
+        .catch(function() {
+            alert('Error de conexión. Intenta de nuevo.');
+        });
+    });
+
+    // Load reviews
+    fetch(API_URL + '/reviews')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            var grid = document.getElementById('reviews-grid');
+            if (!data.reviews || data.reviews.length === 0) {
+                document.getElementById('reviews-section').style.display = 'none';
+                return;
+            }
+
+            var summary = document.getElementById('reviews-summary');
+            summary.style.display = '';
+            var fullStars = Math.floor(data.average);
+            var starsHtml = '';
+            for (var i = 0; i < 5; i++) starsHtml += i < fullStars ? '★' : '☆';
+            document.getElementById('reviews-stars').textContent = starsHtml;
+            document.getElementById('reviews-avg').textContent = data.average + ' de 5 · ' + data.count + ' reseña' + (data.count !== 1 ? 's' : '');
+
+            grid.innerHTML = data.reviews.map(function(r) {
+                var stars = '';
+                for (var j = 0; j < 5; j++) stars += j < r.rating ? '★' : '☆';
+                var initials = r.name.split(' ').map(function(w) { return w[0]; }).join('').slice(0, 2).toUpperCase();
+                return '<div class="review-item">' +
+                    '<div class="review-item__stars">' + stars + '</div>' +
+                    '<div class="review-item__comment">' + r.comment.replace(/</g, '&lt;') + '</div>' +
+                    '<div class="review-item__author">' +
+                        '<div class="review-item__avatar">' + initials + '</div>' +
+                        '<div>' +
+                            '<div class="review-item__name">' + r.name.replace(/</g, '&lt;') + '</div>' +
+                            (r.website ? '<div class="review-item__site">' + r.website.replace(/</g, '&lt;') + '</div>' : '') +
+                        '</div>' +
+                    '</div>' +
+                '</div>';
+            }).join('');
+
+            var schema = {
+                '@context': 'https://schema.org',
+                '@type': 'SoftwareApplication',
+                'name': 'Correo Argentino Pro',
+                'applicationCategory': 'BusinessApplication',
+                'operatingSystem': 'WordPress',
+                'aggregateRating': {
+                    '@type': 'AggregateRating',
+                    'ratingValue': String(data.average),
+                    'bestRating': '5',
+                    'worstRating': '1',
+                    'ratingCount': String(data.count)
+                }
+            };
+            var scriptEl = document.createElement('script');
+            scriptEl.type = 'application/ld+json';
+            scriptEl.textContent = JSON.stringify(schema);
+            document.head.appendChild(scriptEl);
+        })
+        .catch(function() {
+            document.getElementById('reviews-section').style.display = 'none';
+        });
+})();
+
+// Screenshots carousel
+var _ss = [
+    { src: '/assets/screenshot-map.webp', label: '<strong>Mapa de sucursales</strong> — Tus clientes eligen sucursal con mapa interactivo, búsqueda y geolocalización' },
+    { src: '/assets/screenshot-cart.webp', label: '<strong>Envío en el carrito</strong> — Cotización en tiempo real con opción de domicilio o sucursal' },
+    { src: '/assets/screenshot-dashboard.webp', label: '<strong>Dashboard del plugin</strong> — Estadísticas de envíos, estado de conexión y acciones rápidas' },
+    { src: '/assets/screenshot-diagnostics.webp', label: '<strong>Diagnóstico del sistema</strong> — Verificación automática de requisitos, credenciales y conexión API' }
+];
+var _ssI = 0, _ssT;
+function ssSet(i) {
+    _ssI = i;
+    var img = document.getElementById('ss-img');
+    img.style.opacity = '0';
+    setTimeout(function() {
+        img.src = _ss[i].src;
+        img.onload = function() { img.style.opacity = '1'; };
+    }, 200);
+    document.getElementById('ss-label').innerHTML = _ss[i].label;
+    document.querySelectorAll('.ss__dot').forEach(function(d, j) { d.classList.toggle('active', j === i); });
+    clearInterval(_ssT);
+    _ssT = setInterval(function() { ssGo(1); }, 5000);
+}
+function ssGo(d) { ssSet((_ssI + d + _ss.length) % _ss.length); }
+_ssT = setInterval(function() { ssGo(1); }, 5000);
+</script>
+
+</body>
+</html>
