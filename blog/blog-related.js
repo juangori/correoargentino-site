@@ -62,9 +62,11 @@
     if (titleEl && cat) titleEl.textContent = 'Más sobre ' + catInfo.label;
 
     mount.innerHTML = list.map(function (p) {
-      var ic = (CATS[p.c] || {}).icon || '';
+      var heroBase = esc(p.u.replace(/\.html$/i, ''));
       return '<article class="blog-card">'
-        + '<a href="' + esc(p.u) + '" class="blog-card__thumb blog-card__thumb--' + esc(p.c) + '">' + ic + '</a>'
+        + '<a href="' + esc(p.u) + '" class="blog-card__thumb blog-card__thumb--' + esc(p.c) + '">'
+        + '<img src="/og/hero/' + heroBase + '.webp" alt="" loading="lazy" width="1200" height="800">'
+        + '</a>'
         + '<div class="blog-card__body">'
         + '<h2><a href="' + esc(p.u) + '">' + esc(p.t) + '</a></h2>'
         + '<p>' + esc(p.d) + '</p>'
