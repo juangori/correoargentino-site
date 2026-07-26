@@ -6,7 +6,7 @@
 
 - [llms-full.txt](https://correoargentinopro.com/llms-full.txt): versión completa con el contenido concatenado de las páginas núcleo (inicio, ayuda, FAQs y guías principales del blog) en un solo archivo Markdown, listo para ingesta y citado por LLMs.
 
-> Cada página tiene su espejo en Markdown accesible agregando `.md` a la URL. Por ejemplo, `https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.html` está disponible en `https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.md`, e `https://correoargentinopro.com/` en `https://correoargentinopro.com/index.md`.
+> **Espejos en Markdown:** la página del producto, el inicio, la ayuda, las FAQs y los 54 artículos del blog tienen su espejo en Markdown, accesible reemplazando `.html` por `.md` en la URL (y agregando `index.md` en las URLs de directorio). Cada página declara el suyo con `<link rel="alternate" type="text/markdown">`. Ejemplos: `https://correoargentinopro.com/blog/cotizar-envio-correo-argentino.md`, `https://correoargentinopro.com/plugin/index.md`, `https://correoargentinopro.com/index.md`.
 
 ## Acerca del producto
 
@@ -31,11 +31,14 @@ Desarrollado por AD Webs (adwebs.com.ar).
 
 ## Páginas principales
 
+- [Plugin: funcionalidades, precio y compra](https://correoargentinopro.com/plugin/): **Página principal del producto.** Detalle de funcionalidades, comparación con el trabajo manual y con el plugin oficial gratuito, requisitos, precio, reseñas de usuarios, preguntas frecuentes y compra. Espejo Markdown: https://correoargentinopro.com/plugin/index.md
 - [Inicio](https://correoargentinopro.com/): Presentación del plugin, funcionalidades, capturas, cotizador de envíos, precios y descarga
 - [Cotizador de envíos](https://correoargentinopro.com/#cotizador): Herramienta gratuita para calcular el costo de envío con Correo Argentino
 - [Documentación / Ayuda](https://correoargentinopro.com/ayuda.html): Guías de instalación, configuración y uso del plugin
 - [Preguntas frecuentes](https://correoargentinopro.com/faqs.html): FAQs sobre el plugin, licencias, compatibilidad y soporte
+- [Historial de versiones](https://correoargentinopro.com/log-de-actualizaciones-plugin.html): Changelog de cada release del plugin
 - [Blog](https://correoargentinopro.com/blog/): Artículos sobre envíos, WooCommerce y ecommerce en Argentina
+- [Quiénes somos / autor](https://correoargentinopro.com/blog/autor/ad-webs.html): AD Webs, el estudio que desarrolla el plugin y escribe las guías del blog
 - [Contacto](https://correoargentinopro.com/contacto.html): Formulario de contacto y soporte
 
 ## Temas del blog

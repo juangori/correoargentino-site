@@ -1,0 +1,114 @@
+> Fuente: https://correoargentinopro.com/plugin/
+
+# Correo Argentino Pro — Plugin de Correo Argentino para WooCommerce
+
+> El plugin de Correo Argentino para WooCommerce: cotización en tiempo real, selector de sucursales con mapa, etiquetas PDF y tracking automático. Licencia anual desde $62.990 ARS. Prueba gratuita de 15 días.
+
+**Correo Argentino Pro** es un plugin comercial para WordPress/WooCommerce que integra los envíos de Correo Argentino en tiendas online argentinas. Se conecta con las APIs oficiales de **MiCorreo** (para emprendedores, monotributistas y PyMEs) y **Paq.Ar** (para empresas con acuerdo comercial).
+
+Desarrollado por [AD Webs](https://adwebs.com.ar). No estamos afiliados a Correo Argentino S.A.
+
+## Datos del producto
+
+| Dato | Valor |
+| --- | --- |
+| Nombre | Correo Argentino Pro |
+| Categoría | Plugin de envíos para WooCommerce |
+| Precio | $62.990 ARS por año (licencia para 1 sitio) |
+| Prueba gratuita | 15 días, todas las funciones, sin tarjeta de crédito |
+| Medios de pago | Mercado Pago (tarjetas de crédito/débito, dinero en cuenta) |
+| Entrega | Instantánea: la licencia se muestra en pantalla y se envía por email |
+| Requisitos | WordPress 5.8+, WooCommerce 6.0+, PHP 7.4+ |
+| Compatibilidad | HPOS, checkout clásico, checkout por bloques, cualquier tema |
+| Cambio de dominio | Sí, sin costo: se desactiva en un sitio y se activa en otro |
+| Valoración | 4,8 / 5 sobre 6 reseñas de usuarios verificados |
+| Soporte | soporte@correoargentinopro.com (prioritario con licencia activa) |
+| Actualizaciones | Automáticas desde el panel de WordPress con licencia activa |
+
+## Funcionalidades
+
+- **Cotización en tiempo real:** consulta la API de MiCorreo en cada compra y muestra el costo real de envío en el checkout, calculado según código postal de origen y destino, peso y dimensiones del carrito.
+- **Selector de sucursales con mapa:** modal interactivo con mapa Leaflet, más de 3.000 sucursales, búsqueda por nombre o localidad, geolocalización y ordenamiento por cercanía.
+- **Creación de envíos:** genera el envío en Correo Argentino desde la pantalla del pedido en WooCommerce, sin cargar los datos a mano en MiCorreo. Soporta MiCorreo y Paq.Ar.
+- **Etiquetas PDF:** genera e imprime los rótulos de envío con código de barras directamente desde cada pedido (disponible para clientes Paq.Ar con acuerdo comercial).
+- **Tracking automático:** seguimiento con timeline visual en el pedido, sincronización cada 6 horas y emails automáticos al cliente cuando cambia el estado del envío.
+- **Acciones masivas:** crear envíos y generar etiquetas para múltiples pedidos a la vez, más exportación a CSV. Pensado para tiendas con volumen.
+- **Reglas de envío gratis:** configurables por monto de compra, zona o producto.
+- **Wizard de configuración y diagnóstico:** verifica requisitos, credenciales y conexión con la API, e indica exactamente qué falta si algo no funciona.
+
+Servicios de Correo Argentino soportados: **Clásico** (a domicilio), **Envío a sucursal** y **Expreso**.
+
+## Con el plugin vs. hacerlo a mano
+
+| Tarea | Sin el plugin | Con Correo Argentino Pro |
+| --- | --- | --- |
+| Costo de envío en el checkout | Monto fijo o "a coordinar" | Cotización real en tiempo real |
+| Elección de sucursal | El cliente la busca aparte | Mapa con +3.000 sucursales |
+| Generar el envío | Cargarlo a mano en MiCorreo | 1 clic desde el pedido |
+| Etiquetas de despacho | Copiar datos y armarlas aparte | Etiqueta PDF automática (Paq.Ar) |
+| Seguimiento del pedido | Buscar el tracking uno por uno | Tracking y emails automáticos |
+| Muchos pedidos a la vez | Uno por uno | Acciones masivas + exportación CSV |
+
+## Cómo se instala
+
+1. **Instalás el plugin:** subís el ZIP a WordPress (Plugins → Añadir nuevo → Subir plugin) y lo activás. No requiere tocar código ni configuración de servidor.
+2. **Activás tu licencia:** pegás la clave en *Correo Arg. Pro → Configuración → Licencia* y conectás tu cuenta de MiCorreo o Paq.Ar con el wizard guiado. El diagnóstico integrado verifica que todo esté correcto.
+3. **Cotizás y despachás:** tus clientes ven el costo real en el checkout y vos generás envíos, etiquetas y tracking desde cada pedido.
+
+## Cuándo conviene y cuándo no
+
+**Conviene si:** vendés online con WooCommerce en Argentina y despachás con Correo Argentino de forma habitual; querés mostrar el costo real de envío en el checkout en lugar de un monto fijo; perdés tiempo cargando cada envío a mano en MiCorreo; o querés que tus clientes puedan elegir sucursal con un mapa.
+
+**No conviene si:** hacés muy pocos envíos por mes (con ese volumen el trabajo manual o el plugin oficial gratuito puede alcanzarte); no usás WooCommerce (el plugin es específico para WooCommerce, no funciona en Tiendanube ni Shopify); o despachás exclusivamente con otro correo.
+
+Comparación detallada con la alternativa gratuita: [plugin oficial de Correo Argentino vs. Correo Argentino Pro](https://correoargentinopro.com/blog/correo-argentino-plugin-oficial-vs-pro.html).
+
+## Preguntas frecuentes
+
+### Qué es el plugin Correo Argentino Pro?
+
+Es un plugin premium para WooCommerce que integra Correo Argentino en tu tienda: cotiza envíos en tiempo real en el checkout, muestra un selector de sucursales con mapa, crea envíos en MiCorreo y Paq.Ar, genera etiquetas PDF y hace el seguimiento automático de cada pedido.
+
+### Puedo probar el plugin antes de comprar?
+
+Sí. La prueba gratuita de 15 días incluye todas las funciones, sin límites y sin tarjeta de crédito. Se desactiva sola al terminar.
+
+### Funciona con mi tema y mi versión de WooCommerce?
+
+Sí. Es compatible con cualquier tema de WooCommerce, con HPOS, checkout clásico y checkout por bloques. Requiere WooCommerce 6.0+, WordPress 5.8+ y PHP 7.4+.
+
+### Cómo recibo el plugin después de pagar?
+
+Al instante. Después de pagar con Mercado Pago, tu clave de licencia aparece en pantalla y se envía a tu email junto con el link de descarga. La activación toma 30 segundos.
+
+### La licencia sirve para cuántos sitios?
+
+Cada licencia anual habilita 1 sitio. Podés cambiar de dominio cuando quieras: desactivás la licencia en el sitio actual y la activás en el nuevo, sin costo extra.
+
+### Qué pasa si vence mi licencia?
+
+El plugin deja de cotizar y crear envíos. Tus datos y configuración se mantienen. Podés renovar en cualquier momento y todo vuelve a funcionar al instante.
+
+## Reseñas de usuarios
+
+Valoración promedio: **4,8 / 5** sobre 6 reseñas.
+
+Citas textuales de los usuarios:
+
+- ★★★★★ **Centro Okami** (centrookami.ar), 2026-03-07: "Excelente plugin! Nos solucionó todo lo relacionado con envíos de Correo Argentino. Teniamos el plugin oficial pero fallaba mucho, este anda rapido, tiene un panel de admin hermoso y vale cada centavo."
+- ★★★★★ **Relaxmo** (relaxmo.com), 2026-03-07: "Gracias gracias gracias! Veniamos luchando con otros plugins para manejar los envíos de nuestros productos y este nos salvó! Fantástico, lo rápido y fácil de usar que es."
+- ★★★★★ **María N.** (naturalezayliteratura.com), 2026-03-12: "Tenemos dos libros publicados y había gente de todo el país que lo queria en papel físico, asi que activamos envíos con Correo Argentino y usamos este plugin, una genialidad! Nosotras no somos muy digitales, pero fue realmente fácil configurarlo y empezar a usarlo."
+- ★★★★★ **Sofi Bevilacqua** (sofibevilacqua.com.ar), 2026-03-07: "Que genial este plugin, no tengo ni que pensar al momento de hacer los envíos. Recomendado al 100%."
+- ★★★★★ **Ventas Automat** (tecnoautomat.com), 2026-03-12: "Recomendado. Vale lo que sale por lejos."
+- ★★★★☆ **Gustavo** (sistemacontinuo.com.ar), 2026-03-12: "Buen plugin, me solucionó más que nada la facilidad de uso. Lo demás es normal. Saludos."
+
+## Enlaces
+
+- [Página del plugin y compra](https://correoargentinopro.com/plugin/)
+- [Sitio oficial](https://correoargentinopro.com/)
+- [Documentación / Centro de ayuda](https://correoargentinopro.com/ayuda.html)
+- [Preguntas frecuentes](https://correoargentinopro.com/faqs.html)
+- [Historial de versiones](https://correoargentinopro.com/log-de-actualizaciones-plugin.html)
+- [Cotizador gratuito de envíos](https://correoargentinopro.com/#cotizador)
+- [Blog sobre envíos y WooCommerce en Argentina](https://correoargentinopro.com/blog/)
+- [Contacto y soporte](https://correoargentinopro.com/contacto.html)
