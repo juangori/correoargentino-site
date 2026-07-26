@@ -34,6 +34,36 @@ Correo Argentino ofrece distintas modalidades y cada una tiene su propia tarifa.
 
 La diferencia de precio entre a domicilio y a sucursal puede ser considerable. Si querés profundizar en cuándo conviene cada una, leé nuestra comparación de [envío a sucursal vs domicilio](https://correoargentinopro.com/blog/envio-sucursal-vs-domicilio-correo-argentino.html). Y si querés ver todas las modalidades en detalle, la guía de [tipos de envío de Correo Argentino](https://correoargentinopro.com/blog/tipos-envio-correo-argentino.html) las explica una por una.
 
+<!-- tarifas:start -->
+## Tarifas de referencia de Correo Argentino
+
+Tarifas reales obtenidas de la API de cotización de Correo Argentino (MiCorreo), con **CABA (CP 1425) como origen**. **Última actualización: 26 de julio de 2026.**
+
+### Cuánto cuesta enviar 1 kg desde CABA
+
+Correo Argentino **tarifa por zona, no por distancia exacta**: varios destinos muy distintos comparten el mismo precio. Agrupados por zona tarifaria:
+
+| Destinos (misma zona tarifaria) | Clásico a sucursal | Clásico a domicilio | Expreso a domicilio |
+| --- | --- | --- | --- |
+| Rosario (Santa Fe), Córdoba capital, Mar del Plata | $6.358 | $9.648 | $13.263 |
+| Mendoza capital, San Miguel de Tucumán, Neuquén capital | $6.995 | $10.509 | $19.262 |
+| Salta capital, Ushuaia (Tierra del Fuego) | $7.307 | $10.586 | $24.269 |
+
+Plazos orientativos: Clásico 2-5 dias habiles, Expreso 1-3 dias habiles. En estas rutas, enviar a sucursal en lugar de a domicilio cuesta en promedio **33% menos**: es la palanca más directa para bajar la tarifa sin cambiar el paquete.
+
+### Cómo escala la tarifa con el peso
+
+Mismo origen y servicio (Clásico a domicilio), variando el peso. Un destino representativo por zona:
+
+| Peso | Rosario | Mendoza capital | Salta capital |
+| --- | --- | --- | --- |
+| 1 kg | $9.648 | $10.509 | $10.586 |
+| 5 kg | $15.957 | $17.880 | $19.724 |
+| 10 kg | $21.342 | $25.423 | $30.568 |
+
+Metodología: consultas a la API de MiCorreo con origen CP 1425 y cajas de 1 kg → 25×20×10 cm, 5 kg → 40×30×20 cm, 10 kg → 50×40×30 cm, elegidas para que gobierne el peso real y no el peso volumétrico. Son tarifas de lista de MiCorreo: con acuerdo Paq.Ar los precios son más bajos.
+<!-- tarifas:end -->
+
 ## MiCorreo vs Paq.Ar: dos esquemas de tarifas
 
 Un mismo envío puede tener dos precios distintos según la plataforma que uses. Entender la diferencia es clave para saber si estás pagando de más.

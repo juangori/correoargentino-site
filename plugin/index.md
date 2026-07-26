@@ -57,11 +57,22 @@ Servicios de Correo Argentino soportados: **Clásico** (a domicilio), **Envío a
 
 ## Cuándo conviene y cuándo no
 
-**Conviene si:** vendés online con WooCommerce en Argentina y despachás con Correo Argentino de forma habitual; querés mostrar el costo real de envío en el checkout en lugar de un monto fijo; perdés tiempo cargando cada envío a mano en MiCorreo; o querés que tus clientes puedan elegir sucursal con un mapa.
+**Te conviene si:**
 
-**No conviene si:** hacés muy pocos envíos por mes (con ese volumen el trabajo manual o el plugin oficial gratuito puede alcanzarte); no usás WooCommerce (el plugin es específico para WooCommerce, no funciona en Tiendanube ni Shopify); o despachás exclusivamente con otro correo.
+- Vendés con WooCommerce y despachás con Correo Argentino de forma habitual.
+- Querés mostrar el costo real de envío en el checkout en lugar de un monto fijo o "a coordinar".
+- Cargar cada envío a mano en MiCorreo ya es parte de tu rutina diaria.
+- Querés que tus clientes elijan sucursal con un mapa, y que reciban el tracking automáticamente.
+- Despachás varios pedidos juntos y necesitás acciones masivas.
+- Operás con MiCorreo o con Paq.Ar y querés gestionar todo desde WooCommerce.
 
-Comparación detallada con la alternativa gratuita: [plugin oficial de Correo Argentino vs. Correo Argentino Pro](https://correoargentinopro.com/blog/correo-argentino-plugin-oficial-vs-pro.html).
+**No te conviene si:**
+
+- **No usás WooCommerce**: es un plugin de WooCommerce, no funciona en Tiendanube, Shopify ni tiendas hechas a medida.
+- Tenés **varios sitios**: cada licencia habilita 1 dominio (se puede mover entre dominios, pero no usar en dos a la vez).
+- Despachás **solo con otro correo** (OCA, Andreani): este plugin es específico de Correo Argentino.
+
+Comparación detallada con la alternativa gratuita: [plugin oficial de Correo Argentino vs. Correo Argentino Pro](https://correoargentinopro.com/blog/correo-argentino-plugin-oficial-vs-pro.html). Y la matriz de las tres opciones (a mano, oficial gratuito, Pro): [comparativas](https://correoargentinopro.com/blog/comparativas/).
 
 ## Preguntas frecuentes
 

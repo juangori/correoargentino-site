@@ -1,0 +1,873 @@
+{
+  "generatedAt": "2026-07-26T13:30:40.587Z",
+  "origin": {
+    "cp": "1425",
+    "name": "CABA"
+  },
+  "rows": [
+    {
+      "dest": "Rosario (Santa Fe)",
+      "cp": "2000",
+      "kg": 1,
+      "box": {
+        "largo": 25,
+        "ancho": 20,
+        "alto": 10
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 6358,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 8746,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 9648,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 13263,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    },
+    {
+      "dest": "Rosario (Santa Fe)",
+      "cp": "2000",
+      "kg": 5,
+      "box": {
+        "largo": 40,
+        "ancho": 30,
+        "alto": 20
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 13255,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 18233,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 15957,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 21941,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    },
+    {
+      "dest": "Rosario (Santa Fe)",
+      "cp": "2000",
+      "kg": 10,
+      "box": {
+        "largo": 50,
+        "ancho": 40,
+        "alto": 30
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 20275,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 29738,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 21342,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 31303,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    },
+    {
+      "dest": "Córdoba capital",
+      "cp": "5000",
+      "kg": 1,
+      "box": {
+        "largo": 25,
+        "ancho": 20,
+        "alto": 10
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 6358,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 8746,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 9648,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 13263,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    },
+    {
+      "dest": "Córdoba capital",
+      "cp": "5000",
+      "kg": 5,
+      "box": {
+        "largo": 40,
+        "ancho": 30,
+        "alto": 20
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 13255,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 18233,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 15957,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 21941,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    },
+    {
+      "dest": "Córdoba capital",
+      "cp": "5000",
+      "kg": 10,
+      "box": {
+        "largo": 50,
+        "ancho": 40,
+        "alto": 30
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 20275,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 29738,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 21342,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 31303,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    },
+    {
+      "dest": "Mar del Plata",
+      "cp": "7600",
+      "kg": 1,
+      "box": {
+        "largo": 25,
+        "ancho": 20,
+        "alto": 10
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 6358,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 8746,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 9648,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 13263,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    },
+    {
+      "dest": "Mar del Plata",
+      "cp": "7600",
+      "kg": 5,
+      "box": {
+        "largo": 40,
+        "ancho": 30,
+        "alto": 20
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 13255,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 18233,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 15957,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 21941,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    },
+    {
+      "dest": "Mar del Plata",
+      "cp": "7600",
+      "kg": 10,
+      "box": {
+        "largo": 50,
+        "ancho": 40,
+        "alto": 30
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 20275,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 29738,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 21342,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 31303,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    },
+    {
+      "dest": "Mendoza capital",
+      "cp": "5500",
+      "kg": 1,
+      "box": {
+        "largo": 25,
+        "ancho": 20,
+        "alto": 10
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 6995,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 12821,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 10509,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 19262,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    },
+    {
+      "dest": "Mendoza capital",
+      "cp": "5500",
+      "kg": 5,
+      "box": {
+        "largo": 40,
+        "ancho": 30,
+        "alto": 20
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 15969,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 35888,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 17880,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 37777,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    },
+    {
+      "dest": "Mendoza capital",
+      "cp": "5500",
+      "kg": 10,
+      "box": {
+        "largo": 50,
+        "ancho": 40,
+        "alto": 30
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 24152,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 65562,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 25423,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 69012,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    },
+    {
+      "dest": "San Miguel de Tucumán",
+      "cp": "4000",
+      "kg": 1,
+      "box": {
+        "largo": 25,
+        "ancho": 20,
+        "alto": 10
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 6995,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 12821,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 10509,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 19262,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    },
+    {
+      "dest": "San Miguel de Tucumán",
+      "cp": "4000",
+      "kg": 5,
+      "box": {
+        "largo": 40,
+        "ancho": 30,
+        "alto": 20
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 15969,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 35888,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 17880,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 37777,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    },
+    {
+      "dest": "San Miguel de Tucumán",
+      "cp": "4000",
+      "kg": 10,
+      "box": {
+        "largo": 50,
+        "ancho": 40,
+        "alto": 30
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 24152,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 65562,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 25423,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 69012,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    },
+    {
+      "dest": "Salta capital",
+      "cp": "4400",
+      "kg": 1,
+      "box": {
+        "largo": 25,
+        "ancho": 20,
+        "alto": 10
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 7307,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 16745,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 10586,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 24269,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    },
+    {
+      "dest": "Salta capital",
+      "cp": "4400",
+      "kg": 5,
+      "box": {
+        "largo": 40,
+        "ancho": 30,
+        "alto": 20
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 18738,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 41276,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 19724,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 45203,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    },
+    {
+      "dest": "Salta capital",
+      "cp": "4400",
+      "kg": 10,
+      "box": {
+        "largo": 50,
+        "ancho": 40,
+        "alto": 30
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 29040,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 98404,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 30568,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 107193,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    },
+    {
+      "dest": "Neuquén capital",
+      "cp": "8300",
+      "kg": 1,
+      "box": {
+        "largo": 25,
+        "ancho": 20,
+        "alto": 10
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 6995,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 12821,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 10509,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 19262,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    },
+    {
+      "dest": "Neuquén capital",
+      "cp": "8300",
+      "kg": 5,
+      "box": {
+        "largo": 40,
+        "ancho": 30,
+        "alto": 20
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 15969,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 35888,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 17880,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 37777,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    },
+    {
+      "dest": "Neuquén capital",
+      "cp": "8300",
+      "kg": 10,
+      "box": {
+        "largo": 50,
+        "ancho": 40,
+        "alto": 30
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 24152,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 65562,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 25423,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 69012,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    },
+    {
+      "dest": "Ushuaia (Tierra del Fuego)",
+      "cp": "9410",
+      "kg": 1,
+      "box": {
+        "largo": 25,
+        "ancho": 20,
+        "alto": 10
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 7307,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 16745,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 10586,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 24269,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    },
+    {
+      "dest": "Ushuaia (Tierra del Fuego)",
+      "cp": "9410",
+      "kg": 5,
+      "box": {
+        "largo": 40,
+        "ancho": 30,
+        "alto": 20
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 18738,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 41276,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 19724,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 45203,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    },
+    {
+      "dest": "Ushuaia (Tierra del Fuego)",
+      "cp": "9410",
+      "kg": 10,
+      "box": {
+        "largo": 50,
+        "ancho": 40,
+        "alto": 30
+      },
+      "rates": [
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 29040,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 98404,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Sucursal"
+        },
+        {
+          "nombre": "Correo Argentino Clasico",
+          "precio": 30568,
+          "plazo": "2-5 dias habiles",
+          "tipo": "Domicilio"
+        },
+        {
+          "nombre": "Correo Argentino Expreso",
+          "precio": 107193,
+          "plazo": "1-3 dias habiles",
+          "tipo": "Domicilio"
+        }
+      ]
+    }
+  ]
+}

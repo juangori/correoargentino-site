@@ -94,6 +94,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     </script>
     <!-- itemlist:end -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Conviene pagar un plugin de Correo Argentino o alcanza el oficial gratuito?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No es una cuestión de volumen sino de alcance: son herramientas que hacen cosas distintas. El plugin oficial gratuito muestra una tarifa en el checkout y ahí termina su trabajo; no crea el envío, no genera la etiqueta y no hace el seguimiento. Todo eso se sigue cargando a mano en MiCorreo, con 3 pedidos o con 300. Si se busca que el ciclo completo quede automatizado —y que el cliente elija sucursal en un mapa y reciba el tracking solo— hace falta un plugin que lo cubra." }
+            },
+            {
+                "@type": "Question",
+                "name": "¿El plugin oficial de Correo Argentino crea envíos y etiquetas?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. El plugin oficial se limita a mostrar tarifas en el checkout. Para generar el envío y la etiqueta hay que entrar a MiCorreo o Paq.Ar, cargar los datos del destinatario a mano y descargar el rótulo. Tampoco ofrece tracking automático ni acciones masivas." }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Sirve Correo Argentino Pro si todavía hago pocos envíos?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sí. El plugin funciona igual con 3 envíos por mes que con 300: no hay límite de pedidos ni de envíos en la licencia. Hay dos beneficios que no dependen del volumen: la experiencia del cliente (ver el costo real en el checkout y elegir sucursal en un mapa mejora la conversión desde la primera venta) y no arrastrar trabajo manual mientras la tienda crece." }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Necesito acuerdo Paq.Ar para usar Correo Argentino Pro?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Con una cuenta de MiCorreo (gratuita, solo se necesita CUIT o CUIL) ya se puede cotizar, crear envíos y usar el selector de sucursales. El acuerdo Paq.Ar es un contrato comercial con Correo Argentino que se gestiona aparte: habilita tarifas negociadas y la generación de etiquetas PDF vía API." }
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -150,6 +178,138 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="../guias/" class="blog-filter">Guías</a>
             <a href="../comparativas/" class="blog-filter active">Comparativas</a>
         </div>
+
+        <!-- Matriz maestra: la comparación que define la decisión -->
+        <div class="cmp">
+            <p class="cmp__eyebrow">La comparación que importa</p>
+            <h2 class="cmp__title">Cómo manejar Correo Argentino en tu tienda WooCommerce</h2>
+            <p class="cmp__intro">Si ya decidiste enviar con Correo Argentino, te queda una sola decisión: <strong>cómo lo gestionás en tu sitio</strong>. Hay tres caminos reales, y lo que los diferencia es <strong>cuánto del trabajo queda automatizado</strong> y cuánto seguís haciendo a mano.</p>
+
+            <div class="cmp__scroll">
+                <table class="cmp__table">
+                    <thead>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th>A mano en MiCorreo</th>
+                            <th>Plugin oficial (gratis)</th>
+                            <th class="cmp__best">Correo Argentino Pro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Costo</td>
+                            <td>Gratis</td>
+                            <td>Gratis</td>
+                            <td class="cmp__best">$62.990/año (1 sitio)</td>
+                        </tr>
+                        <tr>
+                            <td>Costo de envío en el checkout</td>
+                            <td class="cmp__no">No: monto fijo o "a coordinar"</td>
+                            <td>Básica, con fallos frecuentes</td>
+                            <td class="cmp__best">Cotización real y estable</td>
+                        </tr>
+                        <tr>
+                            <td>Selector de sucursales</td>
+                            <td class="cmp__no">No</td>
+                            <td>Listado, sin mapa</td>
+                            <td class="cmp__best">Mapa interactivo, +3.000</td>
+                        </tr>
+                        <tr>
+                            <td>Crear el envío</td>
+                            <td>Manual, dato por dato</td>
+                            <td class="cmp__no">No lo hace</td>
+                            <td class="cmp__best">1 clic desde el pedido</td>
+                        </tr>
+                        <tr>
+                            <td>Etiquetas PDF</td>
+                            <td>Descarga manual</td>
+                            <td class="cmp__no">No</td>
+                            <td class="cmp__best">Automáticas (Paq.Ar)</td>
+                        </tr>
+                        <tr>
+                            <td>Tracking al cliente</td>
+                            <td>Manual, pedido por pedido</td>
+                            <td class="cmp__no">No</td>
+                            <td class="cmp__best">Automático, con emails</td>
+                        </tr>
+                        <tr>
+                            <td>Muchos pedidos a la vez</td>
+                            <td class="cmp__no">Uno por uno</td>
+                            <td class="cmp__no">—</td>
+                            <td class="cmp__best">Acciones masivas + CSV</td>
+                        </tr>
+                        <tr>
+                            <td>HPOS y checkout por bloques</td>
+                            <td>No aplica</td>
+                            <td class="cmp__no">No garantizado</td>
+                            <td class="cmp__best">Compatible</td>
+                        </tr>
+                        <tr>
+                            <td>Carga de datos por pedido</td>
+                            <td>Completa</td>
+                            <td>Completa</td>
+                            <td class="cmp__best">Ninguna</td>
+                        </tr>
+                        <tr>
+                            <td>Soporte</td>
+                            <td>—</td>
+                            <td>Foro de WordPress</td>
+                            <td class="cmp__best">Email, con licencia activa</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="cmp__note">El plugin oficial cotiza en el checkout pero no crea envíos ni etiquetas: después de cada venta seguís cargando los datos a mano en MiCorreo. Por eso, en la práctica, la comparación real es entre <strong>trabajo manual</strong> y <strong>automatización</strong>, no entre gratis y pago.</p>
+
+            <div class="cmp__cta">
+                <a href="/plugin/" class="cmp__cta-btn">Ver Correo Argentino Pro &rarr;</a>
+                <a href="../correo-argentino-plugin-oficial-vs-pro.html" class="cmp__cta-link">Comparación detallada vs. el plugin oficial</a>
+            </div>
+        </div>
+
+        <!-- Guía de decisión -->
+        <div class="cmp-pick">
+            <div class="cmp-pick__card">
+                <p class="cmp-pick__who">Cero costo, todo manual</p>
+                <h3>A mano en MiCorreo</h3>
+                <p>No mostrás costo de envío en el checkout: cotizás aparte en el <a href="../cotizar-envio-correo-argentino.html">cotizador</a> y cargás cada despacho a mano en MiCorreo. No pagás nada, pero cada venta te consume tiempo.</p>
+            </div>
+            <div class="cmp-pick__card">
+                <p class="cmp-pick__who">Solo cotización</p>
+                <h3>Plugin oficial gratuito</h3>
+                <p>Resuelve una sola cosa: mostrar una tarifa en el checkout, y no siempre de forma estable. Del envío para adelante —crear el despacho, la etiqueta, el tracking— seguís trabajando a mano.</p>
+            </div>
+            <div class="cmp-pick__card cmp-pick__card--best">
+                <p class="cmp-pick__who">Ciclo completo</p>
+                <h3>Correo Argentino Pro</h3>
+                <p>Cubre todo el recorrido desde el primer envío: cotización estable en el checkout, sucursal con mapa, creación del despacho, etiqueta y tracking automático al cliente.</p>
+            </div>
+        </div>
+
+        <!-- FAQ de decisión -->
+        <div class="cmp-faq">
+            <h2 class="cmp-faq__title">Dudas frecuentes al elegir</h2>
+            <div class="prefaq__list">
+                <details class="prefaq__item">
+                    <summary class="prefaq__q">¿Conviene pagar un plugin de Correo Argentino o alcanza el oficial gratuito?<span class="prefaq__icon">+</span></summary>
+                    <p class="prefaq__a">No es una cuestión de volumen sino de alcance: son herramientas que hacen cosas distintas. El plugin oficial gratuito muestra una tarifa en el checkout y ahí termina su trabajo; no crea el envío, no genera la etiqueta y no hace el seguimiento. Todo eso lo seguís cargando a mano en MiCorreo, tengas 3 pedidos o 300. Si querés que el ciclo completo quede automatizado —y que tu cliente elija sucursal en un mapa y reciba el tracking solo— necesitás un plugin que lo cubra.</p>
+                </details>
+                <details class="prefaq__item">
+                    <summary class="prefaq__q">¿El plugin oficial de Correo Argentino crea envíos y etiquetas?<span class="prefaq__icon">+</span></summary>
+                    <p class="prefaq__a">No. El plugin oficial se limita a mostrar tarifas en el checkout. Para generar el envío y la etiqueta tenés que entrar a MiCorreo o Paq.Ar, cargar los datos del destinatario a mano y descargar el rótulo. Tampoco ofrece tracking automático ni acciones masivas.</p>
+                </details>
+                <details class="prefaq__item">
+                    <summary class="prefaq__q">¿Sirve Correo Argentino Pro si todavía hago pocos envíos?<span class="prefaq__icon">+</span></summary>
+                    <p class="prefaq__a">Sí. El plugin funciona igual con 3 envíos por mes que con 300: no hay límite de pedidos ni de envíos en la licencia. Y hay dos cosas que no dependen del volumen. La primera es la experiencia de tu cliente: ver el costo real en el checkout y elegir sucursal en un mapa mejora la conversión desde la primera venta. La segunda es no arrastrar trabajo manual mientras crecés: configurarlo una vez al principio es más simple que migrar el proceso cuando ya tenés pedidos encima.</p>
+                </details>
+                <details class="prefaq__item">
+                    <summary class="prefaq__q">¿Necesito acuerdo Paq.Ar para usar Correo Argentino Pro?<span class="prefaq__icon">+</span></summary>
+                    <p class="prefaq__a">No. Con una cuenta de MiCorreo (gratuita, solo necesitás CUIT o CUIL) ya podés cotizar, crear envíos y usar el selector de sucursales. El acuerdo Paq.Ar es un contrato comercial con Correo Argentino que se gestiona aparte: habilita tarifas negociadas y la generación de etiquetas PDF vía API. Si no lo tenés, todo lo demás funciona igual.</p>
+                </details>
+            </div>
+        </div>
+
         <div class="blog-grid">
 
             <article class="blog-card">

@@ -1,0 +1,106 @@
+name: Actualizar tarifas de Correo Argentino
+
+# Regenera las tablas de tarifas del blog consultando la API de cotización.
+# Si los precios cambiaron: commitea el resultado y publica el sitio.
+#
+# Nota: los push hechos con el GITHUB_TOKEN por defecto NO disparan otros
+# workflows, así que este workflow hace el deploy a Pages él mismo en vez de
+# depender de que se dispare deploy.yml.
+on:
+  schedule:
+    # Día 1 de cada mes, 11:00 UTC (08:00 en Argentina)
+    - cron: '0 11 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.diff.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # build-tarifas.js sólo usa fetch nativo (Node 18+): sin dependencias.
+      # Si falla más del 20% de las consultas, el script sale con error y no
+      # modifica nada, para no publicar tablas con huecos.
+      - name: Regenerar tablas de tarifas
+        run: node scripts/build-tarifas.js
+
+      - name: Detectar cambios
+        id: diff
+        run: |
+          FILES="data/tarifas-correo-argentino.json blog/tarifas-correo-argentino-2026.html blog/tarifas-correo-argentino-2026.md"
+          if git diff --quiet -- $FILES; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Las tarifas no cambiaron: nada que publicar."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --stat -- $FILES
+          fi
+
+      - name: Commitear y pushear
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/tarifas-correo-argentino.json \
+                  blog/tarifas-correo-argentino-2026.html \
+                  blog/tarifas-correo-argentino-2026.md
+          git commit -m "chore(tarifas): actualizar tarifas de Correo Argentino" \
+                     -m "Regeneradas automáticamente desde la API de cotización."
+          git push
+
+  deploy:
+    needs: update
+    if: needs.update.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # ref: main explícito — en un run por schedule, github.sha apunta al commit
+      # anterior al que acabamos de pushear.
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install sitemap script deps
+        working-directory: scripts
+        run: npm install --no-audit --no-fund
+
+      - name: Regenerate sitemap.xml
+        run: node scripts/build-sitemap.js
+
+      - name: Regenerate blog posts data
+        run: node scripts/build-blog-data.js
+
+      - name: Strip non-public files from build artifact
+        run: |
+          rm -rf scripts gsc-reports node_modules .github
+          rm -f gsc-key.json *-key.json
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

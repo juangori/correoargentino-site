@@ -54,7 +54,7 @@ Acá es donde la diferencia se hace abismal. El plugin oficial no crea envíos. 
 
 Con Correo Argentino Pro, todo eso lo haces desde el panel de WooCommerce. Abrís el pedido, hacés clic en "Crear envío", y el plugin envía los datos a la API de Correo Argentino, crea el envío y te genera la etiqueta PDF lista para imprimir. Si tenés 50 pedidos pendientes, podés seleccionarlos todos y crear los envíos y etiquetas en lote con las acciones masivas.
 
-Para una tienda que maneja más de un puñado de envíos por semana, esta automatización representa un ahorro enorme de tiempo y una reducción significativa de errores humanos. Si querés entender mejor cómo funciona todo el proceso de envío, te recomendamos nuestra [guía completa de envíos con Correo Argentino para tiendas online](https://correoargentinopro.com/blog/envios-correo-argentino-tienda-online.html).
+Esa automatización te ahorra tiempo en cada pedido y elimina los errores de copiar datos a mano, desde el primer envío. Si querés entender mejor cómo funciona todo el proceso, te recomendamos nuestra [guía completa de envíos con Correo Argentino para tiendas online](https://correoargentinopro.com/blog/envios-correo-argentino-tienda-online.html).
 
 ## Compatibilidad técnica
 
@@ -72,11 +72,11 @@ Con Correo Argentino Pro, tenés soporte directo por email con tiempos de respue
 
 ## Cuándo usar cada uno
 
-Seamos honestos: el plugin oficial puede servirte si tu tienda está en una etapa muy inicial, haces menos de 5 envíos por semana, no necesitas generar etiquetas desde WooCommerce y no te molesta cargar los datos manualmente en la web de Correo Argentino. Es gratis, y para algo muy básico puede cumplir.
+Seamos honestos: el plugin oficial puede cumplir si lo único que buscás es que el checkout muestre una tarifa, no te importa que a veces falle, y no te molesta cargar cada envío a mano en la web de Correo Argentino. Es gratis y hace esa única cosa.
 
-Ahora, si tu tienda ya tiene un flujo constante de pedidos, si valoras tu tiempo, si querés darle a tus clientes una experiencia de envío profesional con tracking automático y selector de sucursales con mapa, y si necesitas que las cosas funcionen de forma confiable con las últimas versiones de WooCommerce, **Correo Argentino Pro es la opción clara**.
+Ahora, si querés que el envío quede resuelto de punta a punta —cotización estable, selector de sucursales con mapa, creación del despacho y la etiqueta desde el pedido, y tracking automático para tu cliente—, **Correo Argentino Pro es la opción clara**. Y esto no depende de cuántos envíos hagas: el trabajo manual que te ahorra existe desde el primer pedido, y la experiencia que le das a tu comprador mejora desde la primera venta.
 
-No se trata solo de funcionalidades extra: se trata de tener una herramienta mantenida, con soporte real, que te permite escalar tu operación sin que los envíos se conviertan en un cuello de botella.
+No se trata solo de funcionalidades extra: se trata de tener una herramienta mantenida, con soporte real, que acompaña tu operación desde el arranque y no se convierte en un cuello de botella cuando crecés.
 
 ## Preguntas frecuentes
 
@@ -94,7 +94,7 @@ No. El plugin oficial no fue actualizado para soportar **HPOS** ni el **checkout
 
 ### ¿Cuándo conviene usar el plugin oficial gratuito?
 
-Puede servirte si tu tienda está en una etapa muy inicial, hacés menos de **5 envíos por semana**, no necesitás generar etiquetas desde WooCommerce y no te molesta cargar los datos a mano en la web de Correo Argentino. Si ya tenés un flujo constante de pedidos y valorás tu tiempo, Correo Argentino Pro es la opción clara.
+Cuando lo único que necesitás es **mostrar una tarifa en el checkout** y estás dispuesto a hacer todo lo demás a mano: entrar a MiCorreo, cargar los datos del destinatario, generar la etiqueta y avisarle el seguimiento a tu cliente. Si querés que ese trabajo quede automatizado, el oficial no lo cubre, sin importar cuántos envíos hagas por mes.
 
 ## Conclusión
 
