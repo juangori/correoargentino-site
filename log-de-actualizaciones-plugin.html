@@ -82,7 +82,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="changelog__stat-label">Releases</div>
             </div>
             <div class="changelog__stat">
-                <div class="changelog__stat-value">3 meses</div>
+                <div class="changelog__stat-value">4 meses</div>
                 <div class="changelog__stat-label">Desde el lanzamiento</div>
             </div>
             <div class="changelog__stat">
@@ -102,6 +102,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="changelog__timeline">
 
+            <details class="changelog-group" open data-month="2026-07">
+                <summary>
+                    <span class="changelog-group__title">Julio 2026</span>
+                    <span class="changelog-group__count">1 release</span>
+                    <span class="changelog-group__chevron" aria-hidden="true"></span>
+                </summary>
+                <div class="changelog-group__body">
+
+            <!-- v1.0.47 -->
+            <article class="changelog-entry changelog-entry--latest">
+                <div class="changelog-entry__head">
+                    <span class="changelog-entry__version">v1.0.47</span>
+                    <span class="changelog-entry__date">27 de julio, 2026</span>
+                    <span class="changelog-entry__tag changelog-entry__tag--new">Nuevo</span>
+                    <span class="changelog-entry__latest-flag">&bull; Última versión</span>
+                </div>
+                <h3>Calculá el costo de envío desde la página del producto</h3>
+                <p>Nueva calculadora de costo de envío directamente en la página de cada producto. El comprador ingresa <strong>solo su código postal</strong> y ve al instante cuánto le sale el envío —tanto <strong>a domicilio</strong> como <strong>a sucursal</strong>— con los días estimados de entrega, todo antes de agregar el producto al carrito. Usa la misma cotización en tiempo real de Correo Argentino (MiCorreo) que el checkout, así que el precio que ve coincide con lo que va a pagar. Aparece automáticamente debajo del botón "Agregar al carrito" (se puede desactivar desde la configuración) y también podés ubicarla donde quieras con el shortcode <code>[cap_calculadora]</code>. Respeta el costo adicional y el envío gratis por monto mínimo que tengas configurados.</p>
+                <div class="changelog-entry__why"><b>Por qué</b>Un cliente que estaba probando el plugin nos sugirió esta función: la mayoría de las tiendas muestran el costo de envío recién en el checkout, y poder verlo desde el producto ayuda al comprador a decidirse y reduce el abandono de carrito. Nos pareció una gran idea, la desarrollamos y la validamos en vivo contra una cuenta real de MiCorreo antes de publicarla.</div>
+            </article>
+
+                </div>
+            </details>
+
             <details class="changelog-group" open data-month="2026-06">
                 <summary>
                     <span class="changelog-group__title">Junio 2026</span>
@@ -111,12 +135,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="changelog-group__body">
 
             <!-- v1.0.44 -->
-            <article class="changelog-entry changelog-entry--latest">
+            <article class="changelog-entry">
                 <div class="changelog-entry__head">
                     <span class="changelog-entry__version">v1.0.44</span>
                     <span class="changelog-entry__date">23 de junio, 2026</span>
                     <span class="changelog-entry__tag changelog-entry__tag--fix">Fix</span>
-                    <span class="changelog-entry__latest-flag">&bull; Última versión</span>
                 </div>
                 <h3>Los envíos con MiCorreo vuelven a crearse y sincronizarse</h3>
                 <p>Al crear un envío con <strong>MiCorreo</strong>, el plugin fallaba con el mensaje <em>"MiCorreo aceptó el envío pero no devolvió un identificador"</em> y el pedido quedaba como "Pendiente", sin sincronizar. La causa: la API de MiCorreo importa los envíos de forma <strong>asíncrona</strong> — deja el envío como "Pendiente" en tu panel de MiCorreo y el número de seguimiento y la etiqueta se generan recién cuando lo cotizás y pagás ahí. El plugin esperaba ese identificador al instante y por eso cortaba con error. Ahora el envío queda marcado como <strong>"Importado"</strong> (sin error), el pedido se sincroniza, y el plugin te indica que completes el pago del envío en el panel de MiCorreo para obtener el seguimiento y la etiqueta. El servicio Paq.Ar sigue funcionando igual, con tracking en tiempo real. De paso corregimos la programación de la sincronización automática de estados de envío.</p>
@@ -150,7 +173,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </details>
 
-            <details class="changelog-group" open data-month="2026-05">
+            <details class="changelog-group" data-month="2026-05">
                 <summary>
                     <span class="changelog-group__title">Mayo 2026</span>
                     <span class="changelog-group__count">2 releases</span>
@@ -185,7 +208,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </details>
 
-            <details class="changelog-group" open data-month="2026-04">
+            <details class="changelog-group" data-month="2026-04">
                 <summary>
                     <span class="changelog-group__title">Abril 2026</span>
                     <span class="changelog-group__count">20 releases</span>
