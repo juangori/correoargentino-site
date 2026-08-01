@@ -37,7 +37,7 @@ La diferencia de precio entre a domicilio y a sucursal puede ser considerable. S
 <!-- tarifas:start -->
 ## Tarifas de referencia de Correo Argentino
 
-Tarifas reales obtenidas de la API de cotización de Correo Argentino (MiCorreo), con **CABA (CP 1425) como origen**. **Última actualización: 26 de julio de 2026.**
+Tarifas reales obtenidas de la API de cotización de Correo Argentino (MiCorreo), con **CABA (CP 1425) como origen**. **Última actualización: 1 de agosto de 2026.**
 
 ### Cuánto cuesta enviar 1 kg desde CABA
 
