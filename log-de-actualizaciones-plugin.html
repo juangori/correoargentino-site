@@ -102,6 +102,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="changelog__timeline">
 
+            <details class="changelog-group" open data-month="2026-08">
+                <summary>
+                    <span class="changelog-group__title">Agosto 2026</span>
+                    <span class="changelog-group__count">1 release</span>
+                    <span class="changelog-group__chevron" aria-hidden="true"></span>
+                </summary>
+                <div class="changelog-group__body">
+
+            <!-- v1.0.49 -->
+            <article class="changelog-entry changelog-entry--latest">
+                <div class="changelog-entry__head">
+                    <span class="changelog-entry__version">v1.0.49</span>
+                    <span class="changelog-entry__date">3 de agosto, 2026</span>
+                    <span class="changelog-entry__tag changelog-entry__tag--fix">Corregido</span>
+                    <span class="changelog-entry__latest-flag">&bull; Última versión</span>
+                </div>
+                <h3>La calculadora ahora muestra el envío gratis y coincide con el checkout</h3>
+                <p>La calculadora de la página de producto mostraba opciones que no coincidían con las del checkout. Se corrigieron tres cosas. <strong>Envío gratis:</strong> si lo configuraste con el método "Envío gratuito" propio de WooCommerce, la calculadora no lo mostraba (solo reconocía el umbral del método de Correo Argentino); ahora detecta las dos formas. <strong>Tipo de entrega:</strong> mostraba siempre domicilio y sucursal sin importar tu configuración, así que una tienda que solo hace retiro en sucursal le ofrecía al comprador un envío a domicilio que después no iba a encontrar; ahora muestra una opción por cada método configurado, con el mismo nombre que ve en el checkout. <strong>Zonas de envío:</strong> las ignoraba y usaba la configuración del primer método que encontrara; ahora resuelve la zona real del código postal ingresado. Además, cuando falta poco para el envío gratis, la calculadora avisa <em>"Te faltan $X para envío gratis"</em>.</p>
+                <div class="changelog-entry__why"><b>Por qué</b>Nos escribió un usuario del plugin: su producto tenía envío gratis a sucursal, aparecía en el checkout, pero no en la calculadora. Al investigarlo encontramos que no era una función faltante sino un error: la calculadora reconstruía por su cuenta la lógica de tarifas en lugar de preguntarle a WooCommerce qué métodos correspondían, y por eso podía desincronizarse del checkout. Ahora consulta los métodos reales de la zona, así que las dos cosas no pueden volver a diferir. Lo validamos en vivo contra una cuenta real de MiCorreo antes de publicarlo.</div>
+            </article>
+
+                </div>
+            </details>
+
             <details class="changelog-group" open data-month="2026-07">
                 <summary>
                     <span class="changelog-group__title">Julio 2026</span>
@@ -111,12 +135,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="changelog-group__body">
 
             <!-- v1.0.47 -->
-            <article class="changelog-entry changelog-entry--latest">
+            <article class="changelog-entry">
                 <div class="changelog-entry__head">
                     <span class="changelog-entry__version">v1.0.47</span>
                     <span class="changelog-entry__date">27 de julio, 2026</span>
                     <span class="changelog-entry__tag changelog-entry__tag--new">Nuevo</span>
-                    <span class="changelog-entry__latest-flag">&bull; Última versión</span>
                 </div>
                 <h3>Calculá el costo de envío desde la página del producto</h3>
                 <p>Nueva calculadora de costo de envío directamente en la página de cada producto. El comprador ingresa <strong>solo su código postal</strong> y ve al instante cuánto le sale el envío —tanto <strong>a domicilio</strong> como <strong>a sucursal</strong>— con los días estimados de entrega, todo antes de agregar el producto al carrito. Usa la misma cotización en tiempo real de Correo Argentino (MiCorreo) que el checkout, así que el precio que ve coincide con lo que va a pagar. Aparece automáticamente debajo del botón "Agregar al carrito" (se puede desactivar desde la configuración) y también podés ubicarla donde quieras con el shortcode <code>[cap_calculadora]</code>. Respeta el costo adicional y el envío gratis por monto mínimo que tengas configurados.</p>

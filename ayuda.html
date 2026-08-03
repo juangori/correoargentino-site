@@ -88,6 +88,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><a href="#zona-envío">Zona de envío</a></li>
                     <li><a href="#flujo-pedido">Flujo de un pedido</a></li>
                     <li><a href="#envío-sucursal">Envío a sucursal</a></li>
+                    <li><a href="#calculadora">Calculadora en el producto</a></li>
                     <li><a href="#etiquetas">Etiquetas y rótulos</a></li>
                     <li><a href="#tracking">Seguimiento de envíos</a></li>
                     <li><a href="#acciones-masivas">Acciones masivas</a></li>
@@ -341,6 +342,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <p>Al seleccionar una sucursal, los campos de dirección se completan automáticamente y quedan como solo lectura. La sucursal seleccionada se guarda con el pedido.</p>
                     <p style="margin-top:16px; font-size:0.9rem;"><a href="blog/envio-sucursal-vs-domicilio-correo-argentino.html" style="color:var(--accent); font-weight:500;">Artículo relacionado: Envío a sucursal vs domicilio →</a></p>
+                </article>
+
+                <!-- Calculadora en el producto -->
+                <article id="calculadora" class="help__article">
+                    <h2>Calculadora en el producto</h2>
+                    <p>La calculadora deja que el comprador vea cuánto le sale el envío en la misma página del producto, antes de agregarlo al carrito. Solo tiene que ingresar su código postal.</p>
+
+                    <p>Muestra exactamente las mismas opciones que va a encontrar después en el checkout: si tu tienda solo hace retiro en sucursal, muestra solo sucursal; si tenés domicilio y sucursal configurados como métodos separados, muestra los dos, cada uno con el nombre que le pusiste. Usa la misma cotización en tiempo real de MiCorreo que el checkout, así que el precio coincide con lo que el cliente va a pagar.</p>
+
+                    <h3>Envío gratis</h3>
+                    <p>Si el producto califica para envío gratis, la calculadora lo muestra como tal. Reconoce las dos formas de configurarlo:</p>
+                    <ul class="help__list">
+                        <li><strong>Umbral del plugin:</strong> el campo "Envío gratis a partir de ($)" del método Correo Argentino, dentro de tu zona de envío.</li>
+                        <li><strong>Método nativo de WooCommerce:</strong> el método "Envío gratuito", cuando está configurado con un monto mínimo de pedido.</li>
+                    </ul>
+                    <p>Cuando falta poco para llegar al mínimo, agrega un aviso del tipo <em>"Te faltan $8.000 para envío gratis"</em>. Es un empujón simple para que el comprador sume otro producto al carrito, y aparece solo cuando el envío todavía no es gratis.</p>
+
+                    <h3>Cómo se activa</h3>
+                    <p>Viene activada por defecto: aparece automáticamente debajo del botón "Agregar al carrito". Podés desactivarla en Configuración → Opciones avanzadas, o ubicarla donde quieras con el shortcode <code>[cap_calculadora]</code>.</p>
+
+                    <h3>Qué necesita</h3>
+                    <ul class="help__list">
+                        <li>MiCorreo configurado, con el código postal del remitente cargado.</li>
+                        <li>El método Correo Argentino agregado a una zona de envío que cubra el destino. La calculadora resuelve la zona según el código postal ingresado, igual que el checkout.</li>
+                        <li>Peso y dimensiones cargados en el producto (si faltan, la estimación puede ser incorrecta).</li>
+                    </ul>
+
+                    <p style="margin-top:16px; font-size:0.9rem;"><strong>Tener en cuenta:</strong> la calculadora estima el envío de ese producto solo, no del carrito. Si tu envío gratis es por monto mínimo y el comprador lo alcanza sumando varios productos, va a seguir viendo el envío como pago hasta llegar al carrito. Y si definiste zonas por provincia, conviene que ingrese el código postal completo (C1425DEF en vez de 1425), porque la primera letra es la que identifica la provincia.</p>
                 </article>
 
                 <!-- Etiquetas y rotulos -->
