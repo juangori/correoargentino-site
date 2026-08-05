@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dejá tu reseña - Correo Argentino Pro para WooCommerce</title>
+    <meta name="description" content="Contanos tu experiencia con Correo Argentino Pro. Tu reseña se publica en nuestro sitio una vez aprobada.">
+    <!-- Página de invitación, se comparte por email. No debe indexarse ni figurar en el sitemap. -->
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preload" href="/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5PL6T2RH');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PL6T2RH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Page Header (navbar inside) -->
+<header class="page-header">
+    <nav class="navbar">
+        <div class="navbar__inner">
+            <a href="/" class="navbar__brand">
+                <svg width="38" height="38" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="nEnv" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient>
+                        <linearGradient id="nPro" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient>
+                    </defs>
+                    <rect x="6" y="18" width="56" height="40" rx="8" fill="white" opacity="0.95"/>
+                    <path d="M6 24 L34 44 L62 24" stroke="url(#nEnv)" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <rect x="40" y="44" width="36" height="20" rx="7" fill="url(#nPro)"/>
+                    <text x="58" y="58.5" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="12.5" font-weight="800" fill="white" letter-spacing="2.5">PRO</text>
+                </svg>
+                <span class="navbar__brand-text">CA Pro</span>
+            </a>
+            <button class="navbar__toggle" aria-label="Menu" onclick="document.querySelector('.navbar__menu').classList.toggle('open')">&#9776;</button>
+            <ul class="navbar__menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/plugin/">Plugin</a></li>
+                <li class="navbar__dropdown">
+                    <span class="navbar__dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Ayuda</span>
+                    <ul class="navbar__submenu">
+                        <li><a href="ayuda.html"><strong>Centro de Ayuda</strong><span>Guías y documentación</span></a></li>
+                        <li><a href="log-de-actualizaciones-plugin.html"><strong>Plugin Updates</strong><span>Historial de versiones</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="blog/">Blog</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="page-header__body">
+        <h1 id="review-heading">Dejá tu reseña</h1>
+        <p id="review-subhead">Contanos cómo te fue con Correo Argentino Pro</p>
+    </div>
+</header>
+
+<!-- Review Form -->
+<section class="contact">
+    <div class="container">
+        <form class="contact-form" id="review-form">
+            <p class="review-intro">
+                Somos un equipo chico y las reseñas son la forma más directa que tenemos de saber
+                qué funciona y qué no. Lo que escribas se publica en nuestro sitio una vez aprobado,
+                junto al nombre y el sitio que indiques.
+            </p>
+
+            <div class="contact-form__group">
+                <label for="name">Tu nombre o el de tu tienda</label>
+                <input type="text" id="name" name="name" required maxlength="100" placeholder="Cómo querés que aparezca">
+            </div>
+
+            <div class="contact-form__group">
+                <label for="website">Tu sitio web <span class="review-optional">(opcional)</span></label>
+                <input type="text" id="website" name="website" maxlength="200" placeholder="https://tutienda.com">
+            </div>
+
+            <div class="contact-form__group">
+                <label id="rating-label">Tu calificación</label>
+                <div class="review-stars" id="review-stars" role="radiogroup" aria-labelledby="rating-label">
+                    <button type="button" class="review-star" data-star="1" role="radio" aria-checked="false" aria-label="1 estrella">&#9734;</button>
+                    <button type="button" class="review-star" data-star="2" role="radio" aria-checked="false" aria-label="2 estrellas">&#9734;</button>
+                    <button type="button" class="review-star" data-star="3" role="radio" aria-checked="false" aria-label="3 estrellas">&#9734;</button>
+                    <button type="button" class="review-star" data-star="4" role="radio" aria-checked="false" aria-label="4 estrellas">&#9734;</button>
+                    <button type="button" class="review-star" data-star="5" role="radio" aria-checked="false" aria-label="5 estrellas">&#9734;</button>
+                    <span class="review-stars__caption" id="review-caption"></span>
+                </div>
+            </div>
+
+            <div class="contact-form__group">
+                <label for="comment">Tu comentario</label>
+                <textarea id="comment" name="comment" required maxlength="1000" placeholder="Qué te resolvió el plugin, qué te costó, qué le agregarías..."></textarea>
+                <p class="review-count"><span id="review-chars">0</span>/1000</p>
+            </div>
+
+            <button type="submit" class="contact-form__submit" id="submit-btn">Enviar reseña</button>
+            <div class="contact-form__status" id="form-status"></div>
+        </form>
+
+        <div class="review-thanks" id="review-thanks" hidden>
+            <div class="review-thanks__icon">&#10004;</div>
+            <h2>¡Gracias!</h2>
+            <p id="review-thanks-text">
+                Ya recibimos tu reseña. La revisamos y la publicamos en el sitio en las próximas horas.
+            </p>
+            <a href="/#reviews-section" class="review-thanks__link">Ver las reseñas publicadas</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="site-footer__grid">
+            <div class="site-footer__brand">
+                <a href="/" class="site-footer__logo">
+                    <svg width="34" height="34" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="fEnv" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient>
+                            <linearGradient id="fPro" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient>
+                        </defs>
+                        <rect x="6" y="18" width="56" height="40" rx="8" fill="white" opacity="0.95"/>
+                        <path d="M6 24 L34 44 L62 24" stroke="url(#fEnv)" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <rect x="40" y="44" width="36" height="20" rx="7" fill="url(#fPro)"/>
+                        <text x="58" y="58.5" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="12.5" font-weight="800" fill="white" letter-spacing="2.5">PRO</text>
+                    </svg>
+                    <span>Correo Argentino <strong>Pro</strong></span>
+                </a>
+                <p class="site-footer__tagline">Integrá Correo Argentino con WooCommerce: cotización en tiempo real, sucursales con mapa, etiquetas y tracking automático.</p>
+                <p class="site-footer__dev">Desarrollado por <a href="https://adwebs.com.ar">AD Webs</a></p>
+            </div>
+            <nav class="site-footer__col" aria-label="Producto">
+                <p class="site-footer__heading">Producto</p>
+                <ul>
+                    <li><a href="/plugin/">El plugin</a></li>
+                    <li><a href="/plugin/#precio">Precios y licencia</a></li>
+                    <li><a href="/#cotizador">Cotizador de envíos</a></li>
+                    <li><a href="/log-de-actualizaciones-plugin.html">Novedades del plugin</a></li>
+                </ul>
+            </nav>
+            <nav class="site-footer__col" aria-label="Recursos">
+                <p class="site-footer__heading">Recursos</p>
+                <ul>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/ayuda.html">Centro de ayuda</a></li>
+                    <li><a href="/faqs.html">Preguntas frecuentes</a></li>
+                    <li><a href="/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <nav class="site-footer__col" aria-label="Empresa">
+                <p class="site-footer__heading">Empresa</p>
+                <ul>
+                    <li><a href="/blog/autor/ad-webs.html">Sobre nosotros</a></li>
+                    <li><a href="/terminos.html">Términos y condiciones</a></li>
+                    <li><a href="/privacidad.html">Política de privacidad</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="site-footer__bottom">
+            <div class="site-footer__pay">
+                <span class="site-footer__pay-label">Pago seguro con</span>
+                <span class="pay-badge pay-badge--mp">Mercado Pago</span>
+                <span class="pay-badge pay-badge--visa">VISA</span>
+                <span class="pay-badge pay-badge--mc" aria-label="Mastercard"><svg width="26" height="16" viewBox="0 0 26 16" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="8" r="6" fill="#eb001b"/><circle cx="16" cy="8" r="6" fill="#f79e1b" fill-opacity="0.9"/></svg></span>
+                <span class="pay-badge pay-badge--amex">AMEX</span>
+            </div>
+            <p class="site-footer__copy">&copy; 2026 Correo Argentino Pro &middot; No estamos afiliados a Correo Argentino S.A.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+.review-intro {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin: 0 0 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-light);
+}
+.review-optional {
+    font-weight: 500;
+    color: var(--text-muted);
+}
+.review-stars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.review-star {
+    background: none;
+    border: none;
+    padding: 0 3px;
+    font-size: 2.3rem;
+    line-height: 1;
+    color: var(--orange);
+    cursor: pointer;
+    transition: transform 0.15s ease;
+    font-family: inherit;
+}
+.review-star:hover {
+    transform: scale(1.12);
+}
+.review-star:focus-visible {
+    outline: 2px solid var(--primary-light);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+.review-stars__caption {
+    margin-left: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+.review-count {
+    margin: 8px 0 0;
+    text-align: right;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+.review-thanks {
+    max-width: 560px;
+    margin: 0 auto;
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 56px 44px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    text-align: center;
+}
+.review-thanks__icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(16, 185, 129, 0.12);
+    color: var(--green);
+    font-size: 1.7rem;
+}
+.review-thanks h2 {
+    margin: 0 0 12px;
+    font-size: 1.5rem;
+}
+.review-thanks p {
+    margin: 0 0 24px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+.review-thanks__link {
+    display: inline-block;
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.review-thanks__link:hover {
+    text-decoration: underline;
+}
+</style>
+
+<script>
+(function () {
+    var API_URL = 'https://api.correoargentinopro.com';
+
+    var form    = document.getElementById('review-form');
+    var stars   = document.getElementById('review-stars');
+    var caption = document.getElementById('review-caption');
+    var comment = document.getElementById('comment');
+    var chars   = document.getElementById('review-chars');
+    var btn     = document.getElementById('submit-btn');
+    var status  = document.getElementById('form-status');
+    var thanks  = document.getElementById('review-thanks');
+
+    var CAPTIONS = ['', 'Muy malo', 'Malo', 'Aceptable', 'Muy bueno', 'Excelente'];
+    var rating   = 0;
+
+    // The link is sent by email, so it can arrive personalised:
+    //   dejar-resena.html?nombre=Nicolas&sitio=https://granboga.com.ar
+    var params = new URLSearchParams(window.location.search);
+    var who    = (params.get('nombre') || '').trim();
+    var site   = (params.get('sitio') || '').trim();
+
+    if (who) {
+        document.getElementById('review-heading').textContent = 'Hola ' + who + ', dejanos tu reseña';
+        document.getElementById('name').value = who;
+    }
+    if (site) {
+        document.getElementById('website').value = site;
+    }
+
+    function paint(n) {
+        var buttons = stars.querySelectorAll('.review-star');
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].textContent = i < n ? '★' : '☆';
+            buttons[i].setAttribute('aria-checked', (i + 1) === rating ? 'true' : 'false');
+        }
+        caption.textContent = CAPTIONS[n] || '';
+    }
+
+    stars.addEventListener('click', function (e) {
+        var star = e.target.closest('.review-star');
+        if (!star) return;
+        rating = parseInt(star.dataset.star, 10);
+        paint(rating);
+    });
+
+    stars.addEventListener('mouseover', function (e) {
+        var star = e.target.closest('.review-star');
+        if (star) paint(parseInt(star.dataset.star, 10));
+    });
+
+    stars.addEventListener('mouseleave', function () {
+        paint(rating);
+    });
+
+    comment.addEventListener('input', function () {
+        chars.textContent = comment.value.length;
+    });
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        status.textContent = '';
+        status.className = 'contact-form__status';
+
+        if (!rating) {
+            status.textContent = 'Elegí una calificación de 1 a 5 estrellas.';
+            status.className = 'contact-form__status contact-form__status--error';
+            return;
+        }
+
+        btn.disabled = true;
+        btn.textContent = 'Enviando...';
+
+        var data = {
+            name: document.getElementById('name').value.trim(),
+            website: document.getElementById('website').value.trim(),
+            rating: rating,
+            comment: comment.value.trim()
+        };
+
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'dejar_resena', review_rating: rating });
+
+        fetch(API_URL + '/reviews', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+        .then(function (r) { return r.json().catch(function () { return {}; }); })
+        .then(function (res) {
+            // The worker answers 200 with { error } for validation failures, so
+            // checking r.ok alone would report a rejected review as sent.
+            if (!res || !res.success) {
+                throw new Error(res && res.error ? res.error : 'Error al enviar la reseña.');
+            }
+            form.hidden = true;
+            if (who) {
+                document.getElementById('review-thanks-text').textContent =
+                    'Gracias ' + who + '. Ya recibimos tu reseña: la revisamos y la publicamos en el sitio en las próximas horas.';
+            }
+            thanks.hidden = false;
+            thanks.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        })
+        .catch(function (err) {
+            status.textContent = err.message || 'Error al enviar. Probá de nuevo en un momento.';
+            status.className = 'contact-form__status contact-form__status--error';
+            btn.disabled = false;
+            btn.textContent = 'Enviar reseña';
+        });
+    });
+})();
+</script>
+
+</body>
+</html>
