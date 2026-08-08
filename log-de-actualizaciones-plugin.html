@@ -110,13 +110,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </summary>
                 <div class="changelog-group__body">
 
-            <!-- v1.1.0 -->
+            <!-- v1.1.2 -->
             <article class="changelog-entry changelog-entry--latest">
+                <div class="changelog-entry__head">
+                    <span class="changelog-entry__version">v1.1.2</span>
+                    <span class="changelog-entry__date">8 de agosto, 2026</span>
+                    <span class="changelog-entry__tag changelog-entry__tag--fix">Corregido</span>
+                    <span class="changelog-entry__latest-flag">&bull; Última versión</span>
+                </div>
+                <h3>El aviso de actualización ya no se queda pegado</h3>
+                <p>Después de actualizar, WordPress podía seguir mostrando <em>"hay una nueva versión disponible"</em> de la versión que acababas de instalar. El plugin agregaba el aviso al registro de actualizaciones pero nunca lo quitaba, y WordPress reguarda ese registro tal cual cuando refresca por su propio temporizador, así que el aviso sobrevivía a cualquier cantidad de comprobaciones. Además, la respuesta del servidor de actualizaciones se cacheaba sin tener en cuenta qué versión tenías instalada, y el botón <em>"Volver a comprobar"</em> devolvía lo cacheado en lugar de consultar de nuevo.</p>
+                <div class="changelog-entry__why"><b>Por qué</b>Salió probando el ciclo completo de actualización en un sitio real, no leyendo el código: instalamos una versión vieja, actualizamos desde el panel de WordPress y miramos qué quedaba en pantalla. El update funcionaba, pero el aviso seguía ahí. Es el tipo de detalle que no rompe nada y desgasta igual, porque invita a apretar "actualizar" una y otra vez sobre algo que ya está al día.</div>
+            </article>
+
+            <!-- v1.1.0 -->
+            <article class="changelog-entry">
                 <div class="changelog-entry__head">
                     <span class="changelog-entry__version">v1.1.0</span>
                     <span class="changelog-entry__date">8 de agosto, 2026</span>
                     <span class="changelog-entry__tag changelog-entry__tag--new">Nuevo</span>
-                    <span class="changelog-entry__latest-flag">&bull; Última versión</span>
                 </div>
                 <h3>Despachá hasta 90 pedidos con un solo archivo</h3>
                 <p>Nueva pantalla <strong>Carga masiva</strong>. Genera el archivo que se sube en <em>Nuevo envío &rarr; Masivo</em> del panel de MiCorreo, con hasta <strong>90 envíos por vez</strong>, en lugar de cargarlos uno por uno. Filtrás por estado y fecha, y los pedidos que ya exportaste quedan marcados para que no los subas dos veces. Cada sucursal elegida por el comprador se traduce sola al código que usa ese archivo, que <strong>no es el mismo</strong> que devuelve la API de Correo Argentino. Antes de generarlo, el plugin revisa pedido por pedido y aparta los que el panel rechazaría, diciéndote exactamente qué les falta: sin celular —es obligatorio en la carga masiva, aunque WooCommerce lo trate como opcional—, sin peso, o con una dirección que no se puede separar en calle y altura.</p>
