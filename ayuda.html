@@ -160,7 +160,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </tr>
                                 <tr>
                                     <td><strong>Cotización automática</strong></td>
-                                    <td>Si</td>
+                                    <td>Sí</td>
                                     <td>No (tarifa fija configurable)</td>
                                 </tr>
                                 <tr>
@@ -172,6 +172,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <td><strong>Cancelar envíos</strong></td>
                                     <td>Desde el panel de MiCorreo</td>
                                     <td>Desde WooCommerce</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Seguimiento en WooCommerce</strong></td>
+                                    <td>No (la API no lo expone: el pedido queda en "Importado" y el seguimiento se ve en el panel)</td>
+                                    <td>Sí, sincronización automática de estados</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Credenciales</strong></td>
@@ -382,11 +387,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <h4>MiCorreo</h4>
                             <ol class="help__list help__list--ordered">
                                 <li>Ingresa al panel de MiCorreo</li>
-                                <li>Busca el envío por número de tracking</li>
-                                <li>Descarga el PDF del rótulo</li>
-                                <li>Imprimilo y pegalo en el paquete</li>
+                                <li>Busca el envío en "Pendientes" por la referencia (el número de pedido de WooCommerce)</li>
+                                <li>Cotizalo y pagalo: ahí se genera el número de seguimiento y se habilita la etiqueta</li>
+                                <li>Descarga el PDF del rótulo, imprimilo y pegalo en el paquete</li>
                             </ol>
-                            <p class="help__note">Las etiquetas de MiCorreo se gestionan directamente desde su plataforma.</p>
+                            <p class="help__note">Las etiquetas de MiCorreo se gestionan directamente desde su plataforma: la API no permite generarlas.</p>
                         </div>
                         <div class="help__col-card">
                             <h4>Paq.Ar</h4>
@@ -403,7 +408,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- Seguimiento de envíos -->
                 <article id="tracking" class="help__article">
                     <h2>Seguimiento de envíos</h2>
-                    <p>El plugin sincroniza automáticamente el estado de todos los envíos activos cada 6 horas. También podés actualizar manualmente desde el detalle del pedido.</p>
+
+                    <div class="help__error">
+                        <h4>Importante: el seguimiento automático funciona con Paq.Ar</h4>
+                        <p>La API de MiCorreo solo permite <strong>importar</strong> el envío: no devuelve seguimiento. Con MiCorreo el pedido queda en <strong>"Importado"</strong>, y el número de seguimiento, la etiqueta y los estados posteriores se gestionan en el panel de MiCorreo después de cotizar y pagar el envío. Es una limitación de la API de Correo Argentino, no del plugin: afecta por igual a cualquier integración, incluida la oficial.</p>
+                    </div>
+
+                    <p>Con Paq.Ar, el plugin sincroniza automáticamente el estado de todos los envíos activos cada 6 horas. También podés actualizar manualmente desde el detalle del pedido.</p>
 
                     <h3>Estados de envío</h3>
                     <table class="help__table">
@@ -411,18 +422,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <tr>
                                 <th>Estado</th>
                                 <th>Descripción</th>
+                                <th>Servicio</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td><span class="help__badge help__badge--blue">Creado</span></td><td>Registrado en Correo Argentino, pendiente de despacho.</td></tr>
-                            <tr><td><span class="help__badge help__badge--blue">Retirado</span></td><td>Correo Argentino retiró el paquete.</td></tr>
-                            <tr><td><span class="help__badge help__badge--orange">En tránsito</span></td><td>El paquete está en camino al destino.</td></tr>
-                            <tr><td><span class="help__badge help__badge--orange">En reparto</span></td><td>Sale a reparto hoy, se entrega en el día.</td></tr>
-                            <tr><td><span class="help__badge help__badge--green">Entregado</span></td><td>Entregado al destinatario exitosamente.</td></tr>
-                            <tr><td><span class="help__badge help__badge--red">Devuelto</span></td><td>No se pudo entregar, devuelto al remitente.</td></tr>
-                            <tr><td><span class="help__badge help__badge--gray">Cancelado</span></td><td>El envío fue cancelado.</td></tr>
+                            <tr><td><span class="help__badge help__badge--orange">Importado</span></td><td>El envío se importó a tu cuenta de MiCorreo. Todavía no tiene número de seguimiento: lo obtenés al cotizarlo y pagarlo en el panel. Es el único estado que vas a ver con MiCorreo.</td><td>Solo MiCorreo</td></tr>
+                            <tr><td><span class="help__badge help__badge--blue">Creado</span></td><td>Registrado en Correo Argentino, pendiente de despacho.</td><td>Solo Paq.Ar</td></tr>
+                            <tr><td><span class="help__badge help__badge--blue">Retirado</span></td><td>Correo Argentino retiró el paquete.</td><td>Solo Paq.Ar</td></tr>
+                            <tr><td><span class="help__badge help__badge--orange">En tránsito</span></td><td>El paquete está en camino al destino.</td><td>Solo Paq.Ar</td></tr>
+                            <tr><td><span class="help__badge help__badge--orange">En reparto</span></td><td>Sale a reparto hoy, se entrega en el día.</td><td>Solo Paq.Ar</td></tr>
+                            <tr><td><span class="help__badge help__badge--green">Entregado</span></td><td>Entregado al destinatario exitosamente.</td><td>Solo Paq.Ar</td></tr>
+                            <tr><td><span class="help__badge help__badge--red">Devuelto</span></td><td>No se pudo entregar, devuelto al remitente.</td><td>Solo Paq.Ar</td></tr>
+                            <tr><td><span class="help__badge help__badge--gray">Cancelado</span></td><td>El envío fue cancelado.</td><td>Solo Paq.Ar</td></tr>
                         </tbody>
                     </table>
+
+                    <h3>Cómo sigo un envío de MiCorreo</h3>
+                    <ol class="help__list help__list--ordered">
+                        <li>Creás el envío desde el pedido: el plugin lo importa a tu cuenta y el pedido queda en "Importado".</li>
+                        <li>Entrás al panel de MiCorreo, lo buscás en "Pendientes" por la referencia (el número de pedido de WooCommerce) y lo cotizás.</li>
+                        <li>Pagás el envío. Recién ahí MiCorreo genera el número de seguimiento y la etiqueta.</li>
+                        <li>A partir de ese momento el seguimiento se consulta en el sitio de Correo Argentino con ese número.</li>
+                    </ol>
+                    <p class="help__note">Si necesitás el seguimiento dentro de WooCommerce, Paq.Ar es el servicio que habilita el circuito completo: devuelve el número al instante y permite sincronizar estados, generar el rótulo y cancelar el envío desde el pedido.</p>
 
                     <h3>Dónde ve el cliente el tracking</h3>
                     <ul class="help__list">
@@ -466,6 +488,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <p>Cuando esta opción está activada, el plugin marca automáticamente el pedido como "Completado" cuándo el tracking indica que el paquete fue entregado.</p>
 
                     <ul class="help__list">
+                        <li><strong>Requiere Paq.Ar:</strong> depende del seguimiento automático, y la API de MiCorreo no lo expone. Con MiCorreo el estado nunca llega a "Entregado", así que los pedidos se completan a mano.</li>
                         <li>Solo aplica a pedidos en estado "Procesando".</li>
                         <li>Se agrega una nota al pedido indicando que fue completado automáticamente.</li>
                         <li>El cliente recibe el email de pedido completado de WooCommerce.</li>
@@ -559,6 +582,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="help__error">
                         <h4>"Conexión API — Error"</h4>
                         <p>Puede ser por credenciales incorrectas, la API de Correo Argentino temporalmente caída, o un firewall bloqueando las conexiones salientes. Verifica tus credenciales y probá de nuevo.</p>
+                    </div>
+
+                    <div class="help__error">
+                        <h4>"El pedido solo muestra Importado y nunca cambia de estado"</h4>
+                        <p>Es el comportamiento esperado con MiCorreo, no un problema de tu instalación. La API de MiCorreo solo permite importar el envío: no devuelve seguimiento. El número de seguimiento y la etiqueta se generan cuando cotizás y pagás ese envío en el panel de MiCorreo, y desde ahí el seguimiento se consulta en el sitio de Correo Argentino. Los estados intermedios y el auto-completado del pedido funcionan con Paq.Ar, que sí devuelve seguimiento por API. Ver <a href="#tracking">Seguimiento de envíos</a>.</p>
                     </div>
 
                     <div class="help__error">

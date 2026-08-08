@@ -23,7 +23,7 @@ Los principales operadores logísticos para e-commerce en Argentina son (si quer
 - Selector de sucursales con mapa interactivo (+3.000 sucursales).
 - Creación de envíos desde WooCommerce (MiCorreo + Paq.Ar).
 - Generación de etiquetas PDF (Paq.Ar).
-- Tracking automático con emails al cliente.
+- Tracking automático con emails al cliente (solo Paq.Ar).
 - Acciones masivas para alto volumen.
 - Compatible con HPOS y checkout por bloques.
 
@@ -48,7 +48,7 @@ Algunos plugins intentan cubrir múltiples operadores en un solo producto. La ve
 - **Cotización en tiempo real:** Que el cliente vea el costo exacto en el checkout, no un precio fijo o estimado.
 - **Creación de envíos:** Poder crear el envío desde WooCommerce sin entrar al sistema del operador.
 - **Etiquetas:** Generar e imprimir rótulos directamente desde el panel.
-- **Tracking:** Seguimiento automático con notificaciones al cliente.
+- **Tracking:** Seguimiento automático con notificaciones al cliente (solo Paq.Ar).
 - **Compatibilidad:** Que soporte HPOS (la nueva forma de almacenar pedidos de WooCommerce) y el checkout por bloques.
 - **Soporte y actualizaciones:** Que el desarrollador mantenga el plugin actualizado y brinde soporte cuándo lo necesites.
 - **Acciones masivas:** Si manejas volumen, necesitas poder crear envíos y etiquetas en lote.
@@ -67,7 +67,7 @@ Con [Correo Argentino Pro](https://correoargentinopro.com/), toda la operativa s
 
 ### ¿Cuál es el mejor plugin de envíos para WooCommerce en Argentina?
 
-No hay un único ganador universal: depende de con qué operador enviás. Si enviás con **Correo Argentino** (el de mayor cobertura nacional), [Correo Argentino Pro](https://correoargentinopro.com/) es la integración más completa para WooCommerce, con cotización en tiempo real, selector de sucursales con mapa, creación de envíos (MiCorreo y Paq.Ar), etiquetas PDF, tracking automático y acciones masivas. Para OCA y Andreani existen plugins, pero suelen ser más básicos y el de Andreani requiere un acuerdo comercial activo.
+No hay un único ganador universal: depende de con qué operador enviás. Si enviás con **Correo Argentino** (el de mayor cobertura nacional), [Correo Argentino Pro](https://correoargentinopro.com/) es la integración más completa para WooCommerce, con cotización en tiempo real, selector de sucursales con mapa, creación de envíos (MiCorreo y Paq.Ar), etiquetas PDF, tracking automático (solo Paq.Ar) y acciones masivas. Para OCA y Andreani existen plugins, pero suelen ser más básicos y el de Andreani requiere un acuerdo comercial activo.
 
 ### ¿Es gratis el plugin Correo Argentino Pro?
 

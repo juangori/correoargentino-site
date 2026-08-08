@@ -1,6 +1,6 @@
 # Correo Argentino Pro
 
-> Plugin premium de WooCommerce para integrar envíos de Correo Argentino en tiendas online de Argentina. Cotización en tiempo real, mapa de sucursales, etiquetas PDF, tracking automático y acciones masivas.
+> Plugin premium de WooCommerce para integrar envíos de Correo Argentino en tiendas online de Argentina. Cotización en tiempo real, mapa de sucursales, etiquetas PDF, tracking automático (solo Paq.Ar) y acciones masivas.
 
 ## Versión completa
 
@@ -17,9 +17,11 @@ Características principales:
 - Selector de sucursales con mapa interactivo Leaflet (+3000 sucursales)
 - Creación de envíos desde el panel de WooCommerce (MiCorreo y Paq.Ar)
 - Generación de etiquetas PDF / rótulos de envío
-- Tracking automático con timeline visual y notificaciones por email
+- Tracking automático con timeline visual y notificaciones por email (solo Paq.Ar)
 - Acciones masivas: crear envíos y etiquetas para múltiples pedidos a la vez
 - Exportación CSV de envíos
+- Carga masiva: genera el archivo de lote de hasta 90 envíos que se sube al panel de MiCorreo, con los códigos de sucursal de Correo Argentino ya resueltos
+- Selector de sucursales dentro del checkout por bloques de WooCommerce, que el plugin oficial no soporta
 - Reglas de envío gratis configurables
 - Servicios soportados: Clásico (a domicilio), Envío a sucursal, Expreso
 - Compatible con HPOS y checkout por bloques de WooCommerce

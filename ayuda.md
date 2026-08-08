@@ -33,6 +33,7 @@ El plugin soporta dos plataformas de Correo Argentino. Elegi la que corresponda 
 | **Cotización automatica** | Si | No (tarifa fija configurable) |
 | **Etiquetas/Rotulos** | Desde el panel de MiCorreo | Generadas desde el plugin |
 | **Cancelar envíos** | Desde el panel de MiCorreo | Desde WooCommerce |
+| **Seguimiento en WooCommerce** | No (la API no lo expone: el pedido queda en "Importado" y el seguimiento se ve en el panel) | Sí, sincronización automática de estados |
 | **Credenciales** | Email, contrasena, Customer ID | API Key, ID de Acuerdo |
 
 [Artículo relacionado: ¿Qué es MiCorreo de Correo Argentino? →](https://correoargentinopro.com/blog/que-es-micorreo-correo-argentino.html)
@@ -163,11 +164,11 @@ El proceso para obtener las etiquetas depende del servicio que uses:
 #### MiCorreo
 
 1. Ingresa al panel de MiCorreo
-2. Busca el envío por numero de tracking
-3. Descarga el PDF del rotulo
-4. Imprimilo y pegalo en el paquete
+2. Busca el envío en "Pendientes" por la referencia (el numero de pedido de WooCommerce)
+3. Cotizalo y pagalo: ahi se genera el numero de seguimiento y se habilita la etiqueta
+4. Descarga el PDF del rotulo, imprimilo y pegalo en el paquete
 
-Las etiquetas de MiCorreo se gestionan directamente desde su plataforma.
+Las etiquetas de MiCorreo se gestionan directamente desde su plataforma: la API no permite generarlas.
 
 #### Paq.Ar
 
@@ -178,25 +179,41 @@ Las etiquetas de MiCorreo se gestionan directamente desde su plataforma.
 
 ## Seguimiento de envíos
 
-El plugin sincroniza automáticamente el estado de todos los envíos activos cada 6 horas. Tambien podes actualizar manualmente desde el detalle del pedido.
+**Importante: el seguimiento automático funciona con Paq.Ar.** La API de MiCorreo solo permite *importar* el envío: no devuelve seguimiento. Con MiCorreo el pedido queda en "Importado", y el numero de seguimiento, la etiqueta y los estados posteriores se gestionan en el panel de MiCorreo despues de cotizar y pagar el envío. Es una limitacion de la API de Correo Argentino, no del plugin: afecta por igual a cualquier integración, incluida la oficial.
+
+Con Paq.Ar, el plugin sincroniza automáticamente el estado de todos los envíos activos cada 6 horas. Tambien podes actualizar manualmente desde el detalle del pedido.
 
 ### Estados de envío
 
-| Estado | Descripcion |
-|---|---|
-| Creado | Registrado en Correo Argentino, pendiente de despacho. |
-| Retirado | Correo Argentino retiro el paquete. |
-| En transito | El paquete esta en camino al destino. |
-| En reparto | Sale a reparto hoy, se entrega en el dia. |
-| Entregado | Entregado al destinatario exitosamente. |
-| Devuelto | No se pudo entregar, devuelto al remitente. |
-| Cancelado | El envío fue cancelado. |
+| Estado | Descripcion | Servicio |
+|---|---|---|
+| Importado | El envío se importo a tu cuenta de MiCorreo. Todavia no tiene numero de seguimiento: lo obtenes al cotizarlo y pagarlo en el panel. Es el unico estado que vas a ver con MiCorreo. | Solo MiCorreo |
+| Creado | Registrado en Correo Argentino, pendiente de despacho. | Solo Paq.Ar |
+| Retirado | Correo Argentino retiro el paquete. | Solo Paq.Ar |
+| En transito | El paquete esta en camino al destino. | Solo Paq.Ar |
+| En reparto | Sale a reparto hoy, se entrega en el dia. | Solo Paq.Ar |
+| Entregado | Entregado al destinatario exitosamente. | Solo Paq.Ar |
+| Devuelto | No se pudo entregar, devuelto al remitente. | Solo Paq.Ar |
+| Cancelado | El envío fue cancelado. | Solo Paq.Ar |
+
+### Como sigo un envío de MiCorreo
+
+1. Creas el envío desde el pedido: el plugin lo importa a tu cuenta y el pedido queda en "Importado".
+2. Entras al panel de MiCorreo, lo buscas en "Pendientes" por la referencia (el numero de pedido de WooCommerce) y lo cotizas.
+3. Pagas el envío. Recien ahi MiCorreo genera el numero de seguimiento y la etiqueta.
+4. A partir de ese momento el seguimiento se consulta en el sitio de Correo Argentino con ese numero.
+
+Si necesitas el seguimiento dentro de WooCommerce, Paq.Ar es el servicio que habilita el circuito completo: devuelve el numero al instante y permite sincronizar estados, generar el rotulo y cancelar el envío desde el pedido.
 
 ### Donde ve el cliente el tracking
+
+Con Paq.Ar:
 
 - **Mi Cuenta:** En el detalle del pedido, con un timeline visual del estado.
 - **Emails:** Recibe notificaciones automáticas cuándo el estado cambia.
 - **Pagina publica:** Podes crear una pagina de tracking con el shortcode `[cap_tracking]`.
+
+Con MiCorreo no hay estados para mostrarle al cliente hasta que pagues el envío en el panel, asi que el plugin no le envia el email de "envío despachado" ni le muestra el timeline: preferimos no prometerle un seguimiento que todavia no existe.
 
 ## Acciones masivas
 
@@ -222,6 +239,7 @@ Estos valores se configuran al editar el metodo de envío dentro de la zona de e
 
 Cuando esta opción esta activada, el plugin marca automáticamente el pedido como "Completado" cuándo el tracking indica que el paquete fue entregado.
 
+- **Requiere Paq.Ar:** depende del seguimiento automático, y la API de MiCorreo no lo expone. Con MiCorreo el estado nunca llega a "Entregado", asi que los pedidos se completan a mano.
 - Solo aplica a pedidos en estado "Procesando".
 - Se agrega una nota al pedido indicando que fue completado automáticamente.
 - El cliente recibe el email de pedido completado de WooCommerce.
@@ -293,6 +311,10 @@ Verifica que todos los productos del carrito tengan peso y dimensiones configura
 #### "Conexion API — Error"
 
 Puede ser por credenciales incorrectas, la API de Correo Argentino temporalmente caida, o un firewall bloqueando las conexiones salientes. Verifica tus credenciales y proba de nuevo.
+
+#### "El pedido solo muestra Importado y nunca cambia de estado"
+
+Es el comportamiento esperado con MiCorreo, no un problema de tu instalacion. La API de MiCorreo solo permite importar el envío: no devuelve seguimiento. El numero de seguimiento y la etiqueta se generan cuando cotizas y pagas ese envío en el panel de MiCorreo, y desde ahi el seguimiento se consulta en el sitio de Correo Argentino. Los estados intermedios y el auto-completado del pedido funcionan con Paq.Ar, que si devuelve seguimiento por API.
 
 #### "No puedo cancelar un envío de MiCorreo"
 

@@ -185,7 +185,7 @@ La respuesta depende de tu situación particular, pero para la **mayoría de las
 
 - **Si vendés a todo el país:** Correo Argentino es el único operador que garantiza cobertura en prácticamente todas las localidades. Si un cliente en un pueblo del interior quiere comprarte, con OCA o Andreani probablemente no puedas enviarle. Con Correo Argentino, sí.
 - **Si estás empezando o sos emprendedor:** MiCorreo no requiere acuerdo comercial, no tiene volumen mínimo, y las tarifas son competitivas desde el primer envío. OCA y Andreani te van a pedir negociar un acuerdo para darte precios razonables.
-- **Si usás WooCommerce:** [Correo Argentino Pro](https://correoargentinopro.com/) te da una integración que ningún otro operador tiene al mismo nivel: cotización en tiempo real, selector de sucursales con mapa, creación de envíos, etiquetas, tracking automático y acciones masivas. Todo desde tu panel de WooCommerce.
+- **Si usás WooCommerce:** [Correo Argentino Pro](https://correoargentinopro.com/) te da una integración que ningún otro operador tiene al mismo nivel: cotización en tiempo real, selector de sucursales con mapa, creación de envíos, etiquetas, tracking automático (solo Paq.Ar) y acciones masivas. Todo desde tu panel de WooCommerce.
 - **Si ya tenés volumen:** Podés escalar a Paq.Ar para acceder a tarifas corporativas, retiro en domicilio y mayor capacidad operativa. Y Correo Argentino Pro soporta ambos servicios (MiCorreo y Paq.Ar).
 
 La única situación donde OCA o Andreani podrían ser preferibles es si tu operación está 100% concentrada en AMBA y necesitás tiempos de entrega express de 24 horas como prioridad absoluta. Pero incluso en ese caso, podés complementar con Correo Argentino para cubrir el resto del país.
@@ -216,7 +216,7 @@ Para la mayoría de las tiendas online, **Correo Argentino es el más económico
 
 ### ¿Cuál conviene integrar con WooCommerce?
 
-**Correo Argentino**, gracias a [Correo Argentino Pro](https://correoargentinopro.com/). Ofrece cotización en tiempo real, selector de sucursales con mapa, creación de envíos (MiCorreo y Paq.Ar), etiquetas PDF, tracking automático y acciones masivas, y es compatible con HPOS y el checkout por bloques. Los plugins de OCA y Andreani suelen ser más básicos y el de Andreani, además, requiere un acuerdo comercial activo para funcionar.
+**Correo Argentino**, gracias a [Correo Argentino Pro](https://correoargentinopro.com/). Ofrece cotización en tiempo real, selector de sucursales con mapa, creación de envíos (MiCorreo y Paq.Ar), etiquetas PDF, tracking automático (solo Paq.Ar) y acciones masivas, y es compatible con HPOS y el checkout por bloques. Los plugins de OCA y Andreani suelen ser más básicos y el de Andreani, además, requiere un acuerdo comercial activo para funcionar.
 
 ## También te puede interesar
 

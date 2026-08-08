@@ -18,7 +18,7 @@ Entre las limitaciones más notables del plugin oficial están la falta de integ
 
 [Correo Argentino Pro](https://correoargentinopro.com/) es un plugin premium desarrollado por [AD Webs](https://adwebs.com.ar), pensado para tiendas WooCommerce que necesitan una solución profesional y completa para gestionar sus envíos con Correo Argentino. No es una versión "mejorada" del plugin oficial: es un producto completamente diferente, construido desde cero con un enfoque en automatización, confiabilidad y experiencia del usuario.
 
-Correo Argentino Pro integra tanto [MiCorreo](https://correoargentinopro.com/blog/que-es-micorreo-correo-argentino.html) como [Paq.Ar](https://correoargentinopro.com/blog/paqar-woocommerce.html), los dos servicios de envío de Correo Argentino. Esto significa que sin importar el tamaño de tu operación, podés usar el mismo plugin. Además, incluye funcionalidades avanzadas como creación de envíos desde el panel de WooCommerce, generación de etiquetas PDF, tracking automático, acciones masivas, selector de sucursales con mapa y compatibilidad total con las últimas versiones de WooCommerce.
+Correo Argentino Pro integra tanto [MiCorreo](https://correoargentinopro.com/blog/que-es-micorreo-correo-argentino.html) como [Paq.Ar](https://correoargentinopro.com/blog/paqar-woocommerce.html), los dos servicios de envío de Correo Argentino. Esto significa que sin importar el tamaño de tu operación, podés usar el mismo plugin. Además, incluye funcionalidades avanzadas como creación de envíos desde el panel de WooCommerce, generación de etiquetas PDF, tracking automático (solo Paq.Ar), acciones masivas, selector de sucursales con mapa y compatibilidad total con las últimas versiones de WooCommerce.
 
 ## Tabla comparativa: plugin oficial vs Correo Argentino Pro
 
@@ -31,7 +31,7 @@ Acá va el detalle completo de lo que ofrece cada uno. Esta tabla te permite ver
 | Creación de envíos MiCorreo | No | Sí, desde el pedido |
 | Creación de envíos Paq.Ar | No | Sí, desde el pedido |
 | Etiquetas PDF | No | Sí, individuales y en lote |
-| Tracking automático | No | Sí, con notificaciones al cliente |
+| Tracking automático (solo Paq.Ar) | No | Sí, con notificaciones al cliente |
 | Acciones masivas | No | Sí, crear envíos y etiquetas en lote |
 | Compatibilidad HPOS | No garantizada | Sí, 100% compatible |
 | Checkout por bloques | No compatible | Sí, totalmente compatible |
@@ -74,7 +74,7 @@ Con Correo Argentino Pro, tenés soporte directo por email con tiempos de respue
 
 Seamos honestos: el plugin oficial puede cumplir si lo único que buscás es que el checkout muestre una tarifa, no te importa que a veces falle, y no te molesta cargar cada envío a mano en la web de Correo Argentino. Es gratis y hace esa única cosa.
 
-Ahora, si querés que el envío quede resuelto de punta a punta —cotización estable, selector de sucursales con mapa, creación del despacho y la etiqueta desde el pedido, y tracking automático para tu cliente—, **Correo Argentino Pro es la opción clara**. Y esto no depende de cuántos envíos hagas: el trabajo manual que te ahorra existe desde el primer pedido, y la experiencia que le das a tu comprador mejora desde la primera venta.
+Ahora, si querés que el envío quede resuelto de punta a punta —cotización estable, selector de sucursales con mapa, creación del despacho y la etiqueta desde el pedido, y tracking automático para tu cliente (solo Paq.Ar)—, **Correo Argentino Pro es la opción clara**. Y esto no depende de cuántos envíos hagas: el trabajo manual que te ahorra existe desde el primer pedido, y la experiencia que le das a tu comprador mejora desde la primera venta.
 
 No se trata solo de funcionalidades extra: se trata de tener una herramienta mantenida, con soporte real, que acompaña tu operación desde el arranque y no se convierte en un cuello de botella cuando crecés.
 
@@ -82,7 +82,7 @@ No se trata solo de funcionalidades extra: se trata de tener una herramienta man
 
 ### ¿Cuál es la diferencia entre el plugin oficial de Correo Argentino y Correo Argentino Pro?
 
-El plugin oficial gratuito se limita a cotizar envíos en el checkout, y no siempre de forma confiable. [Correo Argentino Pro](https://correoargentinopro.com/), en cambio, cubre **todo el ciclo de vida del envío**: cotización, creación del envío desde WooCommerce, etiquetas PDF, tracking automático y acciones masivas. No es una versión mejorada del oficial, sino un producto completamente diferente construido desde cero.
+El plugin oficial gratuito se limita a cotizar envíos en el checkout, y no siempre de forma confiable. [Correo Argentino Pro](https://correoargentinopro.com/), en cambio, cubre **todo el ciclo de vida del envío**: cotización, creación del envío desde WooCommerce, etiquetas PDF, tracking automático (solo Paq.Ar) y acciones masivas. No es una versión mejorada del oficial, sino un producto completamente diferente construido desde cero.
 
 ### ¿El plugin oficial permite generar etiquetas y crear envíos desde WooCommerce?
 
@@ -100,6 +100,6 @@ Cuando lo único que necesitás es **mostrar una tarifa en el checkout** y está
 
 La comparativa entre el **correo argentino plugin oficial vs correo argentino PRO** se resume en una pregunta: querés una solución básica y limitada, o una herramienta profesional que automatice todo tu flujo de envíos? Si llegaste hasta acá, probablemente ya sepas la respuesta.
 
-[Conoce Correo Argentino Pro](https://correoargentinopro.com/) y lleva los envíos de tu tienda WooCommerce al siguiente nivel. Cotización en tiempo real, creación de envíos, etiquetas PDF, tracking automático, acciones masivas y compatibilidad total con WooCommerce moderno. Todo en un solo plugin. Si querés ver cómo se compara Correo Argentino con otros operadores, lee nuestra [comparativa entre Correo Argentino, OCA y Andreani](https://correoargentinopro.com/blog/correo-argentino-vs-oca-vs-andreani.html).
+[Conoce Correo Argentino Pro](https://correoargentinopro.com/) y lleva los envíos de tu tienda WooCommerce al siguiente nivel. Cotización en tiempo real, creación de envíos, etiquetas PDF, tracking automático (solo Paq.Ar), acciones masivas y compatibilidad total con WooCommerce moderno. Todo en un solo plugin. Si querés ver cómo se compara Correo Argentino con otros operadores, lee nuestra [comparativa entre Correo Argentino, OCA y Andreani](https://correoargentinopro.com/blog/correo-argentino-vs-oca-vs-andreani.html).
 
 Para empezar a configurar el plugin, seguí nuestra [guía de integración de Correo Argentino con WooCommerce](https://correoargentinopro.com/blog/como-integrar-correo-argentino-woocommerce.html). También te puede interesar nuestra [guía completa de WooCommerce en Argentina](https://correoargentinopro.com/blog/woocommerce-argentina-guia-completa.html).

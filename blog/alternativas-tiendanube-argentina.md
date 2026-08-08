@@ -76,7 +76,7 @@ Uno de los puntos que más preocupa al migrar de Tiendanube es la logística. Co
 - Cotización en tiempo real de MiCorreo y Paq.Ar directo en el checkout.
 - Selector de sucursales con mapa interactivo para que el cliente elija dónde retirar.
 - Creación de envíos y generación de etiquetas PDF desde el panel de WooCommerce.
-- Tracking automático con notificaciones por email al cliente.
+- Tracking automático con notificaciones por email al cliente (solo Paq.Ar).
 - Acciones masivas para procesar múltiples envíos de una sola vez.
 - Compatible con HPOS y el checkout por bloques de WooCommerce.
 
@@ -250,7 +250,7 @@ Solo si tu foco principal es vender internacionalmente y el costo en dólares no
 
 ### ¿Qué plataforma tiene mejor integración con Correo Argentino?
 
-WooCommerce, gracias a **[Correo Argentino Pro](https://correoargentinopro.com/)**: cotización en tiempo real de MiCorreo y Paq.Ar en el checkout, selector de sucursales con mapa interactivo, generación de etiquetas PDF, tracking automático con notificaciones por email y acciones masivas. Tiendanube ofrece una integración básica, mientras que Shopify, Wix, Jumpseller y Magento no tienen integración con Correo Argentino.
+WooCommerce, gracias a **[Correo Argentino Pro](https://correoargentinopro.com/)**: cotización en tiempo real de MiCorreo y Paq.Ar en el checkout, selector de sucursales con mapa interactivo, generación de etiquetas PDF, tracking automático con notificaciones por email (solo Paq.Ar) y acciones masivas. Tiendanube ofrece una integración básica, mientras que Shopify, Wix, Jumpseller y Magento no tienen integración con Correo Argentino.
 
 ## También te puede interesar
 

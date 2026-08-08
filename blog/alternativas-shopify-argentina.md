@@ -58,7 +58,7 @@ La mayoría de las apps del ecosistema de Shopify están diseñadas para el merc
 - **0% de comisión por venta:** WooCommerce no cobra un solo peso por transacción. Solo pagás la comisión de tu procesador de pagos (Mercado Pago, Modo, etc.). Si facturás fuerte, el ahorro es enorme.
 - **Costos en pesos:** El hosting podés contratarlo con proveedores argentinos o internacionales accesibles. No estás atado a pagar en dólares a una plataforma SaaS.
 - **Integración completa con Mercado Pago:** Plugins nativos y gratuitos que soportan todos los medios de pago: tarjetas de crédito en cuotas, débito, efectivo, transferencia, Mercado Crédito y más.
-- **Integración completa con Correo Argentino:** Gracias a **[Correo Argentino Pro](https://correoargentinopro.com/)**, tenés cotización en tiempo real, selector de sucursales con mapa, creación de envíos, etiquetas PDF, tracking automático y acciones masivas. Todo desde el panel de WooCommerce.
+- **Integración completa con Correo Argentino:** Gracias a **[Correo Argentino Pro](https://correoargentinopro.com/)**, tenés cotización en tiempo real, selector de sucursales con mapa, creación de envíos, etiquetas PDF, tracking automático (solo Paq.Ar) y acciones masivas. Todo desde el panel de WooCommerce.
 - **Personalización total:** A diferencia de Shopify, con WooCommerce podés modificar absolutamente todo: diseño, checkout, lógica de negocio, campos personalizados, reglas de precio, y más.
 - **SEO superior:** WordPress es la plataforma con mejor SEO del mercado. Blog integrado, control total de metas, URLs amigables, schema markup, sitemaps y más. Shopify no se le acerca.
 - **Ecosistema adaptado al mercado argentino:** Plugins de facturación electrónica (AFIP), integración con operadores logísticos locales, medios de pago argentinos, y una comunidad activa de desarrolladores en el país.
@@ -82,7 +82,7 @@ El punto donde WooCommerce más se diferencia de Shopify en Argentina es la log�
 - Selector de sucursales con mapa interactivo para retiro en sucursal.
 - Creación automática de envíos desde el panel de pedidos.
 - Generación de etiquetas PDF con un clic.
-- Tracking automático con notificaciones por email al cliente.
+- Tracking automático con notificaciones por email al cliente (solo Paq.Ar).
 - Acciones masivas para procesar decenas de envíos de una sola vez.
 - Compatible con HPOS y el checkout por bloques de WooCommerce.
 

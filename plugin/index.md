@@ -2,7 +2,7 @@
 
 # Correo Argentino Pro — Plugin de Correo Argentino para WooCommerce
 
-> El plugin de Correo Argentino para WooCommerce: cotización en tiempo real, selector de sucursales con mapa, etiquetas PDF y tracking automático. Licencia anual desde $62.990 ARS. Prueba gratuita de 15 días.
+> El plugin de Correo Argentino para WooCommerce: cotización en tiempo real, selector de sucursales con mapa, etiquetas PDF y tracking automático (solo Paq.Ar). Licencia anual desde $62.990 ARS. Prueba gratuita de 15 días.
 
 **Correo Argentino Pro** es un plugin comercial para WordPress/WooCommerce que integra los envíos de Correo Argentino en tiendas online argentinas. Se conecta con las APIs oficiales de **MiCorreo** (para emprendedores, monotributistas y PyMEs) y **Paq.Ar** (para empresas con acuerdo comercial).
 
@@ -31,8 +31,10 @@ Desarrollado por [AD Webs](https://adwebs.com.ar). No estamos afiliados a Correo
 - **Selector de sucursales con mapa:** modal interactivo con mapa Leaflet, más de 3.000 sucursales, búsqueda por nombre o localidad, geolocalización y ordenamiento por cercanía.
 - **Creación de envíos:** genera el envío en Correo Argentino desde la pantalla del pedido en WooCommerce, sin cargar los datos a mano en MiCorreo. Soporta MiCorreo y Paq.Ar.
 - **Etiquetas PDF:** genera e imprime los rótulos de envío con código de barras directamente desde cada pedido (disponible para clientes Paq.Ar con acuerdo comercial).
-- **Tracking automático:** seguimiento con timeline visual en el pedido, sincronización cada 6 horas y emails automáticos al cliente cuando cambia el estado del envío.
+- **Tracking automático (solo Paq.Ar):** seguimiento con timeline visual en el pedido, sincronización cada 6 horas y emails automáticos al cliente cuando cambia el estado del envío. Solo Paq.Ar: la API de MiCorreo no expone seguimiento, así que con MiCorreo el pedido queda en "Importado" y el seguimiento se gestiona en el panel.
 - **Acciones masivas:** crear envíos y generar etiquetas para múltiples pedidos a la vez, más exportación a CSV. Pensado para tiendas con volumen.
+- **Carga masiva en MiCorreo:** genera el archivo de lote de hasta 90 envíos que se sube en *Nuevo envío → Masivo* del panel. Traduce cada sucursal al código que usa ese archivo —distinto del que devuelve la API— y marca los pedidos a los que les falta un dato obligatorio antes de generarlo.
+- **Checkout por bloques:** el selector de sucursales funciona dentro del checkout por bloques de WooCommerce, el que traen las tiendas nuevas. Ni el plugin oficial de Correo Argentino ni las alternativas gratuitas del directorio lo soportan.
 - **Reglas de envío gratis:** configurables por monto de compra, zona o producto.
 - **Wizard de configuración y diagnóstico:** verifica requisitos, credenciales y conexión con la API, e indica exactamente qué falta si algo no funciona.
 
@@ -48,6 +50,8 @@ Servicios de Correo Argentino soportados: **Clásico** (a domicilio), **Envío a
 | Etiquetas de despacho | Copiar datos y armarlas aparte | Etiqueta PDF automática (Paq.Ar) |
 | Seguimiento del pedido | Buscar el tracking uno por uno | Tracking y emails automáticos |
 | Muchos pedidos a la vez | Uno por uno | Acciones masivas + exportación CSV |
+| Despachar en lote en MiCorreo | Armar el CSV de lote a mano, fila por fila | Archivo generado con hasta 90 envíos |
+| Sucursales en el checkout por bloques | No hay selector | Selector integrado |
 
 ## Cómo se instala
 
@@ -62,7 +66,7 @@ Servicios de Correo Argentino soportados: **Clásico** (a domicilio), **Envío a
 - Vendés con WooCommerce y despachás con Correo Argentino de forma habitual.
 - Querés mostrar el costo real de envío en el checkout en lugar de un monto fijo o "a coordinar".
 - Cargar cada envío a mano en MiCorreo ya es parte de tu rutina diaria.
-- Querés que tus clientes elijan sucursal con un mapa, y que reciban el tracking automáticamente.
+- Querés que tus clientes elijan sucursal con un mapa, y que reciban el tracking automáticamente (solo Paq.Ar).
 - Despachás varios pedidos juntos y necesitás acciones masivas.
 - Operás con MiCorreo o con Paq.Ar y querés gestionar todo desde WooCommerce.
 
@@ -78,7 +82,7 @@ Comparación detallada con la alternativa gratuita: [plugin oficial de Correo Ar
 
 ### Qué es el plugin Correo Argentino Pro?
 
-Es un plugin premium para WooCommerce que integra Correo Argentino en tu tienda: cotiza envíos en tiempo real en el checkout, muestra un selector de sucursales con mapa, crea envíos en MiCorreo y Paq.Ar, genera etiquetas PDF y hace el seguimiento automático de cada pedido.
+Es un plugin premium para WooCommerce que integra Correo Argentino en tu tienda: cotiza envíos en tiempo real en el checkout, muestra un selector de sucursales con mapa, crea envíos en MiCorreo y Paq.Ar, genera etiquetas PDF y hace el seguimiento automático de cada pedido (solo Paq.Ar).
 
 ### Puedo probar el plugin antes de comprar?
 

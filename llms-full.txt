@@ -1,6 +1,6 @@
 # Correo Argentino Pro
 
-> Plugin premium de WooCommerce para integrar envíos de Correo Argentino en tiendas online de Argentina. Cotización en tiempo real, mapa de sucursales, etiquetas PDF, tracking automático y acciones masivas.
+> Plugin premium de WooCommerce para integrar envíos de Correo Argentino en tiendas online de Argentina. Cotización en tiempo real, mapa de sucursales, etiquetas PDF, tracking automático (solo Paq.Ar) y acciones masivas.
 
 Sitio oficial: https://correoargentinopro.com/
 
@@ -12,9 +12,11 @@ Correo Argentino Pro es un plugin comercial para WordPress/WooCommerce que permi
 - Selector de sucursales con mapa interactivo Leaflet (+3000 sucursales), búsqueda, geolocalización y ordenamiento por cercanía.
 - Creación de envíos desde el panel de WooCommerce (MiCorreo y Paq.Ar).
 - Generación de etiquetas PDF / rótulos de envío (Paq.Ar).
-- Tracking automático con timeline visual y notificaciones por email al cliente. Sincronización cada 6 horas.
+- Tracking automático con timeline visual y notificaciones por email al cliente. Sincronización cada 6 horas (solo Paq.Ar: la API de MiCorreo no expone seguimiento).
 - Acciones masivas: crear envíos y generar etiquetas para múltiples pedidos a la vez.
 - Exportación CSV de envíos y reglas de envío gratis configurables.
+- Carga masiva: genera el archivo de lote de hasta 90 envíos que se sube en "Nuevo envío > Masivo" del panel de MiCorreo. Traduce cada sucursal elegida al código que usa ese archivo, que es distinto del que devuelve la API, y avisa qué pedidos van a ser rechazados (por ejemplo, sin celular, que Correo Argentino exige) antes de generarlo.
+- Selector de sucursales dentro del checkout por bloques de WooCommerce. Ni el plugin oficial de Correo Argentino ni las alternativas gratuitas del directorio lo soportan.
 - Servicios soportados: Clásico (a domicilio), Envío a sucursal, Expreso.
 - Compatible con HPOS y checkout por bloques de WooCommerce. Wizard de configuración y diagnóstico integrado.
 
@@ -39,7 +41,7 @@ Plugin Premium para WooCommerce. La integración profesional con Correo Argentin
 - **Selector de sucursales con mapa** — Modal interactivo con mapa Leaflet, búsqueda, geolocalización y ordenamiento por cercanía. +3000 sucursales.
 - **Creación de envíos** — Creá envíos en Correo Argentino desde el panel de WooCommerce. Soporta MiCorreo (PyMEs) y Paq.Ar (empresas).
 - **Etiquetas PDF** — Genera e imprime rótulos de envío directamente desde cada pedido. Disponible para clientes Paq.Ar con acuerdo comercial.
-- **Tracking automático** — Seguimiento en tiempo real con timeline visual. Emails automáticos al cambiar de estado. Sincronización cada 6 horas.
+- **Tracking automático (solo Paq.Ar)** — Seguimiento en tiempo real con timeline visual. Emails automáticos al cambiar de estado. Sincronización cada 6 horas (solo Paq.Ar: la API de MiCorreo no expone seguimiento).
 - **Acciones masivas** — Creá envíos y generá etiquetas para múltiples pedidos a la vez. Exportá a CSV. Perfecto para alto volumen.
 
 ## Cotizador de envíos Correo Argentino
@@ -127,6 +129,7 @@ El plugin soporta dos plataformas de Correo Argentino. Elegi la que corresponda 
 | **Cotización automatica** | Si | No (tarifa fija configurable) |
 | **Etiquetas/Rotulos** | Desde el panel de MiCorreo | Generadas desde el plugin |
 | **Cancelar envíos** | Desde el panel de MiCorreo | Desde WooCommerce |
+| **Seguimiento en WooCommerce** | No (la API no lo expone: el pedido queda en "Importado" y el seguimiento se ve en el panel) | Sí, sincronización automática de estados |
 | **Credenciales** | Email, contrasena, Customer ID | API Key, ID de Acuerdo |
 
 [Artículo relacionado: ¿Qué es MiCorreo de Correo Argentino? →](https://correoargentinopro.com/blog/que-es-micorreo-correo-argentino.html)
@@ -257,11 +260,11 @@ El proceso para obtener las etiquetas depende del servicio que uses:
 #### MiCorreo
 
 1. Ingresa al panel de MiCorreo
-2. Busca el envío por numero de tracking
-3. Descarga el PDF del rotulo
-4. Imprimilo y pegalo en el paquete
+2. Busca el envío en "Pendientes" por la referencia (el numero de pedido de WooCommerce)
+3. Cotizalo y pagalo: ahi se genera el numero de seguimiento y se habilita la etiqueta
+4. Descarga el PDF del rotulo, imprimilo y pegalo en el paquete
 
-Las etiquetas de MiCorreo se gestionan directamente desde su plataforma.
+Las etiquetas de MiCorreo se gestionan directamente desde su plataforma: la API no permite generarlas.
 
 #### Paq.Ar
 
@@ -272,25 +275,41 @@ Las etiquetas de MiCorreo se gestionan directamente desde su plataforma.
 
 ## Seguimiento de envíos
 
-El plugin sincroniza automáticamente el estado de todos los envíos activos cada 6 horas. Tambien podes actualizar manualmente desde el detalle del pedido.
+**Importante: el seguimiento automático funciona con Paq.Ar.** La API de MiCorreo solo permite *importar* el envío: no devuelve seguimiento. Con MiCorreo el pedido queda en "Importado", y el numero de seguimiento, la etiqueta y los estados posteriores se gestionan en el panel de MiCorreo despues de cotizar y pagar el envío. Es una limitacion de la API de Correo Argentino, no del plugin: afecta por igual a cualquier integración, incluida la oficial.
+
+Con Paq.Ar, el plugin sincroniza automáticamente el estado de todos los envíos activos cada 6 horas. Tambien podes actualizar manualmente desde el detalle del pedido.
 
 ### Estados de envío
 
-| Estado | Descripcion |
-|---|---|
-| Creado | Registrado en Correo Argentino, pendiente de despacho. |
-| Retirado | Correo Argentino retiro el paquete. |
-| En transito | El paquete esta en camino al destino. |
-| En reparto | Sale a reparto hoy, se entrega en el dia. |
-| Entregado | Entregado al destinatario exitosamente. |
-| Devuelto | No se pudo entregar, devuelto al remitente. |
-| Cancelado | El envío fue cancelado. |
+| Estado | Descripcion | Servicio |
+|---|---|---|
+| Importado | El envío se importo a tu cuenta de MiCorreo. Todavia no tiene numero de seguimiento: lo obtenes al cotizarlo y pagarlo en el panel. Es el unico estado que vas a ver con MiCorreo. | Solo MiCorreo |
+| Creado | Registrado en Correo Argentino, pendiente de despacho. | Solo Paq.Ar |
+| Retirado | Correo Argentino retiro el paquete. | Solo Paq.Ar |
+| En transito | El paquete esta en camino al destino. | Solo Paq.Ar |
+| En reparto | Sale a reparto hoy, se entrega en el dia. | Solo Paq.Ar |
+| Entregado | Entregado al destinatario exitosamente. | Solo Paq.Ar |
+| Devuelto | No se pudo entregar, devuelto al remitente. | Solo Paq.Ar |
+| Cancelado | El envío fue cancelado. | Solo Paq.Ar |
+
+### Como sigo un envío de MiCorreo
+
+1. Creas el envío desde el pedido: el plugin lo importa a tu cuenta y el pedido queda en "Importado".
+2. Entras al panel de MiCorreo, lo buscas en "Pendientes" por la referencia (el numero de pedido de WooCommerce) y lo cotizas.
+3. Pagas el envío. Recien ahi MiCorreo genera el numero de seguimiento y la etiqueta.
+4. A partir de ese momento el seguimiento se consulta en el sitio de Correo Argentino con ese numero.
+
+Si necesitas el seguimiento dentro de WooCommerce, Paq.Ar es el servicio que habilita el circuito completo: devuelve el numero al instante y permite sincronizar estados, generar el rotulo y cancelar el envío desde el pedido.
 
 ### Donde ve el cliente el tracking
+
+Con Paq.Ar:
 
 - **Mi Cuenta:** En el detalle del pedido, con un timeline visual del estado.
 - **Emails:** Recibe notificaciones automáticas cuándo el estado cambia.
 - **Pagina publica:** Podes crear una pagina de tracking con el shortcode `[cap_tracking]`.
+
+Con MiCorreo no hay estados para mostrarle al cliente hasta que pagues el envío en el panel, asi que el plugin no le envia el email de "envío despachado" ni le muestra el timeline: preferimos no prometerle un seguimiento que todavia no existe.
 
 ## Acciones masivas
 
@@ -316,6 +335,7 @@ Estos valores se configuran al editar el metodo de envío dentro de la zona de e
 
 Cuando esta opción esta activada, el plugin marca automáticamente el pedido como "Completado" cuándo el tracking indica que el paquete fue entregado.
 
+- **Requiere Paq.Ar:** depende del seguimiento automático, y la API de MiCorreo no lo expone. Con MiCorreo el estado nunca llega a "Entregado", asi que los pedidos se completan a mano.
 - Solo aplica a pedidos en estado "Procesando".
 - Se agrega una nota al pedido indicando que fue completado automáticamente.
 - El cliente recibe el email de pedido completado de WooCommerce.
@@ -387,6 +407,10 @@ Verifica que todos los productos del carrito tengan peso y dimensiones configura
 #### "Conexion API — Error"
 
 Puede ser por credenciales incorrectas, la API de Correo Argentino temporalmente caida, o un firewall bloqueando las conexiones salientes. Verifica tus credenciales y proba de nuevo.
+
+#### "El pedido solo muestra Importado y nunca cambia de estado"
+
+Es el comportamiento esperado con MiCorreo, no un problema de tu instalacion. La API de MiCorreo solo permite importar el envío: no devuelve seguimiento. El numero de seguimiento y la etiqueta se generan cuando cotizas y pagas ese envío en el panel de MiCorreo, y desde ahi el seguimiento se consulta en el sitio de Correo Argentino. Los estados intermedios y el auto-completado del pedido funcionan con Paq.Ar, que si devuelve seguimiento por API.
 
 #### "No puedo cancelar un envío de MiCorreo"
 
@@ -820,7 +844,7 @@ La respuesta depende de tu situación particular, pero para la **mayoría de las
 
 - **Si vendés a todo el país:** Correo Argentino es el único operador que garantiza cobertura en prácticamente todas las localidades. Si un cliente en un pueblo del interior quiere comprarte, con OCA o Andreani probablemente no puedas enviarle. Con Correo Argentino, sí.
 - **Si estás empezando o sos emprendedor:** MiCorreo no requiere acuerdo comercial, no tiene volumen mínimo, y las tarifas son competitivas desde el primer envío. OCA y Andreani te van a pedir negociar un acuerdo para darte precios razonables.
-- **Si usás WooCommerce:** [Correo Argentino Pro](https://correoargentinopro.com/) te da una integración que ningún otro operador tiene al mismo nivel: cotización en tiempo real, selector de sucursales con mapa, creación de envíos, etiquetas, tracking automático y acciones masivas. Todo desde tu panel de WooCommerce.
+- **Si usás WooCommerce:** [Correo Argentino Pro](https://correoargentinopro.com/) te da una integración que ningún otro operador tiene al mismo nivel: cotización en tiempo real, selector de sucursales con mapa, creación de envíos, etiquetas, tracking automático (solo Paq.Ar) y acciones masivas. Todo desde tu panel de WooCommerce.
 - **Si ya tenés volumen:** Podés escalar a Paq.Ar para acceder a tarifas corporativas, retiro en domicilio y mayor capacidad operativa. Y Correo Argentino Pro soporta ambos servicios (MiCorreo y Paq.Ar).
 
 La única situación donde OCA o Andreani podrían ser preferibles es si tu operación está 100% concentrada en AMBA y necesitás tiempos de entrega express de 24 horas como prioridad absoluta. Pero incluso en ese caso, podés complementar con Correo Argentino para cubrir el resto del país.
@@ -851,7 +875,7 @@ Para la mayoría de las tiendas online, **Correo Argentino es el más económico
 
 ### ¿Cuál conviene integrar con WooCommerce?
 
-**Correo Argentino**, gracias a [Correo Argentino Pro](https://correoargentinopro.com/). Ofrece cotización en tiempo real, selector de sucursales con mapa, creación de envíos (MiCorreo y Paq.Ar), etiquetas PDF, tracking automático y acciones masivas, y es compatible con HPOS y el checkout por bloques. Los plugins de OCA y Andreani suelen ser más básicos y el de Andreani, además, requiere un acuerdo comercial activo para funcionar.
+**Correo Argentino**, gracias a [Correo Argentino Pro](https://correoargentinopro.com/). Ofrece cotización en tiempo real, selector de sucursales con mapa, creación de envíos (MiCorreo y Paq.Ar), etiquetas PDF, tracking automático (solo Paq.Ar) y acciones masivas, y es compatible con HPOS y el checkout por bloques. Los plugins de OCA y Andreani suelen ser más básicos y el de Andreani, además, requiere un acuerdo comercial activo para funcionar.
 
 ## También te puede interesar
 
@@ -1754,7 +1778,7 @@ Los principales operadores logisticos para e-commerce en Argentina son (si quere
 - Selector de sucursales con mapa interactivo (+3.000 sucursales).
 - Creacion de envíos desde WooCommerce (MiCorreo + Paq.Ar).
 - Generación de etiquetas PDF (Paq.Ar).
-- Tracking automático con emails al cliente.
+- Tracking automático con emails al cliente (solo Paq.Ar).
 - Acciones masivas para alto volumen.
 - Compatible con HPOS y checkout por bloques.
 
@@ -1779,7 +1803,7 @@ Algunos plugins intentan cubrir multiples operadores en un solo producto. La ven
 - **Cotización en tiempo real:** Que el cliente vea el costo exacto en el checkout, no un precio fijo o estimado.
 - **Creacion de envíos:** Poder crear el envío desde WooCommerce sin entrar al sistema del operador.
 - **Etiquetas:** Generar e imprimir rotulos directamente desde el panel.
-- **Tracking:** Seguimiento automático con notificaciones al cliente.
+- **Tracking:** Seguimiento automático con notificaciones al cliente (solo Paq.Ar).
 - **Compatibilidad:** Que soporte HPOS (la nueva forma de almacenar pedidos de WooCommerce) y el checkout por bloques.
 - **Soporte y actualizaciones:** Que el desarrollador mantenga el plugin actualizado y brinde soporte cuándo lo necesites.
 - **Acciones masivas:** Si manejas volumen, necesitas poder crear envíos y etiquetas en lote.
